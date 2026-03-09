@@ -4,23 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contractor Arsenal - Websites That Win You More Jobs</title>
-<meta name="description" content="Done-for-you websites built specifically for contractors. Rank locally, convert visitors into calls. Painters, roofers, landscapers, remodelers.">
+<meta name="description" content="Done-for-you websites built for contractors. Any trade, any market. Rank on Google, get more calls, launch in 48-72 hours.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <style>
-:root {
-  --bg: #0a0a0a;
-  --surface: #111111;
-  --surface2: #1a1a1a;
-  --border: rgba(255,255,255,0.08);
-  --red: #C0392B;
-  --red-light: #E74C3C;
-  --gold: #F97316;
-  --gold-light: #FB923C;
-  --text: #f0f0f0;
-  --muted: #888;
-  --radius: 12px;
+:root{
+  --bg:#0a0a0a;--surface:#111111;--surface2:#1a1a1a;
+  --border:rgba(255,255,255,0.08);
+  --red:#C0392B;--red-light:#E74C3C;
+  --gold:#F97316;--gold-light:#FB923C;
+  --text:#f0f0f0;--muted:#888;--radius:12px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -28,64 +21,76 @@ body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;over
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;height:auto;display:block;}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;background:rgba(10,10,10,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:2px;color:var(--text);}
-.nav-logo span{color:var(--red);}
-.nav-links{display:flex;gap:2rem;align-items:center;}
-.nav-links a{font-weight:600;font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;opacity:.8;transition:opacity .2s;}
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;background:rgba(10,10,10,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:.6rem;}
+.nav-logo img{height:38px;width:auto;}
+.nav-logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:.05em;color:var(--text);}
+.nav-links{display:flex;gap:1.5rem;align-items:center;}
+.nav-links a{font-weight:600;font-size:.82rem;letter-spacing:.5px;text-transform:uppercase;color:var(--text);opacity:.75;transition:opacity .2s;}
 .nav-links a:hover{opacity:1;}
-.nav-cta{background:var(--red);color:#fff;padding:.55rem 1.3rem;border-radius:6px;font-weight:700;font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;transition:background .2s;}
-.nav-cta:hover{background:var(--red-light);opacity:1;}
-.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.nav-links a.active{opacity:1;color:var(--gold);}
+.nav-cta{background:var(--red);color:#fff !important;padding:.5rem 1.25rem;border-radius:6px;font-weight:700;opacity:1 !important;transition:background .2s;}
+.nav-cta:hover{background:var(--red-light);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
 .nav-hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s;}
-.nav-mobile{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(10,10,10,.98);padding:1.5rem 5%;flex-direction:column;gap:1.2rem;z-index:999;border-bottom:1px solid var(--border);}
+.nav-mobile{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(10,10,10,.98);padding:1.5rem 5%;flex-direction:column;gap:0;z-index:999;border-bottom:1px solid var(--border);}
 .nav-mobile.open{display:flex;}
-.nav-mobile a{font-weight:600;font-size:1rem;text-transform:uppercase;letter-spacing:.5px;padding:.5rem 0;border-bottom:1px solid var(--border);}
+.nav-mobile a{font-weight:600;font-size:1rem;text-transform:uppercase;letter-spacing:.5px;padding:.9rem 0;border-bottom:1px solid var(--border);color:var(--text);}
+.nav-mobile a:hover{color:var(--gold);}
 
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;padding:100px 5% 60px;position:relative;overflow:hidden;background:var(--bg);}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 20% 50%, rgba(192,57,43,0.15) 0%, transparent 70%);pointer-events:none;}
-.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:1280px;margin:0 auto;width:100%;}
-.hero-left{z-index:2;}
+/* ── HERO: FULL-BLEED BACKGROUND SLIDESHOW ── */
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 5% 60px;position:relative;overflow:hidden;}
+
+/* Background slides sit behind everything */
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease-in-out;}
+.hero-slide.active{opacity:1;}
+.hero-slide img{width:100%;height:100%;object-fit:cover;object-position:center right;}
+
+/* Gradient: solid dark on left → transparent on right so images show through */
+.hero-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(108deg,
+    #0a0a0a 28%,
+    rgba(10,10,10,0.90) 46%,
+    rgba(10,10,10,0.45) 68%,
+    rgba(10,10,10,0.15) 100%
+  );
+}
+/* Brand red glow */
+.hero::before{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 55% 80% at 0% 50%,rgba(192,57,43,0.18) 0%,transparent 70%);}
+/* Noise */
+.noise-overlay{position:absolute;inset:0;z-index:2;opacity:.04;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;}
+
+/* Content above all overlays */
+.hero-content{position:relative;z-index:3;max-width:1280px;margin:0 auto;width:100%;}
+.hero-inner{max-width:640px;}
+
 .hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.3);color:var(--gold);padding:.35rem .85rem;border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;}
 .hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 1.5s infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
-.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.2rem,6vw,5.5rem);line-height:1.0;letter-spacing:1px;margin-bottom:1rem;}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,7vw,6.5rem);line-height:1.0;letter-spacing:1px;margin-bottom:1rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
 .hero h1 .accent-red{color:var(--red);}
 .hero h1 .accent-gold{color:var(--gold);}
-.hero-sub{font-size:1.1rem;color:var(--muted);max-width:480px;margin-bottom:2rem;line-height:1.7;}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;}
-.btn-primary{background:var(--red);color:#fff;padding:.85rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;border:2px solid var(--red);}
+.hero-sub{font-size:1.1rem;color:rgba(240,240,240,0.85);max-width:480px;margin-bottom:2rem;line-height:1.7;}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem;}
+.btn-primary{background:var(--red);color:#fff;padding:.85rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;border:2px solid var(--red);display:inline-block;}
 .btn-primary:hover{background:var(--red-light);border-color:var(--red-light);transform:translateY(-2px);}
-.btn-outline{border:2px solid var(--gold);color:var(--gold);padding:.85rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;}
+.btn-outline{border:2px solid var(--gold);color:var(--gold);padding:.85rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;display:inline-block;}
 .btn-outline:hover{background:var(--gold);color:#000;transform:translateY(-2px);}
-.hero-trust{margin-top:1.8rem;display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;}
-.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.82rem;color:var(--muted);}
-.trust-item svg{width:14px;height:14px;fill:var(--gold);}
+.hero-trust{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.82rem;color:rgba(240,240,240,0.65);}
+.trust-item svg{width:14px;height:14px;fill:var(--gold);flex-shrink:0;}
 
-/* SWIPER HERO */
-.hero-right{position:relative;z-index:2;}
-.swiper-hero-wrap{position:relative;animation:floatY 4s ease-in-out infinite;}
-@keyframes floatY{0%,100%{transform:translateY(0);}50%{transform:translateY(-18px);}  }
-.swiper-hero{width:100%;max-width:540px;margin:0 auto;overflow:visible !important;}
-.swiper-hero .swiper-wrapper{padding:30px 0;}
-.swiper-hero .swiper-slide{border-radius:14px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.6);transition:transform .4s;}
-.swiper-hero .swiper-slide img{width:100%;height:320px;object-fit:cover;display:block;}
-.swiper-hero .swiper-slide-active{box-shadow:0 30px 80px rgba(192,57,43,0.4);}
-.swiper-gradient-overlay{position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,var(--bg),transparent);pointer-events:none;z-index:5;border-radius:0 0 14px 14px;}
-
-/* NOISE TEXTURE */
-.noise-overlay{position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px;pointer-events:none;}
-
-/* SECTION COMMON */
+/* ── SECTIONS ── */
 section{padding:80px 5%;}
 .section-inner{max-width:1280px;margin:0 auto;}
 .section-label{font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;}
 .section-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.15;margin-bottom:1rem;}
 .section-sub{color:var(--muted);max-width:580px;font-size:1rem;}
 
-/* PROBLEM */
+/* ── PROBLEM ── */
 .problem{background:var(--surface);}
 .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
 .problem-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;position:relative;overflow:hidden;}
@@ -94,7 +99,7 @@ section{padding:80px 5%;}
 .problem-card h3{font-size:1.05rem;font-weight:700;margin-bottom:.5rem;}
 .problem-card p{font-size:.9rem;color:var(--muted);line-height:1.6;}
 
-/* SOLUTION */
+/* ── SOLUTION ── */
 .solution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
 .solution-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;transition:transform .3s,border-color .3s;}
 .solution-card:hover{transform:translateY(-4px);border-color:rgba(249,115,22,0.3);}
@@ -102,14 +107,14 @@ section{padding:80px 5%;}
 .solution-card h3{font-size:1.05rem;font-weight:700;margin-bottom:.5rem;}
 .solution-card p{font-size:.9rem;color:var(--muted);line-height:1.6;}
 
-/* LEAD DEMO */
+/* ── LEAD DEMO ── */
 .lead-demo{background:var(--surface);border-radius:24px;padding:3rem;max-width:960px;margin:3rem auto 0;position:relative;overflow:hidden;border:1px solid var(--border);}
 .lead-demo::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 80% 50%,rgba(249,115,22,0.07),transparent);pointer-events:none;}
 .lead-demo-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
 .lead-demo-copy .section-title{font-size:clamp(1.6rem,3vw,2.2rem);}
 .lead-demo-copy ul{list-style:none;margin-top:1.5rem;display:flex;flex-direction:column;gap:.8rem;}
 .lead-demo-copy li{display:flex;align-items:flex-start;gap:.75rem;font-size:.95rem;color:var(--muted);}
-.lead-demo-copy li::before{content:'';width:18px;height:18px;min-width:18px;border-radius:50%;background:var(--gold);margin-top:2px;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 10l4 4 6-7' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:14px 14px;background-repeat:no-repeat;background-position:center;}
+.lead-demo-copy li::before{content:'';width:18px;height:18px;min-width:18px;border-radius:50%;background:var(--gold);margin-top:2px;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 10l4 4 6-7' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:14px;background-repeat:no-repeat;background-position:center;}
 .lead-notif{background:var(--bg);border-radius:14px;border:1px solid var(--border);padding:1.5rem;display:flex;flex-direction:column;gap:1rem;}
 .notif-item{display:flex;align-items:center;gap:.85rem;background:var(--surface2);border-radius:10px;padding:1rem;animation:slideIn .5s ease both;}
 @keyframes slideIn{from{opacity:0;transform:translateX(20px);}to{opacity:1;transform:none;}}
@@ -120,25 +125,28 @@ section{padding:80px 5%;}
 .notif-text span{font-size:.78rem;color:var(--muted);}
 .notif-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);margin-left:auto;flex-shrink:0;animation:blink 2s infinite;}
 
-/* HOW IT WORKS */
+/* ── HOW IT WORKS ── */
 .how{background:linear-gradient(135deg,rgba(192,57,43,0.05),rgba(249,115,22,0.03));}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;position:relative;}
 .steps::before{content:'';position:absolute;top:52px;left:calc(16.66% + 1rem);right:calc(16.66% + 1rem);height:2px;background:linear-gradient(90deg,var(--red),var(--gold));z-index:0;}
 .step{text-align:center;position:relative;z-index:1;}
-.step-num{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:1px;margin:0 auto 1.25rem;box-shadow:0 8px 30px rgba(192,57,43,0.35);}
+.step-num{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.6rem;margin:0 auto 1.25rem;box-shadow:0 8px 30px rgba(192,57,43,0.35);}
 .step h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem;}
 .step p{font-size:.9rem;color:var(--muted);line-height:1.6;}
 
-/* CONTRACTOR TYPES */
+/* ── CONTRACTOR TYPES ── */
 .types{background:var(--surface);}
-.types-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem;}
-.type-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem 1.25rem;text-align:center;transition:all .3s;cursor:default;}
+.types-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem;}
+.type-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem 1.25rem;text-align:center;transition:all .3s;}
 .type-card:hover{border-color:rgba(192,57,43,0.4);transform:translateY(-4px);}
 .type-icon{font-size:2.5rem;margin-bottom:1rem;display:block;}
 .type-card h3{font-size:1.05rem;font-weight:700;margin-bottom:.4rem;}
 .type-card p{font-size:.82rem;color:var(--muted);}
+.types-note{margin-top:2rem;padding:1.25rem 1.75rem;background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.2);border-radius:var(--radius);text-align:center;}
+.types-note p{font-size:.92rem;color:var(--muted);}
+.types-note a{color:var(--gold);font-weight:700;}
 
-/* COMPARE */
+/* ── COMPARE ── */
 .compare{background:var(--bg);}
 .compare-table-wrap{overflow-x:auto;margin-top:3rem;border-radius:var(--radius);border:1px solid var(--border);}
 .compare-table{width:100%;border-collapse:collapse;min-width:640px;}
@@ -150,14 +158,14 @@ section{padding:80px 5%;}
 .check{color:var(--gold);font-weight:700;}
 .cross{color:var(--muted);opacity:.5;}
 
-/* METRICS */
+/* ── METRICS ── */
 .metrics{background:linear-gradient(135deg,rgba(192,57,43,0.08),rgba(249,115,22,0.05));border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .metrics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem;text-align:center;}
 .metric-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5rem);line-height:1;color:var(--gold);margin-bottom:.25rem;}
 .metric-label{font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
 .metric-sub{font-size:.78rem;color:var(--muted);opacity:.6;margin-top:.2rem;}
 
-/* TESTIMONIALS */
+/* ── TESTIMONIALS ── */
 .testi{background:var(--surface);}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
 .testi-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;transition:transform .3s;}
@@ -169,7 +177,7 @@ section{padding:80px 5%;}
 .testi-name strong{display:block;font-size:.9rem;font-weight:700;}
 .testi-name span{font-size:.78rem;color:var(--muted);}
 
-/* FAQ */
+/* ── FAQ ── */
 .faq{background:var(--bg);}
 .faq-list{max-width:760px;margin:2.5rem auto 0;display:flex;flex-direction:column;gap:.75rem;}
 .faq-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
@@ -180,46 +188,45 @@ section{padding:80px 5%;}
 .faq-a-inner{padding:0 1.5rem 1.25rem;font-size:.9rem;color:var(--muted);line-height:1.7;}
 .faq-item.open .faq-a{max-height:300px;}
 
-/* FINAL CTA */
+/* ── FINAL CTA ── */
 .final-cta{background:linear-gradient(135deg,rgba(192,57,43,0.15),rgba(249,115,22,0.08));border-top:1px solid var(--border);text-align:center;padding:100px 5%;}
 .final-cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:1px;margin-bottom:1rem;}
 .final-cta h2 .accent-gold{color:var(--gold);}
 .final-cta p{color:var(--muted);font-size:1.05rem;max-width:500px;margin:0 auto 2.5rem;}
 .cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
 
-/* FOOTER */
+/* ── FOOTER ── */
 footer{background:var(--surface);border-top:1px solid var(--border);padding:60px 5% 30px;}
 .footer-inner{max-width:1280px;margin:0 auto;}
-.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem;}
-.footer-brand .logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;margin-bottom:.75rem;}
-.footer-brand .logo span{color:var(--red);}
-.footer-brand p{font-size:.85rem;color:var(--muted);line-height:1.6;max-width:220px;}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem;}
+.footer-brand-logo{display:flex;align-items:center;gap:.6rem;margin-bottom:.75rem;}
+.footer-brand-logo img{height:36px;width:auto;}
+.footer-brand-logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:.05em;}
+.footer-brand p{font-size:.85rem;color:var(--muted);line-height:1.6;max-width:240px;}
 .footer-col h4{font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
-.footer-col li{font-size:.88rem;color:var(--muted);}
-.footer-col a{color:var(--muted);transition:color .2s;}
+.footer-col a{font-size:.88rem;color:var(--muted);transition:color .2s;}
 .footer-col a:hover{color:var(--text);}
+.footer-col span{font-size:.88rem;color:var(--muted);}
 .footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
 .footer-bottom p{font-size:.8rem;color:var(--muted);}
-.footer-legal{display:flex;gap:1.5rem;}
-.footer-legal span{font-size:.8rem;color:var(--muted);}
+.footer-social{display:flex;gap:.6rem;}
+.fsoc{width:34px;height:34px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);color:var(--muted);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all .2s;}
+.fsoc:hover{border-color:var(--red);}
 
-/* SCROLL REVEAL */
+/* ── SCROLL REVEAL ── */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease;}
 .reveal.visible{opacity:1;transform:none;}
 .reveal-delay-1{transition-delay:.1s;}
 .reveal-delay-2{transition-delay:.2s;}
 .reveal-delay-3{transition-delay:.3s;}
 
-/* MOBILE */
+/* ── RESPONSIVE ── */
 @media(max-width:1024px){
-  .hero-inner{grid-template-columns:1fr;}
-  .hero-right{order:-1;max-width:500px;margin:0 auto;}
-  .swiper-hero{max-width:400px;}
-  .swiper-hero .swiper-slide img{height:260px;}
   .solution-grid{grid-template-columns:repeat(2,1fr);}
   .types-grid{grid-template-columns:repeat(2,1fr);}
   .footer-top{grid-template-columns:1fr 1fr;}
+  .lead-demo-inner{grid-template-columns:1fr;}
 }
 @media(max-width:768px){
   nav{padding:0 4%;}
@@ -227,17 +234,15 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
   .nav-hamburger{display:flex;}
   section{padding:60px 4%;}
   .hero{padding:90px 4% 60px;}
-  .hero-inner{gap:2rem;}
-  .hero h1{font-size:clamp(2.5rem,10vw,3.5rem);}
+  .hero h1{font-size:clamp(2.8rem,10vw,4rem);}
+  .hero-overlay{background:linear-gradient(108deg,#0a0a0a 45%,rgba(10,10,10,0.85) 70%,rgba(10,10,10,0.6) 100%);}
   .problem-grid,.steps,.testi-grid{grid-template-columns:1fr;}
   .steps::before{display:none;}
   .solution-grid{grid-template-columns:1fr;}
   .types-grid{grid-template-columns:repeat(2,1fr);}
   .metrics-grid{grid-template-columns:1fr;gap:1.5rem;}
-  .lead-demo-inner{grid-template-columns:1fr;}
   .footer-top{grid-template-columns:1fr 1fr;gap:1.5rem;}
   .footer-bottom{flex-direction:column;text-align:center;}
-  .swiper-hero .swiper-slide img{height:220px;}
   .hero-actions{flex-direction:column;}
   .btn-primary,.btn-outline{text-align:center;}
   .cta-actions{flex-direction:column;align-items:center;}
@@ -245,8 +250,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
 @media(max-width:480px){
   .types-grid{grid-template-columns:1fr;}
   .footer-top{grid-template-columns:1fr;}
-  .hero h1{font-size:2.4rem;}
-  .swiper-hero .swiper-slide img{height:180px;}
+  .hero h1{font-size:2.8rem;}
 }
 </style>
 </head>
@@ -254,34 +258,69 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
 
 <!-- NAV -->
 <nav>
-  <a href="index.html" class="nav-logo">Contractor<span>Arsenal</span></a>
+  <a href="index.html" class="nav-logo">
+    <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
+    <span class="nav-logo-text">Contractor Arsenal</span>
+  </a>
   <div class="nav-links">
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
+    <a href="arsenal.html">Arsenal 001</a>
     <a href="apply.html" class="nav-cta">Apply Now</a>
   </div>
-  <div class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 <div class="nav-mobile" id="navMobile">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="apply.html">Apply Now</a>
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="arsenal.html" onclick="closeMenu()">Arsenal 001</a>
+  <a href="apply.html" onclick="closeMenu()">Apply Now</a>
 </div>
 
 <!-- HERO -->
-<section class="hero" id="hero">
+<section class="hero">
+  <!-- Background slideshow — fades between portfolio images -->
+  <div class="hero-bg">
+    <div class="hero-slide active">
+      <img src="https://github.com/user-attachments/assets/e1706902-da3a-419b-8cd1-862fbd61082b" alt="" aria-hidden="true" loading="eager">
+    </div>
+    <div class="hero-slide">
+      <img src="https://github.com/user-attachments/assets/32b1e767-b22d-41cd-bea9-7bf145b638aa" alt="" aria-hidden="true" loading="lazy">
+    </div>
+    <div class="hero-slide">
+      <img src="https://github.com/user-attachments/assets/b3e6b468-65c7-4b60-b2b7-3b9f0d08ba47" alt="" aria-hidden="true" loading="lazy">
+    </div>
+    <div class="hero-slide">
+      <img src="https://github.com/user-attachments/assets/fb0e9956-c523-456c-b499-2b979a111bc5" alt="" aria-hidden="true" loading="lazy">
+    </div>
+    <div class="hero-slide">
+      <img src="https://github.com/user-attachments/assets/92e12d9a-5c1a-4231-8b58-2a874f063539" alt="" aria-hidden="true" loading="lazy">
+    </div>
+    <div class="hero-slide">
+      <img src="https://github.com/user-attachments/assets/dd186500-6297-4699-9002-ef0fb2a3f1d3" alt="" aria-hidden="true" loading="lazy">
+    </div>
+    <div class="hero-slide">
+      <img src="https://github.com/user-attachments/assets/957e7a58-7b91-4b73-944e-e67e7afc3657" alt="" aria-hidden="true" loading="lazy">
+    </div>
+    <div class="hero-slide">
+      <img src="https://github.com/user-attachments/assets/f242403d-f7b6-45b0-aa37-2f96fec89b19" alt="" aria-hidden="true" loading="lazy">
+    </div>
+  </div>
+  <!-- Gradient + noise overlays -->
+  <div class="hero-overlay"></div>
   <div class="noise-overlay"></div>
-  <div class="hero-inner">
-    <div class="hero-left">
+  <!-- Content -->
+  <div class="hero-content">
+    <div class="hero-inner">
       <div class="hero-eyebrow">Done-For-You Contractor Websites</div>
       <h1>
         Websites That<br>
         <span class="accent-red">Win Jobs.</span><br>
         <span class="accent-gold">Not Just Looks.</span>
       </h1>
-      <p class="hero-sub">We build high-converting websites specifically for contractors. Rank on Google. Get more calls. Launch in 48 to 72 hours.</p>
+      <p class="hero-sub">We build high-converting websites for contractors. Rank on Google. Get more calls. Launch in 48 to 72 hours.</p>
       <div class="hero-actions">
         <a href="apply.html" class="btn-primary">Apply For Your Site</a>
         <a href="about.html" class="btn-outline">See How It Works</a>
@@ -290,22 +329,6 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
         <div class="trust-item"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32L2.27 6.62l5.34-.78z"/></svg> Contractor specialists</div>
         <div class="trust-item"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32L2.27 6.62l5.34-.78z"/></svg> 48-72hr launch</div>
         <div class="trust-item"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32L2.27 6.62l5.34-.78z"/></svg> No tech skills needed</div>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="swiper-hero-wrap">
-        <div class="swiper swiper-hero">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/e1706902-da3a-419b-8cd1-862fbd61082b" alt="Contractor website example 1" loading="eager"></div>
-            <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/32b1e767-b22d-41cd-bea9-7bf145b638aa" alt="Contractor website example 2" loading="lazy"></div>
-            <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/b3e6b468-65c7-4b60-b2b7-3b9f0d08ba47" alt="Contractor website example 3" loading="lazy"></div>
-            <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/fb0e9956-c523-456c-b499-2b979a111bc5" alt="Contractor website example 4" loading="lazy"></div>
-            <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/92e12d9a-5c1a-4231-8b58-2a874f063539" alt="Contractor website example 5" loading="lazy"></div>
-            <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/dd186500-6297-4699-9002-ef0fb2a3f1d3" alt="Contractor website example 6" loading="lazy"></div>
-            <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/957e7a58-7b91-4b73-944e-e67e7afc3657" alt="Contractor website example 7" loading="lazy"></div>
-            <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/f242403d-f7b6-45b0-aa37-2f96fec89b19" alt="Contractor website example 8" loading="lazy"></div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -449,17 +472,17 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
   </div>
 </section>
 
-<!-- CONTRACTOR TYPES -->
+<!-- WHO WE SERVE -->
 <section class="types">
   <div class="section-inner">
     <div class="section-label">Who We Serve</div>
-    <h2 class="section-title">Built for Your Trade</h2>
-    <p class="section-sub">We specialize in home service contractors. We know your customers, your market, and what it takes to win.</p>
+    <h2 class="section-title">Built for Every Contractor</h2>
+    <p class="section-sub">If you do residential or commercial work, we build for you. We know the trades, the keywords, and exactly what converts in your market.</p>
     <div class="types-grid">
       <div class="type-card reveal">
         <span class="type-icon">🎨</span>
         <h3>Painters</h3>
-        <p>Interior, exterior, cabinet painting. We rank you for high-value residential jobs in your city.</p>
+        <p>Interior, exterior, cabinet painting. Rank for high-value residential jobs in your city.</p>
       </div>
       <div class="type-card reveal reveal-delay-1">
         <span class="type-icon">🏠</span>
@@ -474,8 +497,31 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
       <div class="type-card reveal reveal-delay-3">
         <span class="type-icon">🔨</span>
         <h3>Remodelers</h3>
-        <p>Kitchen, bath, whole-home. Position yourself as the premium choice for high-ticket remodel projects.</p>
+        <p>Kitchen, bath, whole-home. Position yourself as the premium choice for high-ticket projects.</p>
       </div>
+      <div class="type-card reveal">
+        <span class="type-icon">❄️</span>
+        <h3>HVAC</h3>
+        <p>Heating, cooling, installation, and service. Own the seasonal search spikes in your area.</p>
+      </div>
+      <div class="type-card reveal reveal-delay-1">
+        <span class="type-icon">🔧</span>
+        <h3>Plumbers</h3>
+        <p>Emergency service, installations, and remodels. Rank when homeowners need help fast.</p>
+      </div>
+      <div class="type-card reveal reveal-delay-2">
+        <span class="type-icon">⚡</span>
+        <h3>Electricians</h3>
+        <p>Residential and commercial electrical. Get found for panel upgrades, EV chargers, and more.</p>
+      </div>
+      <div class="type-card reveal reveal-delay-3">
+        <span class="type-icon">🏗️</span>
+        <h3>General Contractors</h3>
+        <p>New builds, additions, renovations. A site that reflects the scale and quality of your work.</p>
+      </div>
+    </div>
+    <div class="types-note">
+      <p>Don't see your trade? <a href="apply.html">Apply anyway</a> — if you do residential or commercial work, we can build for you.</p>
     </div>
   </div>
 </section>
@@ -638,7 +684,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">What trades do you work with?</button>
-        <div class="faq-a"><div class="faq-a-inner">We specialize in painting, roofing, landscaping, and remodeling. We may also be a fit for other home service contractors. Apply and we'll let you know if we're a good match.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">We build for any contractor doing residential or commercial work. Painters, roofers, landscapers, remodelers, HVAC, plumbers, electricians, general contractors and more. Apply and we'll confirm we're a good fit.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Do I own the website?</button>
@@ -664,8 +710,20 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="logo">Contractor<span>Arsenal</span></div>
+        <div class="footer-brand-logo">
+          <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
+          <span class="footer-brand-logo-text">Contractor Arsenal</span>
+        </div>
         <p>Done-for-you websites built for contractors who want more local jobs and less tech headaches.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="apply.html">Apply Now</a></li>
+          <li><a href="arsenal.html">Arsenal 001</a></li>
+        </ul>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
@@ -677,81 +735,47 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
           <li><span>Ongoing Support</span></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><span>Results</span></li>
-          <li><span>FAQ</span></li>
-          <li><a href="apply.html">Apply Now</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Get Started</h4>
-        <ul>
-          <li><a href="apply.html">Apply for Your Site</a></li>
-          <li><span>Instagram DM Us</span></li>
-          <li><span>Free Consultation</span></li>
-        </ul>
-      </div>
     </div>
     <div class="footer-bottom">
-      <p>2025 Contractor Arsenal. All rights reserved.</p>
-      <div class="footer-legal">
-        <span>Privacy Policy</span>
-        <span>Terms of Service</span>
+      <p>&copy; 2025 Contractor Arsenal. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener" class="fsoc" title="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FFDC80"/><stop offset="30%" stop-color="#F77737"/><stop offset="60%" stop-color="#C13584"/><stop offset="100%" stop-color="#515BD4"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5.5" fill="url(#ig)"/><circle cx="12" cy="12" r="4.2" stroke="#fff" stroke-width="1.8" fill="none"/><circle cx="17.2" cy="6.8" r="1.1" fill="#fff"/></svg>
+        </a>
       </div>
     </div>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
 // NAV
-function toggleMenu() {
-  document.getElementById('navMobile').classList.toggle('open');
-}
+function toggleMenu(){document.getElementById('navMobile').classList.toggle('open');}
+function closeMenu(){document.getElementById('navMobile').classList.remove('open');}
 
-// SWIPER
-new Swiper('.swiper-hero', {
-  effect: 'coverflow',
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  loop: true,
-  coverflowEffect: {
-    rotate: 30,
-    stretch: 0,
-    depth: 120,
-    modifier: 1,
-    slideShadows: true
-  },
-  autoplay: {
-    delay: 2800,
-    disableOnInteraction: false
-  },
-  breakpoints: {
-    0: { slidesPerView: 1.2 },
-    480: { slidesPerView: 1.4 },
-    768: { slidesPerView: 1.6 },
-    1024: { slidesPerView: 1.8 }
-  }
-});
+// HERO BACKGROUND SLIDESHOW
+(function(){
+  var slides = document.querySelectorAll('.hero-slide');
+  var current = 0;
+  if(!slides.length) return;
+  setInterval(function(){
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 3600);
+})();
 
 // SCROLL REVEAL
-const reveals = document.querySelectorAll('.reveal');
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-reveals.forEach(r => obs.observe(r));
+var obs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r);});
 
 // FAQ
-function toggleFaq(btn) {
-  var item = btn.closest('.faq-item');
-  var isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
+function toggleFaq(btn){
+  var item=btn.closest('.faq-item');
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
+  if(!isOpen) item.classList.add('open');
 }
 </script>
 </body>
