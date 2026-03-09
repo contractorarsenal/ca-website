@@ -56,9 +56,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;display:flex;a
 .typing-text{overflow:hidden;white-space:nowrap;}
 .cursor{display:inline-block;width:2px;height:1em;background:var(--red);margin-left:1px;animation:cursor-blink .8s step-end infinite;vertical-align:middle;}
 @keyframes cursor-blink{0%,100%{opacity:1;}50%{opacity:0;}}
-.hero-type-wrap{display:inline-block;position:relative;}
-.hero-type-text{font-family:'Barlow Condensed',sans-serif;font-size:inherit;font-weight:900;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.05;}
-.hero-type-cursor{display:inline-block;width:4px;height:.85em;background:var(--red);margin-left:4px;vertical-align:middle;animation:cursor-blink .8s step-end infinite;}
+.hero-type-wrap{display:inline-block;position:relative;white-space:nowrap;}
+.hero-type-text{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.8rem,4.5vw,4rem);font-weight:900;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;white-space:nowrap;}
+.hero-type-cursor{display:inline-block;width:3px;height:.8em;background:var(--red);margin-left:3px;vertical-align:middle;animation:cursor-blink .8s step-end infinite;}
 
 .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,8vw,7rem);line-height:.95;letter-spacing:1px;margin-bottom:1.5rem;}
 .hero h1 .line-gold{color:var(--gold);}
@@ -293,11 +293,6 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
   <div class="noise-overlay"></div>
   <div class="hero-content">
 
-    <!-- Typing animation badge -->
-    <div class="typing-wrap">
-      <span class="typing-text" id="typingText">Private Membership Network</span><span class="cursor"></span>
-    </div>
-
     <h1>
       The Inner Circle for<br>
       <span class="hero-type-wrap"><span class="hero-type-text" id="heroTypeText"></span><span class="hero-type-cursor"></span></span>
@@ -313,11 +308,11 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
         <div class="stat-label">Acceptance</div>
       </div>
       <div class="hero-stat">
-        <div class="stat-number">124</div>
+        <div class="stat-number">25</div>
         <div class="stat-label">Members</div>
       </div>
       <div class="hero-stat">
-        <div class="stat-number">31</div>
+        <div class="stat-number">12</div>
         <div class="stat-label">States</div>
       </div>
       <div class="hero-stat">
@@ -436,8 +431,8 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
         <div class="event-divider"></div>
         <p class="event-desc">The first-ever Arsenal 001 in-person event. Seattle is home — come meet the founders and founding members, connect over dinner, and set the tone for the community.</p>
         <div class="event-card-bottom">
-          <div class="event-coming-soon">Coming Soon — 2025</div>
-          <a href="#apply" class="event-cta interest">Register Interest</a>
+          <div class="event-coming-soon">Coming Soon — 2026</div>
+          <a href="#apply" class="event-cta">Apply to Attend</a>
         </div>
       </div>
       <div class="event-card reveal reveal-delay-1">
@@ -449,7 +444,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
         <div class="event-divider"></div>
         <p class="event-desc">An evening with Bay Area members and guests. Builders, tech-adjacent operators, and tradespeople in one room. The cross-pollination of ideas you can't find anywhere else.</p>
         <div class="event-card-bottom">
-          <div class="event-coming-soon">Coming Soon — 2025</div>
+          <div class="event-coming-soon">Coming Soon — 2026</div>
           <a href="#apply" class="event-cta interest">Register Interest</a>
         </div>
       </div>
@@ -462,7 +457,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
         <div class="event-divider"></div>
         <p class="event-desc">A private dinner for Arsenal 001 members in LA. A mix of contractors, creatives, and operators who are all playing big games in one of the country's most competitive markets.</p>
         <div class="event-card-bottom">
-          <div class="event-coming-soon">Coming Soon — 2025</div>
+          <div class="event-coming-soon">Coming Soon — 2026</div>
           <a href="#apply" class="event-cta interest">Register Interest</a>
         </div>
       </div>
@@ -488,7 +483,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
         <div class="event-divider"></div>
         <p class="event-desc">Texas is one of the most active markets for contractors and builders. Connect with the best operators in the Lone Star state and the members who are building empires there.</p>
         <div class="event-card-bottom">
-          <div class="event-coming-soon">Coming Soon — 2026</div>
+          <div class="event-coming-soon">Coming Soon — 2027</div>
           <a href="#apply" class="event-cta interest">Register Interest</a>
         </div>
       </div>
@@ -501,8 +496,8 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
         <div class="event-divider"></div>
         <p class="event-desc">Arsenal 001's flagship annual retreat. Three days of strategy, connection, and collaboration in Miami. The event that sets the direction for the next 12 months.</p>
         <div class="event-card-bottom">
-          <div class="event-coming-soon">Annual — 2026</div>
-          <a href="#apply" class="event-cta">Apply to Attend</a>
+          <div class="event-coming-soon">Annual — 2027</div>
+          <a href="#apply" class="event-cta interest">Register Interest</a>
         </div>
       </div>
     </div>
@@ -758,48 +753,6 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
 function toggleMenu(){document.getElementById('navMobile').classList.toggle('open');}
 function closeMenu(){document.getElementById('navMobile').classList.remove('open');}
 
-// TYPING ANIMATION
-(function(){
-  var phrases = [
-    'Private Membership Network',
-    'The Inner Circle for Contractors',
-    'The Inner Circle for Builders',
-    'The Inner Circle for E-Commerce',
-    'The Inner Circle for Marketers',
-    'The Inner Circle for Sales Leaders',
-    'Keep Each Other in Your Arsenal'
-  ];
-  var el = document.getElementById('typingText');
-  if(!el) return;
-  var pi = 0, ci = 0, deleting = false, wait = 0;
-  var speed = 55, deleteSpeed = 30, pauseAfter = 1800, pauseAfterDelete = 400;
-
-  function type(){
-    var phrase = phrases[pi];
-    if(!deleting){
-      el.textContent = phrase.substring(0, ci + 1);
-      ci++;
-      if(ci === phrase.length){
-        deleting = true;
-        setTimeout(type, pauseAfter);
-        return;
-      }
-      setTimeout(type, speed);
-    } else {
-      el.textContent = phrase.substring(0, ci - 1);
-      ci--;
-      if(ci === 0){
-        deleting = false;
-        pi = (pi + 1) % phrases.length;
-        setTimeout(type, pauseAfterDelete);
-        return;
-      }
-      setTimeout(type, deleteSpeed);
-    }
-  }
-  setTimeout(type, 600);
-})();
-
 // HERO TYPING ANIMATION
 (function(){
   var phrases = [
@@ -807,10 +760,13 @@ function closeMenu(){document.getElementById('navMobile').classList.remove('open
     'Elite Ecommerce Owners.',
     'Elite Marketers.',
     'Elite Sales Leaders.',
-    'Elite Operators.',
-    'Elite Builders.',
+    'Elite Tech Founders.',
+    'Elite Software Builders.',
     'Elite Agency Owners.',
-    'Elite Tradespeople.'
+    'Elite Business Operators.',
+    'Elite Tradespeople.',
+    'Elite Network Builders.',
+    'Elite Entrepreneurs.'
   ];
   var el = document.getElementById('heroTypeText');
   if(!el) return;
