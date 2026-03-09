@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Contractor Arsenal</title>
+<meta name="description" content="Learn what makes Contractor Arsenal different. We build professional contractor websites that generate real leads and revenue.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#1F1F1F;--bg2:#282828;--bg3:#303030;--bg4:#3a3a3a;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.16);
+  --red:#EF4444;--red2:#DC2626;--red3:#F87171;
+  --red-dim:rgba(239,68,68,0.12);--red-bg:rgba(239,68,68,0.08);
+  --gold:#F59E0B;--gold2:#FBBF24;--gold-dim:rgba(245,158,11,0.12);
+  --text:#F5F5F5;--text2:#C0C0C0;--text3:#888;--text4:#555;
+  --shadow:0 2px 16px rgba(0,0,0,0.35);--shadow2:0 8px 40px rgba(0,0,0,0.5);
+  --r:8px;--r2:12px;
+}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:4px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(31,31,31,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 2rem;box-shadow:0 1px 20px rgba(0,0,0,0.4)}
+.nav-inner{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;flex-shrink:0}
+.nav-logo img{height:40px;width:auto}
+.nav-logo-text{font-size:1rem;font-weight:900;color:var(--text);font-family:'Barlow Condensed',sans-serif;letter-spacing:0.03em}
+.nav-links{display:flex;gap:0;list-style:none;margin-left:1rem}
+.nav-links a{padding:0.5rem 1rem;font-size:0.87rem;color:var(--text3);text-decoration:none;border-radius:6px;transition:color 0.2s;font-weight:600}
+.nav-links a:hover,.nav-links a.active{color:var(--text)}
+.nav-right{margin-left:auto;display:flex;gap:0.6rem;align-items:center}
+.nav-btn-primary{background:var(--red);color:#fff;border:none;padding:0.5rem 1.15rem;border-radius:6px;font-size:0.82rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:0.4rem;transition:all 0.2s;font-family:'Barlow',sans-serif}
+.nav-btn-primary:hover{background:var(--red2);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin-left:auto;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:rgba(31,31,31,0.99);backdrop-filter:blur(20px);z-index:99;flex-direction:column;padding:2rem 1.5rem;gap:0;overflow-y:auto;border-top:1px solid var(--border)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:1rem 0;font-size:1.1rem;font-weight:700;color:var(--text2);text-decoration:none;border-bottom:1px solid var(--border);display:block}
+.mobile-menu a:hover{color:var(--red)}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,#1a0a0a 0%,#2a1010 40%,#1F1F1F 100%);padding:7rem 2rem 5rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:700px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(239,68,68,0.1) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:780px;margin:0 auto;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--red-dim);border:1px solid rgba(239,68,68,0.3);border-radius:4px;padding:0.35rem 1rem;font-size:0.75rem;font-weight:700;color:var(--red);margin-bottom:1.25rem;text-transform:uppercase;letter-spacing:0.06em;font-family:'Barlow Condensed',sans-serif}
+.hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;line-height:1.1;font-family:'Barlow Condensed',sans-serif;margin-bottom:1.25rem}
+.hero h1 span{color:var(--red)}
+.hero p{font-size:1.05rem;color:var(--text2);max-width:660px;margin:0 auto;line-height:1.8}
+
+/* SECTIONS */
+section{padding:5rem 2rem}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--red-dim);border:1px solid rgba(239,68,68,0.3);border-radius:4px;padding:0.3rem 0.9rem;font-size:0.75rem;font-weight:700;color:var(--red);margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.06em;font-family:'Barlow Condensed',sans-serif}
+.section-title{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:900;color:var(--text);font-family:'Barlow Condensed',sans-serif;line-height:1.1}
+.section-title span{color:var(--red)}
+.section-sub{font-size:0.95rem;color:var(--text2);margin:0.6rem 0 0;max-width:560px;line-height:1.7}
+
+/* MISSION */
+#mission{background:var(--bg2)}
+.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.mission-img{border-radius:12px;overflow:hidden;border:2px solid var(--border2);aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--bg3),var(--bg4));box-shadow:var(--shadow2)}
+.mission-img img{width:75%;height:75%;object-fit:contain}
+.mission-text p{font-size:0.97rem;color:var(--text2);line-height:1.85;margin-bottom:1.25rem}
+.mission-text p:last-of-type{margin-bottom:1.75rem}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;padding:0.78rem 1.6rem;border-radius:6px;background:var(--red);color:#fff;font-size:0.9rem;font-weight:700;text-decoration:none;transition:all 0.2s;box-shadow:0 4px 16px rgba(239,68,68,0.3);font-family:'Barlow',sans-serif}
+.btn-primary:hover{background:var(--red2);transform:translateY(-1px)}
+
+/* STATS */
+#stats{background:var(--bg)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;max-width:1000px;margin:0 auto}
+.stat-card{border-left:3px solid rgba(239,68,68,0.3);padding-left:1.25rem;transition:all 0.3s}
+.stat-card:hover{border-left-color:var(--red);transform:translateX(5px)}
+.stat-num{font-size:3rem;font-weight:900;color:var(--red);font-family:'Barlow Condensed',sans-serif;line-height:1;margin-bottom:0.4rem}
+.stat-label{font-size:0.78rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.05em;line-height:1.4}
+
+/* WHO WE SERVE */
+#serve{background:var(--bg2)}
+.serve-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.serve-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r2);padding:1.5rem;transition:all 0.25s;box-shadow:var(--shadow);text-align:center}
+.serve-card:hover{border-color:var(--red);transform:translateY(-5px);box-shadow:var(--shadow2)}
+.serve-icon{font-size:2rem;margin-bottom:0.75rem;display:block}
+.serve-title{font-weight:800;color:var(--text);font-size:1rem;font-family:'Barlow',sans-serif;margin-bottom:0.3rem}
+.serve-desc{font-size:0.8rem;color:var(--text2);line-height:1.6}
+
+/* WHAT WE DO */
+#whatwedo{background:var(--bg)}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem}
+.svc-card{background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r2);padding:1.75rem;transition:all 0.25s;box-shadow:var(--shadow)}
+.svc-card:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:var(--shadow2)}
+.svc-card h3{font-size:1.15rem;font-weight:800;color:var(--text);margin-bottom:1rem;font-family:'Barlow',sans-serif;display:flex;align-items:center;gap:0.5rem}
+.svc-card ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.svc-card li{font-size:0.85rem;color:var(--text2);padding-left:1.1rem;position:relative}
+.svc-card li::before{content:'→';position:absolute;left:0;color:var(--red);font-weight:900;font-size:0.8rem}
+
+/* VALUES */
+#values{background:var(--bg2)}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
+.value-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r2);padding:1.75rem;transition:all 0.25s;box-shadow:var(--shadow)}
+.value-card:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:var(--shadow2)}
+.value-icon{width:48px;height:48px;border-radius:8px;background:var(--red-dim);border:1px solid rgba(239,68,68,0.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem}
+.value-card h3{font-weight:800;color:var(--text);font-size:1rem;margin-bottom:0.4rem;font-family:'Barlow',sans-serif}
+.value-card p{font-size:0.83rem;color:var(--text2);line-height:1.65}
+
+/* CTA */
+#cta{background:linear-gradient(160deg,#1a0a0a 0%,#2a1010 40%,#1F1F1F 100%);text-align:center;position:relative;overflow:hidden}
+#cta::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(239,68,68,0.1) 0%,transparent 70%);pointer-events:none}
+.cta-inner{max-width:620px;margin:0 auto;position:relative;z-index:1}
+.cta-logo{width:72px;height:72px;border-radius:12px;margin:0 auto 1.5rem;overflow:hidden;border:2px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center}
+.cta-logo img{width:65%;height:65%;object-fit:contain}
+.cta-inner h2{font-size:clamp(2rem,4vw,3rem);font-weight:900;color:var(--text);font-family:'Barlow Condensed',sans-serif;line-height:1.1;margin-bottom:0.75rem}
+.cta-inner h2 span{color:var(--red)}
+.cta-inner p{font-size:0.95rem;color:var(--text2);margin-bottom:2rem;line-height:1.75}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-white{padding:0.9rem 2rem;border-radius:6px;background:var(--text);color:#1F1F1F;font-size:0.92rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:0.5rem;transition:all 0.25s;font-family:'Barlow',sans-serif}
+.btn-white:hover{background:#fff;transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:0.78rem;color:var(--text3)}
+.fsoc{width:34px;height:34px;border-radius:6px;background:var(--bg3);border:1px solid var(--border2);color:var(--text2);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:0.85rem;transition:all 0.2s}
+.fsoc:hover{border-color:var(--red);color:var(--red)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .serve-grid{grid-template-columns:repeat(2,1fr)}
+  .values-grid{grid-template-columns:repeat(2,1fr)}
+  .mission-grid{grid-template-columns:1fr;gap:2rem}
+  .mission-img{max-width:340px;margin:0 auto}
+}
+@media(max-width:768px){
+  nav{padding:0 1rem;height:60px}
+  .nav-links,.nav-right{display:none}
+  .hamburger{display:flex}
+  .mobile-menu{top:60px}
+  .nav-logo img{height:34px}
+  .nav-logo-text{font-size:0.85rem}
+  section{padding:3.5rem 1.2rem}
+  .hero{padding:5.5rem 1.5rem 3.5rem}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}
+  .serve-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr}
+  .cta-btns{flex-direction:column;align-items:center}
+  .btn-white,.btn-primary{width:100%;max-width:320px;justify-content:center}
+}
+@media(max-width:480px){
+  .serve-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
+      <span class="nav-logo-text">Contractor Arsenal</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="apply.html" class="nav-btn-primary">Apply Now ↗</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">🏠 Home</a>
+  <a href="about.html" onclick="closeMenu()">ℹ️ About</a>
+  <a href="apply.html" onclick="closeMenu()">📋 Apply Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner reveal">
+    <div class="hero-badge">⚡ Our Story</div>
+    <h1>Built for Contractors<br><span>Who Want to Win</span></h1>
+    <p>Contractor Arsenal was built because too many good tradespeople were losing jobs to competitors with better-looking websites. We fix that. We understand the trades, we know what converts, and we build sites that work.</p>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="section-inner">
+    <div class="mission-grid">
+      <div class="reveal">
+        <div class="mission-img">
+          <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:0.15s">
+        <div class="section-badge">Our Mission</div>
+        <h2 class="section-title">We Help Contractors <span>Dominate</span> Their Local Market</h2>
+        <div class="mission-text" style="margin-top:1.25rem">
+          <p>Our mission is simple: build contractor websites that generate real leads and real revenue. Not pretty templates that sit idle   but active, ranking, converting machines that work while you're on the job site.</p>
+          <p>We've worked with painters, roofers, landscapers, and remodelers across the country. We know what homeowners search for, what makes them call, and what makes them bounce. Every decision we make is built around that knowledge.</p>
+          <a href="apply.html" class="btn-primary">Apply Now   60 Seconds →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="section-inner" style="text-align:center">
+    <div class="reveal">
+      <div class="section-badge" style="display:inline-flex">By the Numbers</div>
+      <h2 class="section-title" style="text-align:center;margin-top:0.5rem">Proven <span>Results</span></h2>
+    </div>
+    <div class="stats-grid reveal" style="transition-delay:0.1s;margin-top:3rem">
+      <div class="stat-card">
+        <div class="stat-num">$850K+</div>
+        <div class="stat-label">Revenue generated for clients</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">50+</div>
+        <div class="stat-label">Active contractor sites</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">48hrs</div>
+        <div class="stat-label">Average launch time</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">8.4x</div>
+        <div class="stat-label">Average return on investment</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section id="serve">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-badge" style="display:inline-flex">Industries</div>
+      <h2 class="section-title" style="text-align:center;margin-top:0.5rem">Who We <span>Serve</span></h2>
+      <p style="font-size:0.95rem;color:var(--text2);text-align:center;margin:0.6rem auto 0;max-width:480px">We build for contractors who are serious about growth. If you're in the trades and want more inbound leads, we can help.</p>
+    </div>
+    <div class="serve-grid reveal" style="transition-delay:0.1s">
+      <div class="serve-card">
+        <span class="serve-icon">🎨</span>
+        <div class="serve-title">Painters</div>
+        <div class="serve-desc">Interior, exterior, cabinet refinishing. We know the painting industry inside out.</div>
+      </div>
+      <div class="serve-card">
+        <span class="serve-icon">🏠</span>
+        <div class="serve-title">Roofers</div>
+        <div class="serve-desc">Storm damage pages, insurance claims info, and financing pages that convert.</div>
+      </div>
+      <div class="serve-card">
+        <span class="serve-icon">🌿</span>
+        <div class="serve-title">Landscapers</div>
+        <div class="serve-desc">Seasonal service pages, lawn care, hardscaping   built to rank year-round.</div>
+      </div>
+      <div class="serve-card">
+        <span class="serve-icon">🔨</span>
+        <div class="serve-title">Remodelers</div>
+        <div class="serve-desc">Kitchen, bath, whole-home remodeling sites with before/after galleries and forms.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section id="whatwedo">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-badge" style="display:inline-flex">Services</div>
+      <h2 class="section-title" style="text-align:center;margin-top:0.5rem">What We <span>Build</span></h2>
+      <p style="font-size:0.95rem;color:var(--text2);text-align:center;margin:0.6rem auto 0;max-width:500px">Every site we build is purpose-built to rank locally and turn visitors into calls and quote requests.</p>
+    </div>
+    <div class="services-grid reveal" style="transition-delay:0.1s">
+      <div class="svc-card">
+        <h3>🎨 Website Design &amp; Development</h3>
+        <ul>
+          <li>Custom contractor-specific design   no templates</li>
+          <li>Mobile-first, fast-loading layouts</li>
+          <li>Professional copywriting that sells your services</li>
+          <li>Before/after photo galleries and video support</li>
+          <li>48-72 hour launch with 30 days of free edits</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <h3>🔍 Local SEO Setup</h3>
+        <ul>
+          <li>On-page SEO: titles, meta, schema markup</li>
+          <li>Google Business Profile integration</li>
+          <li>Service area pages for multiple cities</li>
+          <li>Sitemap creation and Google Search Console setup</li>
+          <li>Review widget integration to show social proof</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <h3>📞 Lead Generation</h3>
+        <ul>
+          <li>Quote request forms routed to your email + SMS</li>
+          <li>Click-to-call buttons on every page</li>
+          <li>Sticky contact bar on mobile</li>
+          <li>GA4 + Google Search Console analytics setup</li>
+          <li>SSL certificate and secure hosting guidance</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <h3>⚙️ Ongoing Support</h3>
+        <ul>
+          <li>Unlimited edits during your 30-day launch window</li>
+          <li>Post-launch update packages available</li>
+          <li>Hosting recommendations (you own everything)</li>
+          <li>Domain setup assistance</li>
+          <li>Fast response time   we don't ghost clients</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section id="values">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-badge" style="display:inline-flex">How We Work</div>
+      <h2 class="section-title" style="text-align:center;margin-top:0.5rem">Our <span>Principles</span></h2>
+    </div>
+    <div class="values-grid reveal" style="transition-delay:0.1s">
+      <div class="value-card">
+        <div class="value-icon">🎯</div>
+        <h3>Results Over Aesthetics</h3>
+        <p>A beautiful site that doesn't rank or convert is worthless. We build for leads first, looks second   and we're good at both.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">💬</div>
+        <h3>Honest Communication</h3>
+        <p>If you're not a good fit, we'll tell you upfront. No overselling, no guarantees we can't keep. Just straight talk.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <h3>Speed Without Shortcuts</h3>
+        <p>48-72 hour launches don't mean sloppy work. It means we're efficient, experienced, and don't waste your time.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔑</div>
+        <h3>You Own Everything</h3>
+        <p>Your domain, your hosting, your site. We don't lock you into proprietary platforms or monthly fees for basic stuff.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🏗</div>
+        <h3>Contractor-First Thinking</h3>
+        <p>We understand the trades. We know how homeowners search, what makes them trust you, and what makes them call.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📈</div>
+        <h3>Long-Term Partnership</h3>
+        <p>We're not a one-and-done service. We want to be the team you call when your business needs to level up online.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="section-inner">
+    <div class="cta-inner reveal">
+      <div class="cta-logo">
+        <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
+      </div>
+      <h2>Ready to Get <span>More Calls?</span></h2>
+      <p>Stop losing jobs to competitors with better websites. Apply in 60 seconds   if you're not a fit, we'll tell you upfront.</p>
+      <div class="cta-btns">
+        <a href="apply.html" class="btn-primary">Apply Now   60 Seconds →</a>
+        <a href="index.html" class="btn-white">&#8592; Back to Home</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2025 Contractor Arsenal. All rights reserved.</span>
+    <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener" class="fsoc" title="Instagram">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FFDC80"/><stop offset="30%" stop-color="#F77737"/><stop offset="60%" stop-color="#C13584"/><stop offset="100%" stop-color="#515BD4"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5.5" fill="url(#ig)"/><circle cx="12" cy="12" r="4.2" stroke="#fff" stroke-width="1.8" fill="none"/><circle cx="17.2" cy="6.8" r="1.1" fill="#fff"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  var m=document.getElementById('mobileMenu'),b=document.getElementById('hamburger');
+  var o=m.classList.contains('open');
+  m.classList.toggle('open',!o);b.classList.toggle('open',!o);
+  document.body.style.overflow=o?'':'hidden';
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow='';
+}
+var io = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      var siblings = Array.from(e.target.parentElement.querySelectorAll('.reveal'));
+      setTimeout(function() { e.target.classList.add('in'); }, Math.min(siblings.indexOf(e.target) * 90, 300));
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold:0.08});
+document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+</script>
+</body>
+</html>

@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply Now | Contractor Arsenal   Websites That Win You More Jobs</title>
+<meta name="description" content="Apply for a Contractor Arsenal website. Fill out the form, pick your budget, and we'll launch your lead-generating site in 48-72 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Barlow+Condensed:wght@600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#111113;
+  --bg2:#18181b;
+  --bg3:#1e1e22;
+  --bg4:#26262c;
+  --bg5:#2e2e35;
+  --border:rgba(255,255,255,0.07);
+  --border2:rgba(255,255,255,0.14);
+  --border3:rgba(255,255,255,0.22);
+  --red:#EF4444;
+  --red2:#DC2626;
+  --red3:#F87171;
+  --red-dim:rgba(239,68,68,0.1);
+  --red-glow:rgba(239,68,68,0.25);
+  --gold:#F59E0B;
+  --gold2:#FBBF24;
+  --gold-dim:rgba(245,158,11,0.1);
+  --green:#10B981;
+  --text:#F0F0F2;
+  --text2:#A8A8B3;
+  --text3:#66666e;
+  --text4:#3a3a42;
+  --r:8px;--r2:14px;--r3:20px;
+}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:4px}
+
+/* NOISE OVERLAY */
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity:0.35;
+}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(17,17,19,0.92);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  height:68px;display:flex;align-items:center;padding:0 2rem;
+}
+.nav-inner{max-width:1100px;margin:0 auto;width:100%;display:flex;align-items:center;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;flex-shrink:0}
+.nav-logo img{height:38px;width:auto}
+.nav-logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.05rem;color:var(--text);letter-spacing:0.04em}
+.nav-links{display:flex;gap:0;list-style:none;margin-left:0.5rem}
+.nav-links a{padding:0.5rem 1rem;font-size:0.85rem;color:var(--text3);text-decoration:none;font-weight:700;transition:color 0.2s;font-family:'Barlow Condensed',sans-serif;letter-spacing:0.04em;text-transform:uppercase}
+.nav-links a:hover{color:var(--text)}
+.nav-right{margin-left:auto}
+.nav-cta{
+  padding:0.5rem 1.2rem;border-radius:6px;
+  background:var(--red);color:#fff;
+  font-size:0.8rem;font-weight:800;
+  text-decoration:none;
+  font-family:'Barlow Condensed',sans-serif;
+  letter-spacing:0.06em;text-transform:uppercase;
+  transition:all 0.2s;
+  box-shadow:0 0 0 0 var(--red-glow);
+}
+.nav-cta:hover{background:var(--red2);box-shadow:0 0 20px var(--red-glow)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin-left:auto;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;bottom:0;background:rgba(17,17,19,0.99);z-index:99;flex-direction:column;padding:2rem 1.5rem;gap:0}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:1.1rem 0;font-size:1.1rem;font-weight:700;color:var(--text2);text-decoration:none;border-bottom:1px solid var(--border);font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:0.05em}
+.mobile-menu a:hover{color:var(--red)}
+
+/* HERO */
+.hero{
+  position:relative;overflow:hidden;
+  padding:5rem 2rem 3rem;
+  background:radial-gradient(ellipse 900px 500px at 50% -100px, rgba(239,68,68,0.12) 0%, transparent 70%), var(--bg);
+  text-align:center;
+}
+.hero-ticker{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  background:rgba(239,68,68,0.08);
+  border:1px solid rgba(239,68,68,0.25);
+  border-radius:3px;
+  padding:0.3rem 1rem;
+  font-size:0.7rem;font-weight:800;
+  color:var(--red);
+  text-transform:uppercase;letter-spacing:0.1em;
+  font-family:'Barlow Condensed',sans-serif;
+  margin-bottom:1.5rem;
+}
+.ticker-dot{width:6px;height:6px;border-radius:50%;background:var(--red);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.8)}}
+.hero h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(3.5rem,9vw,7rem);
+  line-height:0.95;
+  letter-spacing:0.02em;
+  color:var(--text);
+  margin-bottom:1.25rem;
+}
+.hero h1 .line2{
+  color:var(--red);
+  -webkit-text-stroke:2px var(--red);
+  display:block;
+}
+.hero-sub{
+  font-size:1rem;color:var(--text2);
+  max-width:520px;margin:0 auto 2rem;
+  line-height:1.8;
+}
+.hero-sub strong{color:var(--text);font-weight:700}
+.hero-chips{display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap}
+.hero-chip{
+  display:flex;align-items:center;gap:0.4rem;
+  padding:0.35rem 0.85rem;
+  border-radius:4px;
+  background:var(--bg3);
+  border:1px solid var(--border2);
+  font-size:0.75rem;font-weight:700;
+  color:var(--text2);
+  font-family:'Barlow Condensed',sans-serif;
+  letter-spacing:0.04em;
+}
+.hero-chip .dot{width:5px;height:5px;border-radius:50%;background:var(--green)}
+
+/* MAIN LAYOUT */
+.main-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem 6rem;display:grid;grid-template-columns:1fr 440px;gap:3.5rem;align-items:start}
+
+/* FORM CARD */
+.form-card{
+  background:var(--bg2);
+  border:1.5px solid var(--border2);
+  border-radius:var(--r3);
+  overflow:hidden;
+  box-shadow:0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+  position:sticky;top:88px;
+}
+.form-card-header{
+  padding:2rem 2rem 1.5rem;
+  border-bottom:1px solid var(--border);
+  background:linear-gradient(135deg, var(--bg3), var(--bg2));
+}
+.form-step-indicator{
+  display:flex;align-items:center;gap:0.5rem;
+  margin-bottom:1.2rem;
+}
+.step-dot{
+  width:28px;height:28px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.7rem;font-weight:900;
+  font-family:'Barlow Condensed',sans-serif;
+  border:2px solid var(--border2);
+  color:var(--text3);
+  transition:all 0.3s;
+}
+.step-dot.active{background:var(--red);border-color:var(--red);color:#fff;box-shadow:0 0 12px var(--red-glow)}
+.step-dot.done{background:var(--green);border-color:var(--green);color:#fff}
+.step-line{flex:1;height:1px;background:var(--border2)}
+.form-card-title{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:900;color:var(--text);letter-spacing:0.02em}
+.form-card-sub{font-size:0.82rem;color:var(--text3);margin-top:0.3rem}
+.form-body{padding:1.75rem 2rem 2rem}
+
+/* FORM FIELDS */
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-row.solo{grid-template-columns:1fr}
+.form-field{display:flex;flex-direction:column;gap:0.4rem}
+.form-label{
+  font-size:0.68rem;font-weight:800;
+  color:var(--text3);
+  text-transform:uppercase;letter-spacing:0.08em;
+  font-family:'Barlow Condensed',sans-serif;
+}
+.form-input{
+  background:var(--bg3);
+  border:1.5px solid var(--border2);
+  border-radius:var(--r);
+  padding:0.7rem 0.95rem;
+  font-size:0.88rem;color:var(--text);
+  outline:none;
+  font-family:'Barlow',sans-serif;
+  transition:border 0.2s,box-shadow 0.2s;
+  width:100%;
+}
+.form-input::placeholder{color:var(--text4)}
+.form-input:focus{
+  border-color:var(--red);
+  box-shadow:0 0 0 3px rgba(239,68,68,0.1);
+  background:var(--bg4);
+}
+select.form-input{
+  -webkit-appearance:none;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath stroke='%2366666e' stroke-width='1.5' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 1rem center;
+  cursor:pointer;
+}
+select.form-input option{background:var(--bg3);color:var(--text)}
+textarea.form-input{resize:vertical;min-height:80px;line-height:1.6}
+
+/* DIVIDER */
+.form-divider{
+  display:flex;align-items:center;gap:0.75rem;
+  margin:1.5rem 0 1.25rem;
+}
+.form-divider span{
+  font-size:0.68rem;font-weight:800;
+  color:var(--text3);text-transform:uppercase;
+  letter-spacing:0.08em;font-family:'Barlow Condensed',sans-serif;
+  white-space:nowrap;
+}
+.form-divider::before,.form-divider::after{
+  content:'';flex:1;height:1px;background:var(--border2);
+}
+
+/* BUDGET SLIDER */
+.budget-section{margin-bottom:1.25rem}
+.budget-display{
+  display:flex;align-items:baseline;gap:0.5rem;margin-bottom:1rem;
+}
+.budget-amount{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:3.5rem;line-height:1;
+  color:var(--text);
+  transition:color 0.3s;
+}
+.budget-period{font-size:0.8rem;color:var(--text3);font-weight:700;padding-bottom:0.3rem}
+
+/* Payment toggle */
+.payment-toggle{
+  display:inline-flex;
+  background:var(--bg3);
+  border:1px solid var(--border2);
+  border-radius:6px;
+  padding:3px;
+  margin-bottom:1.25rem;
+  gap:2px;
+}
+.toggle-btn{
+  padding:0.4rem 1rem;
+  border-radius:4px;
+  font-size:0.75rem;font-weight:800;
+  font-family:'Barlow Condensed',sans-serif;
+  letter-spacing:0.06em;text-transform:uppercase;
+  cursor:pointer;border:none;
+  background:transparent;color:var(--text3);
+  transition:all 0.2s;
+}
+.toggle-btn.active{
+  background:var(--red);color:#fff;
+  box-shadow:0 2px 8px rgba(239,68,68,0.3);
+}
+
+/* Slider */
+.slider-wrap{position:relative;padding-bottom:1.75rem}
+.slider-track{
+  width:100%;height:6px;
+  border-radius:3px;
+  -webkit-appearance:none;appearance:none;
+  background:var(--bg4);
+  cursor:pointer;outline:none;
+}
+.slider-track::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width:22px;height:22px;border-radius:50%;
+  background:var(--red);
+  border:3px solid var(--bg2);
+  box-shadow:0 0 0 2px var(--red),0 4px 12px rgba(239,68,68,0.4);
+  cursor:pointer;
+  transition:transform 0.15s,box-shadow 0.15s;
+}
+.slider-track::-webkit-slider-thumb:hover{
+  transform:scale(1.15);
+  box-shadow:0 0 0 3px var(--red),0 4px 16px rgba(239,68,68,0.5);
+}
+.slider-track::-moz-range-thumb{
+  width:22px;height:22px;border-radius:50%;
+  background:var(--red);
+  border:3px solid var(--bg2);
+  box-shadow:0 0 0 2px var(--red);
+  cursor:pointer;
+}
+.slider-labels{
+  display:flex;justify-content:space-between;
+  margin-top:0.6rem;
+}
+.slider-label{font-size:0.65rem;font-weight:700;color:var(--text4);font-family:'Barlow Condensed',sans-serif;letter-spacing:0.04em}
+
+/* Plan hint */
+.plan-hint{
+  display:flex;align-items:flex-start;gap:0.65rem;
+  padding:0.9rem 1rem;
+  background:var(--bg3);
+  border:1px solid var(--border2);
+  border-radius:var(--r);
+  margin-top:1rem;
+  transition:all 0.3s;
+}
+.plan-hint-icon{font-size:1.2rem;flex-shrink:0;margin-top:1px}
+.plan-hint-name{font-weight:900;font-size:0.9rem;color:var(--text);font-family:'Barlow',sans-serif}
+.plan-hint-desc{font-size:0.78rem;color:var(--text2);margin-top:0.15rem;line-height:1.5}
+.plan-hint-price{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:900;color:var(--red);margin-left:auto;flex-shrink:0;padding-left:0.75rem;align-self:center}
+
+/* SUBMIT */
+.btn-submit{
+  width:100%;padding:1rem;
+  border-radius:var(--r);
+  background:var(--red);color:#fff;
+  font-size:0.95rem;font-weight:900;
+  font-family:'Barlow Condensed',sans-serif;
+  letter-spacing:0.07em;text-transform:uppercase;
+  border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:0.6rem;
+  transition:all 0.25s;
+  margin-top:1.5rem;
+  box-shadow:0 4px 16px rgba(239,68,68,0.3);
+  position:relative;overflow:hidden;
+}
+.btn-submit::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);
+  transform:translateX(-100%);
+  transition:transform 0.4s;
+}
+.btn-submit:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(239,68,68,0.45)}
+.btn-submit:hover::before{transform:translateX(100%)}
+.btn-submit:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.btn-submit:active{transform:translateY(0)}
+.btn-submit .arrow{transition:transform 0.2s}
+.btn-submit:hover .arrow{transform:translateX(4px)}
+.submit-note{display:flex;align-items:center;justify-content:center;gap:0.4rem;font-size:0.72rem;color:var(--text3);margin-top:0.75rem}
+
+/* SUCCESS STATE */
+.form-success{
+  display:none;text-align:center;padding:3rem 2rem;
+}
+.form-success.visible{display:block}
+.success-icon{
+  width:64px;height:64px;border-radius:50%;
+  background:rgba(16,185,129,0.12);border:2px solid var(--green);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;margin:0 auto 1.5rem;
+  animation:popIn 0.5s cubic-bezier(0.175,0.885,0.32,1.275);
+}
+@keyframes popIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.success-title{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:900;color:var(--green);margin-bottom:0.5rem}
+.success-body{font-size:0.9rem;color:var(--text2);line-height:1.7;max-width:340px;margin:0 auto}
+
+/* LEFT PANEL */
+/* Trust bar */
+.trust-bar{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--r2);overflow:hidden;margin-bottom:2.5rem;
+}
+.trust-item{
+  padding:1.25rem 1rem;text-align:center;
+  border-right:1px solid var(--border);
+  transition:background 0.2s;
+}
+.trust-item:last-child{border-right:none}
+.trust-item:hover{background:var(--bg3)}
+.trust-num{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:2.2rem;line-height:1;color:var(--red);
+}
+.trust-label{font-size:0.65rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;margin-top:0.3rem}
+
+/* What to expect */
+.panel-section{margin-bottom:2.5rem}
+.panel-label{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:0.7rem;font-weight:900;
+  color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;
+  display:flex;align-items:center;gap:0.5rem;margin-bottom:1.25rem;
+}
+.panel-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* Timeline */
+.timeline{display:flex;flex-direction:column;gap:0}
+.timeline-item{
+  display:grid;grid-template-columns:28px 1fr;gap:0.85rem;
+  position:relative;padding-bottom:1.5rem;
+}
+.timeline-item:last-child{padding-bottom:0}
+.tl-dot{
+  width:28px;height:28px;border-radius:50%;
+  background:var(--bg3);border:2px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.7rem;font-weight:900;color:var(--text3);
+  flex-shrink:0;position:relative;z-index:1;
+  font-family:'Barlow Condensed',sans-serif;
+  transition:all 0.3s;
+}
+.timeline-item:hover .tl-dot{border-color:var(--red);color:var(--red)}
+.timeline-item:not(:last-child) .tl-dot::after{
+  content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);
+  width:1px;height:calc(100% + 1.25rem + 4px);
+  background:linear-gradient(to bottom,var(--border2),transparent);
+}
+.tl-content{padding-top:3px}
+.tl-title{font-weight:800;font-size:0.9rem;color:var(--text);margin-bottom:0.2rem}
+.tl-desc{font-size:0.78rem;color:var(--text2);line-height:1.5}
+
+/* What's included */
+.includes-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem}
+.include-item{
+  display:flex;align-items:flex-start;gap:0.6rem;
+  padding:0.75rem;
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--r);transition:all 0.2s;
+}
+.include-item:hover{border-color:rgba(239,68,68,0.3);background:var(--red-dim)}
+.include-icon{font-size:1rem;flex-shrink:0;margin-top:1px}
+.include-text{font-size:0.78rem;font-weight:700;color:var(--text2);line-height:1.4}
+
+/* Testimonial */
+.testimonial-card{
+  background:var(--bg2);
+  border:1px solid var(--border2);
+  border-radius:var(--r2);
+  padding:1.5rem;
+  position:relative;
+  overflow:hidden;
+}
+.testimonial-card::before{
+  content:'"';
+  position:absolute;top:-0.5rem;left:1rem;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:6rem;line-height:1;
+  color:rgba(239,68,68,0.07);
+  pointer-events:none;
+}
+.testimonial-stars{color:var(--gold2);font-size:0.9rem;margin-bottom:0.75rem;letter-spacing:2px}
+.testimonial-text{font-size:0.88rem;color:var(--text2);line-height:1.7;font-style:italic;margin-bottom:1rem}
+.testimonial-author{display:flex;align-items:center;gap:0.75rem}
+.testimonial-avatar{
+  width:36px;height:36px;border-radius:50%;
+  background:linear-gradient(135deg,var(--red),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.8rem;font-weight:900;color:#fff;
+  font-family:'Barlow Condensed',sans-serif;
+  flex-shrink:0;
+}
+.testimonial-name{font-size:0.82rem;font-weight:800;color:var(--text)}
+.testimonial-role{font-size:0.72rem;color:var(--text3)}
+
+/* FAQ compact */
+.faq-list{display:flex;flex-direction:column;gap:0.5rem}
+.faq-item{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--r);overflow:hidden;
+}
+.faq-q{
+  width:100%;padding:0.9rem 1rem;
+  display:flex;justify-content:space-between;align-items:center;
+  background:none;border:none;cursor:pointer;
+  font-size:0.82rem;font-weight:700;color:var(--text2);
+  font-family:'Barlow',sans-serif;text-align:left;
+  transition:color 0.2s;
+}
+.faq-q:hover{color:var(--text)}
+.faq-chevron{font-size:0.7rem;color:var(--text3);transition:transform 0.25s;flex-shrink:0}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height 0.3s ease,padding 0.3s;
+  font-size:0.8rem;color:var(--text2);line-height:1.65;
+  padding:0 1rem;
+}
+.faq-item.open .faq-a{max-height:200px;padding:0 1rem 1rem}
+
+/* FOOTER */
+footer{
+  background:var(--bg2);
+  border-top:1px solid var(--border);
+  padding:1.75rem 2rem;
+}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:0.75rem;color:var(--text3)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:0.75rem;color:var(--text3);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--red)}
+.footer-social{display:flex;gap:0.5rem}
+.fsoc{width:32px;height:32px;border-radius:6px;background:var(--bg3);border:1px solid var(--border2);color:var(--text3);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:0.85rem;transition:all 0.2s}
+.fsoc:hover{border-color:var(--red);color:var(--red)}
+
+/* ANIMATIONS */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .main-wrap{grid-template-columns:1fr;gap:2rem}
+  .form-card{position:static}
+  .left-panel{order:1}
+  .form-card{order:-1}
+}
+@media(max-width:640px){
+  nav{padding:0 1rem;height:60px}
+  .nav-links,.nav-right{display:none}
+  .hamburger{display:flex}
+  .mobile-menu{top:60px}
+  .hero{padding:4rem 1.5rem 2.5rem}
+  .hero h1{font-size:clamp(3rem,12vw,5rem)}
+  .main-wrap{padding:2rem 1rem 4rem}
+  .form-row{grid-template-columns:1fr}
+  .form-body{padding:1.5rem 1.25rem}
+  .form-card-header{padding:1.5rem 1.25rem 1.25rem}
+  .includes-grid{grid-template-columns:1fr}
+  .trust-bar{grid-template-columns:repeat(3,1fr)}
+  .trust-num{font-size:1.6rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
+      <span class="nav-logo-text">Contractor Arsenal</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="apply.html" class="nav-cta">Apply Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="apply.html" onclick="closeMenu()">Apply Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-ticker">
+    <span class="ticker-dot"></span>
+    Now Accepting Applications   Limited Spots Per Month
+  </div>
+  <h1>Get Your<br><span class="line2">Site. Win Jobs.</span></h1>
+  <p class="hero-sub">
+    Tell us about your business. We'll build you a <strong>lead machine</strong> that works 24/7   launched in <strong>48-72 hours</strong>.
+  </p>
+  <div class="hero-chips">
+    <div class="hero-chip"><span class="dot"></span> 60-Second Form</div>
+    <div class="hero-chip"><span class="dot"></span> No Fluff. Real Results.</div>
+    <div class="hero-chip"><span class="dot"></span> 48-Hour Launch</div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="main-wrap">
+
+  <!-- LEFT: SOCIAL PROOF + INFO -->
+  <div class="left-panel">
+
+    <!-- Trust bar -->
+    <div class="trust-bar reveal">
+      <div class="trust-item">
+        <div class="trust-num">50+</div>
+        <div class="trust-label">Active Sites</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num">48h</div>
+        <div class="trust-label">Avg Launch</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num">8.4x</div>
+        <div class="trust-label">Avg ROI</div>
+      </div>
+    </div>
+
+    <!-- What to expect -->
+    <div class="panel-section reveal" style="transition-delay:0.1s">
+      <div class="panel-label">What Happens Next</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="tl-dot">1</div>
+          <div class="tl-content">
+            <div class="tl-title">You Submit</div>
+            <div class="tl-desc">Takes 60 seconds. We review every application personally   no bots.</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-dot">2</div>
+          <div class="tl-content">
+            <div class="tl-title">We Reach Out Within 24 Hours</div>
+            <div class="tl-desc">Quick call to confirm fit, gather brand assets, lock in your vision.</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-dot">3</div>
+          <div class="tl-content">
+            <div class="tl-title">Build Begins Immediately</div>
+            <div class="tl-desc">We write, design, and build. You don't lift a finger.</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-dot">4</div>
+          <div class="tl-content">
+            <div class="tl-title">Live in 48-72 Hours</div>
+            <div class="tl-desc">Your site goes live, SEO-ready, lead capture on, phone ringing.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- What's included -->
+    <div class="panel-section reveal" style="transition-delay:0.15s">
+      <div class="panel-label">Every Site Includes</div>
+      <div class="includes-grid">
+        <div class="include-item">
+          <div class="include-icon">🎨</div>
+          <div class="include-text">Custom Design &amp; Copywriting</div>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">🔍</div>
+          <div class="include-text">Full Local SEO Setup</div>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">📱</div>
+          <div class="include-text">Mobile-First Responsive</div>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">📞</div>
+          <div class="include-text">Lead Forms + Click-to-Call</div>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">📍</div>
+          <div class="include-text">Google Business Integration</div>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">⚡</div>
+          <div class="include-text">30 Days Free Edits</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial -->
+    <div class="panel-section reveal" style="transition-delay:0.2s">
+      <div class="panel-label">From a Contractor</div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"I was skeptical   had a bad experience with web guys before. These guys launched my site in two days and I got my first lead the same week. Phone doesn't stop now."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MR</div>
+          <div>
+            <div class="testimonial-name">Mike R.</div>
+            <div class="testimonial-role">Roofing Contractor   Charlotte, NC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="panel-section reveal" style="transition-delay:0.25s">
+      <div class="panel-label">Quick FAQ</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Do I need to provide anything?
+            <span class="faq-chevron">&#9660;</span>
+          </button>
+          <div class="faq-a">Just your logo (if you have one), a couple photos, and 15 minutes on a call. We handle everything else   writing, design, and launch.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What if I already have a website?
+            <span class="faq-chevron">&#9660;</span>
+          </button>
+          <div class="faq-a">We can rebuild it from scratch or start fresh. Most contractors who come to us have a site that doesn't generate leads   we fix that.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Can I pay monthly instead of upfront?
+            <span class="faq-chevron">&#9660;</span>
+          </button>
+          <div class="faq-a">Yes   use the payment toggle on the form to see monthly options. We offer flexible plans so you can get started without a big upfront cost.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Do I own the site?
+            <span class="faq-chevron">&#9660;</span>
+          </button>
+          <div class="faq-a">100%. You own everything   domain, hosting, code. We're not holding you hostage. It's your business, your asset.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /left-panel -->
+
+  <!-- RIGHT: FORM -->
+  <div class="form-card reveal">
+    <div class="form-card-header">
+      <div class="form-step-indicator">
+        <div class="step-dot active" id="step1dot">1</div>
+        <div class="step-line"></div>
+        <div class="step-dot" id="step2dot">2</div>
+        <div class="step-line"></div>
+        <div class="step-dot" id="step3dot">3</div>
+      </div>
+      <div class="form-card-title">Let's Get You Built</div>
+      <div class="form-card-sub">Takes 60 seconds. We'll review and reach out within 24 hours.</div>
+    </div>
+
+    <div class="form-body">
+      <div id="formBody">
+        <form id="applyForm">
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="name">Your Name *</label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="business">Business Name *</label>
+              <input class="form-input" type="text" id="business" name="business" placeholder="Smith Roofing Co." required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="phone">Phone Number *</label>
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required autocomplete="tel">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="email">Email Address *</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="john@smithroofing.com" required autocomplete="email">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="trade">Your Trade *</label>
+              <select class="form-input" id="trade" name="trade" required>
+                <option value="" disabled selected>Select your trade...</option>
+                <option value="Painting">Painting</option>
+                <option value="Roofing">Roofing</option>
+                <option value="Landscaping">Landscaping</option>
+                <option value="Remodeling">Remodeling</option>
+                <option value="HVAC">HVAC</option>
+                <option value="Plumbing">Plumbing</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Concrete">Concrete</option>
+                <option value="Fencing">Fencing</option>
+                <option value="Cleaning">Cleaning</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="location">Service Area *</label>
+              <input class="form-input" type="text" id="location" name="location" placeholder="Charlotte, NC" required>
+            </div>
+          </div>
+          <div class="form-row solo">
+            <div class="form-field">
+              <label class="form-label" for="message">Tell us about your business</label>
+              <textarea class="form-input" id="message" name="message" placeholder="Current situation, goals, what you're struggling with..."></textarea>
+            </div>
+          </div>
+
+          <!-- BUDGET SECTION -->
+          <div class="form-divider">
+            <span>Your Budget</span>
+          </div>
+
+          <div class="budget-section">
+            <div class="payment-toggle">
+              <button type="button" class="toggle-btn active" id="btnOneTime" onclick="setPaymentType('onetime')">One-Time</button>
+              <button type="button" class="toggle-btn" id="btnMonthly" onclick="setPaymentType('monthly')">Monthly</button>
+            </div>
+
+            <div class="budget-display">
+              <div class="budget-amount" id="budgetDisplay">$2,500</div>
+              <div class="budget-period" id="budgetPeriod">one-time</div>
+            </div>
+
+            <div class="slider-wrap">
+              <input type="range" class="slider-track" id="budgetSlider"
+                min="0" max="4" step="1" value="1"
+                oninput="updateBudget()"
+                style="background:linear-gradient(to right,#EF4444 0%,#EF4444 25%,#26262c 25%,#26262c 100%)">
+              <div class="slider-labels">
+                <span class="slider-label" id="slabel0">$1,500</span>
+                <span class="slider-label" id="slabel1">$2,500</span>
+                <span class="slider-label" id="slabel2">$3,500</span>
+                <span class="slider-label" id="slabel3">$5,000</span>
+                <span class="slider-label" id="slabel4">Custom</span>
+              </div>
+            </div>
+
+            <div class="plan-hint" id="planHint">
+              <div class="plan-hint-icon" id="planIcon">🚀</div>
+              <div>
+                <div class="plan-hint-name" id="planName">Essential Site</div>
+                <div class="plan-hint-desc" id="planDesc">5 custom pages, full SEO, lead forms, Google Business. Perfect for solo operators.</div>
+              </div>
+              <div class="plan-hint-price" id="planPrice">$2,500</div>
+            </div>
+
+            <input type="hidden" id="budgetInput" name="budget" value="$2,500 one-time">
+            <input type="hidden" id="paymentTypeInput" name="payment_type" value="one-time">
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            Submit My Application
+            <svg class="arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <div class="submit-note">
+            <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            No spam. No pressure. We'll reach out within 24 hours.
+          </div>
+        </form>
+      </div>
+
+      <!-- Success state -->
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">&#10003;</div>
+        <div class="success-title">You're In.</div>
+        <p class="success-body">Application received. We'll review it personally and reach out within 24 hours. Check your email and phone   this could be the best call you take all week.</p>
+      </div>
+    </div>
+  </div><!-- /form-card -->
+
+</div><!-- /main-wrap -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2025 Contractor Arsenal. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener" class="fsoc" title="Instagram">
+        <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// MOBILE MENU
+function toggleMenu(){
+  document.getElementById('hamburger').classList.toggle('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// BUDGET DATA
+var plans = {
+  onetime: [
+    { label:'$1,500', amount:'$1,500', name:'Starter Site', desc:'3 pages, mobile-responsive, basic SEO. Get online fast.', icon:'⚡', price:'$1,500' },
+    { label:'$2,500', amount:'$2,500', name:'Essential Site', desc:'5 custom pages, full SEO, lead forms, Google Business. Perfect for solo operators.', icon:'🚀', price:'$2,500' },
+    { label:'$3,500', amount:'$3,500', name:'Premium Site', desc:'10 pages, advanced SEO, 5 city pages, blog, review widget. Built to dominate.', icon:'💎', price:'$3,500' },
+    { label:'$5,000', amount:'$5,000', name:'Elite Package', desc:'Everything in Premium + PPC landing pages, analytics dashboard, priority support.', icon:'👑', price:'$5,000' },
+    { label:'Custom', amount:'Custom', name:'Custom Build', desc:"Have something bigger in mind? Let's talk. We'll scope it together.", icon:'🤝', price:"Let's Talk" }
+  ],
+  monthly: [
+    { label:'$199/mo', amount:'$199/mo', name:'Starter Monthly', desc:'3-page site + hosting + support. Low barrier to get you online.', icon:'⚡', price:'$199/mo' },
+    { label:'$299/mo', amount:'$299/mo', name:'Growth Plan', desc:'5 pages, full SEO, lead forms. Everything you need to start generating calls.', icon:'🚀', price:'$299/mo' },
+    { label:'$449/mo', amount:'$449/mo', name:'Premium Plan', desc:'10 pages, city SEO expansion, blog, review widget. Serious growth mode.', icon:'💎', price:'$449/mo' },
+    { label:'$699/mo', amount:'$699/mo', name:'Elite Plan', desc:'Full-service: site, SEO, Google Ads management, reporting. All in.', icon:'👑', price:'$699/mo' },
+    { label:'Custom', amount:'Custom', name:'Custom Plan', desc:"Need something tailored? We do custom monthly retainers too.", icon:'🤝', price:"Let's Talk" }
+  ]
+};
+
+var paymentType = 'onetime';
+
+function setPaymentType(type) {
+  paymentType = type;
+  document.getElementById('btnOneTime').classList.toggle('active', type === 'onetime');
+  document.getElementById('btnMonthly').classList.toggle('active', type === 'monthly');
+  var data = plans[type];
+  for (var i = 0; i < 5; i++) {
+    document.getElementById('slabel' + i).textContent = data[i].label;
+  }
+  updateBudget();
+}
+
+function updateBudget() {
+  var val = parseInt(document.getElementById('budgetSlider').value);
+  var data = plans[paymentType][val];
+  var pct = (val / 4) * 100;
+
+  document.getElementById('budgetSlider').style.background =
+    'linear-gradient(to right, #EF4444 0%, #EF4444 ' + pct + '%, #26262c ' + pct + '%, #26262c 100%)';
+
+  document.getElementById('budgetDisplay').textContent = data.amount;
+  document.getElementById('budgetPeriod').textContent = paymentType === 'onetime' ? 'one-time' : 'per month';
+  document.getElementById('planIcon').textContent = data.icon;
+  document.getElementById('planName').textContent = data.name;
+  document.getElementById('planDesc').textContent = data.desc;
+  document.getElementById('planPrice').textContent = data.price;
+
+  document.getElementById('budgetInput').value = data.amount + ' ' + (paymentType === 'onetime' ? 'one-time' : 'monthly');
+  document.getElementById('paymentTypeInput').value = paymentType;
+
+  updateSteps();
+}
+
+// STEP INDICATOR
+function updateSteps() {
+  var fields = ['name','business','phone','email','trade','location'];
+  var filled = fields.filter(function(f) {
+    var el = document.getElementById(f);
+    return el && el.value.trim() !== '';
+  }).length;
+
+  var s1 = document.getElementById('step1dot');
+  var s2 = document.getElementById('step2dot');
+  var s3 = document.getElementById('step3dot');
+
+  if (filled >= 1) s1.classList.add('done'); else s1.classList.remove('done');
+  if (filled >= 4) s2.classList.add('done'); else s2.classList.remove('done');
+  if (filled >= 6) s3.classList.add('done'); else s3.classList.remove('done');
+}
+
+document.querySelectorAll('.form-input').forEach(function(el) {
+  el.addEventListener('input', updateSteps);
+  el.addEventListener('change', updateSteps);
+});
+
+// FORM SUBMIT   Basin endpoint, stay on page
+document.getElementById('applyForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="spin"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> Sending...';
+
+  try {
+    var formData = new FormData(this);
+    var resp = await fetch('https://usebasin.com/f/2246e3a169bb', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    // Show success regardless of exact status   Basin returns 2xx on success
+    if (resp.ok || resp.status === 200 || resp.status === 201) {
+      document.getElementById('formBody').style.display = 'none';
+      document.getElementById('formSuccess').classList.add('visible');
+      ['step1dot','step2dot','step3dot'].forEach(function(id) {
+        var el = document.getElementById(id);
+        el.classList.remove('active');
+        el.classList.add('done');
+        el.textContent = '✓';
+      });
+    } else {
+      throw new Error('Server error');
+    }
+  } catch(err) {
+    btn.disabled = false;
+    btn.innerHTML = 'Submit My Application <svg class="arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+    alert('Something went wrong. Please try again or DM us on Instagram.');
+  }
+});
+
+// SPINNER STYLE
+var style = document.createElement('style');
+style.textContent = '.spin{animation:spin 0.8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}';
+document.head.appendChild(style);
+
+// FAQ TOGGLE
+function toggleFaq(btn) {
+  var item = btn.closest('.faq-item');
+  var wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+  if (!wasOpen) item.classList.add('open');
+}
+
+// REVEAL ON SCROLL
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+
+// INIT
+updateBudget();
+</script>
+</body>
+</html>
