@@ -56,6 +56,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;display:flex;a
 .typing-text{overflow:hidden;white-space:nowrap;}
 .cursor{display:inline-block;width:2px;height:1em;background:var(--red);margin-left:1px;animation:cursor-blink .8s step-end infinite;vertical-align:middle;}
 @keyframes cursor-blink{0%,100%{opacity:1;}50%{opacity:0;}}
+.hero-type-wrap{display:inline-block;position:relative;}
+.hero-type-text{font-family:'Barlow Condensed',sans-serif;font-size:inherit;font-weight:900;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.05;}
+.hero-type-cursor{display:inline-block;width:4px;height:.85em;background:var(--red);margin-left:4px;vertical-align:middle;animation:cursor-blink .8s step-end infinite;}
 
 .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,8vw,7rem);line-height:.95;letter-spacing:1px;margin-bottom:1.5rem;}
 .hero h1 .line-gold{color:var(--gold);}
@@ -296,9 +299,8 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
     </div>
 
     <h1>
-      The Inner Circle<br>
-      for <span class="line-gold">Elite</span><br>
-      <span class="line-red">Operators</span>
+      The Inner Circle for<br>
+      <span class="hero-type-wrap"><span class="hero-type-text" id="heroTypeText"></span><span class="hero-type-cursor"></span></span>
     </h1>
     <p class="hero-sub">Arsenal 001 is a private network where contractors, builders, marketers, and ambitious operators connect, grow, and keep each other in the arsenal. You never know when you'll need someone.</p>
     <div class="hero-ctas">
@@ -796,6 +798,40 @@ function closeMenu(){document.getElementById('navMobile').classList.remove('open
     }
   }
   setTimeout(type, 600);
+})();
+
+// HERO TYPING ANIMATION
+(function(){
+  var phrases = [
+    'Elite Contractors.',
+    'Elite Ecommerce Owners.',
+    'Elite Marketers.',
+    'Elite Sales Leaders.',
+    'Elite Operators.',
+    'Elite Builders.',
+    'Elite Agency Owners.',
+    'Elite Tradespeople.'
+  ];
+  var el = document.getElementById('heroTypeText');
+  if(!el) return;
+  var pi = 0, ci = 0, deleting = false;
+  var speed = 65, deleteSpeed = 35, pauseAfter = 2200, pauseAfterDelete = 400;
+
+  function type(){
+    var phrase = phrases[pi];
+    if(!deleting){
+      el.textContent = phrase.substring(0, ci + 1);
+      ci++;
+      if(ci === phrase.length){ deleting = true; setTimeout(type, pauseAfter); return; }
+      setTimeout(type, speed);
+    } else {
+      el.textContent = phrase.substring(0, ci - 1);
+      ci--;
+      if(ci === 0){ deleting = false; pi = (pi + 1) % phrases.length; setTimeout(type, pauseAfterDelete); return; }
+      setTimeout(type, deleteSpeed);
+    }
+  }
+  type();
 })();
 
 // EVENTS TABS
