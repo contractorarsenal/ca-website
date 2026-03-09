@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arsenal 001 | The Inner Circle for Elite Contractors</title>
-<meta name="description" content="Arsenal 001 is a private network for the top contractors in America. Where serious operators connect, grow, and win together.">
+<title>Arsenal 001 | The Inner Circle for Elite Operators</title>
+<meta name="description" content="Arsenal 001 is a private membership network for the top contractors, builders, and ambitious operators. Keep each other in your arsenal.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
@@ -43,118 +43,161 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;display:flex;a
 .nav-mobile a:hover{color:var(--gold);}
 
 /* ── HERO ── */
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 5% 80px;position:relative;overflow:hidden;text-align:center;}
-.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(192,57,43,0.18) 0%,transparent 65%);}
-.hero::before{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(192,57,43,0.5),transparent);}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:110px 5% 80px;position:relative;overflow:hidden;text-align:center;}
+.hero-bg-glow{position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:900px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(192,57,43,0.16) 0%,transparent 65%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(192,57,43,0.4),transparent);}
 .noise-overlay{position:absolute;inset:0;z-index:1;opacity:.04;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;}
-.hero-content{position:relative;z-index:2;max-width:820px;margin:0 auto;}
-.hero-badge{display:inline-flex;align-items:center;gap:.6rem;background:rgba(192,57,43,0.1);border:1px solid rgba(192,57,43,0.3);border-radius:100px;padding:.4rem 1rem;font-size:.75rem;font-weight:700;color:var(--red);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.75rem;font-family:'Barlow Condensed',sans-serif;}
-.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--red);animation:blink 1.5s infinite;}
+.hero-content{position:relative;z-index:2;max-width:860px;margin:0 auto;}
+
+/* Typing badge */
+.typing-wrap{display:inline-flex;align-items:center;gap:.5rem;background:rgba(192,57,43,0.1);border:1px solid rgba(192,57,43,0.3);border-radius:100px;padding:.4rem 1.1rem;font-size:.78rem;font-weight:700;color:var(--red);letter-spacing:1px;text-transform:uppercase;margin-bottom:1.75rem;font-family:'Barlow Condensed',sans-serif;min-width:380px;justify-content:center;}
+.typing-wrap::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0;animation:blink 1.5s infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
-.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,8vw,7rem);line-height:.95;letter-spacing:1px;margin-bottom:1.5rem;text-shadow:0 4px 30px rgba(0,0,0,0.5);}
+.typing-text{overflow:hidden;white-space:nowrap;}
+.cursor{display:inline-block;width:2px;height:1em;background:var(--red);margin-left:1px;animation:cursor-blink .8s step-end infinite;vertical-align:middle;}
+@keyframes cursor-blink{0%,100%{opacity:1;}50%{opacity:0;}}
+
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,8vw,7rem);line-height:.95;letter-spacing:1px;margin-bottom:1.5rem;}
 .hero h1 .line-gold{color:var(--gold);}
 .hero h1 .line-red{color:var(--red);}
-.hero-sub{font-size:1.15rem;color:rgba(240,240,240,0.75);max-width:580px;margin:0 auto 2.5rem;line-height:1.75;}
+.hero-sub{font-size:1.1rem;color:rgba(240,240,240,0.72);max-width:600px;margin:0 auto 2.5rem;line-height:1.78;}
 .hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;}
 .btn-primary{background:var(--red);color:#fff;padding:.9rem 2.2rem;border-radius:8px;font-weight:700;font-size:1rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;border:2px solid var(--red);display:inline-block;}
 .btn-primary:hover{background:var(--red-light);border-color:var(--red-light);transform:translateY(-2px);}
-.btn-ghost{border:1px solid rgba(255,255,255,0.2);color:rgba(240,240,240,0.8);padding:.9rem 2.2rem;border-radius:8px;font-weight:700;font-size:1rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;display:inline-block;}
+.btn-ghost{border:1px solid rgba(255,255,255,0.2);color:rgba(240,240,240,0.75);padding:.9rem 2.2rem;border-radius:8px;font-weight:700;font-size:1rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;display:inline-block;}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
 
 /* Stats bar */
 .hero-stats{display:flex;gap:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:rgba(17,17,17,0.8);backdrop-filter:blur(10px);max-width:640px;margin:0 auto;}
-.hero-stat{flex:1;padding:1.5rem 1rem;text-align:center;border-right:1px solid var(--border);transition:background .2s;}
+.hero-stat{flex:1;padding:1.25rem 1rem;text-align:center;border-right:1px solid var(--border);}
 .hero-stat:last-child{border-right:none;}
-.hero-stat:hover{background:rgba(255,255,255,0.03);}
-.stat-number{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;line-height:1;color:var(--gold);margin-bottom:.25rem;}
-.stat-label{font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+.stat-number{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1;color:var(--gold);margin-bottom:.2rem;}
+.stat-label{font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
 
 /* ── SECTIONS ── */
 section{padding:80px 5%;}
 .section-inner{max-width:1200px;margin:0 auto;}
 .section-label{font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;}
-.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.0;letter-spacing:1px;margin-bottom:.75rem;}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);line-height:1.0;letter-spacing:1px;margin-bottom:.75rem;}
 .section-sub{color:var(--muted);font-size:1rem;line-height:1.7;}
 
-/* ── BENEFITS ── */
-#benefits{background:var(--surface);}
-.benefits-intro{text-align:center;margin-bottom:3rem;}
-.benefits-intro .section-sub{max-width:580px;margin:0 auto;}
-.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-.benefit-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;position:relative;overflow:hidden;transition:all .3s;}
-.benefit-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),var(--gold));opacity:0;transition:opacity .3s;}
-.benefit-card:hover{transform:translateY(-4px);border-color:rgba(249,115,22,0.25);}
-.benefit-card:hover::before{opacity:1;}
-.benefit-num{font-family:'Bebas Neue',sans-serif;font-size:3rem;line-height:1;color:rgba(192,57,43,0.2);position:absolute;top:.75rem;right:1.25rem;}
-.benefit-icon{font-size:2rem;margin-bottom:1rem;}
-.benefit-card h3{font-size:1.1rem;font-weight:800;margin-bottom:.5rem;}
-.benefit-card p{font-size:.88rem;color:var(--muted);line-height:1.65;}
+/* ── WHY ARSENAL ── */
+#why{background:var(--surface);}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.why-visual{background:var(--bg);border:1px solid var(--border);border-radius:20px;padding:2.5rem;text-align:center;position:relative;overflow:hidden;}
+.why-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(192,57,43,0.1),transparent);}
+.why-logo{width:100px;height:100px;border-radius:16px;margin:0 auto 1.5rem;background:rgba(255,255,255,0.04);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.why-logo img{width:75%;height:75%;object-fit:contain;}
+.why-quote{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1.1;letter-spacing:1px;margin-bottom:.75rem;position:relative;z-index:1;}
+.why-quote span{color:var(--red);}
+.why-desc{font-size:.9rem;color:var(--muted);line-height:1.7;position:relative;z-index:1;}
+.why-text .section-sub{margin-top:.75rem;}
+.why-list{margin-top:1.75rem;display:flex;flex-direction:column;gap:.85rem;}
+.why-item{display:flex;align-items:flex-start;gap:.85rem;}
+.why-icon{width:38px;height:38px;border-radius:8px;background:rgba(192,57,43,0.1);border:1px solid rgba(192,57,43,0.2);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.why-item p{font-size:.9rem;color:var(--muted);line-height:1.65;}
+.why-item p strong{color:var(--text);}
 
-/* ── HOW IT WORKS ── */
-#how{background:var(--bg);}
-.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
-.how-steps{display:flex;flex-direction:column;gap:1.5rem;}
-.how-step{display:flex;gap:1.25rem;align-items:flex-start;}
-.how-step-num{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;flex-shrink:0;box-shadow:0 4px 16px rgba(192,57,43,0.3);}
-.how-step-text h3{font-size:1rem;font-weight:800;margin-bottom:.3rem;}
-.how-step-text p{font-size:.88rem;color:var(--muted);line-height:1.6;}
-.how-visual{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:2.5rem;position:relative;overflow:hidden;}
-.how-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 80% 20%,rgba(192,57,43,0.08),transparent);}
-.member-preview{position:relative;z-index:1;}
-.member-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border);}
-.member-header-logo{display:flex;align-items:center;gap:.5rem;}
-.member-header-logo img{height:28px;width:auto;}
-.member-header-logo span{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:.9rem;letter-spacing:.05em;}
-.member-badge{background:rgba(192,57,43,0.15);border:1px solid rgba(192,57,43,0.3);color:var(--red);font-size:.65rem;font-weight:800;padding:.2rem .6rem;border-radius:100px;letter-spacing:1px;text-transform:uppercase;}
-.member-list{display:flex;flex-direction:column;gap:.75rem;}
-.member-row{display:flex;align-items:center;gap:.75rem;padding:.75rem;background:rgba(255,255,255,0.03);border-radius:8px;border:1px solid var(--border);}
-.member-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--gold));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;flex-shrink:0;}
-.member-info{flex:1;}
-.member-name{font-size:.88rem;font-weight:700;}
-.member-trade{font-size:.72rem;color:var(--muted);}
-.member-revenue{font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:900;color:var(--gold);}
+/* ── BENEFITS ── */
+#benefits{background:var(--bg);}
+.benefits-header{text-align:center;margin-bottom:3rem;}
+.benefits-header .section-sub{max-width:580px;margin:.5rem auto 0;}
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.benefit-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;position:relative;overflow:hidden;transition:all .3s;}
+.benefit-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),var(--gold));opacity:0;transition:opacity .3s;}
+.benefit-card:hover{transform:translateY(-4px);border-color:rgba(249,115,22,0.2);}
+.benefit-card:hover::before{opacity:1;}
+.benefit-num{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;line-height:1;color:rgba(192,57,43,0.12);position:absolute;top:.5rem;right:1rem;}
+.benefit-icon{font-size:1.8rem;margin-bottom:.85rem;}
+.benefit-card h3{font-size:1.05rem;font-weight:800;margin-bottom:.4rem;}
+.benefit-card p{font-size:.87rem;color:var(--muted);line-height:1.65;}
 
 /* ── EVENTS ── */
 #events{background:var(--surface);}
 .events-header{text-align:center;margin-bottom:3rem;}
+.events-header .section-sub{max-width:600px;margin:.5rem auto 0;}
+.events-tabs{display:flex;gap:.5rem;justify-content:center;margin-bottom:2.5rem;}
+.events-tab{padding:.5rem 1.25rem;border-radius:100px;font-size:.82rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--muted);transition:all .2s;}
+.events-tab.active{background:var(--red);color:#fff;border-color:var(--red);}
 .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.events-grid-online{display:none;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
 .event-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all .3s;}
-.event-card:hover{transform:translateY(-4px);border-color:rgba(192,57,43,0.3);box-shadow:0 20px 50px rgba(0,0,0,0.4);}
-.event-card-top{padding:1.5rem 1.5rem 0;border-bottom:1px solid var(--border);padding-bottom:1.25rem;}
-.event-tag{display:inline-block;background:rgba(192,57,43,0.12);color:var(--red);font-size:.65rem;font-weight:800;padding:.2rem .6rem;border-radius:4px;margin-bottom:1rem;letter-spacing:1px;text-transform:uppercase;}
-.event-tag.gold{background:rgba(249,115,22,0.12);color:var(--gold);}
-.event-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:900;line-height:1.1;margin-bottom:.5rem;}
-.event-location{font-size:.8rem;color:var(--muted);}
-.event-card-bottom{padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;}
-.event-date{font-size:.82rem;font-weight:600;color:var(--muted);}
-.event-price{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:900;color:var(--gold);}
-.event-cta{display:inline-flex;align-items:center;gap:.35rem;background:var(--red);color:#fff;padding:.5rem 1rem;border-radius:6px;font-size:.78rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;border:none;cursor:pointer;text-decoration:none;}
+.event-card:hover{transform:translateY(-4px);border-color:rgba(192,57,43,0.3);}
+.event-card-top{padding:1.5rem;}
+.event-tag{display:inline-block;background:rgba(192,57,43,0.12);color:var(--red);font-size:.65rem;font-weight:800;padding:.2rem .6rem;border-radius:4px;margin-bottom:.75rem;letter-spacing:1px;text-transform:uppercase;}
+.event-tag.online{background:rgba(249,115,22,0.12);color:var(--gold);}
+.event-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.45rem;font-weight:900;line-height:1.1;margin-bottom:.4rem;}
+.event-location{font-size:.82rem;color:var(--muted);display:flex;align-items:center;gap:.3rem;}
+.event-divider{height:1px;background:var(--border);margin:1rem 1.5rem;}
+.event-desc{padding:0 1.5rem 1.25rem;font-size:.85rem;color:var(--muted);line-height:1.65;}
+.event-card-bottom{padding:1rem 1.5rem 1.5rem;display:flex;align-items:center;justify-content:space-between;}
+.event-coming-soon{font-size:.75rem;font-weight:700;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;}
+.event-cta{display:inline-flex;align-items:center;gap:.35rem;background:var(--red);color:#fff;padding:.5rem 1.1rem;border-radius:6px;font-size:.78rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;}
 .event-cta:hover{background:var(--red-light);}
-.event-cta-ghost{border:1px solid rgba(255,255,255,0.15);color:var(--muted);}
-.event-cta-ghost:hover{border-color:var(--gold);color:var(--gold);background:transparent;}
+.event-cta.interest{background:transparent;border:1px solid rgba(249,115,22,0.3);color:var(--gold);}
+.event-cta.interest:hover{background:rgba(249,115,22,0.1);}
 
-/* ── APPLY SECTION ── */
-#apply-cta{background:linear-gradient(160deg,#0d0505 0%,#1a0808 40%,#0a0a0a 100%);text-align:center;position:relative;overflow:hidden;}
-#apply-cta::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(192,57,43,0.12) 0%,transparent 70%);pointer-events:none;}
-.apply-inner{max-width:640px;margin:0 auto;position:relative;z-index:1;}
-.apply-icon{width:80px;height:80px;border-radius:16px;margin:0 auto 2rem;overflow:hidden;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;}
-.apply-icon img{width:65%;height:65%;object-fit:contain;}
-.apply-inner h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);line-height:1.0;letter-spacing:1px;margin-bottom:.75rem;}
-.apply-inner h2 span{color:var(--red);}
-.apply-inner p{color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto;}
-.apply-note{display:inline-flex;align-items:center;gap:.5rem;background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.2);border-radius:100px;padding:.4rem 1rem;font-size:.78rem;color:var(--gold);font-weight:600;margin-top:1.5rem;}
+/* ── APPLICATION FORM ── */
+#apply{background:var(--bg);}
+.form-header{text-align:center;margin-bottom:3rem;}
+.form-header .section-sub{max-width:560px;margin:.5rem auto 0;}
+.form-wrap{max-width:760px;margin:0 auto;}
+.form-card{background:var(--surface);border:1px solid var(--border2);border-radius:20px;overflow:hidden;}
+.form-card-head{padding:2rem 2.5rem 1.75rem;background:linear-gradient(135deg,rgba(192,57,43,0.08),rgba(249,115,22,0.04));border-bottom:1px solid var(--border);}
+.form-card-head h3{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;margin-bottom:.3rem;letter-spacing:.03em;}
+.form-card-head p{font-size:.88rem;color:var(--muted);}
+.form-body{padding:2rem 2.5rem 2.5rem;}
+.form-section{margin-bottom:2rem;}
+.form-section-title{font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;display:flex;align-items:center;gap:.5rem;}
+.form-section-title::after{content:'';flex:1;height:1px;background:var(--border);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
+.form-row.trio{grid-template-columns:1fr 1fr 1fr;}
+.form-row.solo{grid-template-columns:1fr;}
+.form-field{display:flex;flex-direction:column;gap:.4rem;}
+.form-label{font-size:.7rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;}
+.form-label .req{color:var(--red);}
+.form-input{background:var(--surface2);border:1.5px solid var(--border2);border-radius:8px;padding:.72rem 1rem;font-size:.9rem;color:var(--text);outline:none;font-family:'Barlow',sans-serif;transition:border .2s,box-shadow .2s;width:100%;}
+.form-input::placeholder{color:rgba(136,136,136,0.5);}
+.form-input:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(192,57,43,0.1);}
+select.form-input{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath stroke='%23888' stroke-width='1.5' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;cursor:pointer;}
+select.form-input option{background:#1a1a1a;}
+textarea.form-input{resize:vertical;min-height:100px;line-height:1.6;}
 
-/* ── FAQ ── */
-#faq{background:var(--bg);}
-.faq-inner{max-width:760px;margin:0 auto;}
-.faq-list{display:flex;flex-direction:column;gap:.75rem;margin-top:2.5rem;}
-.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
-.faq-q{width:100%;background:none;border:none;color:var(--text);text-align:left;padding:1.25rem 1.5rem;font-family:'Barlow',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
-.faq-q::after{content:'+';font-size:1.4rem;font-weight:300;color:var(--gold);transition:transform .3s;flex-shrink:0;}
-.faq-item.open .faq-q::after{transform:rotate(45deg);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;}
-.faq-a-inner{padding:0 1.5rem 1.25rem;font-size:.9rem;color:var(--muted);line-height:1.7;}
-.faq-item.open .faq-a{max-height:300px;}
+/* Multi-select options */
+.options-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;}
+.options-grid.three{grid-template-columns:1fr 1fr 1fr;}
+.option-label{display:flex;align-items:center;gap:.7rem;padding:.75rem .9rem;background:var(--surface2);border:1.5px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s;font-size:.87rem;font-weight:600;}
+.option-label:hover{border-color:rgba(192,57,43,0.3);}
+.option-label input{display:none;}
+.option-label input:checked ~ .option-check{background:var(--red);border-color:var(--red);}
+.option-label input:checked ~ .option-check::after{opacity:1;}
+.option-label:has(input:checked){border-color:var(--red);background:rgba(192,57,43,0.07);}
+.option-check{width:18px;height:18px;border-radius:4px;border:2px solid var(--border2);flex-shrink:0;position:relative;transition:all .2s;}
+.option-check::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 8l3.5 3.5 6.5-7' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:12px;background-repeat:no-repeat;background-position:center;opacity:0;transition:opacity .15s;}
+.option-letter{width:22px;height:22px;border-radius:4px;background:rgba(192,57,43,0.1);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:900;color:var(--red);flex-shrink:0;font-family:'Barlow Condensed',sans-serif;}
+
+/* Revenue options */
+.revenue-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;}
+.rev-label{display:flex;align-items:center;justify-content:center;padding:.65rem .5rem;background:var(--surface2);border:1.5px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s;font-size:.8rem;font-weight:700;text-align:center;}
+.rev-label:hover{border-color:rgba(192,57,43,0.3);}
+.rev-label input{display:none;}
+.rev-label:has(input:checked){border-color:var(--red);background:rgba(192,57,43,0.1);color:var(--red);}
+
+/* Submit button */
+.btn-submit{width:100%;padding:1.1rem;border-radius:8px;background:var(--red);color:#fff;font-size:1rem;font-weight:900;font-family:'Barlow Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.6rem;transition:all .25s;margin-top:2rem;box-shadow:0 4px 20px rgba(192,57,43,0.3);position:relative;overflow:hidden;}
+.btn-submit::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);transform:translateX(-100%);transition:transform .4s;}
+.btn-submit:hover{background:var(--red-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(192,57,43,0.45);}
+.btn-submit:hover::before{transform:translateX(100%);}
+.btn-submit:disabled{opacity:.5;cursor:not-allowed;transform:none;}
+.form-note{text-align:center;font-size:.8rem;color:var(--muted);margin-top:.75rem;}
+
+/* Success */
+.form-success{display:none;text-align:center;padding:4rem 2rem;}
+.form-success.show{display:block;}
+.success-icon{width:72px;height:72px;border-radius:50%;background:rgba(16,185,129,0.12);border:2px solid #10B981;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.5rem;animation:popIn .5s cubic-bezier(.175,.885,.32,1.275);}
+@keyframes popIn{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}
+.success-title{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:#10B981;letter-spacing:1px;margin-bottom:.5rem;}
+.success-body{font-size:.95rem;color:var(--muted);line-height:1.7;max-width:380px;margin:0 auto;}
 
 /* ── FOOTER ── */
 footer{background:var(--surface);border-top:1px solid var(--border);padding:60px 5% 30px;}
@@ -176,7 +219,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
 .fsoc:hover{border-color:var(--red);}
 
 /* ── REVEAL ── */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
 .reveal.visible{opacity:1;transform:none;}
 .reveal-delay-1{transition-delay:.1s;}
 .reveal-delay-2{transition-delay:.2s;}
@@ -185,7 +228,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
 @media(max-width:1024px){
   .benefits-grid{grid-template-columns:repeat(2,1fr);}
   .events-grid{grid-template-columns:repeat(2,1fr);}
-  .how-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .why-grid{grid-template-columns:1fr;gap:2.5rem;}
   .footer-top{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:768px){
@@ -194,11 +237,16 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
   .nav-hamburger{display:flex;}
   section{padding:60px 4%;}
   .hero{padding:100px 4% 60px;}
-  .hero h1{font-size:clamp(3rem,10vw,5rem);}
+  .typing-wrap{min-width:0;font-size:.7rem;}
   .hero-stats{flex-wrap:wrap;}
   .hero-stat{min-width:50%;}
   .benefits-grid{grid-template-columns:1fr;}
-  .events-grid{grid-template-columns:1fr;}
+  .events-grid,.events-grid-online{grid-template-columns:1fr;}
+  .form-row,.form-row.trio{grid-template-columns:1fr;}
+  .options-grid,.options-grid.three{grid-template-columns:1fr;}
+  .revenue-grid{grid-template-columns:repeat(2,1fr);}
+  .form-body{padding:1.5rem 1.25rem;}
+  .form-card-head{padding:1.5rem 1.25rem 1.25rem;}
   .footer-top{grid-template-columns:1fr 1fr;gap:1.5rem;}
   .footer-bottom{flex-direction:column;text-align:center;}
   .hero-ctas{flex-direction:column;align-items:center;}
@@ -206,7 +254,8 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
 }
 @media(max-width:480px){
   .footer-top{grid-template-columns:1fr;}
-  .hero-stat{min-width:50%;}
+  .hero h1{font-size:3rem;}
+  .revenue-grid{grid-template-columns:repeat(2,1fr);}
 }
 </style>
 </head>
@@ -237,24 +286,29 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg-glow"></div>
   <div class="noise-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge">Private Membership Network</div>
+
+    <!-- Typing animation badge -->
+    <div class="typing-wrap">
+      <span class="typing-text" id="typingText">Private Membership Network</span><span class="cursor"></span>
+    </div>
+
     <h1>
       The Inner Circle<br>
       for <span class="line-gold">Elite</span><br>
-      <span class="line-red">Contractors</span>
+      <span class="line-red">Operators</span>
     </h1>
-    <p class="hero-sub">A private network where the most ambitious contractors in America connect, build, and win together. Apply to join Arsenal 001.</p>
+    <p class="hero-sub">Arsenal 001 is a private network where contractors, builders, marketers, and ambitious operators connect, grow, and keep each other in the arsenal. You never know when you'll need someone.</p>
     <div class="hero-ctas">
-      <a href="apply.html" class="btn-primary">Apply for Membership</a>
-      <a href="#benefits" class="btn-ghost">See Member Benefits</a>
+      <a href="#apply" class="btn-primary">Apply for Membership</a>
+      <a href="#why" class="btn-ghost">Why Arsenal?</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
         <div class="stat-number">3.2%</div>
-        <div class="stat-label">Acceptance Rate</div>
+        <div class="stat-label">Acceptance</div>
       </div>
       <div class="hero-stat">
         <div class="stat-number">124</div>
@@ -266,7 +320,42 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
       </div>
       <div class="hero-stat">
         <div class="stat-number">$24M+</div>
-        <div class="stat-label">Combined Revenue</div>
+        <div class="stat-label">Combined Rev</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY ARSENAL -->
+<section id="why">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div class="why-visual reveal">
+        <div class="why-logo">
+          <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
+        </div>
+        <div class="why-quote">Keep Each Other<br><span>In Your Arsenal</span></div>
+        <p class="why-desc">You never know when you'll need a great roofer in Dallas, a killer marketer in Miami, or a developer in Denver. Arsenal 001 means you always have someone to call.</p>
+      </div>
+      <div class="why-text reveal reveal-delay-1">
+        <div class="section-label">The Name</div>
+        <h2 class="section-title">Why Arsenal?</h2>
+        <p class="section-sub">Arsenal 001 pays homage to Contractor Arsenal — our roots in building websites for tradespeople. But the name goes deeper than that.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-icon">🎯</div>
+            <p><strong>Keep us in your arsenal.</strong> That's what we tell every contractor we work with. Have the right people, tools, and connections on standby — ready to deploy when you need them.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">🤝</div>
+            <p><strong>Keep each other in your arsenal.</strong> Arsenal 001 is built on the same idea — a curated network of operators you can call, refer, collaborate with, or lean on at any point in your journey.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">🏆</div>
+            <p><strong>001 means first.</strong> This is the founding cohort. The inner circle. The ones who got in before it became known.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -275,135 +364,47 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
 <!-- BENEFITS -->
 <section id="benefits">
   <div class="section-inner">
-    <div class="benefits-intro reveal">
+    <div class="benefits-header reveal">
       <div class="section-label">Member Benefits</div>
-      <h2 class="section-title">Engage with the Best<br>in the Business</h2>
-      <p class="section-sub">As a member of Arsenal 001, you get access to a network of operators who are serious about growing. No tire kickers. No noise. Just results-driven contractors.</p>
+      <h2 class="section-title">What You Get as a Member</h2>
+      <p class="section-sub">Arsenal 001 is more than a network. It's a curated community of operators who are serious about growing and helping each other win.</p>
     </div>
     <div class="benefits-grid">
       <div class="benefit-card reveal">
         <div class="benefit-num">01</div>
-        <div class="benefit-icon">🤝</div>
+        <div class="benefit-icon">📡</div>
         <h3>Private Referral Network</h3>
-        <p>Connect with non-competing contractors across the country. Send and receive high-quality referrals from members you know and trust.</p>
+        <p>Send and receive high-quality referrals from members across industries and markets. Trusted connections, no middleman.</p>
       </div>
       <div class="benefit-card reveal reveal-delay-1">
         <div class="benefit-num">02</div>
         <div class="benefit-icon">📞</div>
         <h3>Monthly Mastermind Calls</h3>
-        <p>Live group calls with top-performing members. Share what's working, get feedback on your business, and hear from industry leaders.</p>
+        <p>Live group calls with top-performing members. Share what's working, get feedback, and hear from operators at the next level.</p>
       </div>
       <div class="benefit-card reveal reveal-delay-2">
         <div class="benefit-num">03</div>
         <div class="benefit-icon">🌎</div>
-        <h3>Exclusive Events &amp; Retreats</h3>
-        <p>Annual retreats, city meetups, and field experiences with the Arsenal family. Build relationships that last beyond business.</p>
+        <h3>In-Person Events &amp; Retreats</h3>
+        <p>Annual meetups in cities across the country. Build relationships that go beyond LinkedIn — the kind that last years.</p>
       </div>
       <div class="benefit-card reveal">
         <div class="benefit-num">04</div>
-        <div class="benefit-icon">🎯</div>
+        <div class="benefit-icon">📚</div>
         <h3>Business Growth Resources</h3>
-        <p>Templates, scripts, hiring guides, and playbooks from contractors doing $1M to $10M+. Skip the mistakes they already made.</p>
+        <p>Templates, hiring guides, sales scripts, and playbooks from members doing $1M to $10M+. Skip the mistakes they already made.</p>
       </div>
       <div class="benefit-card reveal reveal-delay-1">
         <div class="benefit-num">05</div>
         <div class="benefit-icon">💰</div>
         <h3>Group Vendor Deals</h3>
-        <p>Group buying power on materials, equipment, software, and services. Members save thousands per year through collective negotiation.</p>
+        <p>Collective buying power on software, materials, and services. Members save thousands per year through group negotiation.</p>
       </div>
       <div class="benefit-card reveal reveal-delay-2">
         <div class="benefit-num">06</div>
         <div class="benefit-icon">🏆</div>
-        <h3>Elite Accountability</h3>
-        <p>Set your goals with people who push you. Quarterly accountability check-ins with members at your level or higher.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how">
-  <div class="section-inner">
-    <div class="how-grid">
-      <div>
-        <div class="section-label reveal">How Membership Works</div>
-        <h2 class="section-title reveal">Built for Contractors<br>Who are Serious</h2>
-        <p class="section-sub reveal" style="margin-bottom:2.5rem">Arsenal 001 is invitation-based with an application process. We keep the group small, curated, and high-quality. Here's how to get in.</p>
-        <div class="how-steps">
-          <div class="how-step reveal">
-            <div class="how-step-num">01</div>
-            <div class="how-step-text">
-              <h3>Submit Your Application</h3>
-              <p>Tell us about your business, your revenue, your goals, and why you want in. Applications are reviewed personally.</p>
-            </div>
-          </div>
-          <div class="how-step reveal">
-            <div class="how-step-num">02</div>
-            <div class="how-step-text">
-              <h3>Interview Call</h3>
-              <p>If you pass the initial review, we'll get on a quick call to assess fit and make sure Arsenal 001 is right for you.</p>
-            </div>
-          </div>
-          <div class="how-step reveal">
-            <div class="how-step-num">03</div>
-            <div class="how-step-text">
-              <h3>Get Your Invite</h3>
-              <p>Accepted members receive their invitation, onboarding materials, and access to the private community and first call.</p>
-            </div>
-          </div>
-          <div class="how-step reveal">
-            <div class="how-step-num">04</div>
-            <div class="how-step-text">
-              <h3>Start Building with the Best</h3>
-              <p>Connect with your cohort, join the mastermind calls, and start leveraging the network to grow your business.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="how-visual reveal reveal-delay-1">
-        <div class="member-preview">
-          <div class="member-header">
-            <div class="member-header-logo">
-              <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="">
-              <span>Arsenal 001</span>
-            </div>
-            <div class="member-badge">Members</div>
-          </div>
-          <div class="member-list">
-            <div class="member-row">
-              <div class="member-avatar">JR</div>
-              <div class="member-info">
-                <div class="member-name">Jake R.</div>
-                <div class="member-trade">Roofing — Houston, TX</div>
-              </div>
-              <div class="member-revenue">$2.4M</div>
-            </div>
-            <div class="member-row">
-              <div class="member-avatar">MP</div>
-              <div class="member-info">
-                <div class="member-name">Marcus P.</div>
-                <div class="member-trade">HVAC — Atlanta, GA</div>
-              </div>
-              <div class="member-revenue">$1.8M</div>
-            </div>
-            <div class="member-row">
-              <div class="member-avatar">TW</div>
-              <div class="member-info">
-                <div class="member-name">Tyler W.</div>
-                <div class="member-trade">Remodeling — Denver, CO</div>
-              </div>
-              <div class="member-revenue">$3.1M</div>
-            </div>
-            <div class="member-row">
-              <div class="member-avatar">AL</div>
-              <div class="member-info">
-                <div class="member-name">Amanda L.</div>
-                <div class="member-trade">Landscaping — Phoenix, AZ</div>
-              </div>
-              <div class="member-revenue">$920K</div>
-            </div>
-          </div>
-        </div>
+        <h3>Accountability &amp; Growth</h3>
+        <p>Quarterly check-ins with members at your level or higher. Set goals publicly. Get pushed by people who won't let you settle.</p>
       </div>
     </div>
   </div>
@@ -413,123 +414,296 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
 <section id="events">
   <div class="section-inner">
     <div class="events-header reveal">
-      <div class="section-label">Events</div>
-      <h2 class="section-title">Get in the Room<br>with the Best</h2>
-      <p class="section-sub" style="max-width:560px;margin:.5rem auto 0">Arsenal 001 hosts exclusive events for members throughout the year. From annual retreats to monthly calls, we build in-person and online.</p>
+      <div class="section-label">Upcoming Events</div>
+      <h2 class="section-title">Get in the Room</h2>
+      <p class="section-sub">Arsenal 001 hosts in-person meetups in key cities and monthly online calls. Show up, connect, and leave with relationships that move the needle.</p>
     </div>
-    <div class="events-grid">
+
+    <div class="events-tabs">
+      <button class="events-tab active" onclick="switchTab('inperson',this)">In-Person</button>
+      <button class="events-tab" onclick="switchTab('online',this)">Online</button>
+    </div>
+
+    <div class="events-grid" id="eventsInPerson">
       <div class="event-card reveal">
         <div class="event-card-top">
-          <div class="event-tag">Annual</div>
-          <h3>Winter Mastermind</h3>
-          <p class="event-location">Scottsdale, AZ</p>
+          <div class="event-tag">Seattle, WA</div>
+          <h3>Arsenal Seattle Kickoff</h3>
+          <p class="event-location">📍 Seattle, WA — Our Home</p>
         </div>
-        <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);">
-          <p style="font-size:.85rem;color:var(--muted);line-height:1.65">3-day intensive for Arsenal 001 members. Strategy sessions, peer reviews, goal setting for the year ahead. Limited to 30 members.</p>
-        </div>
+        <div class="event-divider"></div>
+        <p class="event-desc">The first-ever Arsenal 001 in-person event. Seattle is home — come meet the founders and founding members, connect over dinner, and set the tone for the community.</p>
         <div class="event-card-bottom">
-          <div>
-            <div class="event-date">January 15-17, 2026</div>
-            <div class="event-price">$1,200</div>
-          </div>
-          <a href="apply.html" class="event-cta">Apply to Attend</a>
+          <div class="event-coming-soon">Coming Soon — 2025</div>
+          <a href="#apply" class="event-cta interest">Register Interest</a>
         </div>
       </div>
       <div class="event-card reveal reveal-delay-1">
         <div class="event-card-top">
-          <div class="event-tag gold">Retreat</div>
-          <h3>Summer Growth Retreat</h3>
-          <p class="event-location">Nashville, TN</p>
+          <div class="event-tag">San Francisco, CA</div>
+          <h3>Bay Area Operator Meetup</h3>
+          <p class="event-location">📍 San Francisco Bay Area</p>
         </div>
-        <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);">
-          <p style="font-size:.85rem;color:var(--muted);line-height:1.65">4-day members retreat. Guest speakers, workshops, and networking with the full Arsenal 001 cohort. The best event of the year.</p>
-        </div>
+        <div class="event-divider"></div>
+        <p class="event-desc">An evening with Bay Area members and guests. Builders, tech-adjacent operators, and tradespeople in one room. The cross-pollination of ideas you can't find anywhere else.</p>
         <div class="event-card-bottom">
-          <div>
-            <div class="event-date">July 10-13, 2026</div>
-            <div class="event-price">$1,800</div>
-          </div>
-          <a href="apply.html" class="event-cta">Apply to Attend</a>
+          <div class="event-coming-soon">Coming Soon — 2025</div>
+          <a href="#apply" class="event-cta interest">Register Interest</a>
         </div>
       </div>
       <div class="event-card reveal reveal-delay-2">
         <div class="event-card-top">
-          <div class="event-tag">Monthly</div>
-          <h3>Mastermind Calls</h3>
-          <p class="event-location">Virtual — Zoom</p>
+          <div class="event-tag">Los Angeles, CA</div>
+          <h3>LA Arsenal Dinner</h3>
+          <p class="event-location">📍 Los Angeles, CA</p>
         </div>
-        <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);">
-          <p style="font-size:.85rem;color:var(--muted);line-height:1.65">Monthly group calls with all active members. Hot seat sessions, peer coaching, and accountability. Free for all Arsenal 001 members.</p>
-        </div>
+        <div class="event-divider"></div>
+        <p class="event-desc">A private dinner for Arsenal 001 members in LA. A mix of contractors, creatives, and operators who are all playing big games in one of the country's most competitive markets.</p>
         <div class="event-card-bottom">
-          <div>
-            <div class="event-date">Every Last Thursday</div>
-            <div class="event-price">Included</div>
-          </div>
-          <a href="apply.html" class="event-cta event-cta-ghost">Apply for Access</a>
+          <div class="event-coming-soon">Coming Soon — 2025</div>
+          <a href="#apply" class="event-cta interest">Register Interest</a>
+        </div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-card-top">
+          <div class="event-tag">New York, NY</div>
+          <h3>NYC Arsenal Summit</h3>
+          <p class="event-location">📍 New York City, NY</p>
+        </div>
+        <div class="event-divider"></div>
+        <p class="event-desc">The biggest Arsenal 001 event of the year. Two days of networking, masterminds, and real talk from operators who have built serious businesses in the most competitive city in the world.</p>
+        <div class="event-card-bottom">
+          <div class="event-coming-soon">Coming Soon — 2026</div>
+          <a href="#apply" class="event-cta interest">Register Interest</a>
+        </div>
+      </div>
+      <div class="event-card reveal reveal-delay-1">
+        <div class="event-card-top">
+          <div class="event-tag">Dallas, TX</div>
+          <h3>Texas Operator Meetup</h3>
+          <p class="event-location">📍 Dallas, TX</p>
+        </div>
+        <div class="event-divider"></div>
+        <p class="event-desc">Texas is one of the most active markets for contractors and builders. Connect with the best operators in the Lone Star state and the members who are building empires there.</p>
+        <div class="event-card-bottom">
+          <div class="event-coming-soon">Coming Soon — 2026</div>
+          <a href="#apply" class="event-cta interest">Register Interest</a>
+        </div>
+      </div>
+      <div class="event-card reveal reveal-delay-2">
+        <div class="event-card-top">
+          <div class="event-tag">Miami, FL</div>
+          <h3>Miami Annual Retreat</h3>
+          <p class="event-location">📍 Miami, FL</p>
+        </div>
+        <div class="event-divider"></div>
+        <p class="event-desc">Arsenal 001's flagship annual retreat. Three days of strategy, connection, and collaboration in Miami. The event that sets the direction for the next 12 months.</p>
+        <div class="event-card-bottom">
+          <div class="event-coming-soon">Annual — 2026</div>
+          <a href="#apply" class="event-cta">Apply to Attend</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- APPLY CTA -->
-<section id="apply-cta">
-  <div class="noise-overlay"></div>
-  <div class="section-inner">
-    <div class="apply-inner reveal">
-      <div class="apply-icon">
-        <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
+    <div class="events-grid-online" id="eventsOnline">
+      <div class="event-card reveal">
+        <div class="event-card-top">
+          <div class="event-tag online">Monthly</div>
+          <h3>Arsenal Mastermind Call</h3>
+          <p class="event-location">💻 Zoom — All Members</p>
+        </div>
+        <div class="event-divider"></div>
+        <p class="event-desc">Monthly live call with all active Arsenal 001 members. Hot seat sessions, peer coaching, wins and losses — raw and real. No BS, no sales pitches. Just operators helping each other grow.</p>
+        <div class="event-card-bottom">
+          <div class="event-coming-soon">Every Last Thursday</div>
+          <a href="#apply" class="event-cta">Apply for Access</a>
+        </div>
       </div>
-      <h2>Ready to Join the <span>Inner Circle?</span></h2>
-      <p>Arsenal 001 accepts a new cohort twice per year. Applications are reviewed personally. Submit yours before the next window closes.</p>
-      <div class="hero-ctas">
-        <a href="apply.html" class="btn-primary">Apply for Arsenal 001</a>
-      </div>
-      <div class="apply-note">
-        3.2% acceptance rate — Quality over quantity
+      <div class="event-card reveal reveal-delay-1">
+        <div class="event-card-top">
+          <div class="event-tag online">Quarterly</div>
+          <h3>Industry Deep-Dive</h3>
+          <p class="event-location">💻 Zoom — All Members</p>
+        </div>
+        <div class="event-divider"></div>
+        <p class="event-desc">Quarterly virtual deep-dives hosted by members who are crushing it in their specific niche. Contracting, e-commerce, sales, marketing — one expert per session, all questions welcome.</p>
+        <div class="event-card-bottom">
+          <div class="event-coming-soon">Once per Quarter</div>
+          <a href="#apply" class="event-cta">Apply for Access</a>
+        </div>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq">
+<!-- APPLICATION FORM -->
+<section id="apply">
   <div class="section-inner">
-    <div class="faq-inner">
-      <div style="text-align:center;" class="reveal">
-        <div class="section-label" style="display:inline-block">FAQ</div>
-        <h2 class="section-title" style="margin-top:.5rem">The Only Network<br>Worth Getting Into</h2>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">What is Arsenal 001?</button>
-          <div class="faq-a"><div class="faq-a-inner">Arsenal 001 is a private, invitation-based membership network for serious contractors. It's a place to connect with other high-performing operators, share knowledge, get referrals, and grow your business faster than you could alone. We keep the group small and curated — quality over quantity, always.</div></div>
+    <div class="form-header reveal">
+      <div class="section-label">Membership Application</div>
+      <h2 class="section-title">The First Step<br>Into the Inner Circle</h2>
+      <p class="section-sub">Applications are reviewed personally. We look for serious operators who are growth-minded and genuinely want to contribute to the network — not just take from it.</p>
+    </div>
+    <div class="form-wrap reveal">
+      <div class="form-card">
+        <div class="form-card-head">
+          <h3>Arsenal 001 Membership Application</h3>
+          <p>Fill this out honestly. We value authenticity over polish.</p>
         </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">How do I join?</button>
-          <div class="faq-a"><div class="faq-a-inner">Submit an application through our apply page. We review every application personally. If you pass the initial screen, we'll invite you to a short interview call. Accepted members receive an invitation when a spot becomes available in the next cohort.</div></div>
+        <div class="form-body" id="formBody">
+          <form id="arsenal001Form">
+
+            <!-- PERSONAL -->
+            <div class="form-section">
+              <div class="form-section-title">Personal Info</div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label">First Name <span class="req">*</span></label>
+                  <input class="form-input" type="text" name="first_name" placeholder="John" required autocomplete="given-name">
+                </div>
+                <div class="form-field">
+                  <label class="form-label">Last Name <span class="req">*</span></label>
+                  <input class="form-input" type="text" name="last_name" placeholder="Smith" required autocomplete="family-name">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label">Phone Number <span class="req">*</span></label>
+                  <input class="form-input" type="tel" name="phone" placeholder="(555) 000-0000" required autocomplete="tel">
+                </div>
+                <div class="form-field">
+                  <label class="form-label">Email Address <span class="req">*</span></label>
+                  <input class="form-input" type="email" name="email" placeholder="john@business.com" required autocomplete="email">
+                </div>
+              </div>
+              <div class="form-row trio">
+                <div class="form-field">
+                  <label class="form-label">Age <span class="req">*</span></label>
+                  <input class="form-input" type="number" name="age" placeholder="28" min="18" max="80" required>
+                </div>
+                <div class="form-field">
+                  <label class="form-label">Gender</label>
+                  <select class="form-input" name="gender">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label class="form-label">Instagram Handle</label>
+                  <input class="form-input" type="text" name="instagram" placeholder="@yourhandle">
+                </div>
+              </div>
+              <div class="form-row solo">
+                <div class="form-field">
+                  <label class="form-label">Where are you located? <span class="req">*</span></label>
+                  <input class="form-input" type="text" name="location" placeholder="City, State" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- BUSINESS -->
+            <div class="form-section">
+              <div class="form-section-title">Your Business</div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label">Business / Job Title <span class="req">*</span></label>
+                  <input class="form-input" type="text" name="job_title" placeholder="Owner, CEO, Operator..." required>
+                </div>
+                <div class="form-field">
+                  <label class="form-label">Company Name</label>
+                  <input class="form-input" type="text" name="company" placeholder="Your company">
+                </div>
+              </div>
+              <div class="form-field" style="margin-bottom:1rem">
+                <label class="form-label" style="margin-bottom:.75rem">Which field best describes you? <span class="req">*</span></label>
+                <div class="options-grid three">
+                  <label class="option-label"><input type="checkbox" name="field" value="Contracting"><span class="option-check"></span><span class="option-letter">A</span> Contracting</label>
+                  <label class="option-label"><input type="checkbox" name="field" value="Building/Construction"><span class="option-check"></span><span class="option-letter">B</span> Building</label>
+                  <label class="option-label"><input type="checkbox" name="field" value="E-commerce"><span class="option-check"></span><span class="option-letter">C</span> E-Commerce</label>
+                  <label class="option-label"><input type="checkbox" name="field" value="Marketing"><span class="option-check"></span><span class="option-letter">D</span> Marketing</label>
+                  <label class="option-label"><input type="checkbox" name="field" value="Creative"><span class="option-check"></span><span class="option-letter">E</span> Creative</label>
+                  <label class="option-label"><input type="checkbox" name="field" value="Finance/Real Estate"><span class="option-check"></span><span class="option-letter">F</span> Finance / RE</label>
+                  <label class="option-label"><input type="checkbox" name="field" value="Sales"><span class="option-check"></span><span class="option-letter">G</span> Sales</label>
+                  <label class="option-label"><input type="checkbox" name="field" value="Tech"><span class="option-check"></span><span class="option-letter">H</span> Tech</label>
+                  <label class="option-label"><input type="checkbox" name="field" value="Other"><span class="option-check"></span><span class="option-letter">I</span> Other</label>
+                </div>
+              </div>
+              <div class="form-field">
+                <label class="form-label" style="margin-bottom:.75rem">Monthly revenue range (USD) <span class="req">*</span></label>
+                <div class="revenue-grid">
+                  <label class="rev-label"><input type="radio" name="revenue" value="Under $3K" required> Under $3K</label>
+                  <label class="rev-label"><input type="radio" name="revenue" value="$3K–$5K"> $3K–$5K</label>
+                  <label class="rev-label"><input type="radio" name="revenue" value="$5K–$10K"> $5K–$10K</label>
+                  <label class="rev-label"><input type="radio" name="revenue" value="$10K–$50K"> $10K–$50K</label>
+                  <label class="rev-label"><input type="radio" name="revenue" value="$50K–$100K"> $50K–$100K</label>
+                  <label class="rev-label"><input type="radio" name="revenue" value="$100K–$500K"> $100K–$500K</label>
+                  <label class="rev-label"><input type="radio" name="revenue" value="$500K–$1M"> $500K–$1M</label>
+                  <label class="rev-label"><input type="radio" name="revenue" value="$1M+"> $1M+</label>
+                  <label class="rev-label"><input type="radio" name="revenue" value="Prefer not to say"> Prefer not to say</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- EVENTS -->
+            <div class="form-section">
+              <div class="form-section-title">Event Interest</div>
+              <div class="form-field">
+                <label class="form-label" style="margin-bottom:.75rem">Which events are you interested in?</label>
+                <div class="options-grid">
+                  <label class="option-label"><input type="checkbox" name="event_interest" value="Seattle Kickoff"><span class="option-check"></span><span class="option-letter">A</span> Seattle Kickoff</label>
+                  <label class="option-label"><input type="checkbox" name="event_interest" value="San Francisco"><span class="option-check"></span><span class="option-letter">B</span> San Francisco</label>
+                  <label class="option-label"><input type="checkbox" name="event_interest" value="Los Angeles"><span class="option-check"></span><span class="option-letter">C</span> Los Angeles</label>
+                  <label class="option-label"><input type="checkbox" name="event_interest" value="New York City"><span class="option-check"></span><span class="option-letter">D</span> New York City</label>
+                  <label class="option-label"><input type="checkbox" name="event_interest" value="Dallas"><span class="option-check"></span><span class="option-letter">E</span> Dallas</label>
+                  <label class="option-label"><input type="checkbox" name="event_interest" value="Miami Annual Retreat"><span class="option-check"></span><span class="option-letter">F</span> Miami Retreat</label>
+                  <label class="option-label"><input type="checkbox" name="event_interest" value="Monthly Online Calls"><span class="option-check"></span><span class="option-letter">G</span> Monthly Online Calls</label>
+                  <label class="option-label"><input type="checkbox" name="event_interest" value="All Events"><span class="option-check"></span><span class="option-letter">H</span> All of the Above</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- REASONS -->
+            <div class="form-section">
+              <div class="form-section-title">Your Application</div>
+              <div class="form-field" style="margin-bottom:1.25rem">
+                <label class="form-label" style="margin-bottom:.75rem">Main reason for applying? <span class="req">*</span></label>
+                <div class="options-grid">
+                  <label class="option-label"><input type="checkbox" name="reason" value="Access to network"><span class="option-check"></span><span class="option-letter">A</span> Access to the network</label>
+                  <label class="option-label"><input type="checkbox" name="reason" value="Accelerate business"><span class="option-check"></span><span class="option-letter">B</span> Accelerate my business</label>
+                  <label class="option-label"><input type="checkbox" name="reason" value="High-value circle"><span class="option-check"></span><span class="option-letter">C</span> Build a high-value circle</label>
+                  <label class="option-label"><input type="checkbox" name="reason" value="Referrals"><span class="option-check"></span><span class="option-letter">D</span> Give and get referrals</label>
+                  <label class="option-label"><input type="checkbox" name="reason" value="Events and travel"><span class="option-check"></span><span class="option-letter">E</span> Events &amp; experiences</label>
+                  <label class="option-label"><input type="checkbox" name="reason" value="Mindset and growth"><span class="option-check"></span><span class="option-letter">F</span> Mindset &amp; growth</label>
+                </div>
+              </div>
+              <div class="form-row solo">
+                <div class="form-field">
+                  <label class="form-label">Why are you a good fit for Arsenal 001? <span class="req">*</span></label>
+                  <textarea class="form-input" name="why_fit" rows="5" placeholder="Tell us about yourself — what you've built, what you bring to the table, and why you want in. Be real." required></textarea>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+              Submit Application
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <p class="form-note">Applications are reviewed personally. You'll hear back within 5 business days.</p>
+
+          </form>
         </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">How do I get invited to Arsenal 001?</button>
-          <div class="faq-a"><div class="faq-a-inner">You can apply directly through this page or be referred by a current member. Current members can refer other contractors they know personally and would vouch for. Referred applicants are fast-tracked through the review process.</div></div>
+
+        <!-- SUCCESS STATE -->
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">✓</div>
+          <div class="success-title">Application Received.</div>
+          <p class="success-body">We review every application personally. If you're a fit, you'll hear from us within 5 business days. Keep building in the meantime.</p>
         </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">Who is in Arsenal 001?</button>
-          <div class="faq-a"><div class="faq-a-inner">Arsenal 001 members are contractors across the US doing meaningful revenue — typically $500K to $5M+ annually. Painters, roofers, HVAC, plumbers, landscapers, remodelers, and more. The common thread: they're serious, growth-oriented, and genuinely want to help other members win.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">What does membership cost?</button>
-          <div class="faq-a"><div class="faq-a-inner">Membership details including cost are shared during the interview process. Events and retreats are separately priced. Monthly mastermind calls are included for all active members.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">What does the cost cover?</button>
-          <div class="faq-a"><div class="faq-a-inner">Membership includes access to the private community, monthly mastermind calls, the member directory and referral network, group vendor deals, and growth resources. Event travel and accommodations are separate costs.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">What happens if I'm rejected?</button>
-          <div class="faq-a"><div class="faq-a-inner">Being rejected from Arsenal 001 doesn't mean we think less of your business — it may simply mean the current cohort isn't the right fit or is full. We'll let you know clearly, and you're welcome to reapply when the next cohort opens. We'd rather tell you upfront than waste your time.</div></div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -578,17 +752,105 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
 </footer>
 
 <script>
+// NAV
 function toggleMenu(){document.getElementById('navMobile').classList.toggle('open');}
 function closeMenu(){document.getElementById('navMobile').classList.remove('open');}
+
+// TYPING ANIMATION
+(function(){
+  var phrases = [
+    'Private Membership Network',
+    'The Inner Circle for Contractors',
+    'The Inner Circle for Builders',
+    'The Inner Circle for E-Commerce',
+    'The Inner Circle for Marketers',
+    'The Inner Circle for Sales Leaders',
+    'Keep Each Other in Your Arsenal'
+  ];
+  var el = document.getElementById('typingText');
+  if(!el) return;
+  var pi = 0, ci = 0, deleting = false, wait = 0;
+  var speed = 55, deleteSpeed = 30, pauseAfter = 1800, pauseAfterDelete = 400;
+
+  function type(){
+    var phrase = phrases[pi];
+    if(!deleting){
+      el.textContent = phrase.substring(0, ci + 1);
+      ci++;
+      if(ci === phrase.length){
+        deleting = true;
+        setTimeout(type, pauseAfter);
+        return;
+      }
+      setTimeout(type, speed);
+    } else {
+      el.textContent = phrase.substring(0, ci - 1);
+      ci--;
+      if(ci === 0){
+        deleting = false;
+        pi = (pi + 1) % phrases.length;
+        setTimeout(type, pauseAfterDelete);
+        return;
+      }
+      setTimeout(type, deleteSpeed);
+    }
+  }
+  setTimeout(type, 600);
+})();
+
+// EVENTS TABS
+function switchTab(tab, btn){
+  document.querySelectorAll('.events-tab').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  var ip = document.getElementById('eventsInPerson');
+  var on = document.getElementById('eventsOnline');
+  if(tab === 'inperson'){
+    ip.style.display = 'grid';
+    on.style.display = 'none';
+  } else {
+    ip.style.display = 'none';
+    on.style.display = 'grid';
+  }
+}
+
+// FAQ (none on this page, but just in case)
 function toggleFaq(btn){
-  var item=btn.closest('.faq-item');
-  var isOpen=item.classList.contains('open');
+  var item = btn.closest('.faq-item');
+  var isOpen = item.classList.contains('open');
   document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
   if(!isOpen) item.classList.add('open');
 }
-var obs=new IntersectionObserver(function(entries){
+
+// FORM SUBMIT
+document.getElementById('arsenal001Form').addEventListener('submit', async function(e){
+  e.preventDefault();
+  var btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:spin .8s linear infinite"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> Submitting...';
+  try {
+    var data = new FormData(this);
+    var resp = await fetch('https://usebasin.com/f/b2138e2d0d81', {
+      method: 'POST', body: data, headers: {'Accept': 'application/json'}
+    });
+    if(resp.ok || resp.status === 200 || resp.status === 201){
+      document.getElementById('formBody').style.display = 'none';
+      document.getElementById('formSuccess').classList.add('show');
+    } else { throw new Error(); }
+  } catch(err){
+    btn.disabled = false;
+    btn.innerHTML = 'Submit Application <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+    alert('Something went wrong. Please try again or DM us on Instagram.');
+  }
+});
+
+var style = document.createElement('style');
+style.textContent = '@keyframes spin{to{transform:rotate(360deg)}}';
+document.head.appendChild(style);
+
+// SCROLL REVEAL
+var obs = new IntersectionObserver(function(entries){
   entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
-},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r);});
 </script>
 </body>

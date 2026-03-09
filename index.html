@@ -40,7 +40,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;display:flex;a
 .nav-mobile a:hover{color:var(--gold);}
 
 /* ── HERO: FULL-BLEED BACKGROUND SLIDESHOW ── */
-.hero{min-height:100vh;display:flex;align-items:center;padding:100px 5% 60px;position:relative;overflow:hidden;}
+.hero{min-height:82vh;display:flex;align-items:center;padding:80px 5% 50px;position:relative;overflow:hidden;}
 
 /* Background slides sit behind everything */
 .hero-bg{position:absolute;inset:0;z-index:0;}
@@ -70,7 +70,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;display:flex;a
 .hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.3);color:var(--gold);padding:.35rem .85rem;border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;}
 .hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 1.5s infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
-.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,7vw,6.5rem);line-height:1.0;letter-spacing:1px;margin-bottom:1rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,5vw,5rem);line-height:1.0;letter-spacing:1px;margin-bottom:.85rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
 .hero h1 .accent-red{color:var(--red);}
 .hero h1 .accent-gold{color:var(--gold);}
 .hero-sub{font-size:1.1rem;color:rgba(240,240,240,0.85);max-width:480px;margin-bottom:2rem;line-height:1.7;}
@@ -265,7 +265,6 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
   <div class="nav-links">
     <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
-    <a href="arsenal.html">Arsenal 001</a>
     <a href="apply.html" class="nav-cta">Apply Now</a>
   </div>
   <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -275,7 +274,6 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
 <div class="nav-mobile" id="navMobile">
   <a href="index.html" onclick="closeMenu()">Home</a>
   <a href="about.html" onclick="closeMenu()">About</a>
-  <a href="arsenal.html" onclick="closeMenu()">Arsenal 001</a>
   <a href="apply.html" onclick="closeMenu()">Apply Now</a>
 </div>
 
