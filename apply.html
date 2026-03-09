@@ -586,7 +586,7 @@ document.getElementById('applyForm').addEventListener('submit',async function(e)
   try{
     var formData=new FormData(this);
     var payload=Object.fromEntries(formData.entries());
-    var resp=await fetch('https://contractorarsenal.app.n8n.cloud/webhook-test/9b64a8cd-4770-4ed5-a65f-24d6540d5390',{method:'POST',body:JSON.stringify(payload),headers:{'Content-Type':'application/json','Accept':'application/json'}});
+    var resp=await fetch('https://contractorarsenal.app.n8n.cloud/webhook/9b64a8cd-4770-4ed5-a65f-24d6540d5390',{method:'POST',body:JSON.stringify(payload),headers:{'Content-Type':'application/json','Accept':'application/json'}});
     if(resp.ok||resp.status===200||resp.status===201){
       document.getElementById('formBody').style.display='none';
       document.getElementById('formSuccess').classList.add('visible');
