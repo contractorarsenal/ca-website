@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Your Free Demo Site | Contractor Arsenal</title>
+<meta name="description" content="See what your contractor website could look like — for free. Fill out the form and we'll build you a custom demo site in 48 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Barlow+Condensed:wght@600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0a;--surface:#111111;--surface2:#1a1a1a;
+  --bg2:#111113;--bg3:#18181b;--bg4:#26262c;--bg5:#2e2e35;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.14);
+  --red:#C0392B;--red-light:#E74C3C;--red2:#a93226;
+  --red-dim:rgba(192,57,43,0.1);--red-glow:rgba(192,57,43,0.25);
+  --gold:#F97316;--gold2:#FB923C;
+  --green:#10B981;
+  --text:#f0f0f0;--text2:#A8A8B3;--text3:#66666e;--text4:#3a3a42;
+  --muted:#888;--radius:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:4px;}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:0.35;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:68px;display:flex;align-items:center;padding:0 5%;}
+.nav-inner{max-width:1100px;margin:0 auto;width:100%;display:flex;align-items:center;gap:2rem;}
+.nav-logo{display:flex;align-items:center;gap:.65rem;}
+.nav-logo img{height:38px;width:auto;}
+.nav-logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.05rem;color:var(--text);letter-spacing:.04em;}
+.nav-links{display:flex;gap:0;list-style:none;margin-left:.5rem;}
+.nav-links a{padding:.5rem 1rem;font-size:.82rem;color:var(--text3);font-weight:700;transition:color .2s;font-family:'Barlow Condensed',sans-serif;letter-spacing:.04em;text-transform:uppercase;}
+.nav-links a:hover{color:var(--text);}
+.nav-right{margin-left:auto;}
+.nav-cta{padding:.5rem 1.2rem;border-radius:6px;background:var(--red);color:#fff;font-size:.8rem;font-weight:800;text-decoration:none;font-family:'Barlow Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase;transition:all .2s;}
+.nav-cta:hover{background:var(--red-light);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin-left:auto;background:none;border:none;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;bottom:0;background:rgba(10,10,10,.99);z-index:99;flex-direction:column;padding:2rem 1.5rem;gap:0;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{padding:1.1rem 0;font-size:1.1rem;font-weight:700;color:var(--text2);border-bottom:1px solid var(--border);font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.05em;}
+.mobile-menu a:hover{color:var(--red);}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:5rem 2rem 3rem;background:radial-gradient(ellipse 900px 500px at 50% -100px,rgba(192,57,43,0.12) 0%,transparent 70%),var(--bg);text-align:center;}
+.hero-ticker{display:inline-flex;align-items:center;gap:.6rem;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);border-radius:3px;padding:.3rem 1rem;font-size:.7rem;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-family:'Barlow Condensed',sans-serif;margin-bottom:1.5rem;}
+.ticker-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.8);}}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,6.5rem);line-height:.95;letter-spacing:.02em;color:var(--text);margin-bottom:1.25rem;}
+.hero h1 .accent-red{color:var(--red);}
+.hero h1 .accent-gold{color:var(--gold);}
+.hero-sub{font-size:1rem;color:var(--text2);max-width:560px;margin:0 auto 2rem;line-height:1.8;}
+.hero-sub strong{color:var(--text);font-weight:700;}
+.hero-chips{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;}
+.hero-chip{display:flex;align-items:center;gap:.4rem;padding:.35rem .85rem;border-radius:4px;background:var(--surface2);border:1px solid var(--border2);font-size:.75rem;font-weight:700;color:var(--text2);font-family:'Barlow Condensed',sans-serif;letter-spacing:.04em;}
+.hero-chip .dot{width:5px;height:5px;border-radius:50%;background:var(--green);}
+
+/* LAYOUT */
+.main-wrap{max-width:1100px;margin:0 auto;padding:3rem 2rem 6rem;display:grid;grid-template-columns:1fr 480px;gap:3.5rem;align-items:start;}
+
+/* FORM CARD */
+.form-card{background:var(--bg3);border:1.5px solid var(--border2);border-radius:20px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,0.6),0 0 0 1px rgba(255,255,255,0.04);position:sticky;top:88px;}
+.form-card-header{padding:2rem 2rem 1.5rem;border-bottom:1px solid var(--border);background:linear-gradient(135deg,var(--bg4),var(--bg3));}
+.form-card-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);border-radius:4px;padding:.25rem .75rem;font-size:.65rem;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.08em;font-family:'Barlow Condensed',sans-serif;margin-bottom:1rem;}
+.form-card-title{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:900;color:var(--text);letter-spacing:.02em;}
+.form-card-sub{font-size:.82rem;color:var(--text3);margin-top:.3rem;}
+.form-body{padding:1.75rem 2rem 2rem;}
+
+/* FORM FIELDS */
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
+.form-row.solo{grid-template-columns:1fr;}
+.form-field{display:flex;flex-direction:column;gap:.4rem;}
+.form-label{font-size:.68rem;font-weight:800;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;font-family:'Barlow Condensed',sans-serif;}
+.form-label .opt{font-size:.6rem;color:var(--text4);font-weight:700;margin-left:.4rem;}
+.form-input{background:var(--bg4);border:1.5px solid var(--border2);border-radius:8px;padding:.7rem .95rem;font-size:.88rem;color:var(--text);outline:none;font-family:'Barlow',sans-serif;transition:border .2s,box-shadow .2s;width:100%;}
+.form-input::placeholder{color:var(--text4);}
+.form-input:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(192,57,43,0.1);background:var(--bg5);}
+textarea.form-input{resize:vertical;min-height:90px;line-height:1.6;}
+
+/* TOGGLE BUTTON GROUP (multi-select / radio style) */
+.toggle-group{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.1rem;}
+.toggle-option{position:relative;}
+.toggle-option input{position:absolute;opacity:0;width:0;height:0;}
+.toggle-option label{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .9rem;border-radius:6px;background:var(--bg4);border:1.5px solid var(--border2);font-size:.8rem;font-weight:700;color:var(--text3);cursor:pointer;transition:all .2s;font-family:'Barlow',sans-serif;}
+.toggle-option label:hover{border-color:rgba(192,57,43,0.5);color:var(--text);}
+.toggle-option input:checked + label{background:var(--red-dim);border-color:var(--red);color:var(--text);box-shadow:0 0 0 2px rgba(192,57,43,0.12);}
+.toggle-option input:checked + label::before{content:'✓';font-size:.7rem;color:var(--red);font-weight:900;}
+
+.form-divider{display:flex;align-items:center;gap:.75rem;margin:1.5rem 0 1.25rem;}
+.form-divider span{font-size:.68rem;font-weight:800;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;font-family:'Barlow Condensed',sans-serif;white-space:nowrap;}
+.form-divider::before,.form-divider::after{content:'';flex:1;height:1px;background:var(--border2);}
+
+/* SUBMIT */
+.btn-submit{width:100%;padding:1rem;border-radius:8px;background:var(--green);color:#fff;font-size:.95rem;font-weight:900;font-family:'Barlow Condensed',sans-serif;letter-spacing:.07em;text-transform:uppercase;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.6rem;transition:all .25s;margin-top:1.5rem;box-shadow:0 4px 16px rgba(16,185,129,0.25);position:relative;overflow:hidden;}
+.btn-submit::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);transform:translateX(-100%);transition:transform .4s;}
+.btn-submit:hover{background:#0ea271;transform:translateY(-2px);box-shadow:0 8px 28px rgba(16,185,129,0.35);}
+.btn-submit:hover::before{transform:translateX(100%);}
+.btn-submit:disabled{opacity:.5;cursor:not-allowed;transform:none;}
+.btn-submit .arrow{transition:transform .2s;}
+.btn-submit:hover .arrow{transform:translateX(4px);}
+.submit-note{display:flex;align-items:center;justify-content:center;gap:.4rem;font-size:.72rem;color:var(--text3);margin-top:.75rem;}
+.form-success{display:none;text-align:center;padding:3rem 2rem;}
+.form-success.visible{display:block;}
+.success-icon{width:64px;height:64px;border-radius:50%;background:rgba(16,185,129,0.12);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1.5rem;animation:popIn .5s cubic-bezier(0.175,0.885,0.32,1.275);}
+@keyframes popIn{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}
+.success-title{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:900;color:var(--green);margin-bottom:.5rem;}
+.success-body{font-size:.9rem;color:var(--text2);line-height:1.7;max-width:340px;margin:0 auto;}
+
+/* LEFT PANEL */
+.panel-section{margin-bottom:2.5rem;}
+.panel-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:900;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;display:flex;align-items:center;gap:.5rem;margin-bottom:1.25rem;}
+.panel-label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+.demo-preview{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius);overflow:hidden;margin-bottom:2.5rem;}
+.demo-preview-bar{background:var(--bg4);padding:.6rem 1rem;display:flex;align-items:center;gap:.5rem;border-bottom:1px solid var(--border);}
+.demo-dot{width:10px;height:10px;border-radius:50%;}
+.demo-screen{padding:1.25rem;display:flex;flex-direction:column;gap:.6rem;}
+.demo-block{border-radius:6px;background:var(--bg4);}
+.demo-block.hero-mock{height:80px;background:linear-gradient(135deg,var(--red-dim),rgba(249,115,22,0.05));border:1px solid rgba(192,57,43,0.2);display:flex;align-items:center;padding:1rem;gap:.75rem;}
+.demo-mock-text{display:flex;flex-direction:column;gap:.3rem;}
+.demo-mock-line{height:8px;border-radius:3px;background:rgba(240,240,240,0.15);}
+.demo-mock-line.short{width:60%;}
+.demo-mock-line.xshort{width:35%;}
+.demo-block.content-mock{height:50px;background:var(--bg4);border:1px solid var(--border);display:flex;gap:.5rem;padding:.75rem;}
+.demo-block.content-mock .mock-col{flex:1;display:flex;flex-direction:column;gap:.3rem;}
+
+.what-gets-built{display:flex;flex-direction:column;gap:.6rem;}
+.wgb-item{display:flex;align-items:center;gap:.75rem;padding:.85rem 1rem;background:var(--bg3);border:1px solid var(--border);border-radius:8px;}
+.wgb-icon{font-size:1.1rem;flex-shrink:0;}
+.wgb-text{font-size:.82rem;font-weight:700;color:var(--text2);}
+.wgb-badge{margin-left:auto;font-size:.6rem;font-weight:800;padding:.2rem .5rem;border-radius:3px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);color:var(--green);font-family:'Barlow Condensed',sans-serif;letter-spacing:.05em;text-transform:uppercase;flex-shrink:0;}
+
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:2.5rem;}
+.trust-item{padding:1.25rem 1rem;text-align:center;border-right:1px solid var(--border);}
+.trust-item:last-child{border-right:none;}
+.trust-num{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1;color:var(--red);}
+.trust-lbl{font-size:.65rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-top:.3rem;}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* FOOTER */
+footer{background:var(--surface);border-top:1px solid var(--border);padding:60px 5% 30px;}
+.footer-inner{max-width:1280px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem;}
+.footer-brand-logo{display:flex;align-items:center;gap:.6rem;margin-bottom:.75rem;}
+.footer-brand-logo img{height:36px;width:auto;}
+.footer-brand-logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:.05em;}
+.footer-brand p{font-size:.85rem;color:var(--muted);line-height:1.6;max-width:240px;}
+.footer-col h4{font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.footer-col a{font-size:.88rem;color:var(--muted);transition:color .2s;}
+.footer-col a:hover{color:var(--text);}
+.footer-col span{font-size:.88rem;color:var(--muted);}
+.footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-bottom p{font-size:.8rem;color:var(--muted);}
+.footer-social{display:flex;gap:.6rem;}
+.fsoc{width:34px;height:34px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);color:var(--muted);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all .2s;}
+.fsoc:hover{border-color:var(--red);}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .main-wrap{grid-template-columns:1fr;gap:2rem;}
+  .form-card{position:static;}
+  .left-panel{order:1;}
+  .form-card{order:-1;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:640px){
+  nav{padding:0 4%;height:60px;}
+  .nav-links,.nav-right{display:none;}
+  .hamburger{display:flex;}
+  .mobile-menu{top:60px;}
+  .hero{padding:4rem 1.5rem 2.5rem;}
+  .hero h1{font-size:clamp(2.8rem,11vw,4.5rem);}
+  .main-wrap{padding:2rem 1rem 4rem;}
+  .form-row{grid-template-columns:1fr;}
+  .form-body{padding:1.5rem 1.25rem;}
+  .form-card-header{padding:1.5rem 1.25rem 1.25rem;}
+  .footer-top{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .trust-row{grid-template-columns:1fr 1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
+      <span class="nav-logo-text">Contractor Arsenal</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="apply.html" class="nav-cta">Apply Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="demo.html" onclick="closeMenu()">Free Demo</a>
+  <a href="apply.html" onclick="closeMenu()">Apply Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-ticker">
+    <span class="ticker-dot"></span>
+    100% Free — No Credit Card. No Commitment.
+  </div>
+  <h1>See Your <span class="accent-red">Site</span><br>Before You <span class="accent-gold">Buy.</span></h1>
+  <p class="hero-sub">
+    Fill out the form below. We'll build you a <strong>real, custom demo website</strong> for your contracting business — completely free — so you can see exactly what you'd be getting before spending a dime.
+  </p>
+  <div class="hero-chips">
+    <div class="hero-chip"><span class="dot"></span> Zero Cost</div>
+    <div class="hero-chip"><span class="dot"></span> Built in 48 Hours</div>
+    <div class="hero-chip"><span class="dot"></span> No Obligation</div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<div class="main-wrap">
+
+  <!-- LEFT PANEL -->
+  <div class="left-panel">
+
+    <div class="trust-row reveal">
+      <div class="trust-item">
+        <div class="trust-num">Free</div>
+        <div class="trust-lbl">Demo Site</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num">48h</div>
+        <div class="trust-lbl">Build Time</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num">0</div>
+        <div class="trust-lbl">Obligations</div>
+      </div>
+    </div>
+
+    <div class="panel-section reveal" style="transition-delay:.05s">
+      <div class="panel-label">Demo Preview</div>
+      <div class="demo-preview">
+        <div class="demo-preview-bar">
+          <div class="demo-dot" style="background:#ff5f57;"></div>
+          <div class="demo-dot" style="background:#ffbd2e;"></div>
+          <div class="demo-dot" style="background:#28c840;"></div>
+          <span style="margin-left:.5rem;font-size:.65rem;color:var(--text4);font-family:'Barlow Condensed',sans-serif;">yourbusiness.com</span>
+        </div>
+        <div class="demo-screen">
+          <div class="demo-block hero-mock">
+            <div class="demo-mock-text">
+              <div class="demo-mock-line" style="width:80%;"></div>
+              <div class="demo-mock-line short"></div>
+              <div class="demo-mock-line xshort" style="background:rgba(192,57,43,0.4);"></div>
+            </div>
+          </div>
+          <div class="demo-block content-mock">
+            <div class="mock-col"><div class="demo-mock-line" style="height:6px;border-radius:3px;background:rgba(240,240,240,0.1);"></div><div class="demo-mock-line" style="height:6px;border-radius:3px;background:rgba(240,240,240,0.06);width:70%;"></div></div>
+            <div class="mock-col"><div class="demo-mock-line" style="height:6px;border-radius:3px;background:rgba(240,240,240,0.1);"></div><div class="demo-mock-line" style="height:6px;border-radius:3px;background:rgba(240,240,240,0.06);width:55%;"></div></div>
+            <div class="mock-col"><div class="demo-mock-line" style="height:6px;border-radius:3px;background:rgba(240,240,240,0.1);"></div><div class="demo-mock-line" style="height:6px;border-radius:3px;background:rgba(240,240,240,0.06);width:65%;"></div></div>
+          </div>
+          <div class="demo-block" style="height:30px;background:rgba(192,57,43,0.15);border:1px solid rgba(192,57,43,0.2);border-radius:6px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-section reveal" style="transition-delay:.1s">
+      <div class="panel-label">What Gets Built For You</div>
+      <div class="what-gets-built">
+        <div class="wgb-item">
+          <div class="wgb-icon">🏠</div>
+          <div class="wgb-text">Full Homepage — with your branding & services</div>
+          <div class="wgb-badge">Free</div>
+        </div>
+        <div class="wgb-item">
+          <div class="wgb-icon">🔍</div>
+          <div class="wgb-text">Local SEO structure baked in from day one</div>
+          <div class="wgb-badge">Free</div>
+        </div>
+        <div class="wgb-item">
+          <div class="wgb-icon">📞</div>
+          <div class="wgb-text">Click-to-call buttons &amp; lead capture form</div>
+          <div class="wgb-badge">Free</div>
+        </div>
+        <div class="wgb-item">
+          <div class="wgb-icon">📱</div>
+          <div class="wgb-text">Mobile-first responsive design</div>
+          <div class="wgb-badge">Free</div>
+        </div>
+        <div class="wgb-item">
+          <div class="wgb-icon">✍️</div>
+          <div class="wgb-text">Done-for-you copy written around your trade</div>
+          <div class="wgb-badge">Free</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-section reveal" style="transition-delay:.15s">
+      <div class="panel-label">How It Works</div>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div style="display:grid;grid-template-columns:28px 1fr;gap:.85rem;">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--red-dim);border:2px solid var(--red);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;color:var(--red);font-family:'Barlow Condensed',sans-serif;flex-shrink:0;">1</div>
+          <div style="padding-top:4px;"><div style="font-weight:800;font-size:.9rem;color:var(--text);margin-bottom:.15rem;">Fill Out This Form</div><div style="font-size:.78rem;color:var(--text2);line-height:1.5;">Tell us about your business — takes about 2 minutes.</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:28px 1fr;gap:.85rem;">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--red-dim);border:2px solid var(--red);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;color:var(--red);font-family:'Barlow Condensed',sans-serif;flex-shrink:0;">2</div>
+          <div style="padding-top:4px;"><div style="font-weight:800;font-size:.9rem;color:var(--text);margin-bottom:.15rem;">We Build Your Demo</div><div style="font-size:.78rem;color:var(--text2);line-height:1.5;">Our team builds a real custom site for your business in 48 hours — no templates.</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:28px 1fr;gap:.85rem;">
+          <div style="width:28px;height:28px;border-radius:50%;background:rgba(16,185,129,0.1);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;color:var(--green);font-family:'Barlow Condensed',sans-serif;flex-shrink:0;">3</div>
+          <div style="padding-top:4px;"><div style="font-weight:800;font-size:.9rem;color:var(--text);margin-bottom:.15rem;">You See It. You Decide.</div><div style="font-size:.78rem;color:var(--text2);line-height:1.5;">We send you the demo link. Love it? We launch it. Not for you? No hard feelings.</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FORM -->
+  <div class="form-card reveal">
+    <div class="form-card-header">
+      <div class="form-card-badge">&#10003; 100% Free — No Credit Card Required</div>
+      <div class="form-card-title">Build My Free Demo</div>
+      <div class="form-card-sub">Fill this out and we'll get building. Takes about 2 minutes.</div>
+    </div>
+    <div class="form-body">
+      <div id="formBody">
+        <form id="demoForm">
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="full_name">Full Name *</label>
+              <input class="form-input" type="text" id="full_name" name="full_name" placeholder="Enter your full name" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="business_name">Business Name *</label>
+              <input class="form-input" type="text" id="business_name" name="business_name" placeholder="Your company or LLC name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label" for="email">Email Address *</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="example@email.com" required autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="phone">Phone Number *</label>
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="(xxx) xxx-xxxx" required autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="form-divider"><span>Your Website</span></div>
+
+          <div class="form-row solo">
+            <div class="form-field">
+              <label class="form-label">Do you currently have a website? *</label>
+              <div class="toggle-group">
+                <div class="toggle-option">
+                  <input type="radio" name="has_website" id="has_website_yes" value="Yes" required>
+                  <label for="has_website_yes">Yes</label>
+                </div>
+                <div class="toggle-option">
+                  <input type="radio" name="has_website" id="has_website_no" value="No">
+                  <label for="has_website_no">No</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row solo">
+            <div class="form-field">
+              <label class="form-label" for="domain">If yes, what's your domain? <span class="opt">Optional</span></label>
+              <input class="form-input" type="text" id="domain" name="domain" placeholder="www.example.com">
+            </div>
+          </div>
+
+          <div class="form-row solo">
+            <div class="form-field">
+              <label class="form-label">Main goal of your new website *</label>
+              <div class="toggle-group">
+                <div class="toggle-option">
+                  <input type="checkbox" name="goal_leads" id="goal_leads" value="Generate leads">
+                  <label for="goal_leads">Generate Leads</label>
+                </div>
+                <div class="toggle-option">
+                  <input type="checkbox" name="goal_credibility" id="goal_credibility" value="Build credibility">
+                  <label for="goal_credibility">Build Credibility</label>
+                </div>
+                <div class="toggle-option">
+                  <input type="checkbox" name="goal_showcase" id="goal_showcase" value="Showcase services/projects">
+                  <label for="goal_showcase">Showcase Work</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-divider"><span>Your Brand</span></div>
+
+          <div class="form-row solo">
+            <div class="form-field">
+              <label class="form-label" for="brand_colors">Brand Colors *</label>
+              <input class="form-input" type="text" id="brand_colors" name="brand_colors" placeholder="just list colors (e.g. blue/white)" required>
+            </div>
+          </div>
+
+          <div class="form-row solo">
+            <div class="form-field">
+              <label class="form-label" for="services">List Your Services *</label>
+              <textarea class="form-input" id="services" name="services" placeholder="List all the things you do (Ex: Painting, Exterior, Interior)" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-row solo">
+            <div class="form-field">
+              <label class="form-label" for="about_business">About Your Business <span class="opt">Optional</span></label>
+              <textarea class="form-input" id="about_business" name="about_business" placeholder="Tell Us The Story Behind The Business"></textarea>
+            </div>
+          </div>
+
+          <div class="form-divider"><span>Contact & Presence</span></div>
+
+          <div class="form-row solo">
+            <div class="form-field">
+              <label class="form-label" for="contact_info">Contact Info to Display on Site *</label>
+              <textarea class="form-input" id="contact_info" name="contact_info" placeholder="Who To Call, Email, Etc." required></textarea>
+            </div>
+          </div>
+
+          <div class="form-row solo">
+            <div class="form-field">
+              <label class="form-label" for="social_links">Social Media Links <span class="opt">Optional</span></label>
+              <textarea class="form-input" id="social_links" name="social_links" placeholder="Instagram, Facebook, Tiktok" style="min-height:70px;"></textarea>
+            </div>
+          </div>
+
+          <div class="form-row solo">
+            <div class="form-field">
+              <label class="form-label">Do you already have a Google Business Profile? *</label>
+              <div class="toggle-group">
+                <div class="toggle-option">
+                  <input type="radio" name="google_business" id="gbp_yes" value="Yes" required>
+                  <label for="gbp_yes">Yes</label>
+                </div>
+                <div class="toggle-option">
+                  <input type="radio" name="google_business" id="gbp_no" value="No">
+                  <label for="gbp_no">No</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row solo">
+            <div class="form-field">
+              <label class="form-label" for="business_address">If no, share your business address, phone &amp; service area <span class="opt">Optional</span></label>
+              <textarea class="form-input" id="business_address" name="business_address" placeholder="Address, phone number, and the area you serve" style="min-height:70px;"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            Build My Free Demo
+            <svg class="arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <div class="submit-note">
+            <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Free forever. No card needed. We build, you decide.
+          </div>
+        </form>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">&#10003;</div>
+        <div class="success-title">We're On It.</div>
+        <p class="success-body">Your demo is in the queue. We'll build it in 48 hours and send you the link directly. Keep an eye on your email — this might be the best thing you see all week.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
+          <span class="footer-brand-logo-text">Contractor Arsenal</span>
+        </div>
+        <p>Done-for-you websites built for contractors who want more local jobs and less tech headaches.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="demo.html">Free Demo</a></li>
+          <li><a href="apply.html">Apply Now</a></li>
+          <li><a href="arsenal.html">Arsenal 001</a></li>
+          <li><a href="partner.html">Partner Network</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><span>Website Design</span></li>
+          <li><span>Local SEO</span></li>
+          <li><span>Copywriting</span></li>
+          <li><span>Mobile Optimization</span></li>
+          <li><span>Ongoing Support</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Contractor Arsenal. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener" class="fsoc" title="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FFDC80"/><stop offset="30%" stop-color="#F77737"/><stop offset="60%" stop-color="#C13584"/><stop offset="100%" stop-color="#515BD4"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5.5" fill="url(#ig)"/><circle cx="12" cy="12" r="4.2" stroke="#fff" stroke-width="1.8" fill="none"/><circle cx="17.2" cy="6.8" r="1.1" fill="#fff"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('hamburger').classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open');}
+function closeMenu(){document.getElementById('hamburger').classList.remove('open');document.getElementById('mobileMenu').classList.remove('open');}
+
+document.getElementById('demoForm').addEventListener('submit',async function(e){
+  e.preventDefault();
+  var btn=document.getElementById('submitBtn');
+  btn.disabled=true;
+  btn.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="spin"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> Submitting...';
+  try{
+    var formData=new FormData(this);
+    // collect checkbox goals into one field
+    var goals=[];
+    ['goal_leads','goal_credibility','goal_showcase'].forEach(function(id){
+      var el=document.getElementById(id);
+      if(el&&el.checked) goals.push(el.value);
+    });
+    formData.set('main_goal', goals.join(', ') || 'Not specified');
+    formData.delete('goal_leads');formData.delete('goal_credibility');formData.delete('goal_showcase');
+    var resp=await fetch('https://usebasin.com/f/528e7f842a31',{method:'POST',body:formData,headers:{'Accept':'application/json'}});
+    if(resp.ok||resp.status===200||resp.status===201){
+      document.getElementById('formBody').style.display='none';
+      document.getElementById('formSuccess').classList.add('visible');
+    }else{throw new Error('Server error');}
+  }catch(err){
+    btn.disabled=false;
+    btn.innerHTML='Build My Free Demo <svg class="arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+    alert('Something went wrong. Please try again or DM us on Instagram.');
+  }
+});
+
+var style=document.createElement('style');
+style.textContent='.spin{animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}';
+document.head.appendChild(style);
+
+var observer=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el){observer.observe(el);});
+</script>
+</body>
+</html>
