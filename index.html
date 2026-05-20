@@ -1,333 +1,784 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5PKHXQ2R');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contractor Arsenal - Websites That Win You More Jobs</title>
-<meta name="description" content="Done-for-you websites built for contractors. Any trade, any market. Rank on Google, get more calls, launch in 48-72 hours.">
+<title>Contractor Arsenal — Websites That Win Contractors Jobs | $297/Month</title>
+<meta name="description" content="Premium contractor websites for $297/month. Custom design, local SEO, lead capture, hosting, and ongoing support. No thousands upfront. Fast launch.">
 <link rel="canonical" href="https://contractorarsenal.com/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Contractor Arsenal — Websites That Win You More Jobs">
-<meta property="og:description" content="Done-for-you websites built for contractors. Any trade, any market. Rank on Google, get more calls, launch in 48–72 hours.">
+<meta property="og:title" content="Contractor Arsenal — Websites That Win Contractors Jobs">
+<meta property="og:description" content="Premium contractor websites for $297/month. Custom design, local SEO, lead capture, hosting, and ongoing support.">
 <meta property="og:url" content="https://contractorarsenal.com/">
 <meta property="og:image" content="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png">
 <meta property="og:site_name" content="Contractor Arsenal">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contractor Arsenal — Websites That Win You More Jobs">
-<meta name="twitter:description" content="Done-for-you websites built for contractors. Any trade, any market. Rank on Google, get more calls, launch in 48–72 hours.">
+<meta name="twitter:title" content="Contractor Arsenal — Websites That Win Contractors Jobs">
+<meta name="twitter:description" content="Premium contractor websites for $297/month. Custom design, local SEO, lead capture, hosting, and ongoing support.">
 <meta name="twitter:image" content="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0a0a0a;--surface:#111111;--surface2:#1a1a1a;
-  --border:rgba(255,255,255,0.08);
-  --red:#C0392B;--red-light:#E74C3C;
-  --gold:#F97316;--gold-light:#FB923C;
-  --text:#f0f0f0;--muted:#888;--radius:12px;
+  --bg:#0F1115;--bg2:#151922;--bg3:#1B2130;
+  --light:#F5F7FA;--white:#FFFFFF;
+  --accent:#FF5E2B;--accent-dim:rgba(255,94,43,0.08);--accent-mid:rgba(255,94,43,0.14);
+  --orange:#FF5E2B;--orange-dim:rgba(255,94,43,0.1);
+  --text:#F0F0F0;--muted:#8B929E;
+  --text-dark:#111827;--text-dark-muted:#6B7280;
+  --border:rgba(255,255,255,0.06);--border-hi:rgba(255,255,255,0.11);
+  --border-light:rgba(0,0,0,0.07);
+  --r:10px;--r-lg:16px;--r-xl:24px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;overflow-x:hidden;line-height:1.6;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;}
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;height:auto;display:block;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--bg2);}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:4px;}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;background:rgba(10,10,10,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
-.nav-logo{display:flex;align-items:center;gap:.6rem;}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:68px;padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(15,17,21,0.96);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{display:flex;align-items:center;}
 .nav-logo img{height:38px;width:auto;}
-.nav-logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:.05em;color:var(--text);}
-.nav-links{display:flex;gap:1.5rem;align-items:center;}
-.nav-links a{font-weight:600;font-size:.82rem;letter-spacing:.5px;text-transform:uppercase;color:var(--text);opacity:.75;transition:opacity .2s;}
+.nav-links{display:flex;gap:2rem;align-items:center;}
+.nav-links a{
+  font-weight:600;font-size:.8rem;letter-spacing:.5px;
+  text-transform:uppercase;color:var(--text);opacity:.55;transition:opacity .2s;
+}
 .nav-links a:hover{opacity:1;}
-.nav-links a.active{opacity:1;color:var(--gold);}
-.nav-cta{background:var(--red);color:#fff !important;padding:.5rem 1.25rem;border-radius:6px;font-weight:700;opacity:1 !important;transition:background .2s;}
-.nav-cta:hover{background:var(--red-light);}
-.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+.nav-links a.active{opacity:1;color:var(--accent);}
+.nav-cta{
+  background:var(--accent);color:#000 !important;
+  padding:.46rem 1.25rem;border-radius:7px;
+  font-weight:700;font-size:.78rem;letter-spacing:.5px;
+  text-transform:uppercase;opacity:1 !important;
+  transition:all .2s;
+}
+.nav-cta:hover{background:#e85520;transform:translateY(-1px);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
 .nav-hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s;}
-.nav-mobile{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(10,10,10,.98);padding:1.5rem 5%;flex-direction:column;gap:0;z-index:999;border-bottom:1px solid var(--border);}
+.nav-mobile{
+  display:none;position:fixed;top:68px;left:0;right:0;
+  background:rgba(15,17,21,.98);
+  padding:1.25rem 5%;flex-direction:column;gap:0;
+  z-index:999;border-bottom:1px solid var(--border);
+}
 .nav-mobile.open{display:flex;}
-.nav-mobile a{font-weight:600;font-size:1rem;text-transform:uppercase;letter-spacing:.5px;padding:.9rem 0;border-bottom:1px solid var(--border);color:var(--text);}
-.nav-mobile a:hover{color:var(--gold);}
+.nav-mobile a{
+  font-weight:600;font-size:1rem;text-transform:uppercase;
+  letter-spacing:.5px;padding:.85rem 0;
+  border-bottom:1px solid var(--border);color:var(--text);
+}
+.nav-mobile a:hover{color:var(--accent);}
+.nav-mobile .mob-cta{
+  margin-top:1rem;text-align:center;
+  background:var(--accent);color:#000;
+  padding:.85rem;border-radius:8px;
+  font-weight:700;border:none;
+}
 
-/* ── HERO: FULL-BLEED BACKGROUND SLIDESHOW ── */
-.hero{min-height:82vh;display:flex;align-items:center;padding:80px 5% 50px;position:relative;overflow:hidden;}
+/* ── BUTTONS ── */
+.btn-lime{
+  background:var(--accent);color:#000;
+  padding:.9rem 2.2rem;border-radius:8px;
+  font-weight:700;font-size:.95rem;letter-spacing:.4px;
+  display:inline-block;transition:all .2s;border:2px solid var(--accent);
+}
+.btn-lime:hover{background:#e85520;border-color:#e85520;transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,94,43,0.22);}
+.btn-outline{
+  border:2px solid var(--accent);color:var(--accent);
+  padding:.9rem 2.2rem;border-radius:8px;
+  font-weight:700;font-size:.95rem;letter-spacing:.4px;
+  display:inline-block;transition:all .2s;
+}
+.btn-outline:hover{background:var(--accent);color:#000;transform:translateY(-2px);}
 
-/* Background slides sit behind everything */
+/* ── SECTION UTILITIES ── */
+section{padding:100px 5%;}
+.section-inner{max-width:1280px;margin:0 auto;}
+.section-label{
+  font-size:.72rem;font-weight:700;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--accent);margin-bottom:.85rem;display:block;
+}
+.section-label.dark{color:var(--orange);}
+.section-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(2.6rem,4.8vw,4rem);
+  line-height:1;letter-spacing:1px;margin-bottom:1.1rem;
+}
+.section-title.on-light{color:var(--text-dark);}
+.section-sub{color:var(--muted);max-width:560px;font-size:1rem;line-height:1.72;}
+.section-sub.on-light{color:var(--text-dark-muted);}
+
+/* ── HERO ── */
+.hero{
+  min-height:92vh;display:flex;align-items:center;
+  padding:68px 5% 60px;position:relative;overflow:hidden;
+}
 .hero-bg{position:absolute;inset:0;z-index:0;}
-.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease-in-out;}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.8s ease-in-out;}
 .hero-slide.active{opacity:1;}
 .hero-slide img{width:100%;height:100%;object-fit:cover;object-position:center right;}
-
-/* Gradient: solid dark on left → transparent on right so images show through */
 .hero-overlay{
   position:absolute;inset:0;z-index:1;
-  background:linear-gradient(108deg,
-    #0a0a0a 28%,
-    rgba(10,10,10,0.90) 46%,
-    rgba(10,10,10,0.45) 68%,
-    rgba(10,10,10,0.15) 100%
-  );
+  background:linear-gradient(105deg,#0F1115 38%,rgba(15,17,21,0.94) 54%,rgba(15,17,21,0.5) 72%,rgba(15,17,21,0.15) 100%);
 }
-/* Brand red glow */
-.hero::before{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse 55% 80% at 0% 50%,rgba(192,57,43,0.18) 0%,transparent 70%);}
-/* Noise */
-.noise-overlay{position:absolute;inset:0;z-index:2;opacity:.04;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;}
-
-/* Content above all overlays */
-.hero-content{position:relative;z-index:3;max-width:1280px;margin:0 auto;width:100%;}
-.hero-inner{max-width:640px;}
-
-.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.3);color:var(--gold);padding:.35rem .85rem;border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;}
-.hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 1.5s infinite;}
-@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
-.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,5vw,5rem);line-height:1.0;letter-spacing:1px;margin-bottom:.85rem;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
-.hero h1 .accent-red{color:var(--red);}
-.hero h1 .accent-gold{color:var(--gold);}
-.hero-sub{font-size:1.1rem;color:rgba(240,240,240,0.85);max-width:480px;margin-bottom:2rem;line-height:1.7;}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem;}
-.btn-primary{background:var(--red);color:#fff;padding:.85rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;border:2px solid var(--red);display:inline-block;}
-.btn-primary:hover{background:var(--red-light);border-color:var(--red-light);transform:translateY(-2px);}
-.btn-outline{border:2px solid var(--gold);color:var(--gold);padding:.85rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;display:inline-block;}
-.btn-outline:hover{background:var(--gold);color:#000;transform:translateY(-2px);}
+.hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.hero-left{max-width:580px;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--accent-dim);border:1px solid rgba(255,94,43,0.22);
+  color:var(--accent);padding:.38rem .9rem;border-radius:100px;
+  font-size:.72rem;font-weight:700;letter-spacing:1.2px;
+  text-transform:uppercase;margin-bottom:1.75rem;
+}
+.eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 1.5s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.2;}}
+.hero h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(3.6rem,7vw,6.8rem);
+  line-height:.92;letter-spacing:1.5px;
+  margin-bottom:1rem;
+}
+.hero h1 .a-lime{color:var(--accent);}
+.hero-price-badge{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:var(--accent);color:#000;
+  padding:.55rem 1.2rem;border-radius:8px;
+  font-size:1.1rem;font-weight:800;letter-spacing:.3px;
+  margin-bottom:1.4rem;
+}
+.hero-sub{
+  font-size:1.05rem;color:rgba(240,240,240,0.72);
+  max-width:490px;margin-bottom:2.25rem;line-height:1.78;
+}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;}
 .hero-trust{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;}
-.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.82rem;color:rgba(240,240,240,0.65);}
-.trust-item svg{width:14px;height:14px;fill:var(--gold);flex-shrink:0;}
+.trust-item{
+  display:flex;align-items:center;gap:.4rem;
+  font-size:.8rem;color:rgba(240,240,240,0.48);font-weight:500;
+}
+.trust-item svg{width:13px;height:13px;flex-shrink:0;}
 
-/* ── SECTIONS ── */
-section{padding:80px 5%;}
-.section-inner{max-width:1280px;margin:0 auto;}
-.section-label{font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;}
-.section-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.15;margin-bottom:1rem;}
-.section-sub{color:var(--muted);max-width:580px;font-size:1rem;}
+/* Hero right side: UI mockup */
+.hero-right{position:relative;display:flex;align-items:center;justify-content:center;}
+.site-mockup{
+  background:#1B2130;border:1px solid var(--border-hi);
+  border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:0 24px 80px rgba(0,0,0,0.55);
+  width:100%;max-width:420px;
+}
+.mockup-chrome{
+  background:#0F1115;border-bottom:1px solid var(--border);
+  padding:.55rem .85rem;display:flex;align-items:center;gap:.6rem;
+}
+.mockup-dots{display:flex;gap:.35rem;}
+.mockup-dots span{width:10px;height:10px;border-radius:50%;display:block;}
+.mockup-dots span:nth-child(1){background:#FF5F57;}
+.mockup-dots span:nth-child(2){background:#FEBC2E;}
+.mockup-dots span:nth-child(3){background:#28C840;}
+.mockup-url{
+  flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);
+  border-radius:5px;padding:.28rem .65rem;
+  font-size:.72rem;color:var(--muted);font-family:'Inter',monospace;
+}
+.mockup-body{padding:1.5rem;}
+.mockup-hero-area{
+  background:linear-gradient(135deg,#0F1115,#1B2130);
+  border-radius:var(--r);padding:1.5rem;margin-bottom:1rem;
+  border:1px solid var(--border);
+}
+.mockup-company{
+  font-family:'Bebas Neue',sans-serif;font-size:1.5rem;
+  letter-spacing:1px;color:var(--text);margin-bottom:.25rem;
+}
+.mockup-tagline{font-size:.75rem;color:var(--muted);margin-bottom:.85rem;}
+.mockup-btn{
+  display:inline-block;background:var(--accent);color:#000;
+  padding:.35rem .85rem;border-radius:5px;
+  font-size:.72rem;font-weight:700;letter-spacing:.3px;
+}
+.mockup-services{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;}
+.mockup-service-card{
+  background:rgba(255,255,255,0.03);border:1px solid var(--border);
+  border-radius:8px;padding:.75rem;font-size:.72rem;color:var(--muted);
+}
+.mockup-service-card strong{display:block;color:var(--text);font-size:.78rem;margin-bottom:.18rem;}
 
-/* ── PROBLEM ── */
-.problem{background:var(--surface);}
-.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
-.problem-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;position:relative;overflow:hidden;}
-.problem-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),transparent);}
-.problem-icon{font-size:2rem;margin-bottom:1rem;}
-.problem-card h3{font-size:1.05rem;font-weight:700;margin-bottom:.5rem;}
-.problem-card p{font-size:.9rem;color:var(--muted);line-height:1.6;}
+/* Floating cards on hero right */
+.float-card{
+  position:absolute;
+  background:var(--bg2);border:1px solid var(--border-hi);
+  border-radius:var(--r-lg);padding:1rem 1.25rem;
+  box-shadow:0 16px 48px rgba(0,0,0,0.5);
+}
+.float-seo{
+  top:-1.5rem;right:-1.5rem;
+  border-left:3px solid var(--accent);
+}
+.float-lead{
+  bottom:-1.25rem;left:-1.25rem;
+  border-left:3px solid #10B981;
+}
+.float-card-label{
+  font-size:.62rem;font-weight:700;letter-spacing:1.2px;
+  text-transform:uppercase;margin-bottom:.3rem;
+}
+.float-seo .float-card-label{color:var(--accent);}
+.float-lead .float-card-label{color:#10B981;}
+.float-card-value{font-weight:700;font-size:.92rem;color:var(--text);}
+.float-card-sub{font-size:.72rem;color:var(--muted);margin-top:.1rem;}
 
-/* ── SOLUTION ── */
-.solution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
-.solution-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;transition:transform .3s,border-color .3s;}
-.solution-card:hover{transform:translateY(-4px);border-color:rgba(249,115,22,0.3);}
-.solution-card .badge{display:inline-block;background:rgba(249,115,22,0.12);color:var(--gold);font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.2rem .6rem;border-radius:4px;margin-bottom:1rem;}
-.solution-card h3{font-size:1.05rem;font-weight:700;margin-bottom:.5rem;}
-.solution-card p{font-size:.9rem;color:var(--muted);line-height:1.6;}
+/* ── TRUST STRIP ── */
+.trust-strip{
+  background:var(--bg2);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:28px 5%;
+}
+.trust-strip-inner{
+  max-width:1280px;margin:0 auto;
+  display:flex;align-items:center;
+}
+.trust-stats{
+  display:flex;gap:0;flex:1;width:100%;
+}
+.ts-stat{
+  text-align:center;flex:1;
+  border-right:1px solid var(--border);padding:.6rem 1rem;
+}
+.ts-stat:last-child{border-right:none;}
+.ts-num{
+  font-weight:700;font-size:.88rem;
+  color:var(--accent);margin-bottom:.2rem;letter-spacing:.01em;
+}
+.ts-label{font-size:.68rem;font-weight:500;letter-spacing:.5px;color:var(--muted);}
+.whop-badge{
+  display:flex;align-items:center;gap:.65rem;
+  background:var(--accent-dim);border:1px solid rgba(255,94,43,0.2);
+  border-radius:var(--r-lg);padding:.75rem 1.25rem;flex-shrink:0;
+}
+.whop-badge-icon{
+  width:36px;height:36px;border-radius:8px;
+  background:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.whop-badge-icon svg{width:18px;height:18px;}
+.whop-badge-text{line-height:1.3;}
+.whop-badge-title{font-weight:700;font-size:.82rem;color:var(--text);}
+.whop-badge-sub{font-size:.68rem;color:var(--muted);letter-spacing:.3px;}
+.whop-logo{height:24px;width:auto;display:block;object-fit:contain;}
+.whop-logo-wrap{background:#fff;border-radius:8px;padding:6px 10px;display:inline-flex;align-items:center;}
 
-/* ── LEAD DEMO ── */
-.lead-demo{background:var(--surface);border-radius:24px;padding:3rem;max-width:960px;margin:3rem auto 0;position:relative;overflow:hidden;border:1px solid var(--border);}
-.lead-demo::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 80% 50%,rgba(249,115,22,0.07),transparent);pointer-events:none;}
-.lead-demo-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
-.lead-demo-copy .section-title{font-size:clamp(1.6rem,3vw,2.2rem);}
-.lead-demo-copy ul{list-style:none;margin-top:1.5rem;display:flex;flex-direction:column;gap:.8rem;}
-.lead-demo-copy li{display:flex;align-items:flex-start;gap:.75rem;font-size:.95rem;color:var(--muted);}
-.lead-demo-copy li::before{content:'';width:18px;height:18px;min-width:18px;border-radius:50%;background:var(--gold);margin-top:2px;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 10l4 4 6-7' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:14px;background-repeat:no-repeat;background-position:center;}
-.lead-notif{background:var(--bg);border-radius:14px;border:1px solid var(--border);padding:1.5rem;display:flex;flex-direction:column;gap:1rem;}
-.notif-item{display:flex;align-items:center;gap:.85rem;background:var(--surface2);border-radius:10px;padding:1rem;animation:slideIn .5s ease both;}
-@keyframes slideIn{from{opacity:0;transform:translateX(20px);}to{opacity:1;transform:none;}}
-.notif-item:nth-child(2){animation-delay:.3s;}
-.notif-item:nth-child(3){animation-delay:.6s;}
-.notif-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--gold));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0;}
-.notif-text strong{display:block;font-size:.9rem;font-weight:700;}
-.notif-text span{font-size:.78rem;color:var(--muted);}
-.notif-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);margin-left:auto;flex-shrink:0;animation:blink 2s infinite;}
+/* ── WHATS INCLUDED (light section) ── */
+.whats-included{background:var(--white);padding:100px 5%;}
+.included-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;align-items:center;margin-top:3.5rem;
+}
+.included-list{list-style:none;display:flex;flex-direction:column;gap:.85rem;}
+.included-item{
+  display:flex;align-items:flex-start;gap:.85rem;
+  font-size:.97rem;color:var(--text-dark);line-height:1.5;
+}
+.check-circle{
+  width:22px;height:22px;min-width:22px;border-radius:50%;
+  background:var(--accent);display:flex;align-items:center;justify-content:center;margin-top:1px;
+}
+.check-circle svg{width:11px;height:11px;}
+.included-right{
+  background:#F5F7FA;border-radius:var(--r-xl);padding:2.5rem;
+  border:1px solid var(--border-light);
+}
+.price-card-header{margin-bottom:1.5rem;}
+.price-card-title{
+  font-family:'Bebas Neue',sans-serif;font-size:1.8rem;
+  letter-spacing:.5px;color:var(--text-dark);margin-bottom:.25rem;
+}
+.price-card-price{
+  font-family:'Bebas Neue',sans-serif;font-size:4rem;
+  line-height:1;color:var(--text-dark);
+}
+.price-card-price span{font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;color:var(--text-dark-muted);letter-spacing:0;}
+.price-card-note{
+  font-size:.82rem;color:var(--text-dark-muted);margin-top:.5rem;line-height:1.5;
+  padding:.6rem .85rem;background:rgba(255,94,43,0.1);border-radius:6px;
+  border-left:3px solid var(--accent);
+}
+.price-card-whop{
+  display:flex;align-items:center;gap:.5rem;
+  margin:1.2rem 0;padding:.55rem .85rem;
+  background:var(--accent-dim);border:1px solid rgba(255,94,43,0.2);border-radius:7px;
+  font-size:.78rem;font-weight:700;color:var(--text-dark);
+}
+.price-card-whop svg{width:14px;height:14px;flex-shrink:0;}
+.price-card-cta{display:block;text-align:center;margin-top:1.5rem;}
 
-/* ── HOW IT WORKS ── */
-.how{background:linear-gradient(135deg,rgba(192,57,43,0.05),rgba(249,115,22,0.03));}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;position:relative;}
-.steps::before{content:'';position:absolute;top:52px;left:calc(16.66% + 1rem);right:calc(16.66% + 1rem);height:2px;background:linear-gradient(90deg,var(--red),var(--gold));z-index:0;}
-.step{text-align:center;position:relative;z-index:1;}
-.step-num{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.6rem;margin:0 auto 1.25rem;box-shadow:0 8px 30px rgba(192,57,43,0.35);}
-.step h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem;}
-.step p{font-size:.9rem;color:var(--muted);line-height:1.6;}
+/* ── TRANSFORMATION ── */
+.transformation{background:var(--bg);}
+.transform-header{margin-bottom:3.5rem;}
+.transform-grid{
+  display:grid;grid-template-columns:1fr 60px 1fr;
+  gap:0;align-items:center;
+}
+.transform-col h4{font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.25rem;}
+.transform-col.before h4{color:var(--orange);}
+.transform-col.after h4{color:var(--accent);}
+.transform-arrow{
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.75rem;color:var(--accent);font-weight:300;
+}
+.fake-site{
+  background:var(--bg3);border:1px solid var(--border-hi);
+  border-radius:var(--r-lg);overflow:hidden;
+}
+.fake-chrome{background:var(--bg2);padding:.5rem .75rem;display:flex;align-items:center;gap:.5rem;border-bottom:1px solid var(--border);}
+.fake-dots{display:flex;gap:.28rem;}
+.fake-dots span{width:8px;height:8px;border-radius:50%;background:var(--border-hi);display:block;}
+.fake-url{flex:1;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:4px;padding:.22rem .5rem;font-size:.65rem;color:var(--muted);}
+.before-body{padding:1.25rem;}
+.before-hero-block{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:1rem;margin-bottom:.75rem;}
+.before-title{font-size:.85rem;font-weight:600;color:var(--muted);margin-bottom:.35rem;}
+.before-text{font-size:.72rem;color:var(--border-hi);line-height:1.6;margin-bottom:.6rem;}
+.before-tag{
+  display:inline-block;font-size:.62rem;padding:.2rem .5rem;
+  background:rgba(255,94,43,0.12);color:var(--orange);border-radius:4px;font-weight:600;
+}
+.before-issue{display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:var(--orange);padding:.35rem 0;border-bottom:1px solid var(--border);}
+.before-issue:last-child{border-bottom:none;}
+.before-issue::before{content:'–';font-size:.65rem;}
+.after-body{padding:1.25rem;}
+.after-hero-block{
+  background:linear-gradient(135deg,var(--bg2),var(--bg3));
+  border:1px solid rgba(255,94,43,0.15);border-radius:8px;
+  padding:1rem;margin-bottom:.75rem;
+}
+.after-co-name{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.5px;color:var(--text);margin-bottom:.2rem;}
+.after-tagline{font-size:.72rem;color:var(--muted);margin-bottom:.65rem;}
+.after-btn-mini{
+  display:inline-block;background:var(--accent);color:#000;
+  padding:.28rem .65rem;border-radius:5px;font-size:.65rem;font-weight:700;
+}
+.after-win{display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:var(--accent);padding:.35rem 0;border-bottom:1px solid var(--border);}
+.after-win:last-child{border-bottom:none;}
+.after-win::before{content:'+';font-size:.65rem;font-weight:700;}
 
-/* ── CONTRACTOR TYPES ── */
-.types{background:var(--surface);}
-.types-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem;}
-.type-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem 1.25rem;text-align:center;transition:all .3s;}
-.type-card:hover{border-color:rgba(192,57,43,0.4);transform:translateY(-4px);}
-.type-icon{font-size:2.5rem;margin-bottom:1rem;display:block;}
-.type-card h3{font-size:1.05rem;font-weight:700;margin-bottom:.4rem;}
-.type-card p{font-size:.82rem;color:var(--muted);}
-.types-note{margin-top:2rem;padding:1.25rem 1.75rem;background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.2);border-radius:var(--radius);text-align:center;}
-.types-note p{font-size:.92rem;color:var(--muted);}
-.types-note a{color:var(--gold);font-weight:700;}
+/* ── WHY WEBSITES FAIL (light) ── */
+.why-fail{background:var(--white);padding:100px 5%;}
+.fail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.fail-card{
+  background:var(--white);border:1px solid var(--border-light);
+  border-radius:var(--r-lg);padding:2rem;
+  box-shadow:0 4px 24px rgba(0,0,0,0.05);
+  transition:transform .3s,box-shadow .3s;
+}
+.fail-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.1);}
+.fail-num{
+  font-family:'Bebas Neue',sans-serif;font-size:4rem;line-height:1;
+  color:rgba(255,94,43,0.12);margin-bottom:.5rem;
+}
+.fail-card h3{font-size:1.05rem;font-weight:700;color:var(--text-dark);margin-bottom:.6rem;}
+.fail-card p{font-size:.9rem;color:var(--text-dark-muted);line-height:1.7;}
+.fail-card-top{display:flex;align-items:center;gap:.5rem;margin-bottom:1rem;}
+.fail-icon-wrap{
+  width:40px;height:40px;border-radius:9px;
+  background:var(--orange-dim);display:flex;align-items:center;justify-content:center;
+}
+.fail-icon-wrap svg{width:18px;height:18px;stroke:var(--orange);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 
-/* ── COMPARE ── */
-.compare{background:var(--bg);}
-.compare-table-wrap{overflow-x:auto;margin-top:3rem;border-radius:var(--radius);border:1px solid var(--border);}
-.compare-table{width:100%;border-collapse:collapse;min-width:640px;}
-.compare-table th,.compare-table td{padding:1rem 1.25rem;text-align:left;border-bottom:1px solid var(--border);font-size:.9rem;}
-.compare-table thead th{background:var(--surface);font-weight:700;font-size:.8rem;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);}
-.compare-table thead th.highlight{background:rgba(192,57,43,0.15);color:var(--red);}
-.compare-table tbody tr:hover td{background:rgba(255,255,255,0.02);}
-.compare-table td.highlight{color:var(--gold);font-weight:700;}
-.check{color:var(--gold);font-weight:700;}
-.cross{color:var(--muted);opacity:.5;}
+/* ── GROWTH SYSTEM ── */
+.growth-system{background:var(--bg2);}
+.system-header{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:3.5rem;}
+.system-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;}
+.sys-card{
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:1.75rem 1.4rem;
+  position:relative;overflow:hidden;transition:all .3s;
+}
+.sys-card:hover{border-color:rgba(255,94,43,0.3);transform:translateY(-4px);}
+.sys-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--accent);opacity:0;transition:opacity .3s;
+}
+.sys-card:hover::after{opacity:1;}
+.sys-icon{
+  width:44px;height:44px;border-radius:10px;
+  background:var(--accent-dim);display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.1rem;
+}
+.sys-icon svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.sys-num{
+  display:inline-block;
+  background:var(--accent-dim);color:var(--accent);
+  font-size:.62rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  padding:.18rem .5rem;border-radius:4px;margin-bottom:.75rem;
+}
+.sys-card h3{font-size:.97rem;font-weight:700;margin-bottom:.4rem;color:var(--text);}
+.sys-card p{font-size:.83rem;color:var(--muted);line-height:1.65;}
+
+/* ── INDUSTRIES (light) ── */
+.industries{background:var(--light);padding:100px 5%;}
+.industries-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem;}
+.industry-card{
+  background:var(--white);border:1px solid var(--border-light);
+  border-radius:var(--r-lg);padding:1.75rem 1.4rem;
+  transition:all .3s;box-shadow:0 2px 12px rgba(0,0,0,0.04);
+  position:relative;overflow:hidden;
+}
+.industry-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.1);}
+.industry-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s;
+}
+.industry-card:hover::after{transform:scaleX(1);}
+.industry-icon{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);background:rgba(255,94,43,0.1);border:1px solid rgba(255,94,43,0.25);padding:4px 10px;border-radius:6px;margin-bottom:.85rem;font-family:'Inter',sans-serif;}
+.industry-card h3{font-size:1rem;font-weight:700;color:var(--text-dark);margin-bottom:.4rem;}
+.industry-card p{font-size:.84rem;color:var(--text-dark-muted);line-height:1.65;}
+.industries-note{
+  margin-top:2rem;text-align:center;
+  font-size:.9rem;color:var(--text-dark-muted);
+}
+.industries-note a{color:var(--text-dark);font-weight:700;text-decoration:underline;text-underline-offset:3px;}
+
+/* ── PROCESS ── */
+.process{background:var(--bg);}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:3.5rem;position:relative;}
+.process-grid::before{
+  content:'';position:absolute;
+  top:38px;left:calc(12.5% + 8px);right:calc(12.5% + 8px);
+  height:1px;background:linear-gradient(90deg,var(--accent),rgba(255,94,43,0.3));z-index:0;
+}
+.process-step{text-align:center;position:relative;z-index:1;padding:0 1rem;}
+.process-num{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--bg2);border:2px solid var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--accent);
+  margin:0 auto 1.5rem;position:relative;z-index:2;
+  box-shadow:0 0 0 6px var(--bg);
+}
+.process-step h3{font-size:1rem;font-weight:700;margin-bottom:.5rem;color:var(--text);}
+.process-step p{font-size:.87rem;color:var(--muted);line-height:1.65;}
+
+/* ── TESTIMONIALS (light) ── */
+.testimonials{background:var(--light);padding:100px 5%;}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.testi-card{
+  background:var(--white);border:1px solid var(--border-light);
+  border-radius:var(--r-lg);padding:2rem;
+  box-shadow:0 4px 20px rgba(0,0,0,0.06);
+  transition:transform .3s,box-shadow .3s;
+  position:relative;overflow:hidden;
+}
+.testi-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.1);}
+.testi-stars{font-size:.85rem;letter-spacing:2px;margin-bottom:1rem;color:#F59E0B;}
+.testi-quote{font-size:.93rem;color:var(--text-dark-muted);line-height:1.78;margin-bottom:1.5rem;font-style:italic;}
+.testi-author{display:flex;align-items:center;gap:.85rem;}
+.testi-avatar{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--bg3),var(--bg2));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:.85rem;flex-shrink:0;color:var(--accent);
+  border:2px solid var(--accent);
+}
+.testi-name strong{display:block;font-size:.9rem;font-weight:700;color:var(--text-dark);}
+.testi-name span{font-size:.77rem;color:var(--text-dark-muted);}
+
+/* ── PRICING ── */
+.pricing{background:var(--bg2);padding:100px 5%;}
+.pricing-inner{max-width:1280px;margin:0 auto;}
+.pricing-layout{display:grid;grid-template-columns:1fr 480px;gap:5rem;align-items:center;}
+.pricing-left .section-sub{margin-top:1rem;}
+.pricing-card{
+  background:var(--bg);border:1px solid var(--border-hi);
+  border-radius:var(--r-xl);padding:2.75rem;
+  box-shadow:0 24px 64px rgba(0,0,0,0.4);
+  position:relative;overflow:hidden;
+}
+.pricing-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:var(--accent);
+}
+.pricing-card-title{
+  font-family:'Bebas Neue',sans-serif;font-size:1.6rem;
+  letter-spacing:.5px;color:var(--text);margin-bottom:.5rem;
+}
+.pricing-price-row{display:flex;align-items:baseline;gap:.35rem;margin-bottom:.4rem;}
+.pricing-price{
+  font-family:'Bebas Neue',sans-serif;font-size:5rem;
+  line-height:1;color:var(--accent);
+}
+.pricing-period{font-size:1rem;font-weight:600;color:var(--muted);}
+.pricing-note{
+  font-size:.82rem;color:var(--muted);
+  margin-bottom:1.75rem;padding:.6rem .85rem;
+  background:var(--accent-dim);border-radius:6px;
+  border-left:3px solid var(--accent);line-height:1.5;
+}
+.pricing-list{list-style:none;display:flex;flex-direction:column;gap:.75rem;margin-bottom:2rem;}
+.pricing-item{
+  display:flex;align-items:center;gap:.75rem;
+  font-size:.92rem;color:var(--text);
+}
+.pricing-check{
+  width:20px;height:20px;min-width:20px;border-radius:50%;
+  background:var(--accent);display:flex;align-items:center;justify-content:center;
+}
+.pricing-check svg{width:10px;height:10px;}
+.pricing-whop{
+  display:flex;align-items:center;gap:.6rem;
+  padding:.65rem .9rem;background:var(--accent-dim);
+  border:1px solid rgba(255,94,43,0.2);border-radius:8px;
+  margin-bottom:1.5rem;font-size:.8rem;font-weight:700;color:var(--accent);
+}
+.pricing-whop svg{width:15px;height:15px;flex-shrink:0;}
+.pricing-cta{display:block;text-align:center;}
 
 /* ── METRICS ── */
-.metrics{background:linear-gradient(135deg,rgba(192,57,43,0.08),rgba(249,115,22,0.05));border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.metrics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem;text-align:center;}
-.metric-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5rem);line-height:1;color:var(--gold);margin-bottom:.25rem;}
-.metric-label{font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
-.metric-sub{font-size:.78rem;color:var(--muted);opacity:.6;margin-top:.2rem;}
-
-/* ── TESTIMONIALS ── */
-.testi{background:var(--surface);}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
-.testi-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;transition:transform .3s;}
-.testi-card:hover{transform:translateY(-4px);}
-.testi-stars{color:var(--gold);font-size:1rem;margin-bottom:.75rem;letter-spacing:2px;}
-.testi-quote{font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem;}
-.testi-author{display:flex;align-items:center;gap:.75rem;}
-.testi-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--gold));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0;}
-.testi-name strong{display:block;font-size:.9rem;font-weight:700;}
-.testi-name span{font-size:.78rem;color:var(--muted);}
-
-/* ── FAQ ── */
-.faq{background:var(--bg);}
-.faq-list{max-width:760px;margin:2.5rem auto 0;display:flex;flex-direction:column;gap:.75rem;}
-.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
-.faq-q{width:100%;background:none;border:none;color:var(--text);text-align:left;padding:1.25rem 1.5rem;font-family:'Barlow',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
-.faq-q::after{content:'+';font-size:1.4rem;font-weight:300;color:var(--gold);transition:transform .3s;flex-shrink:0;}
-.faq-item.open .faq-q::after{transform:rotate(45deg);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;}
-.faq-a-inner{padding:0 1.5rem 1.25rem;font-size:.9rem;color:var(--muted);line-height:1.7;}
-.faq-item.open .faq-a{max-height:300px;}
+.metrics{background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:80px 5%;}
+.metrics-inner{max-width:1280px;margin:0 auto;}
+.metrics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.metric-card{
+  text-align:center;padding:2.25rem 2rem;
+  border:1px solid var(--border);border-radius:var(--r-lg);
+  background:var(--bg2);transition:border-color .3s;
+}
+.metric-card:hover{border-color:rgba(255,94,43,0.25);}
+.metric-num{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(3.2rem,5.5vw,5rem);
+  line-height:1;color:var(--accent);margin-bottom:.3rem;
+}
+.metric-label{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text);margin-bottom:.3rem;}
+.metric-sub{font-size:.77rem;color:var(--muted);}
 
 /* ── FINAL CTA ── */
-.final-cta{background:linear-gradient(135deg,rgba(192,57,43,0.15),rgba(249,115,22,0.08));border-top:1px solid var(--border);text-align:center;padding:100px 5%;}
-.final-cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:1px;margin-bottom:1rem;}
-.final-cta h2 .accent-gold{color:var(--gold);}
-.final-cta p{color:var(--muted);font-size:1.05rem;max-width:500px;margin:0 auto 2.5rem;}
+.final-cta{
+  background:var(--bg);padding:120px 5%;
+  text-align:center;position:relative;overflow:hidden;
+}
+.final-cta::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(255,94,43,0.05),transparent);
+}
+.final-cta-inner{position:relative;z-index:1;}
+.final-cta-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--accent-dim);border:1px solid rgba(255,94,43,0.25);
+  color:var(--accent);padding:.38rem .9rem;border-radius:100px;
+  font-size:.7rem;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;margin-bottom:1.5rem;
+}
+.final-cta h2{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(3rem,6.5vw,5.5rem);
+  letter-spacing:1.5px;margin-bottom:1.25rem;line-height:.95;
+  color:var(--text);
+}
+.final-cta h2 .a-lime{color:var(--accent);}
+.final-cta p{
+  color:var(--muted);font-size:1.05rem;
+  max-width:480px;margin:0 auto 2.75rem;line-height:1.75;
+}
 .cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
 
-/* ── FOOTER ── */
-footer{background:var(--surface);border-top:1px solid var(--border);padding:60px 5% 30px;}
-.footer-inner{max-width:1280px;margin:0 auto;}
-.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem;}
-.footer-brand-logo{display:flex;align-items:center;gap:.6rem;margin-bottom:.75rem;}
-.footer-brand-logo img{height:36px;width:auto;}
-.footer-brand-logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:.05em;}
-.footer-brand p{font-size:.85rem;color:var(--muted);line-height:1.6;max-width:240px;}
-.footer-col h4{font-size:.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
-.footer-col a{font-size:.88rem;color:var(--muted);transition:color .2s;}
-.footer-col a:hover{color:var(--text);}
-.footer-col span{font-size:.88rem;color:var(--muted);}
-.footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-.footer-bottom p{font-size:.8rem;color:var(--muted);}
-.footer-social{display:flex;gap:.6rem;}
-.fsoc{width:34px;height:34px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);color:var(--muted);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all .2s;}
-.fsoc:hover{border-color:var(--red);}
+/* ── POPUP ── */
+.offer-popup{
+  position:fixed;bottom:2rem;left:2rem;z-index:9000;
+  width:285px;
+  background:var(--bg2);border:1px solid var(--border-hi);
+  border-left:3px solid var(--accent);border-radius:var(--r-lg);
+  padding:1.5rem;
+  box-shadow:0 20px 60px rgba(0,0,0,0.55);
+  opacity:0;transform:translateY(20px);
+  transition:opacity .5s ease,transform .5s ease;
+  pointer-events:none;
+}
+.offer-popup.visible{opacity:1;transform:none;pointer-events:auto;}
+.offer-popup.gone{display:none;}
+.popup-close{
+  position:absolute;top:.75rem;right:.75rem;
+  background:none;border:none;color:var(--muted);
+  cursor:pointer;font-size:1rem;line-height:1;padding:.25rem;transition:color .2s;
+}
+.popup-close:hover{color:var(--text);}
+.popup-tag{
+  font-size:.63rem;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--accent);
+  margin-bottom:.45rem;display:flex;align-items:center;gap:.38rem;
+}
+.popup-tag::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);animation:blink 1.5s infinite;}
+.popup-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.65rem;line-height:1;letter-spacing:.5px;
+  margin-bottom:.45rem;color:var(--text);
+}
+.popup-sub{font-size:.82rem;color:var(--muted);line-height:1.55;margin-bottom:1.2rem;}
+.popup-cta{
+  display:block;text-align:center;
+  background:var(--accent);color:#000;
+  padding:.7rem 1rem;border-radius:7px;
+  font-weight:700;font-size:.83rem;letter-spacing:.5px;
+  text-transform:uppercase;transition:background .2s;
+}
+.popup-cta:hover{background:#e85520;}
 
-/* ── SCROLL REVEAL ── */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease;}
+/* ── FOOTER ── */
+footer{background:#09090C;border-top:3px solid var(--accent);}
+.footer-main{padding:70px 5% 0;max-width:1280px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3.5rem;}
+.footer-brand-logo{display:flex;align-items:center;gap:.55rem;margin-bottom:1rem;}
+.footer-brand-logo img{height:40px;width:auto;}
+.footer-brand-desc{font-size:.87rem;color:var(--muted);line-height:1.7;max-width:230px;margin-bottom:1.5rem;}
+.footer-socials{display:flex;gap:.5rem;}
+.fsoc{
+  width:36px;height:36px;border-radius:7px;
+  background:var(--bg2);border:1px solid var(--border);
+  color:var(--muted);display:flex;align-items:center;justify-content:center;
+  transition:all .2s;
+}
+.fsoc:hover{border-color:var(--accent);color:var(--accent);}
+.footer-col h4{font-size:.68rem;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.footer-col a{font-size:.87rem;color:var(--muted);transition:color .2s;}
+.footer-col a:hover{color:var(--text);}
+.footer-divider{border:none;border-top:1px solid var(--border);margin:0 5%;}
+.footer-bottom{
+  max-width:1280px;margin:0 auto;
+  padding:1.5rem 5% 2rem;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
+}
+.footer-bottom p{font-size:.8rem;color:var(--muted);}
+.footer-bottom a{color:var(--muted);text-decoration:underline;text-underline-offset:2px;}
+.footer-bottom a:hover{color:var(--text);}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
 .reveal.visible{opacity:1;transform:none;}
 .reveal-delay-1{transition-delay:.1s;}
 .reveal-delay-2{transition-delay:.2s;}
 .reveal-delay-3{transition-delay:.3s;}
 
 /* ── RESPONSIVE ── */
+@media(max-width:1200px){
+  .system-grid{grid-template-columns:repeat(3,1fr);}
+  .pricing-layout{grid-template-columns:1fr;gap:3rem;}
+  .footer-grid{grid-template-columns:1.4fr 1fr 1fr 1fr;}
+  .footer-grid .footer-col:last-child{display:none;}
+  .hero-content{grid-template-columns:1fr;gap:3rem;}
+  .hero-right{display:none;}
+}
 @media(max-width:1024px){
-  .solution-grid{grid-template-columns:repeat(2,1fr);}
-  .types-grid{grid-template-columns:repeat(2,1fr);}
-  .footer-top{grid-template-columns:1fr 1fr;}
-  .lead-demo-inner{grid-template-columns:1fr;}
+  .industries-grid{grid-template-columns:repeat(3,1fr);}
+  .transform-grid{grid-template-columns:1fr 40px 1fr;}
+  .system-header{grid-template-columns:1fr;}
+  .included-grid{grid-template-columns:1fr;gap:3rem;}
+  .footer-grid{grid-template-columns:1fr 1fr 1fr;}
+  .footer-grid .footer-col:last-child,.footer-grid .footer-col:nth-child(5){display:block;}
+  .footer-brand{grid-column:1/-1;}
 }
 @media(max-width:768px){
-  nav{padding:0 4%;}
+  nav{padding:0 4%;height:64px;}
   .nav-links{display:none;}
   .nav-hamburger{display:flex;}
-  section{padding:60px 4%;}
-  .hero{padding:90px 4% 60px;}
-  .hero h1{font-size:clamp(2.8rem,10vw,4rem);}
-  .hero-overlay{background:linear-gradient(108deg,#0a0a0a 45%,rgba(10,10,10,0.85) 70%,rgba(10,10,10,0.6) 100%);}
-  .problem-grid,.steps,.testi-grid{grid-template-columns:1fr;}
-  .steps::before{display:none;}
-  .solution-grid{grid-template-columns:1fr;}
-  .types-grid{grid-template-columns:repeat(2,1fr);}
-  .metrics-grid{grid-template-columns:1fr;gap:1.5rem;}
-  .footer-top{grid-template-columns:1fr 1fr;gap:1.5rem;}
+  .nav-mobile{top:64px;}
+  section,.whats-included,.industries,.testimonials,.pricing,.why-fail{padding:70px 4%;}
+  .hero{padding:80px 4% 60px;min-height:auto;}
+  .trust-strip{padding:20px 4%;}
+  .trust-strip-inner{flex-direction:column;gap:1rem;}
+  .trust-stats{gap:0;}
+  .ts-stat{border-right:none;border-bottom:1px solid var(--border);padding:.75rem .5rem;}
+  .ts-stat:last-child{border-bottom:none;}
+  .whop-badge{width:100%;justify-content:center;}
+  .fail-grid{grid-template-columns:1fr;}
+  .system-grid{grid-template-columns:repeat(2,1fr);}
+  .industries-grid{grid-template-columns:repeat(2,1fr);}
+  .process-grid{grid-template-columns:repeat(2,1fr);gap:2rem;}
+  .process-grid::before{display:none;}
+  .metrics-grid{grid-template-columns:1fr;gap:1.25rem;}
+  .testi-grid{grid-template-columns:1fr;}
+  .transform-grid{grid-template-columns:1fr;gap:1rem;}
+  .transform-arrow{transform:rotate(90deg);margin:.5rem 0;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+  .footer-brand{grid-column:1/-1;}
   .footer-bottom{flex-direction:column;text-align:center;}
-  .hero-actions{flex-direction:column;}
-  .btn-primary,.btn-outline{text-align:center;}
-  .cta-actions{flex-direction:column;align-items:center;}
+  .hero-actions,.cta-actions{flex-direction:column;}
+  .btn-lime,.btn-outline{text-align:center;}
+  .offer-popup{left:1rem;right:1rem;width:auto;bottom:1rem;}
 }
 @media(max-width:480px){
-  .types-grid{grid-template-columns:1fr;}
-  .footer-top{grid-template-columns:1fr;}
-  .hero h1{font-size:2.8rem;}
+  .industries-grid{grid-template-columns:1fr 1fr;}
+  .system-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .footer-brand{grid-column:auto;}
+  .hero h1{font-size:3.2rem;}
+  .process-grid{grid-template-columns:1fr;}
 }
 </style>
 <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Contractor Arsenal",
-    "url": "https://contractorarsenal.com",
-    "logo": "https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png",
-    "description": "Done-for-you websites built for contractors. Any trade, any market. Rank on Google, get more calls, launch in 48–72 hours.",
-    "sameAs": ["https://www.instagram.com/contractorarsenal/"],
-    "contactPoint": {"@type": "ContactPoint","contactType": "customer service","url": "https://contractorarsenal.com/apply.html"}
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Contractor Arsenal",
-    "url": "https://contractorarsenal.com"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Contractor Website Services",
-    "itemListElement": [
-      {"@type": "ListItem","position": 1,"name": "Custom Website Design","description": "Custom contractor websites built in 48–72 hours. No templates, full copywriting included."},
-      {"@type": "ListItem","position": 2,"name": "Local SEO","description": "Full local SEO setup including Google Business Profile integration and on-page optimization."},
-      {"@type": "ListItem","position": 3,"name": "Mobile-First Development","description": "All sites built mobile-first and fully responsive across all devices."},
-      {"@type": "ListItem","position": 4,"name": "Lead Forms & Click-to-Call","description": "Built-in lead capture forms and click-to-call functionality to convert visitors into customers."},
-      {"@type": "ListItem","position": 5,"name": "Copywriting","description": "Professional copywriting included with every build — no generic template text."}
-    ]
-  }
-]
+{"@context":"https://schema.org","@type":"Organization","name":"Contractor Arsenal","url":"https://contractorarsenal.com","logo":"https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png","description":"Premium contractor websites for $297/month. Custom design, local SEO, lead capture, hosting, and ongoing support.","contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://contractorarsenal.com/demo.html"}}
 </script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PKHXQ2R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- POPUP -->
+<div class="offer-popup gone" id="offerPopup">
+  <button class="popup-close" onclick="closePopup()" aria-label="Close">&times;</button>
+  <div class="popup-tag">Free. No Commitment.</div>
+  <div class="popup-title">GET YOUR FREE DEMO</div>
+  <p class="popup-sub">We'll build a custom demo for your business. No templates, no cost, no strings attached.</p>
+  <a href="demo.html" class="popup-cta">Claim My Free Demo →</a>
+</div>
 
 <!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
-    <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
-    
+    <img src="favicon.png" alt="Contractor Arsenal">
   </a>
   <div class="nav-links">
-    <a href="index.html" class="active">Home</a>
+    <a href="services.html">Services</a>
+    <a href="industries.html">Industries</a>
+    <a href="work.html">Work</a>
     <a href="about.html">About</a>
-    <a href="apply.html" class="nav-cta">Apply Now</a>
+    <a href="demo.html" class="nav-cta">Get Demo</a>
   </div>
   <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 <div class="nav-mobile" id="navMobile">
-  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="services.html" onclick="closeMenu()">Services</a>
+  <a href="industries.html" onclick="closeMenu()">Industries</a>
+  <a href="work.html" onclick="closeMenu()">Work</a>
   <a href="about.html" onclick="closeMenu()">About</a>
-  <a href="apply.html" onclick="closeMenu()">Apply Now</a>
+  <a href="demo.html" class="mob-cta" onclick="closeMenu()">Get My Free Demo</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <!-- Background slideshow — fades between portfolio images -->
   <div class="hero-bg">
     <div class="hero-slide active">
       <img src="https://github.com/user-attachments/assets/e1706902-da3a-419b-8cd1-862fbd61082b" alt="" aria-hidden="true" loading="eager">
@@ -344,319 +795,415 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
     <div class="hero-slide">
       <img src="https://github.com/user-attachments/assets/92e12d9a-5c1a-4231-8b58-2a874f063539" alt="" aria-hidden="true" loading="lazy">
     </div>
-    <div class="hero-slide">
-      <img src="https://github.com/user-attachments/assets/dd186500-6297-4699-9002-ef0fb2a3f1d3" alt="" aria-hidden="true" loading="lazy">
-    </div>
-    <div class="hero-slide">
-      <img src="https://github.com/user-attachments/assets/957e7a58-7b91-4b73-944e-e67e7afc3657" alt="" aria-hidden="true" loading="lazy">
-    </div>
-    <div class="hero-slide">
-      <img src="https://github.com/user-attachments/assets/f242403d-f7b6-45b0-aa37-2f96fec89b19" alt="" aria-hidden="true" loading="lazy">
-    </div>
   </div>
-  <!-- Gradient + noise overlays -->
   <div class="hero-overlay"></div>
-  <div class="noise-overlay"></div>
-  <!-- Content -->
   <div class="hero-content">
-    <div class="hero-inner">
-      <div class="hero-eyebrow">Done-For-You Contractor Websites</div>
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span class="whop-logo-wrap" style="padding:3px 8px"><img src="assets/whop-logo.png" alt="WHOP" class="whop-logo" style="height:17px"></span>&nbsp;·&nbsp; Built For Contractors
+      </div>
       <h1>
-        Websites That<br>
-        <span class="accent-red">Win Jobs.</span><br>
-        <span class="accent-gold">Not Just Looks.</span>
+        WEBSITES THAT<br>
+        WIN <span class="a-lime">JOBS.</span>
       </h1>
-      <p class="hero-sub">We build high-converting websites for contractors. Rank on Google. Get more calls. Launch in 48 to 72 hours.</p>
+      <div class="hero-price-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        $297/month. Everything included.
+      </div>
+      <p class="hero-sub">Built for contractors who want more calls, estimate requests, and booked work.</p>
       <div class="hero-actions">
-        <a href="apply.html" class="btn-primary">Apply For Your Site</a>
-        <a href="demo.html" class="btn-outline">See a Free Demo First</a>
+        <a href="demo.html" class="btn-lime">Get My Free Demo</a>
+        <a href="#pricing" class="btn-outline">See What's Included</a>
       </div>
       <div class="hero-trust">
-        <div class="trust-item"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32L2.27 6.62l5.34-.78z"/></svg> Contractor specialists</div>
-        <div class="trust-item"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32L2.27 6.62l5.34-.78z"/></svg> 48-72hr launch</div>
-        <div class="trust-item"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32L2.27 6.62l5.34-.78z"/></svg> No tech skills needed</div>
+        <div class="trust-item">
+          <svg viewBox="0 0 20 20" fill="#FF5E2B"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32L2.27 6.62l5.34-.78z"/></svg>
+          120+ sites built
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 20 20" fill="#FF5E2B"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32L2.27 6.62l5.34-.78z"/></svg>
+          Fast Launch
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 20 20" fill="#FF5E2B"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.44.91-5.32L2.27 6.62l5.34-.78z"/></svg>
+          No big upfront fee
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="site-mockup reveal reveal-delay-1">
+        <div class="mockup-chrome">
+          <div class="mockup-dots"><span></span><span></span><span></span></div>
+          <div class="mockup-url">granitestateroofing.com</div>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-hero-area">
+            <div class="mockup-company">GRANITE STATE ROOFING</div>
+            <div class="mockup-tagline">Licensed · Insured · 400+ 5-Star Reviews</div>
+            <div class="mockup-btn">Get a Free Estimate →</div>
+          </div>
+          <div class="mockup-services">
+            <div class="mockup-service-card"><strong>Roof Replacement</strong>Residential &amp; commercial</div>
+            <div class="mockup-service-card"><strong>Storm Damage</strong>Emergency response</div>
+            <div class="mockup-service-card"><strong>New Construction</strong>Builder preferred</div>
+            <div class="mockup-service-card"><strong>Gutters</strong>Full install &amp; repair</div>
+          </div>
+        </div>
+      </div>
+      <div class="float-card float-seo reveal">
+        <div class="float-card-label">Google Ranking</div>
+        <div class="float-card-value">#1 "roofing near me"</div>
+        <div class="float-card-sub">Manchester, NH · Page 1</div>
+      </div>
+      <div class="float-card float-lead reveal reveal-delay-2">
+        <div class="float-card-label">New Lead</div>
+        <div class="float-card-value">James M. — Full reroof</div>
+        <div class="float-card-sub">Submitted 4 min ago · $14,800 job</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section class="problem">
-  <div class="section-inner">
-    <div class="section-label">The Problem</div>
-    <h2 class="section-title">Why Most Contractor Websites Don't Work</h2>
-    <p class="section-sub">Generic templates and DIY builders cost you jobs every single day.</p>
-    <div class="problem-grid">
-      <div class="problem-card reveal">
-        <div class="problem-icon">📉</div>
-        <h3>You Don't Rank on Google</h3>
-        <p>Competitors with optimized local SEO show up first. Your phone stays quiet while theirs rings off the hook.</p>
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="trust-stats">
+      <div class="ts-stat reveal">
+        <div class="ts-num"><span class="whop-logo-wrap" style="padding:4px 8px"><img src="assets/whop-logo.png" alt="WHOP" class="whop-logo" style="height:20px"></span></div>
+        <div class="ts-label">Trusted by 120+ Contractors</div>
       </div>
-      <div class="problem-card reveal reveal-delay-1">
-        <div class="problem-icon">😴</div>
+      <div class="ts-stat reveal reveal-delay-1">
+        <div class="ts-num">Washington Focused</div>
+        <div class="ts-label">Seattle, Tacoma, Spokane, Bellevue</div>
+      </div>
+      <div class="ts-stat reveal reveal-delay-2">
+        <div class="ts-num">Launch In 7 Days</div>
+        <div class="ts-label">Your Site Up and Getting Calls</div>
+      </div>
+      <div class="ts-stat reveal reveal-delay-3">
+        <div class="ts-num">$297/Month</div>
+        <div class="ts-label">No Setup Fees. No Surprises.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT'S INCLUDED -->
+<section class="whats-included" id="pricing">
+  <div class="section-inner">
+    <div class="included-grid">
+      <div>
+        <span class="section-label dark">Everything in one price</span>
+        <h2 class="section-title on-light">One Price.<br>Everything Included.</h2>
+        <p class="section-sub on-light">Everything you need to turn your website into a job-winning machine. One flat price.</p>
+        <ul class="included-list" style="margin-top:2rem;">
+          <li class="included-item reveal">
+            <span class="check-circle"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
+            A site built to win jobs in your trade and city
+          </li>
+          <li class="included-item reveal reveal-delay-1">
+            <span class="check-circle"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
+            Mobile-first design that converts on every screen
+          </li>
+          <li class="included-item reveal reveal-delay-2">
+            <span class="check-circle"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
+            More people finding you and requesting estimates
+          </li>
+          <li class="included-item reveal">
+            <span class="check-circle"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
+            Service pages written and optimized for your trade
+          </li>
+          <li class="included-item reveal reveal-delay-1">
+            <span class="check-circle"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
+            Lead capture forms and click-to-call buttons
+          </li>
+          <li class="included-item reveal reveal-delay-2">
+            <span class="check-circle"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
+            Hosting, SSL, and ongoing site support
+          </li>
+          <li class="included-item reveal">
+            <span class="check-circle"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
+            Google Business Profile optimization support
+          </li>
+          <li class="included-item reveal reveal-delay-1">
+            <span class="check-circle"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
+            Monthly updates and ongoing optimization
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="included-right reveal">
+          <div class="price-card-header">
+            <div class="price-card-title">Contractor Growth Website</div>
+            <div class="price-card-price">$297<span>/month</span></div>
+          </div>
+          <div class="price-card-note">Built to win jobs from day one. No big upfront cost.</div>
+          <div class="price-card-whop">
+            <span class="whop-logo-wrap" style="padding:4px 8px"><img src="assets/whop-logo.png" alt="WHOP" class="whop-logo" style="height:18px"></span>
+            Official Partner
+          </div>
+          <a href="demo.html" class="btn-lime price-card-cta">Start With a Free Demo →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEBSITE TRANSFORMATION -->
+<section class="transformation">
+  <div class="section-inner">
+    <div class="transform-header">
+      <span class="section-label">Before &amp; After</span>
+      <h2 class="section-title">Your Site Either<br>Wins Jobs or It Doesn't.</h2>
+      <p class="section-sub">Most contractor websites drive people away. Here's the difference between a site that sits there and one that brings in calls.</p>
+    </div>
+    <div class="transform-grid">
+      <div class="transform-col before reveal">
+        <h4>Before: Losing Jobs</h4>
+        <div class="fake-site">
+          <div class="fake-chrome">
+            <div class="fake-dots"><span></span><span></span><span></span></div>
+            <div class="fake-url">acmepainting2008.weebly.com</div>
+          </div>
+          <div class="before-body">
+            <div class="before-hero-block">
+              <div class="before-title" style="font-size:1rem;font-weight:400;color:#666;">Welcome to ACME Painting</div>
+              <div class="before-text">We are a painting company. We do interior and exterior painting. Contact us for a free quote. We have many years of experience in painting homes and businesses.</div>
+              <div class="before-tag">No rank · No calls · No leads</div>
+            </div>
+            <div class="before-issue">Invisible on Google — page 4+</div>
+            <div class="before-issue">No click-to-call on mobile</div>
+            <div class="before-issue">Loads in 8+ seconds</div>
+            <div class="before-issue">No local SEO — zero service pages</div>
+            <div class="before-issue">Looks like 2009</div>
+          </div>
+        </div>
+      </div>
+      <div class="transform-arrow reveal reveal-delay-1">→</div>
+      <div class="transform-col after reveal reveal-delay-2">
+        <h4>After: Winning Jobs</h4>
+        <div class="fake-site">
+          <div class="fake-chrome">
+            <div class="fake-dots"><span></span><span></span><span></span></div>
+            <div class="fake-url">elitepainting-portland.com</div>
+          </div>
+          <div class="after-body">
+            <div class="after-hero-block">
+              <div class="after-co-name">ELITE PAINTING — PORTLAND</div>
+              <div class="after-tagline">Interior · Exterior · Cabinet Refinishing</div>
+              <div class="after-btn-mini">Call Now: (503) 555-0142</div>
+            </div>
+            <div class="after-win">Google #1 for "painter Portland OR"</div>
+            <div class="after-win">Click-to-call on every page</div>
+            <div class="after-win">Sub-2 second load time</div>
+            <div class="after-win">6 optimized service pages</div>
+            <div class="after-win">Mobile-first, conversion-built</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY WEBSITES FAIL -->
+<section class="why-fail">
+  <div class="section-inner">
+    <span class="section-label dark">The Problem</span>
+    <h2 class="section-title on-light">Why Most Contractor<br>Websites Fail in 5 Seconds.</h2>
+    <p class="section-sub on-light">Visitors make a decision instantly. If your site doesn't rank, load fast, and make calling easy, you're handing jobs to your competition every day.</p>
+    <div class="fail-grid">
+      <div class="fail-card reveal">
+        <div class="fail-card-top">
+          <div class="fail-icon-wrap">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+        </div>
+        <div class="fail-num">01</div>
+        <h3>You're Invisible on Google</h3>
+        <p>Competitors with optimized local SEO show up first. Your phone stays quiet while theirs rings. Every search you miss is a job you didn't bid.</p>
+      </div>
+      <div class="fail-card reveal reveal-delay-1">
+        <div class="fail-card-top">
+          <div class="fail-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+        </div>
+        <div class="fail-num">02</div>
         <h3>Visitors Leave Without Calling</h3>
-        <p>A confusing website without a clear call to action loses you 70% of your potential leads before they even pick up the phone.</p>
+        <p>No clear call to action. Slow load time. Generic copy that doesn't speak to the customer's problem. They bounce in seconds and call the next result.</p>
       </div>
-      <div class="problem-card reveal reveal-delay-2">
-        <div class="problem-icon">⏳</div>
-        <h3>Your Time Is Too Valuable</h3>
-        <p>You're busy running jobs. You don't have hours to learn WordPress, chase plugins, or write copy that converts.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SOLUTION -->
-<section class="solution">
-  <div class="section-inner">
-    <div class="section-label">The Solution</div>
-    <h2 class="section-title">Everything Your Site Needs to Convert Leads</h2>
-    <p class="section-sub">Built from the ground up for contractors. Not a template. A lead machine.</p>
-    <div class="solution-grid">
-      <div class="solution-card reveal">
-        <div class="badge">SEO</div>
-        <h3>Local SEO Baked In</h3>
-        <p>Google My Business optimization, city pages, schema markup, and keyword targeting built into every page from day one.</p>
-      </div>
-      <div class="solution-card reveal reveal-delay-1">
-        <div class="badge">Speed</div>
-        <h3>Blazing Fast Performance</h3>
-        <p>Lightweight code, optimized images, and 95+ PageSpeed scores that Google rewards with higher rankings.</p>
-      </div>
-      <div class="solution-card reveal reveal-delay-2">
-        <div class="badge">Design</div>
-        <h3>Conversion-First Design</h3>
-        <p>Bold CTAs, social proof, service pages, and trust signals engineered to turn visitors into phone calls.</p>
-      </div>
-      <div class="solution-card reveal">
-        <div class="badge">Copy</div>
-        <h3>Done-For-You Copywriting</h3>
-        <p>We write every word. Headlines, service descriptions, about sections, and FAQs that speak directly to your ideal customer.</p>
-      </div>
-      <div class="solution-card reveal reveal-delay-1">
-        <div class="badge">Mobile</div>
-        <h3>Mobile Optimized</h3>
-        <p>Over 70% of contractor searches happen on phones. Your site looks and converts perfectly on every screen size.</p>
-      </div>
-      <div class="solution-card reveal reveal-delay-2">
-        <div class="badge">Support</div>
-        <h3>Ongoing Updates Included</h3>
-        <p>Need a new service page or a tweak? We handle it. No tech headaches, no extra invoices for small changes.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LEAD DEMO -->
-<section style="background:var(--surface);padding:60px 5%;">
-  <div class="section-inner">
-    <div class="lead-demo">
-      <div class="lead-demo-inner">
-        <div class="lead-demo-copy reveal">
-          <div class="section-label">Real Results</div>
-          <h2 class="section-title">Your Phone Starts Ringing Within Days</h2>
-          <ul>
-            <li>Leads come in through your site 24/7, even while you're on the job</li>
-            <li>Calls, form fills, and quote requests routed directly to you</li>
-            <li>Every lead is a warm, local customer who found you on Google</li>
-          </ul>
-        </div>
-        <div class="lead-notif reveal reveal-delay-1">
-          <div class="notif-item">
-            <div class="notif-avatar">JM</div>
-            <div class="notif-text">
-              <strong>New Lead: James M.</strong>
-              <span>Needs full exterior paint. Eastside. Ready to book.</span>
-            </div>
-            <div class="notif-dot"></div>
-          </div>
-          <div class="notif-item">
-            <div class="notif-avatar">SR</div>
-            <div class="notif-text">
-              <strong>New Lead: Sarah R.</strong>
-              <span>Roof replacement. 2,400 sqft home. Called 3 min ago.</span>
-            </div>
-            <div class="notif-dot"></div>
-          </div>
-          <div class="notif-item">
-            <div class="notif-avatar">DK</div>
-            <div class="notif-text">
-              <strong>New Lead: D. Kowalski</strong>
-              <span>Full landscape redesign. Big budget. Wants quote ASAP.</span>
-            </div>
-            <div class="notif-dot"></div>
+      <div class="fail-card reveal reveal-delay-2">
+        <div class="fail-card-top">
+          <div class="fail-icon-wrap">
+            <svg viewBox="0 0 24 24"><polyline points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
         </div>
+        <div class="fail-num">03</div>
+        <h3>You're Losing Jobs Every Week</h3>
+        <p>Every week without a working website is jobs you never bid. You're on the job, not chasing plugins and writing SEO copy. You shouldn't have to be.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="how">
+<!-- GROWTH SYSTEM -->
+<section class="growth-system">
   <div class="section-inner">
-    <div class="section-label">Process</div>
-    <h2 class="section-title">Up and Running in 3 Simple Steps</h2>
-    <p class="section-sub">No meetings, no back-and-forth, no tech headaches. We handle everything.</p>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="step-num">01</div>
-        <h3>Apply in 5 Minutes</h3>
-        <p>Fill out our quick application. Tell us about your trade, service area, and what you want from your new site.</p>
+    <div class="system-header">
+      <div>
+        <span class="section-label">The System</span>
+        <h2 class="section-title">One Website.<br>Every Job.</h2>
       </div>
-      <div class="step reveal reveal-delay-1">
-        <div class="step-num">02</div>
-        <h3>We Build Your Site</h3>
-        <p>Our team writes the copy, designs every page, sets up SEO, and gets everything ready. You do nothing.</p>
+      <p class="section-sub">Your website should be winning jobs every month. We build it, launch it, and keep it running. One price. No tech headaches.</p>
+    </div>
+    <div class="system-grid">
+      <div class="sys-card reveal">
+        <div class="sys-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="sys-num">01</div>
+        <h3>Custom Website</h3>
+        <p>Built from scratch. Fast, mobile-first, conversion-focused. Every page written for your trade and city.</p>
       </div>
-      <div class="step reveal reveal-delay-2">
-        <div class="step-num">03</div>
-        <h3>Leads Start Coming In</h3>
-        <p>Your site goes live in 48 to 72 hours. Calls, texts, and form fills start hitting your phone from local customers.</p>
+      <div class="sys-card reveal reveal-delay-1">
+        <div class="sys-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="sys-num">02</div>
+        <h3>Local SEO</h3>
+        <p>Google Business, city pages, schema markup, and keyword targeting baked in. Built to rank, not just look good.</p>
+      </div>
+      <div class="sys-card reveal reveal-delay-2">
+        <div class="sys-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="sys-num">03</div>
+        <h3>Lead Capture</h3>
+        <p>Every warm lead goes straight to your phone. No missed calls, no lost estimates.</p>
+      </div>
+      <div class="sys-card reveal reveal-delay-1">
+        <div class="sys-icon">
+          <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="sys-num">04</div>
+        <h3>Ongoing Updates</h3>
+        <p>Your site stays current, fast, and optimized. We handle the changes so you stay on the job.</p>
+      </div>
+      <div class="sys-card reveal reveal-delay-2">
+        <div class="sys-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="sys-num">05</div>
+        <h3>Ongoing Support</h3>
+        <p>Updates, optimization, and support included every month. Your site keeps improving the longer it runs.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHO WE SERVE -->
-<section class="types">
+<!-- INDUSTRIES -->
+<section class="industries">
   <div class="section-inner">
-    <div class="section-label">Who We Serve</div>
-    <h2 class="section-title">Built for Every Contractor</h2>
-    <p class="section-sub">If you do residential or commercial work, we build for you. We know the trades, the keywords, and exactly what converts in your market.</p>
-    <div class="types-grid">
-      <div class="type-card reveal">
-        <span class="type-icon">🎨</span>
-        <h3>Painters</h3>
-        <p>Interior, exterior, cabinet painting. Rank for high-value residential jobs in your city.</p>
-      </div>
-      <div class="type-card reveal reveal-delay-1">
-        <span class="type-icon">🏠</span>
+    <span class="section-label dark">Who We Serve</span>
+    <h2 class="section-title on-light">Built for Every Trade.</h2>
+    <p class="section-sub on-light">Roofers, painters, landscapers, remodelers, HVAC, plumbers, electricians, and more. We know what wins jobs in your trade.</p>
+    <div class="industries-grid">
+      <div class="industry-card reveal">
+        <div class="industry-icon">Roofing</div>
         <h3>Roofers</h3>
-        <p>Replacement, repair, gutters. Capture storm damage leads and premium re-roof customers.</p>
+        <p>Capture storm damage leads, premium re-roofs, and replacement jobs. Rank when homeowners are searching hardest.</p>
       </div>
-      <div class="type-card reveal reveal-delay-2">
-        <span class="type-icon">🌿</span>
+      <div class="industry-card reveal reveal-delay-1">
+        <div class="industry-icon">Painting</div>
+        <h3>Painters</h3>
+        <p>Interior, exterior, cabinet painting. Get in front of homeowners ready to spend on quality work, not the cheapest bid.</p>
+      </div>
+      <div class="industry-card reveal reveal-delay-2">
+        <div class="industry-icon">Landscaping</div>
         <h3>Landscapers</h3>
-        <p>Design, installation, maintenance. Get in front of homeowners ready to invest in their outdoor space.</p>
+        <p>Design, installation, maintenance. Attract clients ready to invest in their outdoor space, not just mow the lawn.</p>
       </div>
-      <div class="type-card reveal reveal-delay-3">
-        <span class="type-icon">🔨</span>
+      <div class="industry-card reveal reveal-delay-3">
+        <div class="industry-icon">Remodeling</div>
         <h3>Remodelers</h3>
-        <p>Kitchen, bath, whole-home. Position yourself as the premium choice for high-ticket projects.</p>
+        <p>Kitchen, bath, whole-home. Position yourself as the premium contractor for high-ticket renovation projects.</p>
       </div>
-      <div class="type-card reveal">
-        <span class="type-icon">❄️</span>
+      <div class="industry-card reveal">
+        <div class="industry-icon">HVAC</div>
         <h3>HVAC</h3>
-        <p>Heating, cooling, installation, and service. Own the seasonal search spikes in your area.</p>
+        <p>Own the seasonal search spikes. Capture emergency and replacement calls before your competitors do.</p>
       </div>
-      <div class="type-card reveal reveal-delay-1">
-        <span class="type-icon">🔧</span>
+      <div class="industry-card reveal reveal-delay-1">
+        <div class="industry-icon">Plumbing</div>
         <h3>Plumbers</h3>
-        <p>Emergency service, installations, and remodels. Rank when homeowners need help fast.</p>
+        <p>Emergency service, installs, remodels. Rank when homeowners need help fast and are ready to call the first result they trust.</p>
       </div>
-      <div class="type-card reveal reveal-delay-2">
-        <span class="type-icon">⚡</span>
+      <div class="industry-card reveal reveal-delay-2">
+        <div class="industry-icon">Electrical</div>
         <h3>Electricians</h3>
-        <p>Residential and commercial electrical. Get found for panel upgrades, EV chargers, and more.</p>
+        <p>Residential and commercial electrical. Win panel upgrades, EV charger installs, and rewires from homeowners near you.</p>
       </div>
-      <div class="type-card reveal reveal-delay-3">
-        <span class="type-icon">🏗️</span>
+      <div class="industry-card reveal reveal-delay-3">
+        <div class="industry-icon">Gen. Contractor</div>
         <h3>General Contractors</h3>
-        <p>New builds, additions, renovations. A site that reflects the scale and quality of your work.</p>
+        <p>New builds, additions, renovations. A site that reflects your scale and closes clients before they call anyone else.</p>
       </div>
     </div>
-    <div class="types-note">
-      <p>Don't see your trade? <a href="apply.html">Apply anyway</a> — if you do residential or commercial work, we can build for you.</p>
-    </div>
+    <p class="industries-note">Don't see your trade? <a href="demo.html">Apply anyway</a>. If you do residential or commercial work, we can build for you.</p>
   </div>
 </section>
 
-<!-- COMPARE -->
-<section class="compare">
+<!-- PROCESS -->
+<section class="process">
   <div class="section-inner">
-    <div class="section-label">Why Contractor Arsenal</div>
-    <h2 class="section-title">The Smarter Choice for Contractors</h2>
-    <p class="section-sub">See how we stack up against other options you might be considering.</p>
-    <div class="compare-table-wrap">
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th class="highlight">Contractor Arsenal</th>
-            <th>DIY Builder</th>
-            <th>Freelancer</th>
-            <th>Angi/HomeAdvisor</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Contractor-specific design</td>
-            <td class="highlight"><span class="check">Yes</span></td>
-            <td><span class="cross">No</span></td>
-            <td><span class="cross">Rarely</span></td>
-            <td><span class="cross">No</span></td>
-          </tr>
-          <tr>
-            <td>Local SEO included</td>
-            <td class="highlight"><span class="check">Yes, built in</span></td>
-            <td><span class="cross">Add-on cost</span></td>
-            <td><span class="cross">Extra charge</span></td>
-            <td><span class="cross">No</span></td>
-          </tr>
-          <tr>
-            <td>Done-for-you copywriting</td>
-            <td class="highlight"><span class="check">Yes, included</span></td>
-            <td><span class="cross">DIY only</span></td>
-            <td><span class="cross">Extra charge</span></td>
-            <td><span class="cross">No</span></td>
-          </tr>
-          <tr>
-            <td>Launch time</td>
-            <td class="highlight"><span class="check">48 to 72 hours</span></td>
-            <td>Weeks of work</td>
-            <td>2 to 6 weeks</td>
-            <td>N/A</td>
-          </tr>
-          <tr>
-            <td>You own the site</td>
-            <td class="highlight"><span class="check">100% yours</span></td>
-            <td>Locked in platform</td>
-            <td>Usually yes</td>
-            <td><span class="cross">No</span></td>
-          </tr>
-          <tr>
-            <td>Ongoing support</td>
-            <td class="highlight"><span class="check">Included</span></td>
-            <td><span class="cross">None</span></td>
-            <td>Hourly rate</td>
-            <td><span class="cross">No</span></td>
-          </tr>
-        </tbody>
-      </table>
+    <span class="section-label">How It Works</span>
+    <h2 class="section-title">Simple Process.<br>Fast Results.</h2>
+    <p class="section-sub">You stay on the job. We build the website that brings the work to you.</p>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="process-num">01</div>
+        <h3>Demo</h3>
+        <p>See the website that could win your next jobs. Free to look at, no commitment required.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="process-num">02</div>
+        <h3>Build</h3>
+        <p>We write every word, design every page, and set up the full system. You review once. We handle everything else.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="process-num">03</div>
+        <h3>Launch</h3>
+        <p>Your site live and ready to win work. Up and running fast.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="process-num">04</div>
+        <h3>Optimize</h3>
+        <p>Monthly ranking improvements and ongoing optimization included. The system gets stronger every month.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- METRICS -->
 <section class="metrics">
-  <div class="section-inner">
-    <div class="section-label" style="text-align:center;">Results</div>
-    <h2 class="section-title" style="text-align:center;">The Numbers Speak for Themselves</h2>
+  <div class="metrics-inner">
+    <span class="section-label" style="display:block;text-align:center;">By the Numbers</span>
+    <h2 class="section-title" style="text-align:center;">The Results Speak<br>for Themselves.</h2>
     <div class="metrics-grid">
-      <div class="reveal">
-        <div class="metric-num">$850K+</div>
+      <div class="metric-card reveal">
+        <div class="metric-num">$4M+</div>
         <div class="metric-label">Revenue Generated</div>
         <div class="metric-sub">Across contractor clients in the last 12 months</div>
       </div>
-      <div class="reveal reveal-delay-1">
+      <div class="metric-card reveal reveal-delay-1">
         <div class="metric-num">$23K</div>
-        <div class="metric-label">Avg Contract Value</div>
+        <div class="metric-label">Avg. Contract Value</div>
         <div class="metric-sub">Median job won through our sites</div>
       </div>
-      <div class="reveal reveal-delay-2">
-        <div class="metric-num">9.2x</div>
-        <div class="metric-label">Average ROI</div>
+      <div class="metric-card reveal reveal-delay-2">
+        <div class="metric-num">9.2×</div>
+        <div class="metric-label">Average Client ROI</div>
         <div class="metric-sub">Return on website investment</div>
       </div>
     </div>
@@ -664,122 +1211,41 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testi">
+<section class="testimonials">
   <div class="section-inner">
-    <div class="section-label">Testimonials</div>
-    <h2 class="section-title">Contractors Who Made the Move</h2>
+    <span class="section-label dark">Real Contractors</span>
+    <h2 class="section-title on-light">Contractors Who Made the Move.</h2>
     <div class="testi-grid">
       <div class="testi-card reveal">
-        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testi-quote">My old site got maybe 1 call a month. Within 2 weeks of launching with Contractor Arsenal I had 4 estimates booked. Best investment I made for my painting business.</p>
+        <div class="testi-stars">5 STARS</div>
+        <p class="testi-quote">My old site got maybe 1 call a month. Within 2 weeks of launching I had 4 estimates booked. Best investment I made for my painting business.</p>
         <div class="testi-author">
           <div class="testi-avatar">MC</div>
           <div class="testi-name">
             <strong>Mike C.</strong>
-            <span>Painter, Phoenix AZ</span>
+            <span>Painter — Phoenix, AZ</span>
           </div>
         </div>
       </div>
       <div class="testi-card reveal reveal-delay-1">
-        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testi-quote">These guys know what they're doing. They wrote all the copy, set up the SEO, and launched everything fast. I'm now on page 1 for roofing in my city and the leads keep coming.</p>
+        <div class="testi-stars">5 STARS</div>
+        <p class="testi-quote">These guys know what they're doing. They wrote all the copy, set up the SEO, and launched everything fast. I'm on page 1 for roofing in my city and the leads keep coming.</p>
         <div class="testi-author">
           <div class="testi-avatar">TR</div>
           <div class="testi-name">
             <strong>Tony R.</strong>
-            <span>Roofer, Nashville TN</span>
+            <span>Roofer — Nashville, TN</span>
           </div>
         </div>
       </div>
       <div class="testi-card reveal reveal-delay-2">
-        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-stars">5 STARS</div>
         <p class="testi-quote">I was skeptical but the ROI is undeniable. Got a $45K remodel job from a lead that came through my new site. The whole site paid for itself with one call.</p>
         <div class="testi-author">
           <div class="testi-avatar">DS</div>
           <div class="testi-name">
             <strong>Dave S.</strong>
-            <span>Remodeler, Denver CO</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq">
-  <div class="section-inner">
-    <div class="section-label" style="text-align:center;">FAQ</div>
-    <h2 class="section-title" style="text-align:center;">Common Questions</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">How fast will my site go live?</button>
-        <div class="faq-a"><div class="faq-a-inner">Most sites launch within 48 to 72 hours after you submit your application and we connect to go over the details. No waiting weeks for a developer.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Do I need to write any content?</button>
-        <div class="faq-a"><div class="faq-a-inner">No. We handle all copywriting. Our team writes headlines, service pages, about sections, FAQs, and all other content based on your trade and service area.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Will I actually rank on Google?</button>
-        <div class="faq-a"><div class="faq-a-inner">Every site includes local SEO fundamentals: keyword targeting, schema markup, optimized meta tags, and Google Business Profile setup guidance. Most clients see ranking improvements within 30 to 60 days.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">What if I already have a website?</button>
-        <div class="faq-a"><div class="faq-a-inner">No problem. We can rebuild your existing site or build a new one from scratch. We'll audit what you have and recommend the best path forward based on your goals.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">What trades do you work with?</button>
-        <div class="faq-a"><div class="faq-a-inner">We build for any contractor doing residential or commercial work. Painters, roofers, landscapers, remodelers, HVAC, plumbers, electricians, general contractors and more. Apply and we'll confirm we're a good fit.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Do I own the website?</button>
-        <div class="faq-a"><div class="faq-a-inner">Yes, 100%. The site, domain, and all assets are yours. We never hold your site hostage or lock you into a platform you can't leave.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FREE DEMO BANNER -->
-<section style="background:linear-gradient(135deg,rgba(16,185,129,0.08),rgba(249,115,22,0.05));border-top:1px solid rgba(16,185,129,0.15);border-bottom:1px solid rgba(16,185,129,0.15);padding:80px 5%;">
-  <div class="section-inner">
-    <div style="max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
-      <div class="reveal">
-        <div style="display:inline-flex;align-items:center;gap:.5rem;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#10B981;padding:.3rem .85rem;border-radius:100px;font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.25rem;">
-          <span style="width:6px;height:6px;border-radius:50%;background:#10B981;display:inline-block;"></span>
-          100% Free — No Commitment
-        </div>
-        <h2 class="section-title" style="font-size:clamp(1.8rem,3.5vw,2.8rem);">Want to See Your Site Before You Buy?</h2>
-        <p style="color:var(--muted);font-size:1rem;line-height:1.7;margin-bottom:2rem;">We'll build you a real, custom demo website for your contracting business — completely free. No templates. No catch. See exactly what you'd be getting before spending a single dollar.</p>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href="demo.html" style="background:#10B981;color:#fff;padding:.85rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;border:2px solid #10B981;display:inline-block;" onmouseover="this.style.background='#0ea271';this.style.borderColor='#0ea271'" onmouseout="this.style.background='#10B981';this.style.borderColor='#10B981'">Get My Free Demo</a>
-          <a href="apply.html" class="btn-outline">Apply for the Full Site</a>
-        </div>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;">
-          <div style="background:var(--surface2);padding:.75rem 1rem;display:flex;align-items:center;gap:.5rem;border-bottom:1px solid var(--border);">
-            <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
-            <div style="width:10px;height:10px;border-radius:50%;background:#ffbd2e;"></div>
-            <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
-            <span style="margin-left:.5rem;font-size:.7rem;color:var(--muted);font-family:'Barlow Condensed',sans-serif;">yourbusiness.com — Live Preview</span>
-          </div>
-          <div style="padding:1.5rem;display:flex;flex-direction:column;gap:.75rem;">
-            <div style="height:60px;border-radius:8px;background:linear-gradient(135deg,rgba(192,57,43,0.15),rgba(249,115,22,0.08));border:1px solid rgba(192,57,43,0.2);display:flex;align-items:center;padding:1rem;gap:.75rem;">
-              <div style="display:flex;flex-direction:column;gap:.4rem;flex:1;">
-                <div style="height:8px;border-radius:3px;background:rgba(240,240,240,0.2);width:75%;"></div>
-                <div style="height:6px;border-radius:3px;background:rgba(240,240,240,0.1);width:50%;"></div>
-              </div>
-              <div style="background:var(--red);border-radius:5px;padding:.35rem .75rem;font-size:.65rem;font-weight:800;color:#fff;font-family:'Barlow Condensed',sans-serif;white-space:nowrap;">Call Now</div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;">
-              <div style="height:45px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);"></div>
-              <div style="height:45px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);"></div>
-              <div style="height:45px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);"></div>
-            </div>
-            <div style="height:35px;border-radius:6px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);display:flex;align-items:center;justify-content:center;">
-              <span style="font-size:.7rem;font-weight:700;color:#10B981;font-family:'Barlow Condensed',sans-serif;letter-spacing:.05em;">YOUR CUSTOM DEMO — BUILT FREE IN 48HRS</span>
-            </div>
+            <span>Remodeler — Denver, CO</span>
           </div>
         </div>
       </div>
@@ -789,88 +1255,129 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:60px
 
 <!-- FINAL CTA -->
 <section class="final-cta">
-  <div class="noise-overlay"></div>
-  <h2>Ready to Start <span class="accent-gold">Winning More Jobs?</span></h2>
-  <p>Apply today and let us build the website your business deserves. Spots fill up fast.</p>
-  <div class="cta-actions">
-    <a href="apply.html" class="btn-primary">Apply For Your Site</a>
-    <a href="about.html" class="btn-outline">Learn More First</a>
+  <div class="final-cta-inner">
+    <div class="final-cta-badge" style="display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;">$297/month · No setup fees ·<span class="whop-logo-wrap" style="padding:2px 7px"><img src="assets/whop-logo.png" alt="WHOP" class="whop-logo" style="height:14px"></span></div>
+    <h2>
+      Your Website Should<br>
+      Bring In <span class="a-lime">Jobs.</span>
+    </h2>
+    <p>One price. Built to win jobs. See your site before you start.</p>
+    <div class="cta-actions">
+      <a href="demo.html" class="btn-lime">Get My Free Demo</a>
+      <a href="services.html" class="btn-outline">See What's Included</a>
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-top">
+  <div class="footer-main">
+    <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-brand-logo">
-          <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
-          <span class="footer-brand-logo-text">Contractor Arsenal</span>
+          <img src="https://github.com/user-attachments/assets/fd46c093-d424-483d-9c5d-19aa0d6249b4" alt="Contractor Arsenal">
         </div>
-        <p>Done-for-you websites built for contractors who want more local jobs and less tech headaches.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigate</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="apply.html">Apply Now</a></li>
-          <li><a href="arsenal.html">Arsenal 001</a></li>
-          <li><a href="demo.html">Free Demo</a></li>
-          <li><a href="partner.html">Partner Network</a></li>
-        </ul>
+        <p class="footer-brand-desc">Built for contractors who need more jobs. $297/month. Serving Seattle, Tacoma, Bellevue, Spokane, and beyond.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener" class="fsoc" title="Instagram">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="#FF5E2B" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="#FF5E2B" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="#FF5E2B"/></svg>
+          </a>
+        </div>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><span>Website Design</span></li>
-          <li><span>Local SEO</span></li>
-          <li><span>Copywriting</span></li>
-          <li><span>Mobile Optimization</span></li>
-          <li><span>Ongoing Support</span></li>
+          <li><a href="services.html">What's Included</a></li>
+          <li><a href="services.html#seo">Local SEO</a></li>
+          <li><a href="services.html#leads">Lead Capture</a></li>
+          <li><a href="services.html#support">Ongoing Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Industries</h4>
+        <ul>
+          <li><a href="industries.html">All Trades</a></li>
+          <li><a href="industries.html#roofing">Roofing</a></li>
+          <li><a href="industries.html#painting">Painting</a></li>
+          <li><a href="industries.html#hvac">HVAC</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="partner.html">WHOP Partner</a></li>
+          <li><a href="mailto:contractorarsenal@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get Started</h4>
+        <ul>
+          <li><a href="demo.html">Free Demo</a></li>
+          <li><a href="apply.html">Apply Now</a></li>
+          <li><a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:contractorarsenal@gmail.com">Email Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><span style="font-size:.87rem;color:#555;">Seattle, WA</span></li>
+          <li><span style="font-size:.87rem;color:#555;">Bellevue, WA</span></li>
+          <li><span style="font-size:.87rem;color:#555;">Tacoma, WA</span></li>
+          <li><span style="font-size:.87rem;color:#555;">Spokane, WA</span></li>
+          <li><span style="font-size:.87rem;color:#555;">Everett &amp; Redmond</span></li>
+          <li><span style="font-size:.87rem;color:#555;">Wenatchee &amp; PNW</span></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Contractor Arsenal. All rights reserved. &nbsp;·&nbsp; <a href="privacy.html" style="color:var(--muted);text-decoration:underline;text-underline-offset:2px;">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html" style="color:var(--muted);text-decoration:underline;text-underline-offset:2px;">Terms</a></p>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener" class="fsoc" title="Instagram">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FFDC80"/><stop offset="30%" stop-color="#F77737"/><stop offset="60%" stop-color="#C13584"/><stop offset="100%" stop-color="#515BD4"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5.5" fill="url(#ig)"/><circle cx="12" cy="12" r="4.2" stroke="#fff" stroke-width="1.8" fill="none"/><circle cx="17.2" cy="6.8" r="1.1" fill="#fff"/></svg>
-        </a>
-      </div>
+  </div>
+  <hr class="footer-divider">
+  <div class="footer-bottom">
+    <p>&copy; 2026 Contractor Arsenal. All rights reserved. &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></p>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+      <span class="whop-logo-wrap" style="padding:3px 8px"><img src="assets/whop-logo.png" alt="WHOP" class="whop-logo" style="height:14px"></span>
+      <span style="font-size:.72rem;color:#555;">|</span>
+      <span style="font-size:.72rem;color:#555;">Serving Washington Contractors</span>
+      <span style="font-size:.72rem;color:#555;">|</span>
+      <span style="font-size:.72rem;color:#555;">WA L&amp;I Licensed Partners Welcome</span>
     </div>
   </div>
 </footer>
 
 <script>
-// NAV
 function toggleMenu(){document.getElementById('navMobile').classList.toggle('open');}
 function closeMenu(){document.getElementById('navMobile').classList.remove('open');}
 
-// HERO BACKGROUND SLIDESHOW
 (function(){
-  var slides = document.querySelectorAll('.hero-slide');
-  var current = 0;
-  if(!slides.length) return;
+  var slides=document.querySelectorAll('.hero-slide'),cur=0;
+  if(!slides.length)return;
   setInterval(function(){
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  }, 3600);
+    slides[cur].classList.remove('active');
+    cur=(cur+1)%slides.length;
+    slides[cur].classList.add('active');
+  },3800);
 })();
 
-// SCROLL REVEAL
-var obs = new IntersectionObserver(function(entries){
+var obs=new IntersectionObserver(function(entries){
   entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
-},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r);});
 
-// FAQ
-function toggleFaq(btn){
-  var item=btn.closest('.faq-item');
-  var isOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
-  if(!isOpen) item.classList.add('open');
+(function(){
+  if(sessionStorage.getItem('popupDone'))return;
+  var p=document.getElementById('offerPopup');
+  setTimeout(function(){
+    p.classList.remove('gone');
+    requestAnimationFrame(function(){requestAnimationFrame(function(){p.classList.add('visible');});});
+  },window.innerWidth<768?9000:5000);
+})();
+function closePopup(){
+  var p=document.getElementById('offerPopup');
+  p.classList.remove('visible');
+  sessionStorage.setItem('popupDone','1');
+  setTimeout(function(){p.classList.add('gone');},500);
 }
 </script>
 </body>
