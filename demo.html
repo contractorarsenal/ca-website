@@ -414,6 +414,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
 
+          <input type="hidden" name="access_key" value="5a7b823c-06ee-4ce2-bd19-da9f4ec8ee7c">
+          <input type="hidden" name="subject" value="New Demo Request — Contractor Arsenal">
+          <input type="checkbox" name="botcheck" style="display:none">
+
           <button type="submit" class="btn-submit" id="submitBtn">
             Build My Free Demo
             <svg class="arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -542,11 +546,13 @@ document.getElementById('demoForm').addEventListener('submit',async function(e){
     ['goal_leads','goal_credibility','goal_showcase'].forEach(function(id){var el=document.getElementById(id);if(el&&el.checked)goals.push(el.value);});
     formData.set('main_goal',goals.join(', ')||'Not specified');
     formData.delete('goal_leads');formData.delete('goal_credibility');formData.delete('goal_showcase');
-    var resp=await fetch('https://usebasin.com/f/528e7f842a31',{method:'POST',body:formData,headers:{'Accept':'application/json'}});
-    if(resp.ok||resp.status===200||resp.status===201){
+    var object=Object.fromEntries(formData);
+    var resp=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(object)});
+    var data=await resp.json();
+    if(data.success){
       document.getElementById('formBody').style.display='none';
       document.getElementById('formSuccess').classList.add('visible');
-    }else{throw new Error('Server error');}
+    }else{throw new Error(data.message||'Server error');}
   }catch(err){
     btn.disabled=false;
     btn.innerHTML='Build My Free Demo <svg class="arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
