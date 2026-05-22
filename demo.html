@@ -14,7 +14,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get Your Free Demo | Contractor Arsenal — See Your Site Before You Start</title>
+<title>Get a Free Contractor Website Demo | Contractor Arsenal</title>
 <meta name="description" content="Fill out the form. We'll build a real custom demo of your future site. Free, no commitment, no credit card.">
 <link rel="canonical" href="https://contractorarsenal.com/demo.html">
 <meta name="robots" content="index, follow">
@@ -26,42 +26,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0F1115;--bg2:#151922;--bg3:#1B2130;
-  --light:#F5F7FA;--white:#FFFFFF;
+  --bg:#FFFFFF;--bg2:#F5F7FA;--bg3:#EDEEF2;
+  --dark:#0F1115;--dark2:#151922;--dark3:#1B2130;
   --accent:#FF5E2B;--accent-dim:rgba(255,94,43,0.08);
-  --orange:#FF5E2B;
+  --text:#1C1C1E;--muted:#6B7280;
+  --text-inv:#F0F2F5;--muted-inv:#A8AFBC;
+  --border:rgba(0,0,0,0.08);--border-inv:rgba(255,255,255,0.07);
+  --rad:0 16px 0 16px;
+  --rad-sm:0 10px 0 10px;
   --green:#10B981;
-  --text:#F0F0F0;--muted:#8B929E;
-  --text-dark:#111827;--text-dark-muted:#6B7280;
-  --border:rgba(255,255,255,0.06);--border-hi:rgba(255,255,255,0.11);
-  --border-light:rgba(0,0,0,0.07);
-  --r:10px;--r-lg:16px;--r-xl:24px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;}
+body{background:#fff;color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;}
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;height:auto;display:block;}
 ::-webkit-scrollbar{width:4px;}
 ::-webkit-scrollbar-track{background:var(--bg2);}
 ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:4px;}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(15,17,21,0.96);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:82px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(15,17,21,0.97);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,0.08);}
 .nav-logo{display:flex;align-items:center;}
-.nav-logo img{height:38px;width:auto;}
-.nav-links{display:flex;gap:2rem;align-items:center;}
-.nav-links a{font-weight:600;font-size:.8rem;letter-spacing:.5px;text-transform:uppercase;color:var(--text);opacity:.55;transition:opacity .2s;}
-.nav-links a:hover{opacity:1;}
-.nav-links a.active{opacity:1;color:var(--accent);}
-.nav-cta{background:var(--accent);color:#000 !important;padding:.46rem 1.25rem;border-radius:7px;font-weight:700;font-size:.78rem;letter-spacing:.5px;text-transform:uppercase;opacity:1 !important;transition:all .2s;}
+.nav-logo img{height:48px;width:auto;object-fit:contain;}
+.nav-links{display:flex;gap:0;align-items:center;position:relative;}
+.nav-slider{position:absolute;height:calc(100% - 8px);top:4px;left:0;background:rgba(255,94,43,0.08);border-radius:0 10px 0 10px;transition:left .2s ease,width .2s ease,opacity .15s;opacity:0;pointer-events:none;}
+.nav-links a{position:relative;z-index:1;font-weight:600;font-size:.8rem;letter-spacing:.5px;text-transform:uppercase;color:#F0F2F5;padding:.55rem .95rem;transition:color .2s;}
+.nav-links a:hover{color:#FF5E2B;}
+.nav-links a.active{color:#FF5E2B;}
+.nav-cta{background:#FF5E2B;color:#fff !important;padding:.46rem 1.25rem;border-radius:0 10px 0 10px;font-weight:700;font-size:.78rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;margin-left:.75rem;}
 .nav-cta:hover{background:#e85520;transform:translateY(-1px);}
-.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
-.nav-hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s;}
-.nav-mobile{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(15,17,21,.98);padding:1.25rem 5%;flex-direction:column;gap:0;z-index:999;border-bottom:1px solid var(--border);}
+.nav-hamburger{display:none;cursor:pointer;background:none;border:none;padding:6px;color:#F0F2F5;}
+.nav-hamburger svg{width:28px;height:28px;transition:transform 500ms ease;}
+.nav-hamburger.open svg{transform:rotate(-45deg);}
+.nav-hamburger svg path:first-child{transition:stroke-dasharray 500ms ease,stroke-dashoffset 500ms ease;stroke-dasharray:12 63;}
+.nav-hamburger.open svg path:first-child{stroke-dasharray:20 300;stroke-dashoffset:-32.42px;}
+.nav-mobile{display:none;position:fixed;top:82px;left:0;right:0;background:rgba(15,17,21,0.98);padding:1.25rem 5%;flex-direction:column;gap:0;z-index:999;border-bottom:1px solid rgba(255,255,255,0.08);}
 .nav-mobile.open{display:flex;}
-.nav-mobile a{font-weight:600;font-size:1rem;text-transform:uppercase;letter-spacing:.5px;padding:.85rem 0;border-bottom:1px solid var(--border);color:var(--text);}
-.nav-mobile a:hover{color:var(--accent);}
-.nav-mobile .mob-cta{margin-top:1rem;text-align:center;background:var(--accent);color:#000;padding:.85rem;border-radius:8px;font-weight:700;border:none;}
+.nav-mobile a{font-weight:600;font-size:1rem;text-transform:uppercase;letter-spacing:.5px;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,0.1);color:#F0F2F5;}
+.nav-mobile a:hover{color:#FF5E2B;}
+.nav-mobile .mob-cta{margin-top:1rem;text-align:center;background:#FF5E2B;color:#fff;padding:.85rem;border-radius:0 10px 0 10px;font-weight:700;border:none;}
 
 /* PAGE HERO */
 .page-hero{padding:120px 5% 60px;background:var(--bg);text-align:center;}
@@ -72,14 +75,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;padding:0 5%;di
 .page-hero h1 .a-lime{color:var(--accent);}
 .page-hero p{font-size:1.05rem;color:var(--muted);max-width:520px;margin:0 auto 1rem;line-height:1.78;}
 .hero-chips{display:flex;gap:.65rem;justify-content:center;flex-wrap:wrap;margin-top:1.25rem;}
-.hero-chip{display:flex;align-items:center;gap:.4rem;padding:.32rem .8rem;border-radius:6px;background:var(--bg2);border:1px solid var(--border-hi);font-size:.75rem;font-weight:600;color:var(--muted);}
+.hero-chip{display:flex;align-items:center;gap:.4rem;padding:.32rem .8rem;border-radius:6px;background:var(--bg2);border:1px solid var(--border-inv);font-size:.75rem;font-weight:600;color:var(--muted);}
 .chip-dot{width:5px;height:5px;border-radius:50%;background:var(--green);}
 
 /* MAIN LAYOUT */
 .main-wrap{max-width:1100px;margin:0 auto;padding:3rem 5% 6rem;display:grid;grid-template-columns:1fr 460px;gap:4rem;align-items:start;}
 
 /* LEFT PANEL */
-.trust-row{display:grid;grid-template-columns:repeat(3,1fr);background:var(--bg2);border:1px solid var(--border-hi);border-radius:var(--r-lg);overflow:hidden;margin-bottom:2.5rem;}
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);background:var(--bg2);border:1px solid var(--border-inv);border-radius:var(--rad-sm);overflow:hidden;margin-bottom:2.5rem;}
 .tr-item{padding:1.25rem 1rem;text-align:center;border-right:1px solid var(--border);}
 .tr-item:last-child{border-right:none;}
 .tr-num{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1;color:var(--accent);margin-bottom:.2rem;}
@@ -104,7 +107,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;padding:0 5%;di
 .step-desc{font-size:.78rem;color:var(--muted);line-height:1.5;}
 
 /* FORM CARD */
-.form-card{background:var(--bg2);border:1.5px solid var(--border-hi);border-radius:var(--r-xl);overflow:hidden;box-shadow:0 32px 72px rgba(0,0,0,0.5);position:sticky;top:84px;}
+.form-card{background:var(--bg2);border:1.5px solid var(--border-inv);border-radius:var(--rad);overflow:hidden;box-shadow:0 32px 72px rgba(0,0,0,0.5);position:sticky;top:84px;}
 .form-card-header{padding:1.75rem 2rem 1.5rem;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
 .form-card-header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);}
 .fc-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);border-radius:4px;padding:.22rem .65rem;font-size:.65rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.85rem;}
@@ -116,8 +119,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;padding:0 5%;di
 .form-row.solo{grid-template-columns:1fr;}
 .form-field{display:flex;flex-direction:column;gap:.4rem;}
 .form-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);}
-.form-label .opt{font-size:.6rem;color:var(--border-hi);font-weight:600;margin-left:.3rem;}
-.form-input{background:var(--bg3);border:1.5px solid var(--border-hi);border-radius:8px;padding:.68rem .9rem;font-size:.88rem;color:var(--text);outline:none;font-family:'Inter',sans-serif;transition:border .2s;width:100%;}
+.form-label .opt{font-size:.6rem;color:var(--border-inv);font-weight:600;margin-left:.3rem;}
+.form-input{background:var(--bg3);border:1.5px solid var(--border-inv);border-radius:8px;padding:.68rem .9rem;font-size:.88rem;color:var(--text);outline:none;font-family:'Inter',sans-serif;transition:border .2s;width:100%;}
 .form-input::placeholder{color:#444;}
 .form-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,94,43,0.08);}
 textarea.form-input{resize:vertical;min-height:80px;line-height:1.6;}
@@ -125,13 +128,13 @@ textarea.form-input{resize:vertical;min-height:80px;line-height:1.6;}
 .toggle-group{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.1rem;}
 .toggle-option{position:relative;}
 .toggle-option input{position:absolute;opacity:0;width:0;height:0;}
-.toggle-option label{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .85rem;border-radius:6px;background:var(--bg3);border:1.5px solid var(--border-hi);font-size:.8rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s;}
+.toggle-option label{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .85rem;border-radius:6px;background:var(--bg3);border:1.5px solid var(--border-inv);font-size:.8rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s;}
 .toggle-option label:hover{border-color:rgba(255,94,43,0.4);color:var(--text);}
 .toggle-option input:checked + label{background:var(--accent-dim);border-color:rgba(255,94,43,0.4);color:var(--accent);}
 
 .form-divider{display:flex;align-items:center;gap:.6rem;margin:1.25rem 0 1rem;}
 .form-divider span{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);white-space:nowrap;}
-.form-divider::before,.form-divider::after{content:'';flex:1;height:1px;background:var(--border-hi);}
+.form-divider::before,.form-divider::after{content:'';flex:1;height:1px;background:var(--border-inv);}
 
 .btn-submit{width:100%;padding:1rem;border-radius:9px;background:var(--accent);color:#000;font-size:.95rem;font-weight:800;letter-spacing:.4px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.6rem;transition:all .2s;margin-top:1.5rem;}
 .btn-submit:hover{background:#e85520;transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,94,43,0.25);}
@@ -147,24 +150,20 @@ textarea.form-input{resize:vertical;min-height:80px;line-height:1.6;}
 .success-title{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--accent);margin-bottom:.5rem;}
 .success-body{font-size:.9rem;color:var(--muted);line-height:1.7;max-width:340px;margin:0 auto;}
 
-footer{background:#09090C;border-top:3px solid var(--accent);}
-.footer-main{padding:70px 5% 0;max-width:1280px;margin:0 auto;}
-.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3.5rem;}
-.footer-brand-logo{display:flex;align-items:center;gap:.55rem;margin-bottom:1rem;}
-.footer-brand-logo img{height:40px;width:auto;}
-.footer-brand-desc{font-size:.87rem;color:var(--muted);line-height:1.7;max-width:230px;margin-bottom:1.5rem;}
-.footer-socials{display:flex;gap:.5rem;}
-.fsoc{width:36px;height:36px;border-radius:7px;background:var(--bg2);border:1px solid var(--border);color:var(--muted);display:flex;align-items:center;justify-content:center;transition:all .2s;}
-.fsoc:hover{border-color:var(--accent);color:var(--accent);}
-.footer-col h4{font-size:.68rem;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
-.footer-col a{font-size:.87rem;color:var(--muted);transition:color .2s;}
-.footer-col a:hover{color:var(--text);}
-.footer-divider{border:none;border-top:1px solid var(--border);margin:0 5%;}
-.footer-bottom{max-width:1280px;margin:0 auto;padding:1.5rem 5% 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-.footer-bottom p{font-size:.8rem;color:var(--muted);}
-.footer-bottom a{color:var(--muted);text-decoration:underline;text-underline-offset:2px;}
-.footer-bottom a:hover{color:var(--text);}
+/* ── FOOTER ── */
+footer{background:#09090C;}
+.footer-main{padding:80px 5% 70px;max-width:1280px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:3rem;}
+.footer-col h4{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.1);}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.8rem;}
+.footer-col a{font-size:.88rem;color:var(--muted);transition:color .2s;}
+.footer-col a:hover{color:#fff;}
+.footer-col li span{font-size:.88rem;color:var(--muted);}
+.footer-bar{background:#FF5E2B;padding:1.5rem 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-bar-logo{display:flex;flex-direction:column;gap:.4rem;}.footer-bar-logo img{height:36px;width:auto;display:block;filter:brightness(0) invert(1);}.footer-bar-tagline{font-size:.75rem;font-weight:700;color:#0F1115;letter-spacing:.5px;opacity:.6;}
+.footer-bar-right{display:flex;align-items:center;gap:1.75rem;flex-wrap:wrap;}
+.footer-bar-right p,.footer-bar-right a{font-size:.8rem;color:#fff;font-weight:500;text-decoration:none;}
+.footer-bar-right a:hover{text-decoration:underline;}
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
 .reveal.visible{opacity:1;transform:none;}
@@ -172,15 +171,14 @@ footer{background:#09090C;border-top:3px solid var(--accent);}
 @media(max-width:900px){
   .main-wrap{grid-template-columns:1fr;gap:2.5rem;}
   .form-card{position:static;}
-  .footer-grid{grid-template-columns:1fr 1fr 1fr;}
-  .footer-brand{grid-column:1/-1;}
+  .footer-grid{grid-template-columns:repeat(3,1fr);}
   .footer-grid .footer-col:last-child{display:none;}
 }
 @media(max-width:768px){
-  nav{padding:0 4%;height:64px;}
+  nav{padding:0 4%;height:76px;}
   .nav-links{display:none;}
   .nav-hamburger{display:flex;}
-  .nav-mobile{top:64px;}
+  .nav-mobile{top:82px;}
   .page-hero{padding:90px 4% 40px;}
   .main-wrap{padding:2rem 4% 4rem;}
   .form-row{grid-template-columns:1fr;}
@@ -191,8 +189,12 @@ footer{background:#09090C;border-top:3px solid var(--accent);}
 }
 @media(max-width:480px){
   .footer-grid{grid-template-columns:1fr;}
-  .footer-brand{grid-column:auto;}
 }
+
+.btn-outline-white{border:2px solid rgba(255,255,255,0.4);color:#fff;padding:.9rem 2.2rem;border-radius:var(--rad);font-weight:700;font-size:.95rem;letter-spacing:.4px;display:inline-block;transition:all .2s;}
+.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,0.1);transform:translateY(-2px);}
+.btn-dark-outline{border:2px solid rgba(255,255,255,.35);color:#F5F7FA;background:transparent;padding:.9rem 2.2rem;border-radius:0 16px 0 16px;font-weight:700;font-size:.95rem;letter-spacing:.4px;display:inline-block;transition:all .2s;}
+.btn-dark-outline:hover{background:#F5F7FA;color:#0F1115;transform:translateY(-2px);}
 </style>
 </head>
 <body>
@@ -202,22 +204,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <nav>
-  <a href="index.html" class="nav-logo"><img src="favicon.png" alt="Contractor Arsenal"></a>
-  <div class="nav-links">
+  <a href="index.html" class="nav-logo">
+    <img src="favicon.png" alt="Contractor Arsenal">
+  </a>
+  <div class="nav-links" id="navLinks">
+    <span class="nav-slider" id="navSlider"></span>
     <a href="services.html">Services</a>
     <a href="industries.html">Industries</a>
-    <a href="work.html">Work</a>
-    <a href="about.html">About</a>
-    <a href="demo.html" class="nav-cta active">Get Demo</a>
+    <a href="about.html">Company</a>
+    <a href="demo.html" class="nav-cta">Get Started</a>
   </div>
-  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="nav-hamburger" id="navBtn" onclick="toggleMenu()" aria-label="Menu">
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"/>
+      <path d="M7 16 27 16"/>
+    </svg>
+  </button>
 </nav>
 <div class="nav-mobile" id="navMobile">
   <a href="services.html" onclick="closeMenu()">Services</a>
   <a href="industries.html" onclick="closeMenu()">Industries</a>
-  <a href="work.html" onclick="closeMenu()">Work</a>
-  <a href="about.html" onclick="closeMenu()">About</a>
-  <a href="demo.html" class="mob-cta" onclick="closeMenu()">Get My Free Demo</a>
+  <a href="about.html" onclick="closeMenu()">Company</a>
+  <a href="demo.html" class="mob-cta" onclick="closeMenu()">Get Started</a>
 </div>
 
 <section class="page-hero">
@@ -273,14 +281,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="panel-section reveal">
       <div class="panel-label">From a Contractor</div>
-      <div style="background:var(--bg2);border:1px solid var(--border-hi);border-radius:var(--r-lg);padding:1.5rem;">
+      <div style="background:var(--bg2);border:1px solid var(--border-inv);border-radius:var(--rad-sm);padding:1.5rem;">
         <div style="font-size:.75rem;letter-spacing:3px;margin-bottom:.75rem;font-weight:700;color:#F59E0B;">5 STARS</div>
-        <p style="font-size:.88rem;color:var(--muted);line-height:1.7;font-style:italic;margin-bottom:1rem;">"I was skeptical — had a bad experience with web guys before. These guys launched my site in two days and I got my first lead the same week. Phone doesn't stop now."</p>
+        <p style="font-size:.88rem;color:var(--muted);line-height:1.7;font-style:italic;margin-bottom:1rem;">"I was skeptical. Had a bad experience with web guys before. These guys launched my site in two days and I got my first lead the same week. Phone doesn't stop now."</p>
         <div style="display:flex;align-items:center;gap:.75rem;">
           <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--bg3),var(--bg2));border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:var(--accent);flex-shrink:0;">MR</div>
           <div>
             <div style="font-size:.82rem;font-weight:700;color:var(--text);">Mike R.</div>
-            <div style="font-size:.72rem;color:var(--muted);">Roofing Contractor — Charlotte, NC</div>
+            <div style="font-size:.72rem;color:var(--muted);">Roofing Contractor in Charlotte, NC</div>
           </div>
         </div>
       </div>
@@ -290,7 +298,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- FORM CARD -->
   <div class="form-card reveal">
     <div class="form-card-header">
-      <div class="fc-badge">100% Free — No Credit Card Required</div>
+      <div class="fc-badge">100% Free. No Credit Card Required.</div>
       <div class="fc-title">Build My Free Demo</div>
       <div class="fc-sub">Takes about 2 minutes. We'll get building within 24 hours.</div>
     </div>
@@ -419,7 +427,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="form-success" id="formSuccess">
         <div class="success-icon"></div>
         <div class="success-title">We're On It.</div>
-        <p class="success-body">Your demo is in the queue. We'll build it in 48 hours and send you the link. Keep an eye on your email — this might be the best thing you see all week.</p>
+        <p class="success-body">Your demo is in the queue. We'll build it in 48 hours and send you the link. Keep an eye on your email. This might be the best thing you see this week.</p>
       </div>
     </div>
   </div>
@@ -429,27 +437,99 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer>
   <div class="footer-main">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-brand-logo"><img src="https://github.com/user-attachments/assets/fd46c093-d424-483d-9c5d-19aa0d6249b4" alt="Contractor Arsenal"></div>
-        <p class="footer-brand-desc">Websites built to win jobs. $297/month. Serving contractors across Washington.</p>
-        <div class="footer-socials"><a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener" class="fsoc" title="Instagram"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="#FF5E2B" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="#FF5E2B" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="#FF5E2B"/></svg></a></div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">What's Included</a></li>
+          <li><a href="services.html#seo">Local SEO</a></li>
+          <li><a href="services.html#leads">Lead Capture</a></li>
+          <li><a href="services.html#support">Ongoing Support</a></li>
+        </ul>
       </div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">What's Included</a></li><li><a href="services.html#seo">Local SEO</a></li><li><a href="services.html#leads">Lead Capture</a></li><li><a href="services.html#support">Support</a></li></ul></div>
-      <div class="footer-col"><h4>Industries</h4><ul><li><a href="industries.html">All Trades</a></li><li><a href="industries.html#roofing">Roofing</a></li><li><a href="industries.html#painting">Painting</a></li><li><a href="industries.html#hvac">HVAC</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="work.html">Our Work</a></li><li><a href="partner.html">WHOP Partner</a></li><li><a href="mailto:contractorarsenal@gmail.com">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Get Started</h4><ul><li><a href="demo.html">Free Demo</a></li><li><a href="apply.html">Apply Now</a></li><li><a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+      <div class="footer-col">
+        <h4>Industries</h4>
+        <ul>
+          <li><a href="industries.html">All Trades</a></li>
+          <li><a href="industries.html#roofing">Roofing</a></li>
+          <li><a href="industries.html#painting">Painting</a></li>
+          <li><a href="industries.html">HVAC</a></li>
+          <li><a href="industries.html#landscaping">Landscaping</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="partner.html">Free CRM</a></li>
+          <li><a href="mailto:contractorarsenal@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get Started</h4>
+        <ul>
+          <li><a href="demo.html">Free Demo</a></li>
+          <li><a href="apply.html">Apply Now</a></li>
+          <li><a href="arsenal.html">Arsenal 001</a></li>
+          <li><a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="mailto:contractorarsenal@gmail.com">Email Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><span>Seattle, WA</span></li>
+          <li><span>Bellevue, WA</span></li>
+          <li><span>Tacoma, WA</span></li>
+          <li><span>Spokane, WA</span></li>
+          <li><span>Everett &amp; Redmond</span></li>
+          <li><span>Wenatchee &amp; PNW</span></li>
+        </ul>
+      </div>
     </div>
   </div>
-  <hr class="footer-divider">
-  <div class="footer-bottom">
-    <p>&copy; 2026 Contractor Arsenal. All rights reserved. &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></p>
-    <p style="font-size:.75rem;color:#444;display:flex;align-items:center;gap:6px;"><span style="background:#fff;border-radius:6px;padding:3px 8px;display:inline-flex;align-items:center;"><img src="assets/whop-logo.png" alt="WHOP" style="height:14px;width:auto;display:block;object-fit:contain;"></span></p>
+  <div class="footer-bar">
+    <a href="index.html" class="footer-bar-logo">
+      <img src="assets/ca-logo.png" alt="Contractor Arsenal">
+    </a>
+    <div class="footer-bar-right">
+      <p>&copy; 2026 Contractor Arsenal. All rights reserved.</p>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </div>
   </div>
 </footer>
 
 <script>
-function toggleMenu(){document.getElementById('navMobile').classList.toggle('open');}
-function closeMenu(){document.getElementById('navMobile').classList.remove('open');}
+function toggleMenu(){
+  var btn=document.getElementById('navBtn');
+  btn.classList.toggle('open');
+  document.getElementById('navMobile').classList.toggle('open');
+}
+function closeMenu(){
+  var btn=document.getElementById('navBtn');
+  btn.classList.remove('open');
+  document.getElementById('navMobile').classList.remove('open');
+}
+/* Sliding nav indicator */
+(function(){
+  var links=document.querySelectorAll('#navLinks a:not(.nav-cta)');
+  var slider=document.getElementById('navSlider');
+  var container=document.getElementById('navLinks');
+  if(!slider||!container)return;
+  links.forEach(function(link){
+    link.addEventListener('mouseenter',function(){
+      var cr=container.getBoundingClientRect();
+      var lr=link.getBoundingClientRect();
+      slider.style.width=lr.width+'px';
+      slider.style.left=(lr.left-cr.left)+'px';
+      slider.style.opacity='1';
+    });
+  });
+  container.addEventListener('mouseleave',function(){
+    slider.style.opacity='0';
+  });
+})();
 
 document.getElementById('demoForm').addEventListener('submit',async function(e){
   e.preventDefault();
