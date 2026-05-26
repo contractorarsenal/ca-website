@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dotcomjay — Jay Duran Flores</title>
+  <meta name="description" content="Jay Duran Flores. Building companies from Seattle, WA." />
+
+  <script>!function(w,d,s,u,n,a,b){if(w[n])return;a=w[n]={q:[],t:+new Date,s:[],o:u,track:function(){a.q.push([+new Date].concat([].slice.call(arguments)))},setScope:function(){a.s=[].slice.call(arguments).filter(function(x){return typeof x==="string"});a.q.push([+new Date,"setScope"].concat(a.s))},scope:function(){var c=[].slice.call(arguments);return{track:function(){a.q.push([+new Date].concat([].slice.call(arguments)).concat([{__scope:c}]))}}}};b=d.createElement(s);b.async=1;b.src=u+"/s.js";d.getElementsByTagName(s)[0].parentNode.insertBefore(b,d.getElementsByTagName(s)[0])}(window,document,"script","https://t.whop.tw","whop");whop.setScope("biz_mJC0nAhZKWfBJP");whop.track("page");</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #0a0a0a;
+      --card:    #141414;
+      --card-hv: #1a1a1a;
+      --border:  #242424;
+      --border-hv: #333;
+      --white:   #ffffff;
+      --off:     #a0a0a0;
+      --dim:     #555;
+      --orange:  #e8622b;
+      --orange-glow: rgba(232, 98, 43, 0.18);
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100svh;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.85rem;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #1a1a1a;
+      border: 2px solid var(--border-hv);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--orange);
+    }
+
+    .header-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.6rem;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      line-height: 1;
+      margin-top: 0.25rem;
+    }
+
+    .header-handle {
+      font-size: 0.8rem;
+      color: var(--orange);
+      font-weight: 500;
+      margin-top: 0.1rem;
+    }
+
+    .header-bio {
+      font-size: 0.88rem;
+      color: var(--off);
+      line-height: 1.6;
+      max-width: 28ch;
+      font-weight: 300;
+      margin-top: 0.15rem;
+    }
+
+    .header-location {
+      font-size: 0.68rem;
+      color: var(--dim);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    /* ── CHIPS ── */
+    .chips {
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-top: 0.1rem;
+    }
+
+    .chip {
+      font-size: 0.63rem;
+      font-weight: 500;
+      color: var(--off);
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .chip-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--orange);
+      animation: blink 2.6s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.2; }
+    }
+
+    /* ── SECTION LABEL ── */
+    .label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--dim);
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── LINK CARDS ── */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      margin-top: 0.85rem;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1rem 1rem 1.15rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--card);
+      text-decoration: none;
+      gap: 1rem;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .link-card:hover {
+      border-color: var(--orange);
+      background: var(--card-hv);
+    }
+
+    .link-card:active { transform: scale(0.98); }
+
+    .link-card-text { display: flex; flex-direction: column; gap: 0.22rem; }
+
+    .link-card-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.97rem;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .link-card-desc {
+      font-size: 0.76rem;
+      color: var(--off);
+      font-weight: 400;
+    }
+
+    .link-arrow {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #1f1f1f;
+      border: 1px solid var(--border-hv);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .link-arrow svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--dim);
+      transition: stroke 0.15s;
+    }
+
+    .link-card:hover .link-arrow {
+      background: var(--orange);
+      border-color: var(--orange);
+    }
+
+    .link-card:hover .link-arrow svg { stroke: #fff; }
+
+    /* ── SOCIAL ── */
+    .social-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      margin-top: 0.85rem;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 1rem 0.9rem 1.15rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--card);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--off);
+      text-decoration: none;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+
+    .social-btn:hover {
+      border-color: var(--border-hv);
+      background: var(--card-hv);
+      color: var(--white);
+    }
+
+    .social-btn svg {
+      width: 17px;
+      height: 17px;
+      stroke: var(--dim);
+      flex-shrink: 0;
+      transition: stroke 0.15s;
+    }
+
+    .social-btn:hover svg { stroke: var(--off); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-brand {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 0.82rem;
+      color: var(--dim);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-sub {
+      font-size: 0.65rem;
+      color: var(--dim);
+      margin-top: 0.25rem;
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="avatar">J</div>
+      <div>
+        <h1 class="header-name">Jay Duran Flores</h1>
+        <p class="header-handle">@dotcomjay</p>
+      </div>
+      <p class="header-bio">Founder of Contractor Arsenal &amp; RevDevHQ. Building companies, websites, and systems.</p>
+      <p class="header-location">Seattle, WA</p>
+      <div class="chips">
+        <span class="chip"><span class="chip-dot"></span>Contractor Arsenal</span>
+        <span class="chip"><span class="chip-dot"></span>Trader U</span>
+        <span class="chip"><span class="chip-dot"></span>Consulting</span>
+      </div>
+    </header>
+
+    <!-- BUILDING -->
+    <div>
+      <p class="label">Currently Building</p>
+      <div class="links">
+
+        <a href="https://contractorarsenal.com/" target="_blank" rel="noopener" class="link-card">
+          <div class="link-card-text">
+            <span class="link-card-name">Contractor Arsenal</span>
+            <span class="link-card-desc">Contractor websites built to win jobs</span>
+          </div>
+          <div class="link-arrow">
+            <svg viewBox="0 0 14 14" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/>
+            </svg>
+          </div>
+        </a>
+
+        <a href="https://whop.com/trader-u-chepeex?a=dotcomjay" target="_blank" rel="noopener" class="link-card">
+          <div class="link-card-text">
+            <span class="link-card-name">Trader U</span>
+            <span class="link-card-desc">Trading community, systems and education</span>
+          </div>
+          <div class="link-arrow">
+            <svg viewBox="0 0 14 14" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/>
+            </svg>
+          </div>
+        </a>
+
+        <a href="https://whop.com/joined/contractorarsenal/products/arsenalconsulting/" target="_blank" rel="noopener" class="link-card">
+          <div class="link-card-text">
+            <span class="link-card-name">Arsenal Consulting</span>
+            <span class="link-card-desc">Marketing, offers, and growth systems</span>
+          </div>
+          <div class="link-arrow">
+            <svg viewBox="0 0 14 14" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/>
+            </svg>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- CONNECT -->
+    <div>
+      <p class="label">Connect</p>
+      <div class="social-row">
+
+        <a href="https://www.instagram.com/dotcomjay/" target="_blank" rel="noopener" class="social-btn">
+          <span>Instagram</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+
+        <a href="https://www.youtube.com/@JayDuranFlores" target="_blank" rel="noopener" class="social-btn">
+          <span>YouTube</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+
+        <a href="mailto:jay@revdevhq.com" class="social-btn">
+          <span>Email</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m2 7 10 7 10-7"/>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p class="footer-brand">dotcomjay</p>
+      <p class="footer-sub">Building publicly — Seattle, WA</p>
+    </footer>
+
+  </div>
+</body>
+</html>
