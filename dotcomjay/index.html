@@ -3,9 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dotcomjay — Jay Duran Flores</title>
-  <meta name="description" content="Jay Duran Flores. Building companies from Seattle, WA." />
 
+  <title>dotcomjay — Jay Duran Flores | Contractor Arsenal Founder</title>
+  <meta name="description" content="Jay Duran Flores is the founder of Contractor Arsenal and RevDevHQ. Building websites, contractor growth systems, and trading communities from Seattle, WA." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="dotcomjay — Jay Duran Flores" />
+  <meta property="og:description" content="Founder of Contractor Arsenal &amp; RevDevHQ. Building websites, companies, and trading communities from Seattle, WA." />
+  <meta property="og:image"       content="https://github.com/user-attachments/assets/949da09d-602e-4fd2-ac9d-3589127ce0d4" />
+  <meta property="og:site_name"   content="dotcomjay" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@dotcomjay" />
+  <meta name="twitter:creator"     content="@dotcomjay" />
+  <meta name="twitter:title"       content="dotcomjay — Jay Duran Flores" />
+  <meta name="twitter:description" content="Founder of Contractor Arsenal &amp; RevDevHQ. Building from Seattle, WA." />
+  <meta name="twitter:image"       content="https://github.com/user-attachments/assets/949da09d-602e-4fd2-ac9d-3589127ce0d4" />
+
+  <!-- JSON-LD: Person -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jay Duran Flores","alternateName":"dotcomjay","jobTitle":"Founder & CEO","description":"Founder of Contractor Arsenal and RevDevHQ. Building websites, contractor growth systems, and trading communities from Seattle, WA.","image":"https://github.com/user-attachments/assets/949da09d-602e-4fd2-ac9d-3589127ce0d4","address":{"@type":"PostalAddress","addressLocality":"Seattle","addressRegion":"WA","addressCountry":"US"},"worksFor":{"@type":"Organization","name":"Contractor Arsenal","url":"https://contractorarsenal.com"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"University of Washington"}],"sameAs":["https://www.instagram.com/dotcomjay/","https://www.youtube.com/@JayDuranFlores","https://contractorarsenal.com"]}</script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Contractor Arsenal","url":"https://contractorarsenal.com","logo":"https://github.com/user-attachments/assets/fd46c093-d424-483d-9c5d-19aa0d6249b4","description":"Premium contractor websites and growth systems. Built to help contractors rank locally, look legit, and turn visitors into leads.","founder":{"@type":"Person","name":"Jay Duran Flores"},"address":{"@type":"PostalAddress","addressLocality":"Seattle","addressRegion":"WA","addressCountry":"US"}}</script>
+
+  <!-- Whop tracking -->
   <script>!function(w,d,s,u,n,a,b){if(w[n])return;a=w[n]={q:[],t:+new Date,s:[],o:u,track:function(){a.q.push([+new Date].concat([].slice.call(arguments)))},setScope:function(){a.s=[].slice.call(arguments).filter(function(x){return typeof x==="string"});a.q.push([+new Date,"setScope"].concat(a.s))},scope:function(){var c=[].slice.call(arguments);return{track:function(){a.q.push([+new Date].concat([].slice.call(arguments)).concat([{__scope:c}]))}}}};b=d.createElement(s);b.async=1;b.src=u+"/s.js";d.getElementsByTagName(s)[0].parentNode.insertBefore(b,d.getElementsByTagName(s)[0])}(window,document,"script","https://t.whop.tw","whop");whop.setScope("biz_mJC0nAhZKWfBJP");whop.track("page");</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,376 +39,1113 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:      #0a0a0a;
-      --card:    #141414;
-      --card-hv: #1a1a1a;
-      --border:  #242424;
-      --border-hv: #333;
-      --white:   #ffffff;
-      --off:     #a0a0a0;
-      --dim:     #555;
-      --orange:  #e8622b;
-      --orange-glow: rgba(232, 98, 43, 0.18);
+      --bg:          #090909;
+      --surface:     #111111;
+      --surface-2:   #181818;
+      --border:      #1e1e1e;
+      --border-hv:   #2c2c2c;
+      --white:       #ffffff;
+      --off:         #979797;
+      --dim:         #505050;
+      --orange:      #e8622b;
+      --orange-soft: rgba(232, 98, 43, 0.10);
+      --orange-glow: rgba(232, 98, 43, 0.22);
     }
 
-    html { font-size: 16px; }
+    html { font-size: 16px; scroll-behavior: smooth; overflow-x: hidden; }
 
     body {
       background: var(--bg);
       color: var(--white);
       font-family: 'Inter', sans-serif;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       min-height: 100svh;
+      overflow-x: hidden;
     }
 
+    img { max-width: 100%; display: block; }
+
+    /* ── PAGE ── */
     .page {
       width: 100%;
-      max-width: 440px;
+      max-width: 460px;
       margin: 0 auto;
-      padding: 3rem 1.25rem 4rem;
+      padding: 2.5rem 1.2rem 5rem;
       display: flex;
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 2rem;
     }
 
-    /* ── HEADER ── */
-    .header {
+    /* ── BRAND TOP ── */
+    .brand-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .brand-logo {
+      height: 46px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 0.68rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--dim);
+    }
+
+    /* ── HERO ── */
+    .hero {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 0.85rem;
+    }
+
+    .avatar-wrap {
+      position: relative;
+      width: 88px;
+      height: 88px;
+      margin-bottom: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .avatar-glow {
+      position: absolute;
+      inset: -10px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--orange-glow) 0%, transparent 68%);
+      filter: blur(12px);
+      pointer-events: none;
     }
 
     .avatar {
-      width: 80px;
-      height: 80px;
+      position: relative;
+      z-index: 1;
+      width: 88px;
+      height: 88px;
       border-radius: 50%;
+      overflow: hidden;
       background: #1a1a1a;
-      border: 2px solid var(--border-hv);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.6rem;
-      color: var(--orange);
+      border: 2px solid #2d2d2d;
+      box-shadow: 0 0 0 4px rgba(232, 98, 43, 0.09);
+      flex-shrink: 0;
     }
 
-    .header-name {
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .hero-name {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
-      font-size: 1.6rem;
+      font-size: 1.65rem;
       letter-spacing: -0.03em;
       color: var(--white);
-      line-height: 1;
-      margin-top: 0.25rem;
+      line-height: 1.1;
     }
 
-    .header-handle {
+    .hero-handle {
       font-size: 0.8rem;
+      font-weight: 500;
       color: var(--orange);
-      font-weight: 500;
-      margin-top: 0.1rem;
+      letter-spacing: 0.02em;
+      margin-top: 0.28rem;
     }
 
-    .header-bio {
-      font-size: 0.88rem;
+    .hero-bio {
+      font-size: 0.86rem;
       color: var(--off);
-      line-height: 1.6;
-      max-width: 28ch;
+      line-height: 1.65;
       font-weight: 300;
-      margin-top: 0.15rem;
+      max-width: 30ch;
+      margin-top: 0.7rem;
     }
 
-    .header-location {
-      font-size: 0.68rem;
-      color: var(--dim);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    /* ── CHIPS ── */
-    .chips {
-      display: flex;
-      justify-content: center;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-      margin-top: 0.1rem;
-    }
-
-    .chip {
-      font-size: 0.63rem;
-      font-weight: 500;
-      color: var(--off);
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 0.3rem 0.7rem;
-      border-radius: 999px;
-      display: flex;
+    .hero-location {
+      display: inline-flex;
       align-items: center;
       gap: 0.3rem;
+      font-size: 0.67rem;
+      color: var(--dim);
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      margin-top: 0.65rem;
     }
 
-    .chip-dot {
-      width: 5px;
-      height: 5px;
+    .hero-location svg { width: 10px; height: 10px; stroke: var(--dim); flex-shrink: 0; }
+
+    .hero-socials {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-top: 1.1rem;
+    }
+
+    .hero-icon {
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      background: var(--orange);
-      animation: blink 2.6s ease-in-out infinite;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      flex-shrink: 0;
+      transition: border-color 0.18s, background 0.18s;
     }
 
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0.2; }
+    .hero-icon svg {
+      width: 15px;
+      height: 15px;
+      stroke: var(--off);
+      stroke-width: 1.6;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.18s;
+    }
+
+    @media (hover: hover) {
+      .hero-icon:hover { border-color: var(--border-hv); background: var(--surface-2); }
+      .hero-icon:hover svg { stroke: var(--white); }
     }
 
     /* ── SECTION LABEL ── */
-    .label {
+    .section-label {
+      display: block;
       font-size: 0.6rem;
       font-weight: 600;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--dim);
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--border);
+      margin-bottom: 0.9rem;
     }
 
-    /* ── LINK CARDS ── */
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.55rem;
-      margin-top: 0.85rem;
+    /* ── PAGE SWITCHING ── */
+    [data-page="home"][hidden],
+    [data-page="about"][hidden] {
+      display: none !important;
     }
 
-    .link-card {
+    body.about-active [data-page="home"] {
+      display: none !important;
+    }
+
+    body:not(.about-active) [data-page="about"] {
+      display: none !important;
+    }
+
+    /* ── CARD IMAGE: LOGO AREA ── */
+    .card-logo-wrap {
+      width: 100%;
+      height: 190px;
+      min-height: 190px;
+      padding: 0;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1rem 1rem 1.15rem;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      background: var(--card);
+      justify-content: center;
+      background: #151515;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .card-logo {
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      max-height: none;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* Featured card logo area */
+    .featured-card .card-logo-wrap {
+      height: 210px;
+      min-height: 210px;
+    }
+
+    .featured-card .card-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── TRADER U CARD ── */
+    .trader-card .trader-logo-wrap {
+      height: 180px;
+      min-height: 180px;
+      padding: 0;
+      background: linear-gradient(145deg, #151515 0%, #1c1c1c 55%, #0f0f0f 100%);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .trader-card .trader-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* ── CARD IMAGE: BANNER AREA ── */
+    .card-banner-wrap {
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+    }
+
+    .card-banner {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* ── FEATURED CARD ── */
+    .featured-card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border-hv);
+      border-radius: 18px;
+      overflow: hidden;
       text-decoration: none;
-      gap: 1rem;
-      transition: border-color 0.15s, background 0.15s;
+      display: block;
+      transition: border-color 0.2s;
     }
 
-    .link-card:hover {
-      border-color: var(--orange);
-      background: var(--card-hv);
+    .featured-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2.5px;
+      background: linear-gradient(90deg, var(--orange) 0%, #f5814e 100%);
+      border-radius: 18px 18px 0 0;
+      z-index: 1;
     }
 
-    .link-card:active { transform: scale(0.98); }
+    .featured-body { padding: 1.35rem 1.4rem 1.5rem; }
 
-    .link-card-text { display: flex; flex-direction: column; gap: 0.22rem; }
-
-    .link-card-name {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 0.97rem;
-      color: var(--white);
-      line-height: 1;
+    .featured-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.32rem;
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--orange);
+      background: rgba(232, 98, 43, 0.1);
+      border: 1px solid rgba(232, 98, 43, 0.18);
+      padding: 0.24rem 0.62rem;
+      border-radius: 999px;
+      margin-bottom: 0.95rem;
     }
 
-    .link-card-desc {
-      font-size: 0.76rem;
-      color: var(--off);
-      font-weight: 400;
-    }
-
-    .link-arrow {
-      width: 30px;
-      height: 30px;
+    .badge-dot {
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
-      background: #1f1f1f;
+      background: var(--orange);
+      animation: pulse 2.8s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.35; transform: scale(0.8); }
+    }
+
+    .featured-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.48rem;
+      letter-spacing: -0.025em;
+      color: var(--white);
+      line-height: 1.18;
+      margin-bottom: 0.62rem;
+    }
+
+    .featured-desc {
+      font-size: 0.84rem;
+      color: var(--off);
+      line-height: 1.62;
+      font-weight: 300;
+      margin-bottom: 1.2rem;
+    }
+
+    .featured-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--orange);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 0.82rem 1.4rem;
+      border-radius: 11px;
+      width: 100%;
+      box-shadow: 0 4px 22px rgba(232, 98, 43, 0.28);
+      transition: background 0.18s, box-shadow 0.18s;
+    }
+
+    .featured-btn svg { width: 13px; height: 13px; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+    @media (hover: hover) {
+      .featured-card:hover { border-color: rgba(232, 98, 43, 0.35); }
+      .featured-card:hover .featured-btn { background: #f07040; box-shadow: 0 6px 30px rgba(232,98,43,0.4); }
+    }
+
+    /* ── OFFER CARDS ── */
+    .offers { display: flex; flex-direction: column; gap: 0.65rem; }
+
+    .offer-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.18s, background 0.18s;
+    }
+
+    .offer-body { padding: 1.15rem 1.2rem; }
+
+    .offer-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .offer-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--surface-2);
       border: 1px solid var(--border-hv);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      transition: background 0.15s, border-color 0.15s;
     }
 
-    .link-arrow svg {
-      width: 13px;
-      height: 13px;
-      stroke: var(--dim);
-      transition: stroke 0.15s;
+    .offer-icon svg { width: 18px; height: 18px; stroke: var(--orange); stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+    .offer-badge {
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dim);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-hv);
+      padding: 0.22rem 0.55rem;
+      border-radius: 999px;
+      white-space: nowrap;
+      margin-top: 2px;
     }
 
-    .link-card:hover .link-arrow {
-      background: var(--orange);
-      border-color: var(--orange);
+    .offer-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.28rem;
     }
 
-    .link-card:hover .link-arrow svg { stroke: #fff; }
+    .offer-desc { font-size: 0.79rem; color: var(--off); line-height: 1.55; margin-bottom: 1rem; }
 
-    /* ── SOCIAL ── */
-    .social-row {
-      display: flex;
-      flex-direction: column;
-      gap: 0.55rem;
-      margin-top: 0.85rem;
-    }
-
-    .social-btn {
+    .offer-btn {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.9rem 1rem 0.9rem 1.15rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-hv);
+      border-radius: 9px;
+      padding: 0.65rem 0.85rem;
+      font-size: 0.81rem;
+      font-weight: 500;
+      color: var(--off);
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+
+    .offer-btn svg { width: 13px; height: 13px; stroke: var(--dim); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; transition: stroke 0.15s, transform 0.15s; }
+
+    @media (hover: hover) {
+      .offer-card:hover { border-color: var(--border-hv); background: var(--surface-2); }
+      .offer-card:hover .offer-btn { background: var(--orange-soft); border-color: rgba(232,98,43,0.22); color: var(--white); }
+      .offer-card:hover .offer-btn svg { stroke: var(--orange); transform: translate(2px,-2px); }
+    }
+
+    /* ── CONNECT ── */
+    .connect-list { display: flex; flex-direction: column; gap: 0.58rem; }
+
+    .connect-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.95rem 1rem;
+      background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      background: var(--card);
-      font-size: 0.85rem;
+      border-radius: 13px;
+      text-decoration: none;
+      color: var(--off);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: border-color 0.18s, background 0.18s, color 0.18s;
+    }
+
+    .connect-icon { width: 36px; height: 36px; border-radius: 9px; background: var(--surface-2); border: 1px solid var(--border-hv); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .connect-icon svg { width: 16px; height: 16px; stroke: var(--off); stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.18s; }
+    .connect-arrow { margin-left: auto; flex-shrink: 0; }
+    .connect-arrow svg { width: 13px; height: 13px; stroke: var(--dim); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.18s, transform 0.18s; }
+
+    @media (hover: hover) {
+      .connect-btn:hover { border-color: var(--border-hv); background: var(--surface-2); color: var(--white); }
+      .connect-btn:hover .connect-icon svg { stroke: var(--white); }
+      .connect-btn:hover .connect-arrow svg { stroke: var(--off); transform: translate(2px,-2px); }
+    }
+
+    /* ── FOOTER ── */
+    footer { text-align: center; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+    .footer-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.9rem; color: var(--dim); letter-spacing: 0.08em; }
+    .footer-sub { font-size: 0.65rem; color: #383838; margin-top: 0.3rem; letter-spacing: 0.07em; }
+
+    /* ═══════════════════════
+       ABOUT PAGE
+    ═══════════════════════ */
+
+    .about-page { padding-top: 2rem; }
+
+    /* top bar: ← Back | dotcomjay | spacer */
+    .about-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
       font-weight: 500;
       color: var(--off);
       text-decoration: none;
-      transition: border-color 0.15s, color 0.15s, background 0.15s;
+      min-width: 60px;
+      transition: color 0.18s;
     }
 
-    .social-btn:hover {
-      border-color: var(--border-hv);
-      background: var(--card-hv);
-      color: var(--white);
-    }
+    .back-home svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; flex-shrink: 0; }
 
-    .social-btn svg {
-      width: 17px;
-      height: 17px;
-      stroke: var(--dim);
-      flex-shrink: 0;
-      transition: stroke 0.15s;
-    }
+    @media (hover: hover) { .back-home:hover { color: var(--white); } }
 
-    .social-btn:hover svg { stroke: var(--off); }
-
-    /* ── FOOTER ── */
-    footer {
-      text-align: center;
-      padding-top: 1.2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-brand {
+    .about-topbar-brand {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
-      font-size: 0.82rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
       color: var(--dim);
-      letter-spacing: 0.06em;
     }
 
-    .footer-sub {
-      font-size: 0.65rem;
-      color: var(--dim);
-      margin-top: 0.25rem;
-      letter-spacing: 0.06em;
+    .about-topbar-spacer { min-width: 60px; }
+
+    /* hero card */
+    .about-hero-card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      padding: 2rem 1.5rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about-hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), #f5814e);
+    }
+
+    .about-avatar-wrap {
+      position: relative;
+      width: 96px;
+      height: 96px;
+      margin-bottom: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .about-avatar {
+      position: relative;
+      z-index: 1;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #1a1a1a;
+      border: 2px solid #2d2d2d;
+      box-shadow: 0 0 0 4px rgba(232, 98, 43, 0.09);
+    }
+
+    .about-hero-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      line-height: 1.1;
+    }
+
+    .about-hero-subtitle {
+      font-size: 0.78rem;
+      color: var(--orange);
+      font-weight: 500;
+      margin-top: 0.3rem;
+    }
+
+    .about-hero-intro {
+      font-size: 0.84rem;
+      color: var(--off);
+      line-height: 1.65;
+      font-weight: 300;
+      margin-top: 0.9rem;
+      max-width: 34ch;
+    }
+
+    /* story card */
+    .story-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.3rem 1.3rem 1.35rem;
+    }
+
+    .story-text { font-size: 0.855rem; color: var(--off); line-height: 1.78; font-weight: 300; }
+    .story-text + .story-text { margin-top: 0.8rem; }
+
+    /* timeline — each job is its own card */
+    .timeline { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .timeline-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.1rem 1.2rem;
+    }
+
+    .timeline-card-head { display: flex; align-items: flex-start; gap: 0.72rem; }
+
+    .timeline-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--orange);
+      flex-shrink: 0;
+      margin-top: 4px;
+      box-shadow: 0 0 0 3px rgba(232, 98, 43, 0.12);
+    }
+
+    .timeline-info { flex: 1; min-width: 0; }
+
+    .timeline-company { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--white); line-height: 1.2; }
+    .timeline-role { font-size: 0.78rem; color: var(--off); font-weight: 400; margin-top: 0.14rem; }
+    .timeline-meta { font-size: 0.68rem; color: var(--dim); margin-top: 0.18rem; }
+    .timeline-desc { font-size: 0.79rem; color: var(--dim); line-height: 1.58; margin-top: 0.65rem; padding-left: 1.47rem; }
+
+    /* info cards — education + project */
+    .info-card-list { display: flex; flex-direction: column; gap: 0.55rem; }
+
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.95rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .info-card-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.88rem; color: var(--white); }
+    .info-card-sub { font-size: 0.77rem; color: var(--off); }
+    .info-card-meta { font-size: 0.7rem; color: var(--dim); margin-top: 0.1rem; }
+    .info-card-desc { font-size: 0.79rem; color: var(--dim); line-height: 1.58; margin-top: 0.45rem; }
+
+    /* values grid */
+    .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; }
+
+    .value-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 0.88rem 0.95rem;
+      font-size: 0.79rem;
+      font-weight: 500;
+      color: var(--off);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      line-height: 1.35;
+    }
+
+    .value-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
+
+    /* cta card */
+    .cta-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.4rem 1.3rem 1.35rem;
+    }
+
+    .cta-card-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      margin-bottom: 1.1rem;
+    }
+
+    .cta-btn-list { display: flex; flex-direction: column; gap: 0.55rem; }
+
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.82rem 1.2rem;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.87rem;
+      text-decoration: none;
+      width: 100%;
+      transition: background 0.18s, box-shadow 0.18s, border-color 0.18s, color 0.18s;
+    }
+
+    .cta-btn.primary { background: var(--orange); color: #fff; box-shadow: 0 4px 18px rgba(232,98,43,0.25); border: 1px solid transparent; }
+    .cta-btn.secondary { background: transparent; color: var(--off); border: 1px solid var(--border-hv); }
+    .cta-btn svg { width: 13px; height: 13px; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; flex-shrink: 0; }
+    .cta-btn.primary svg { stroke: #fff; }
+    .cta-btn.secondary svg { stroke: var(--dim); }
+
+    @media (hover: hover) {
+      .cta-btn.primary:hover { background: #f07040; box-shadow: 0 6px 26px rgba(232,98,43,0.38); }
+      .cta-btn.secondary:hover { background: var(--surface-2); border-color: var(--border-hv); color: var(--white); }
+    }
+
+    /* ── RESPONSIVE 430px ── */
+    @media (max-width: 430px) {
+      .page { padding: 2.25rem 1rem 4.5rem; gap: 1.85rem; }
+      .brand-logo          { height: 40px; }
+      .card-logo-wrap      { height: 170px; min-height: 170px; }
+      .featured-card .card-logo-wrap { height: 190px; min-height: 190px; }
+      .card-banner-wrap    { height: 170px; }
+      .trader-card .trader-logo-wrap { height: 160px; min-height: 160px; }
+      .featured-title      { font-size: 1.32rem; }
+      .featured-body       { padding: 1.2rem 1.2rem 1.3rem; }
+    }
+
+    /* ── RESPONSIVE 375px ── */
+    @media (max-width: 375px) {
+      .page { padding: 2rem 0.9rem 4rem; gap: 1.6rem; }
+      .brand-logo          { height: 36px; }
+      .card-logo-wrap      { height: 155px; min-height: 155px; }
+      .featured-card .card-logo-wrap { height: 172px; min-height: 172px; }
+      .card-banner-wrap    { height: 155px; }
+      .trader-card .trader-logo-wrap { height: 145px; min-height: 145px; }
+      .hero-name           { font-size: 1.42rem; }
+      .hero-bio            { font-size: 0.83rem; max-width: 28ch; }
+      .featured-title      { font-size: 1.22rem; }
+      .featured-desc       { font-size: 0.81rem; }
+      .featured-btn        { font-size: 0.84rem; padding: 0.76rem 1.1rem; }
+      .featured-body       { padding: 1.1rem 1.1rem 1.2rem; }
+      .offer-title         { font-size: 0.97rem; }
+      .offer-btn           { font-size: 0.78rem; padding: 0.6rem 0.75rem; }
+      .offer-body          { padding: 1rem; }
+      .connect-btn         { font-size: 0.86rem; padding: 0.88rem 0.9rem; }
+      .values-grid         { grid-template-columns: 1fr; }
+      .about-hero-name     { font-size: 1.32rem; }
+      .cta-btn             { font-size: 0.84rem; padding: 0.78rem 1rem; }
     }
   </style>
 </head>
 <body>
-  <div class="page">
 
-    <!-- HEADER -->
-    <header class="header">
-      <div class="avatar">J</div>
-      <div>
-        <h1 class="header-name">Jay Duran Flores</h1>
-        <p class="header-handle">@dotcomjay</p>
+  <!-- ══════════ HOME PAGE ══════════ -->
+  <main data-page="home" class="page">
+
+    <div class="brand-top">
+      <img class="brand-logo" src="https://github.com/user-attachments/assets/fd46c093-d424-483d-9c5d-19aa0d6249b4" alt="Contractor Arsenal logo" loading="eager" decoding="async" />
+      <span class="brand-name">Contractor Arsenal</span>
+    </div>
+
+    <header class="hero">
+      <div class="avatar-wrap">
+        <div class="avatar-glow"></div>
+        <div class="avatar">
+          <img class="avatar-img" src="https://github.com/user-attachments/assets/949da09d-602e-4fd2-ac9d-3589127ce0d4" alt="Jay Duran Flores" loading="eager" decoding="async" />
+        </div>
       </div>
-      <p class="header-bio">Founder of Contractor Arsenal &amp; RevDevHQ. Building companies, websites, and systems.</p>
-      <p class="header-location">Seattle, WA</p>
-      <div class="chips">
-        <span class="chip"><span class="chip-dot"></span>Contractor Arsenal</span>
-        <span class="chip"><span class="chip-dot"></span>Trader U</span>
-        <span class="chip"><span class="chip-dot"></span>Consulting</span>
+      <h1 class="hero-name">Jay Duran Flores</h1>
+      <p class="hero-handle">@dotcomjay</p>
+      <p class="hero-bio">Founder of Contractor Arsenal &amp; RevDevHQ. Building websites, companies, and trading communities.</p>
+      <span class="hero-location">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        Seattle, WA
+      </span>
+      <div class="hero-socials">
+        <a href="https://www.instagram.com/dotcomjay/" target="_blank" rel="noopener" class="hero-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@JayDuranFlores" target="_blank" rel="noopener" class="hero-icon" aria-label="YouTube">
+          <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="mailto:jay@revdevhq.com" class="hero-icon" aria-label="Email Jay">
+          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        </a>
       </div>
     </header>
 
-    <!-- BUILDING -->
-    <div>
-      <p class="label">Currently Building</p>
-      <div class="links">
+    <section aria-label="Featured offer">
+      <span class="section-label">Featured Offer</span>
+      <a href="https://contractorarsenal.com/" target="_blank" rel="noopener" class="featured-card">
+        <div class="card-logo-wrap">
+          <img class="card-logo" src="https://github.com/user-attachments/assets/fd46c093-d424-483d-9c5d-19aa0d6249b4" alt="Contractor Arsenal logo" loading="lazy" decoding="async" />
+        </div>
+        <div class="featured-body">
+          <span class="featured-badge"><span class="badge-dot"></span>Now Open</span>
+          <h2 class="featured-title">Build Your Contractor Website</h2>
+          <p class="featured-desc">Websites built to help contractors look legit, rank locally, and turn visitors into leads.</p>
+          <span class="featured-btn">
+            Get Your Website Built
+            <svg viewBox="0 0 14 14" fill="none"><path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/></svg>
+          </span>
+        </div>
+      </a>
+    </section>
 
-        <a href="https://contractorarsenal.com/" target="_blank" rel="noopener" class="link-card">
-          <div class="link-card-text">
-            <span class="link-card-name">Contractor Arsenal</span>
-            <span class="link-card-desc">Contractor websites built to win jobs</span>
+    <section aria-label="Businesses">
+      <span class="section-label">Businesses</span>
+      <div class="offers">
+
+        <a href="https://contractorarsenal.com/" target="_blank" rel="noopener" class="offer-card">
+          <div class="card-logo-wrap">
+            <img class="card-logo" src="https://github.com/user-attachments/assets/fd46c093-d424-483d-9c5d-19aa0d6249b4" alt="Contractor Arsenal logo" loading="lazy" decoding="async" />
           </div>
-          <div class="link-arrow">
-            <svg viewBox="0 0 14 14" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/>
-            </svg>
+          <div class="offer-body">
+            <div class="offer-top">
+              <div class="offer-icon">
+                <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <span class="offer-badge">Main Company</span>
+            </div>
+            <p class="offer-title">Contractor Arsenal</p>
+            <p class="offer-desc">Contractor websites built to win jobs.</p>
+            <div class="offer-btn"><span>View Website Services</span><svg viewBox="0 0 14 14"><path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/></svg></div>
           </div>
         </a>
 
-        <a href="https://whop.com/trader-u-chepeex?a=dotcomjay" target="_blank" rel="noopener" class="link-card">
-          <div class="link-card-text">
-            <span class="link-card-name">Trader U</span>
-            <span class="link-card-desc">Trading community, systems and education</span>
+        <a href="https://whop.com/trader-u-chepeex?a=dotcomjay" target="_blank" rel="noopener" class="offer-card trader-card">
+          <div class="trader-logo-wrap">
+            <img class="trader-logo" src="https://github.com/user-attachments/assets/3dc9acf8-ae09-47eb-85d8-90164ec1e3cc" alt="Trader U logo" loading="lazy" decoding="async" />
           </div>
-          <div class="link-arrow">
-            <svg viewBox="0 0 14 14" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/>
-            </svg>
+          <div class="offer-body">
+            <div class="offer-top">
+              <div class="offer-icon">
+                <svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              </div>
+              <span class="offer-badge">Community</span>
+            </div>
+            <p class="offer-title">Trader U</p>
+            <p class="offer-desc">Trading community, systems, and education.</p>
+            <div class="offer-btn"><span>Join Trader U</span><svg viewBox="0 0 14 14"><path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/></svg></div>
           </div>
         </a>
 
-        <a href="https://whop.com/joined/contractorarsenal/products/arsenalconsulting/" target="_blank" rel="noopener" class="link-card">
-          <div class="link-card-text">
-            <span class="link-card-name">Arsenal Consulting</span>
-            <span class="link-card-desc">Marketing, offers, and growth systems</span>
+        <a href="https://whop.com/joined/contractorarsenal/products/arsenalconsulting/" target="_blank" rel="noopener" class="offer-card">
+          <div class="card-banner-wrap">
+            <img class="card-banner" src="https://github.com/user-attachments/assets/596f5919-9f0b-42b1-9f6e-8dc4e85f8856" alt="Arsenal Consulting — marketing, offers, and growth systems" loading="lazy" decoding="async" />
           </div>
-          <div class="link-arrow">
-            <svg viewBox="0 0 14 14" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/>
-            </svg>
+          <div class="offer-body">
+            <div class="offer-top">
+              <div class="offer-icon">
+                <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <span class="offer-badge">Training</span>
+            </div>
+            <p class="offer-title">Arsenal Consulting</p>
+            <p class="offer-desc">Learn marketing, offers, and growth systems.</p>
+            <div class="offer-btn"><span>Start Learning</span><svg viewBox="0 0 14 14"><path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/></svg></div>
           </div>
         </a>
 
       </div>
-    </div>
+    </section>
 
-    <!-- CONNECT -->
-    <div>
-      <p class="label">Connect</p>
-      <div class="social-row">
+    <section aria-label="About Jay">
+      <span class="section-label">About</span>
+      <a href="#about" class="offer-card">
+        <div class="offer-body">
+          <div class="offer-top">
+            <div class="offer-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </div>
+            <span class="offer-badge">Founder Story</span>
+          </div>
+          <p class="offer-title">Read My Story</p>
+          <p class="offer-desc">From building websites to launching communities, this is the story behind dotcomjay.</p>
+          <div class="offer-btn"><span>Read More About Me</span><svg viewBox="0 0 14 14"><path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/></svg></div>
+        </div>
+      </a>
+    </section>
 
-        <a href="https://www.instagram.com/dotcomjay/" target="_blank" rel="noopener" class="social-btn">
+    <section aria-label="Connect">
+      <span class="section-label">Connect</span>
+      <div class="connect-list">
+        <a href="https://www.instagram.com/dotcomjay/" target="_blank" rel="noopener" class="connect-btn">
+          <div class="connect-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg></div>
           <span>Instagram</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
-          </svg>
+          <div class="connect-arrow"><svg viewBox="0 0 14 14"><path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/></svg></div>
         </a>
-
-        <a href="https://www.youtube.com/@JayDuranFlores" target="_blank" rel="noopener" class="social-btn">
+        <a href="https://www.youtube.com/@JayDuranFlores" target="_blank" rel="noopener" class="connect-btn">
+          <div class="connect-icon"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></div>
           <span>YouTube</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
-            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
-          </svg>
+          <div class="connect-arrow"><svg viewBox="0 0 14 14"><path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/></svg></div>
         </a>
-
-        <a href="mailto:jay@revdevhq.com" class="social-btn">
+        <a href="mailto:jay@revdevhq.com" class="connect-btn">
+          <div class="connect-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></div>
           <span>Email</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-            <path d="m2 7 10 7 10-7"/>
-          </svg>
+          <div class="connect-arrow"><svg viewBox="0 0 14 14"><path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/></svg></div>
         </a>
-
       </div>
-    </div>
+    </section>
 
-    <!-- FOOTER -->
     <footer>
-      <p class="footer-brand">dotcomjay</p>
-      <p class="footer-sub">Building publicly — Seattle, WA</p>
+      <p class="footer-name">dotcomjay</p>
+      <p class="footer-sub">Building publicly from Seattle, WA</p>
     </footer>
 
-  </div>
+  </main>
+
+  <!-- ══════════ ABOUT PAGE ══════════ -->
+  <main data-page="about" class="page about-page" hidden>
+
+    <!-- TOP BAR -->
+    <div class="about-topbar">
+      <a href="#home" class="back-home" aria-label="Back to home">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back
+      </a>
+      <span class="about-topbar-brand">dotcomjay</span>
+      <span class="about-topbar-spacer"></span>
+    </div>
+
+    <!-- HERO CARD -->
+    <div class="about-hero-card">
+      <div class="about-avatar-wrap">
+        <div class="avatar-glow"></div>
+        <div class="about-avatar">
+          <img class="avatar-img" src="https://github.com/user-attachments/assets/949da09d-602e-4fd2-ac9d-3589127ce0d4" alt="Jay Duran Flores" loading="eager" decoding="async" />
+        </div>
+      </div>
+      <h1 class="about-hero-name">Jay Duran Flores</h1>
+      <p class="about-hero-subtitle">Founder, builder, and operator based in Seattle, WA.</p>
+      <p class="about-hero-intro">I build websites, companies, communities, and systems for people who want to move faster and look more professional online.</p>
+    </div>
+
+    <!-- STORY -->
+    <section aria-label="My story">
+      <span class="section-label">My Story</span>
+      <div class="story-card">
+        <p class="story-text">I started building in 2018. Not because everything was perfect, but because I saw a gap between how hard business owners worked and how their online presence made them look.</p>
+        <p class="story-text">Contractor Arsenal became the company where I could bring everything together: websites, local SEO, lead generation, design, software, sales, and systems.</p>
+        <p class="story-text">I came from being doubted. I was told to lower my expectations. Instead of accepting that, I used it as fuel. Every project became proof that you can start from nothing, learn the skill, and create your own path.</p>
+        <p class="story-text">Today, my focus is simple: help contractors and business owners look legit, get found, and turn attention into real opportunities.</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section aria-label="Experience">
+      <span class="section-label">Experience</span>
+      <div class="timeline">
+
+        <div class="timeline-card">
+          <div class="timeline-card-head">
+            <div class="timeline-dot"></div>
+            <div class="timeline-info">
+              <p class="timeline-company">Contractor Arsenal</p>
+              <p class="timeline-role">Chief Executive Officer</p>
+              <p class="timeline-meta">Jan 2018 &ndash; Present &middot; Seattle, WA / Remote</p>
+            </div>
+          </div>
+          <p class="timeline-desc">I lead Contractor Arsenal as a website and growth company for contractors. We build websites, SEO systems, and lead-generation foundations that help local service businesses win more jobs.</p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-card-head">
+            <div class="timeline-dot"></div>
+            <div class="timeline-info">
+              <p class="timeline-company">Various Roles</p>
+              <p class="timeline-role">Web Design, Sales &amp; Marketing</p>
+              <p class="timeline-meta">Mar 2018 &ndash; Mar 2022</p>
+            </div>
+          </div>
+          <p class="timeline-desc">Worked across web design, sales, lead qualification, and marketing. These years helped me understand how businesses actually win customers online.</p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-card-head">
+            <div class="timeline-dot"></div>
+            <div class="timeline-info">
+              <p class="timeline-company">Apple</p>
+              <p class="timeline-role">Software Engineer &mdash; Contract</p>
+              <p class="timeline-meta">2022 &ndash; Oct 2025</p>
+            </div>
+          </div>
+          <p class="timeline-desc">Worked across software, app development, user experience, clean interfaces, and scalable digital systems.</p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-card-head">
+            <div class="timeline-dot"></div>
+            <div class="timeline-info">
+              <p class="timeline-company">Northwest Motorsport</p>
+              <p class="timeline-role">Sales &amp; Marketing Specialist</p>
+              <p class="timeline-meta">Feb 2023 &ndash; Jan 2024 &middot; Marysville, WA / Hybrid</p>
+            </div>
+          </div>
+          <p class="timeline-desc">Managed lead qualification, customer communication, and pipeline activity while sharpening sales, follow-up, negotiation, and closing skills.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section aria-label="Education">
+      <span class="section-label">Education</span>
+      <div class="info-card-list">
+        <div class="info-card">
+          <p class="info-card-title">University of Washington</p>
+          <p class="info-card-sub">Bachelor of Arts, Computer Science</p>
+        </div>
+        <div class="info-card">
+          <p class="info-card-title">Snohomish High School</p>
+          <p class="info-card-sub">High School Diploma</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT -->
+    <section aria-label="Project">
+      <span class="section-label">Project</span>
+      <div class="info-card-list">
+        <div class="info-card">
+          <p class="info-card-title">CFRP &mdash; Code For Regular People</p>
+          <p class="info-card-meta">Apr 2021 &ndash; Feb 2023</p>
+          <p class="info-card-desc">CFRP was created to teach regular people that there are always other options. The mission was to help kids and adults see technology, creativity, and business as real paths forward.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section aria-label="Values">
+      <span class="section-label">Values</span>
+      <div class="values-grid">
+        <div class="value-card"><span class="value-dot"></span>Build from nothing</div>
+        <div class="value-card"><span class="value-dot"></span>Move fast</div>
+        <div class="value-card"><span class="value-dot"></span>Make it look professional</div>
+        <div class="value-card"><span class="value-dot"></span>Help people win</div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section aria-label="Work together">
+      <div class="cta-card">
+        <p class="cta-card-title">Want to build something with me?</p>
+        <div class="cta-btn-list">
+          <a href="https://contractorarsenal.com/" target="_blank" rel="noopener" class="cta-btn primary">
+            Work With Contractor Arsenal
+            <svg viewBox="0 0 14 14"><path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/></svg>
+          </a>
+          <a href="https://whop.com/trader-u-chepeex?a=dotcomjay" target="_blank" rel="noopener" class="cta-btn secondary">
+            Join Trader U
+            <svg viewBox="0 0 14 14"><path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/></svg>
+          </a>
+          <a href="mailto:jay@revdevhq.com" class="cta-btn secondary">
+            Contact Jay
+            <svg viewBox="0 0 14 14"><path d="M2.5 11.5 11.5 2.5M5 2.5h6.5v6.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="footer-name">dotcomjay</p>
+      <p class="footer-sub">Building publicly from Seattle, WA</p>
+    </footer>
+
+  </main>
+
+  <script>
+    function showPage() {
+      const hash  = window.location.hash || '#home';
+      const home  = document.querySelector('[data-page="home"]');
+      const about = document.querySelector('[data-page="about"]');
+
+      if (!home || !about) return;
+
+      if (hash === '#about') {
+        home.setAttribute('hidden', '');
+        about.removeAttribute('hidden');
+        document.body.classList.add('about-active');
+      } else {
+        about.setAttribute('hidden', '');
+        home.removeAttribute('hidden');
+        document.body.classList.remove('about-active');
+      }
+
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      });
+    }
+
+    window.addEventListener('hashchange', showPage);
+    window.addEventListener('DOMContentLoaded', showPage);
+  </script>
+
 </body>
 </html>
