@@ -14,207 +14,83 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services — $297/Month Contractor Websites | Contractor Arsenal</title>
-<meta name="description" content="Everything included in $297/month: custom contractor website, local SEO, lead capture forms, hosting, mobile design, Google Business Profile support, and ongoing updates.">
+<title>Contractor Websites: What's Included | Contractor Arsenal</title>
+<meta name="description" content="What's actually included in a Contractor Arsenal website: custom design, local SEO, lead capture forms, hosting, mobile design, Google Business Profile support, and ongoing updates.">
 <link rel="canonical" href="https://contractorarsenal.com/services.html">
 <meta name="robots" content="index, follow">
-<meta property="og:title" content="Services — $297/Month Contractor Websites | Contractor Arsenal">
-<meta property="og:description" content="Everything included in $297/month: custom design, local SEO, lead capture, hosting, and ongoing support.">
+<meta property="og:title" content="Contractor Websites: What's Included | Contractor Arsenal">
+<meta property="og:description" content="What's actually included in a Contractor Arsenal website: custom design, local SEO, lead capture, hosting, and ongoing support.">
 <meta property="og:url" content="https://contractorarsenal.com/services.html">
 <meta property="og:image" content="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 <style>
-:root{
-  --bg:#FFFFFF;--bg2:#F5F7FA;--bg3:#EDEEF2;
-  --dark:#0F1115;--dark2:#151922;--dark3:#1B2130;
-  --accent:#FF5E2B;--accent-dim:rgba(255,94,43,0.08);
-  --text:#1C1C1E;--muted:#6B7280;
-  --text-inv:#F0F2F5;--muted-inv:#A8AFBC;
-  --border:rgba(0,0,0,0.08);--border-inv:rgba(255,255,255,0.07);
-  --rad:0 16px 0 16px;
-  --rad-sm:0 10px 0 10px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:#fff;color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;}
-a{color:inherit;text-decoration:none;}
-img{max-width:100%;height:auto;display:block;}
-::-webkit-scrollbar{width:4px;}
-::-webkit-scrollbar-track{background:var(--bg2);}
-::-webkit-scrollbar-thumb{background:var(--accent);border-radius:4px;}
-
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:82px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(15,17,21,0.97);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,0.08);}
-.nav-logo{display:flex;align-items:center;}
-.nav-logo img{height:48px;width:auto;object-fit:contain;}
-.nav-links{display:flex;gap:0;align-items:center;position:relative;}
-.nav-slider{position:absolute;height:calc(100% - 8px);top:4px;left:0;background:rgba(255,94,43,0.08);border-radius:0 10px 0 10px;transition:left .2s ease,width .2s ease,opacity .15s;opacity:0;pointer-events:none;}
-.nav-links a{position:relative;z-index:1;font-weight:600;font-size:.8rem;letter-spacing:.5px;text-transform:uppercase;color:#F0F2F5;padding:.55rem .95rem;transition:color .2s;}
-.nav-links a:hover{color:#FF5E2B;}
-.nav-links a.active{color:#FF5E2B;}
-.nav-cta{background:#FF5E2B;color:#fff !important;padding:.46rem 1.25rem;border-radius:0 10px 0 10px;font-weight:700;font-size:.78rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;margin-left:.75rem;}
-.nav-cta:hover{background:#e85520;transform:translateY(-1px);}
-.nav-hamburger{display:none;cursor:pointer;background:none;border:none;padding:6px;color:#F0F2F5;}
-.nav-hamburger svg{width:28px;height:28px;transition:transform 500ms ease;}
-.nav-hamburger.open svg{transform:rotate(-45deg);}
-.nav-hamburger svg path:first-child{transition:stroke-dasharray 500ms ease,stroke-dashoffset 500ms ease;stroke-dasharray:12 63;}
-.nav-hamburger.open svg path:first-child{stroke-dasharray:20 300;stroke-dashoffset:-32.42px;}
-.nav-mobile{display:none;position:fixed;top:82px;left:0;right:0;background:rgba(15,17,21,0.98);padding:1.25rem 5%;flex-direction:column;gap:0;z-index:999;border-bottom:1px solid rgba(255,255,255,0.08);}
-.nav-mobile.open{display:flex;}
-.nav-mobile a{font-weight:600;font-size:1rem;text-transform:uppercase;letter-spacing:.5px;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,0.1);color:#F0F2F5;}
-.nav-mobile a:hover{color:#FF5E2B;}
-.nav-mobile .mob-cta{margin-top:1rem;text-align:center;background:#FF5E2B;color:#fff;padding:.85rem;border-radius:0 10px 0 10px;font-weight:700;border:none;}
-
-.btn-lime{background:var(--accent);color:#fff;padding:.9rem 2.2rem;border-radius:var(--rad);font-weight:700;font-size:.95rem;letter-spacing:.4px;display:inline-block;transition:all .2s;border:2px solid var(--accent);}
-.btn-lime:hover{background:#e85520;border-color:#e85520;transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,94,43,0.22);}
-.btn-outline{border:2px solid var(--accent);color:var(--accent);padding:.9rem 2.2rem;border-radius:var(--rad);font-weight:700;font-size:.95rem;letter-spacing:.4px;display:inline-block;transition:all .2s;}
-.btn-outline:hover{background:var(--accent);color:#000;transform:translateY(-2px);}
-
-.page-hero{padding:140px 5% 80px;background:var(--dark);}
-.page-hero-inner{max-width:1280px;margin:0 auto;}
-.section-label{font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:.85rem;display:block;}
-.section-label.dark{color:var(--accent);}
-.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,4.8vw,4rem);line-height:1;letter-spacing:1px;margin-bottom:1.1rem;}
-.section-title.on-light{color:var(--text);}
-.section-sub{color:var(--muted);max-width:560px;font-size:1rem;line-height:1.72;}
-.section-sub.on-light{color:var(--muted);}
-
-.page-hero-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
-.page-hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;}
-.page-hero .section-title{color:var(--text-inv);}
-.page-hero .section-sub{color:var(--muted-inv);}
-.page-hero .section-label{color:var(--accent);}
-
-.price-hero-card{
-  background:var(--bg2);border:1px solid var(--border-inv);border-radius:var(--rad);
-  padding:2.5rem;box-shadow:0 24px 64px rgba(0,0,0,0.4);
-  position:relative;overflow:hidden;
-}
-.price-hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent);}
-.phc-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.5px;color:var(--text);margin-bottom:.4rem;}
-.phc-price{font-family:'Bebas Neue',sans-serif;font-size:5rem;line-height:1;color:var(--accent);}
-.phc-period{font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;color:var(--muted);}
-.phc-note{font-size:.82rem;color:var(--muted);margin:.75rem 0 1.5rem;line-height:1.5;border-left:3px solid var(--accent);padding-left:.75rem;}
-.phc-list{list-style:none;display:flex;flex-direction:column;gap:.65rem;}
-.phc-item{display:flex;align-items:center;gap:.65rem;font-size:.9rem;color:var(--text);}
-.phc-check{width:18px;height:18px;min-width:18px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;}
-.phc-check svg{width:9px;height:9px;}
-.phc-whop{display:flex;align-items:center;gap:.5rem;margin-top:1.25rem;padding:.6rem .85rem;background:var(--accent-dim);border:1px solid rgba(255,94,43,0.2);border-radius:7px;font-size:.78rem;font-weight:700;color:var(--accent);}
-.whop-logo{height:24px;width:auto;display:block;object-fit:contain;}
-.whop-logo-wrap{background:#fff;border-radius:8px;padding:6px 10px;display:inline-flex;align-items:center;}
-.phc-cta{display:block;text-align:center;margin-top:1.5rem;}
-
-section{padding:100px 5%;}
-.section-inner{max-width:1280px;margin:0 auto;}
-
-/* Detail sections */
-.service-detail{padding:100px 5%;}
-.service-detail:nth-child(even){background:#fff;}
-.service-detail:nth-child(odd){background:var(--bg2);}
-.sd-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
-.sd-inner.flip{direction:rtl;}
-.sd-inner.flip>*{direction:ltr;}
-.sd-icon{width:56px;height:56px;border-radius:14px;background:var(--accent-dim);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;border:1px solid rgba(255,94,43,0.2);}
-.sd-icon svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-.sd-list{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-top:1.5rem;}
-.sd-item{display:flex;align-items:flex-start;gap:.75rem;font-size:.95rem;color:var(--muted);}
-.sd-check{width:20px;height:20px;min-width:20px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin-top:2px;}
-.sd-check svg{width:10px;height:10px;}
-.sd-visual{background:#F0F2F5;border-radius:var(--rad);padding:2rem;min-height:280px;display:flex;flex-direction:column;justify-content:center;gap:1rem;border:1px solid var(--border);}
-.sd-stat-row{display:flex;gap:1rem;}
-.sd-stat{flex:1;background:#fff;border-radius:var(--rad-sm);padding:1.25rem;text-align:center;border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,0.04);}
-.sd-stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1;color:var(--text);margin-bottom:.2rem;}
-.sd-stat-label{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);}
-.sd-bar{background:#fff;border-radius:var(--rad-sm);padding:1rem 1.25rem;border:1px solid var(--border);}
-.sd-bar-label{font-size:.75rem;font-weight:600;color:var(--muted);margin-bottom:.4rem;display:flex;justify-content:space-between;}
-.sd-bar-track{height:8px;background:#E5E7EB;border-radius:100px;overflow:hidden;}
-.sd-bar-fill{height:100%;border-radius:100px;background:var(--accent);}
-
-/* Compare table */
-.compare-section{background:var(--bg2);padding:100px 5%;}
-.compare-wrap{overflow-x:auto;margin-top:3rem;border-radius:var(--rad-sm);border:1px solid var(--border-inv);}
-.compare-table{width:100%;border-collapse:collapse;min-width:580px;}
-.compare-table th,.compare-table td{padding:.95rem 1.2rem;text-align:left;border-bottom:1px solid var(--border);font-size:.88rem;}
-.compare-table thead th{background:var(--bg3);font-weight:700;font-size:.72rem;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);}
-.compare-table thead th.hi{background:rgba(255,94,43,0.06);color:var(--accent);}
+.page-hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:3.5rem;align-items:center;}
+.price-teaser{background:var(--surface);border:1.5px solid var(--ink);border-radius:var(--r-lg);padding:1.75rem;}
+.price-teaser .pricing-price{font-size:2.4rem;}
+.compare-wrap{overflow-x:auto;border:1.5px solid var(--border);border-radius:var(--r-lg);margin-top:1rem;}
+.compare-table{width:100%;border-collapse:collapse;min-width:600px;}
+.compare-table th,.compare-table td{padding:.9rem 1.1rem;text-align:left;border-bottom:1px solid var(--border-soft);font-size:.86rem;}
+.compare-table thead th{background:var(--surface-2);font-weight:700;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+.compare-table thead th.hi{color:var(--accent);}
 .compare-table tbody tr:last-child td{border-bottom:none;}
 .compare-table td.hi{color:var(--accent);font-weight:700;}
-.chk{color:var(--accent);font-weight:700;}
-.crs{color:var(--muted);opacity:.5;}
+.crs{color:var(--faint);}
+@media(max-width:860px){.page-hero-grid{grid-template-columns:1fr;}}
 
-/* FAQ */
-.faq-section{background:#fff;padding:100px 5%;}
-.faq-list{max-width:760px;margin:3rem auto 0;display:flex;flex-direction:column;gap:.6rem;}
-.faq-item{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rad-sm);overflow:hidden;transition:border-color .2s;}
-.faq-item:hover{border-color:var(--border-inv);}
-.faq-q{width:100%;background:none;border:none;color:var(--text);text-align:left;padding:1.25rem 1.5rem;font-family:'Inter',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
-.faq-q::after{content:'+';font-size:1.4rem;font-weight:300;color:var(--accent);transition:transform .3s;flex-shrink:0;}
-.faq-item.open .faq-q::after{transform:rotate(45deg);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
-.faq-a-inner{padding:0 1.5rem 1.25rem;font-size:.92rem;color:var(--muted);line-height:1.75;}
-.faq-item.open .faq-a{max-height:300px;}
+/* Alternating service detail sections */
+.sd-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;}
+.sd-bullets{display:flex;flex-direction:column;gap:.5rem;margin:1.25rem 0 1.5rem;}
+.sd-bullets li{display:flex;align-items:center;gap:.6rem;font-size:.9rem;color:var(--ink-soft);}
+.sd-bullets li::before{content:'';width:6px;height:6px;background:var(--accent);flex-shrink:0;}
+.sd-cta{font-size:.86rem;font-weight:700;color:var(--ink);border-bottom:2px solid var(--accent);}
+.sd-visual{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:1.75rem;}
 
-/* Final CTA */
-.final-cta{background:var(--dark);padding:120px 5%;text-align:center;position:relative;overflow:hidden;}
-.final-cta::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(255,94,43,0.05),transparent);}
-.final-cta-inner{position:relative;z-index:1;}
-.final-cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5rem);letter-spacing:1.5px;margin-bottom:1.25rem;line-height:.95;color:var(--text-inv);}
-.final-cta h2 .a-lime{color:var(--accent);}
-.final-cta p{color:var(--muted-inv);font-size:1rem;max-width:440px;margin:0 auto 2.5rem;line-height:1.75;}
-.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.sd-search-box{display:flex;align-items:center;gap:.5rem;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-pill);padding:.7rem 1.1rem;font-family:monospace;font-size:.9rem;color:var(--ink-soft);margin-bottom:1rem;}
+.sd-cursor{display:inline-block;width:2px;height:1em;background:var(--accent);animation:sd-blink 1s step-end infinite;}
+@keyframes sd-blink{50%{opacity:0;}}
+.sd-result-card{border:1px solid var(--border-soft);border-radius:var(--r-md);padding:.75rem 1rem;margin-bottom:.5rem;opacity:0;transform:translateY(6px);transition:opacity .5s var(--ease-out),transform .5s var(--ease-out);}
+.sd-visual.visible .sd-result-card{opacity:1;transform:none;}
+.sd-visual.visible .sd-result-card.faint{transition-delay:.15s;}
+.sd-result-card.highlight{border-color:var(--accent);background:var(--accent-tint);}
+.sd-result-name{font-size:.88rem;font-weight:700;color:var(--ink);}
+.sd-result-meta{font-size:.76rem;color:var(--accent);font-weight:600;margin-top:.15rem;}
+.sd-result-card.faint{opacity:.55;}
+.sd-result-card.faint .sd-result-name{color:var(--muted);}
 
-.btn-dark-outline{border:2px solid rgba(255,255,255,.35);color:#F5F7FA;background:transparent;padding:.9rem 2.2rem;border-radius:0 16px 0 16px;font-weight:700;font-size:.95rem;letter-spacing:.4px;display:inline-block;transition:all .2s;}
-.btn-dark-outline:hover{background:#F5F7FA;color:#0F1115;transform:translateY(-2px);}
-.btn-outline-white{border:2px solid rgba(255,255,255,0.4);color:#fff;padding:.9rem 2.2rem;border-radius:var(--rad);font-weight:700;font-size:.95rem;letter-spacing:.4px;display:inline-block;transition:all .2s;}
-.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,0.1);transform:translateY(-2px);}
-
-footer{background:#09090C;}
-.footer-main{padding:80px 5% 70px;max-width:1280px;margin:0 auto;}
-.footer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:3rem;}
-.footer-bar{background:#FF5E2B;padding:1.5rem 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
-.footer-bar-logo{display:flex;flex-direction:column;gap:.4rem;}.footer-bar-logo img{height:36px;width:auto;display:block;filter:brightness(0) invert(1);}
-.footer-bar-right{display:flex;align-items:center;gap:1.75rem;flex-wrap:wrap;}
-.footer-bar-right p,.footer-bar-right a{font-size:.8rem;color:#fff;font-weight:500;text-decoration:none;}
-.footer-bar-right a:hover{text-decoration:underline;}
-.footer-col h4{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.1);}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
-.footer-col a{font-size:.88rem;color:var(--muted);transition:color .2s;}
-.footer-col a:hover{color:#fff;}
-
-
-
-
-
-
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
-.reveal.visible{opacity:1;transform:none;}
-.reveal-delay-1{transition-delay:.1s;}
-.reveal-delay-2{transition-delay:.2s;}
-.reveal-delay-3{transition-delay:.3s;}
-
-@media(max-width:1024px){
-  .page-hero-layout{grid-template-columns:1fr;}
-  .price-hero-card{max-width:480px;}
-  .sd-inner,.sd-inner.flip{grid-template-columns:1fr;direction:ltr;}
-  .footer-grid{grid-template-columns:1fr 1fr 1fr;}
-  .footer-grid .footer-col:last-child{display:none;}
-  .footer-brand{grid-column:1/-1;}
+.sd-phone-row{display:flex;align-items:center;justify-content:space-between;background:var(--surface-2);border:1px solid var(--border-soft);border-radius:var(--r-md);padding:.85rem 1rem;margin-bottom:1rem;box-shadow:0 1px 0 rgba(18,18,18,.02);}
+.sd-phone-row span{font-size:.85rem;color:var(--ink-soft);font-weight:600;}
+.sd-estimate-btn{display:inline-block;background:var(--accent);color:#fff;font-size:.78rem;font-weight:700;padding:.4rem .9rem;border-radius:var(--r-md);transform:scale(1);}
+@keyframes sd-press{0%{transform:scale(1);}45%{transform:scale(.93);}100%{transform:scale(1);}}
+.sd-visual.visible .sd-estimate-btn{animation:sd-press .32s var(--ease-out) .55s;}
+.sd-notification{
+  background:var(--surface);border:1.5px solid var(--accent);border-radius:var(--r-md);padding:1rem;
+  box-shadow:0 14px 32px rgba(18,18,18,.1);
+  opacity:0;transform:translateY(10px);transition:opacity .5s var(--ease-out) .65s,transform .5s var(--ease-out) .65s;
 }
-@media(max-width:768px){
-  nav{padding:0 4%;height:76px;}
-  .nav-links{display:none;}
-  .nav-hamburger{display:flex;}
-  .nav-mobile{top:82px;}
-  .page-hero{padding:100px 4% 60px;}
-  section,.service-detail,.compare-section,.faq-section,.final-cta{padding:70px 4%;}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
-  .footer-bottom{flex-direction:column;text-align:center;}
-  .page-hero-actions,.cta-actions{flex-direction:column;}
-  .btn-lime,.btn-outline{text-align:center;}
-  .sd-stat-row{flex-direction:column;}
+.sd-visual.visible .sd-notification{opacity:1;transform:none;}
+.sd-notification-title{display:flex;align-items:center;gap:.45rem;font-size:.7rem;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.5rem;}
+.sd-status-dot{
+  width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;
+  opacity:0;transform:scale(.3);transition:opacity .3s var(--ease-out) 1.05s,transform .3s var(--ease-out) 1.05s;
 }
-@media(max-width:480px){
-  .footer-grid{grid-template-columns:1fr;}
+.sd-visual.visible .sd-status-dot{opacity:1;transform:scale(1);}
+.sd-notification-row{display:flex;justify-content:space-between;font-size:.85rem;color:var(--ink-soft);padding:.3rem 0;border-bottom:1px solid var(--border-soft);}
+.sd-notification-row:last-child{border-bottom:none;padding-bottom:0;}
+.sd-notification-row strong{color:var(--ink);}
+
+.sd-history-row{display:flex;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--border-soft);opacity:0;transform:translateX(-8px);transition:opacity .5s var(--ease-out),transform .5s var(--ease-out);}
+.sd-visual.visible .sd-history-row{opacity:1;transform:none;}
+.sd-history-row:last-child{border-bottom:none;padding-bottom:0;}
+.sd-history-date{font-family:var(--display);font-weight:700;font-size:.8rem;color:var(--accent);flex-shrink:0;width:64px;}
+.sd-history-text{font-size:.88rem;color:var(--ink-soft);}
+
+@media(max-width:860px){
+  .sd-grid{grid-template-columns:1fr;gap:2rem;}
+  .sd-copy{order:1;}
+  .sd-visual{order:2;}
 }
 </style>
 </head>
@@ -224,192 +100,263 @@ footer{background:#09090C;}
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<nav>
-  <a href="index.html" class="nav-logo">
-    <img src="favicon.png" alt="Contractor Arsenal">
-  </a>
-  <div class="nav-links" id="navLinks">
-    <span class="nav-slider" id="navSlider"></span>
-    <a href="services.html" class="active">Services</a>
-    <a href="industries.html">Industries</a>
-    <a href="about.html">Company</a>
-    <a href="demo.html" class="nav-cta">Get Started</a>
-  </div>
-  <button class="nav-hamburger" id="navBtn" onclick="toggleMenu()" aria-label="Menu">
-    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"/>
-      <path d="M7 16 27 16"/>
-    </svg>
-  </button>
-</nav>
-<div class="nav-mobile" id="navMobile">
-  <a href="services.html" onclick="closeMenu()">Services</a>
-  <a href="industries.html" onclick="closeMenu()">Industries</a>
-  <a href="about.html" onclick="closeMenu()">Company</a>
-  <a href="demo.html" class="mob-cta" onclick="closeMenu()">Get Started</a>
-</div>
-
-<!-- PAGE HERO -->
-<div class="page-hero">
-  <div class="page-hero-inner">
-    <div class="page-hero-layout">
-      <div>
-        <span class="section-label">What You Get</span>
-        <h1 class="section-title">One Price.<br>No Surprises.<br><span style="color:var(--accent);">$297/Month.</span></h1>
-        <p class="section-sub">Your website should be winning jobs every month. One flat price covers everything it needs to do that.</p>
-        <div class="page-hero-actions">
-          <a href="demo.html" class="btn-lime">Get My Free Demo</a>
-          <a href="#compare" class="btn-dark-outline">See How We Compare</a>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Contractor Arsenal homepage">
+      <span class="nav-logo-mark">
+        <img src="assets/mark-dark.png" class="mark mark-dark" alt="" width="306" height="125">
+        <img src="assets/mark-light.png" class="mark mark-light" alt="" width="306" height="125">
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="work.html">Work</a>
+      <div class="nav-drop">
+        <a href="services.html" class="nav-drop-trigger active" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
+        <div class="nav-drop-panel">
+          <div class="nav-drop-label">Services</div>
+        <a href="services.html" class="nav-drop-row">
+          <span class="nav-drop-row-bar"></span>
+          <span class="nav-drop-row-text">
+            <span class="nav-drop-row-eyebrow">Websites</span>
+            <span class="nav-drop-row-title">Contractor Websites</span>
+            <span class="nav-drop-row-desc">Built around your services, market, and customers.</span>
+          </span>
+          <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="seo.html" class="nav-drop-row">
+          <span class="nav-drop-row-bar"></span>
+          <span class="nav-drop-row-text">
+            <span class="nav-drop-row-eyebrow">Search Visibility</span>
+            <span class="nav-drop-row-title">SEO + AEO + GEO</span>
+            <span class="nav-drop-row-desc">Help Google and AI systems understand your business.</span>
+          </span>
+          <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="seo.html#google-business" class="nav-drop-row">
+          <span class="nav-drop-row-bar"></span>
+          <span class="nav-drop-row-text">
+            <span class="nav-drop-row-eyebrow">Google Business</span>
+            <span class="nav-drop-row-title">Google Business</span>
+            <span class="nav-drop-row-desc">Connect your site with your local Google presence.</span>
+          </span>
+          <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="services.html#leads" class="nav-drop-row">
+          <span class="nav-drop-row-bar"></span>
+          <span class="nav-drop-row-text">
+            <span class="nav-drop-row-eyebrow">Lead Capture</span>
+            <span class="nav-drop-row-title">Lead Capture</span>
+            <span class="nav-drop-row-desc">Make it easy for visitors to call or request an estimate.</span>
+          </span>
+          <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+          <div class="nav-drop-foot">
+            <span class="nav-drop-foot-price">Websites start at $297/mo</span>
+            <a href="services.html" class="nav-drop-foot-link">View All Services →</a>
+          </div>
         </div>
       </div>
-      <div class="price-hero-card reveal">
-        <div class="phc-title">Contractor Growth Website</div>
-        <div><span class="phc-price">$297</span><span class="phc-period">/month</span></div>
-        <div class="phc-note">No massive upfront build fee. Built for contractors who want to launch fast and grow.</div>
-        <ul class="phc-list">
-          <li class="phc-item"><span class="phc-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Custom contractor website</li>
-          <li class="phc-item"><span class="phc-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Mobile-first design</li>
-          <li class="phc-item"><span class="phc-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Local SEO setup</li>
-          <li class="phc-item"><span class="phc-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Service pages</li>
-          <li class="phc-item"><span class="phc-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Lead capture forms</li>
-          <li class="phc-item"><span class="phc-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Click-to-call buttons</li>
-          <li class="phc-item"><span class="phc-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Hosting &amp; SSL</li>
-          <li class="phc-item"><span class="phc-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Website updates</li>
-          <li class="phc-item"><span class="phc-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Google Business Profile support</li>
-          <li class="phc-item"><span class="phc-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Ongoing optimization</li>
-        </ul>
-        <a href="demo.html" class="btn-lime phc-cta">Start With a Free Demo →</a>
+      <a href="pricing.html">Pricing</a>
+      <div class="nav-drop">
+        <a href="resources.html" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Resources<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
+        <div class="nav-drop-panel nav-drop-panel-wide">
+          <div class="nav-drop-label">Contractor Growth Library</div>
+          <div class="nav-drop-grid">
+          <a href="resources.html#websites" class="nav-drop-row nav-drop-row-compact">
+            <span class="nav-drop-row-bar"></span>
+            <span class="nav-drop-row-text">
+              <span class="nav-drop-row-title">Websites</span>
+              <span class="nav-drop-row-desc">Website design, pricing, structure</span>
+            </span>
+          </a>
+          <a href="resources.html#search-visibility" class="nav-drop-row nav-drop-row-compact">
+            <span class="nav-drop-row-bar"></span>
+            <span class="nav-drop-row-text">
+              <span class="nav-drop-row-title">Search Visibility</span>
+              <span class="nav-drop-row-desc">SEO, AEO, GEO, local search</span>
+            </span>
+          </a>
+          <a href="resources.html#google-business" class="nav-drop-row nav-drop-row-compact">
+            <span class="nav-drop-row-bar"></span>
+            <span class="nav-drop-row-text">
+              <span class="nav-drop-row-title">Google Business</span>
+              <span class="nav-drop-row-desc">Maps, reviews, profile optimization</span>
+            </span>
+          </a>
+          <a href="resources.html#leads" class="nav-drop-row nav-drop-row-compact">
+            <span class="nav-drop-row-bar"></span>
+            <span class="nav-drop-row-text">
+              <span class="nav-drop-row-title">Leads</span>
+              <span class="nav-drop-row-desc">Lead generation and conversion</span>
+            </span>
+          </a>
+          <a href="resources.html#google-ads" class="nav-drop-row nav-drop-row-compact">
+            <span class="nav-drop-row-bar"></span>
+            <span class="nav-drop-row-text">
+              <span class="nav-drop-row-title">Google Ads</span>
+              <span class="nav-drop-row-desc">Google Ads and Local Services Ads</span>
+            </span>
+          </a>
+          <a href="resources.html#trade-guides" class="nav-drop-row nav-drop-row-compact">
+            <span class="nav-drop-row-bar"></span>
+            <span class="nav-drop-row-text">
+              <span class="nav-drop-row-title">Trade Guides</span>
+              <span class="nav-drop-row-desc">Roofing, painting, HVAC, landscaping and more</span>
+            </span>
+          </a>
+          </div>
+          <div class="nav-drop-foot nav-drop-foot-center">
+            <a href="resources.html" class="nav-drop-foot-link">Browse the Growth Library →</a>
+          </div>
+        </div>
       </div>
+      <a href="about.html">Company</a>
+    </nav>
+    <div class="nav-right">
+      <a href="demo.html" class="nav-cta hide-mobile">Get a Free Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
   </div>
+</header>
+<div class="nav-mobile" id="navMobile">
+  <a href="work.html">Work</a>
+  <details class="nav-mobile-drop">
+    <summary>Services</summary>
+    <a href="services.html">Websites</a>
+    <a href="seo.html">Search Visibility</a>
+    <a href="seo.html#google-business">Google Business</a>
+    <a href="services.html#leads">Lead Capture</a>
+  </details>
+  <a href="pricing.html">Pricing</a>
+  <details class="nav-mobile-drop">
+    <summary>Resources</summary>
+    <a href="resources.html">Growth Library</a>
+    <a href="resources.html#websites">Websites</a>
+    <a href="resources.html#search-visibility">Search Visibility</a>
+    <a href="resources.html#google-business">Google Business</a>
+    <a href="resources.html#leads">Leads</a>
+    <a href="resources.html#trade-guides">Trade Guides</a>
+  </details>
+  <a href="about.html">Company</a>
+  <a href="demo.html" class="mob-cta">Get a Free Demo</a>
 </div>
+
+<section class="page-hero page-hero--left">
+  <div class="wrap page-hero-grid">
+    <div>
+      <div class="eyebrow">What's Included</div>
+      <h1 class="h-display">A website that<br>works as hard as you do.</h1>
+      <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Your website should be winning jobs every month. Here's exactly what goes into building one that does.</p>
+      <div class="btn-row" style="margin-top:1.75rem;">
+        <a href="demo.html" class="btn btn-primary">Get My Free Demo</a>
+        <a href="#compare" class="btn btn-outline">See How We Compare</a>
+      </div>
+    </div>
+    <div class="price-teaser reveal">
+      <div class="pricing-kicker">Starting At</div>
+      <div class="pricing-price">$297<span>/month</span></div>
+      <p class="pricing-note">Custom website, built for Google, hosting, and support. No setup fee.</p>
+      <a href="pricing.html" class="btn btn-outline btn-block">Compare Plans →</a>
+    </div>
+  </div>
+</section>
 
 <!-- SERVICE DETAILS -->
-<div class="service-detail" id="website">
-  <div class="sd-inner">
-    <div>
-      <div class="sd-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-      <span class="section-label dark">Custom Website</span>
-      <h2 class="section-title on-light">Built for Your Trade.<br>Not a Template.</h2>
-      <p class="section-sub on-light">Built from scratch for your trade and city. No templates. A real site that turns visitors into callers.</p>
-      <ul class="sd-list">
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Custom design matched to your brand</li>
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Fast-loading, optimized from day one</li>
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Done-for-you copywriting, no writing required</li>
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Fast Launch</li>
-      </ul>
-    </div>
-    <div class="sd-visual reveal">
-      <div class="sd-stat-row">
-        <div class="sd-stat"><div class="sd-stat-num">48hr</div><div class="sd-stat-label">Avg. launch</div></div>
-        <div class="sd-stat"><div class="sd-stat-num">100%</div><div class="sd-stat-label">Custom built</div></div>
-      </div>
-      <div class="sd-bar">
-        <div class="sd-bar-label"><span>Site speed score</span><span>96/100</span></div>
-        <div class="sd-bar-track"><div class="sd-bar-fill" style="width:96%"></div></div>
-      </div>
-      <div class="sd-bar">
-        <div class="sd-bar-label"><span>Mobile usability</span><span>100%</span></div>
-        <div class="sd-bar-track"><div class="sd-bar-fill" style="width:100%"></div></div>
-      </div>
+<section id="website" style="background:var(--surface-2);border-top:1px solid var(--border-soft);">
+  <div class="wrap">
+    <div class="eyebrow">01 · Custom Website</div>
+    <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Built for your trade.<br>Not a template.</h2>
+    <p class="h-sub" style="margin-top:1.1rem;">Built from scratch for your trade and city. No templates. A real site that turns visitors into callers. Guide: <a href="resources/contractor-homepage.html" style="color:var(--ink);font-weight:700;border-bottom:2px solid var(--accent);">What Should Be on a Contractor Homepage? →</a></p>
+    <div class="card-grid grid-3" style="margin-top:2rem;">
+      <div class="card"><div class="stat-num" style="font-size:1.8rem;">48hr</div><div style="font-size:.82rem;color:var(--muted);margin-top:.3rem;">Avg. launch</div></div>
+      <div class="card"><div class="stat-num" style="font-size:1.8rem;">100%</div><div style="font-size:.82rem;color:var(--muted);margin-top:.3rem;">Custom built</div></div>
+      <div class="card"><div class="stat-num" style="font-size:1.8rem;">96/100</div><div style="font-size:.82rem;color:var(--muted);margin-top:.3rem;">Avg. site speed score</div></div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="service-detail" id="seo">
-  <div class="sd-inner flip">
-    <div>
-      <div class="sd-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-      <span class="section-label dark">Local SEO</span>
-      <h2 class="section-title on-light">Rank Where<br>Customers Search.</h2>
-      <p class="section-sub on-light">Local SEO means showing up when someone in your city searches for your trade. We set up everything from technical structure to Google Business Profile, built to rank from day one.</p>
-      <ul class="sd-list">
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>City and service area targeting</li>
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Schema markup and structured data</li>
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Google Business Profile setup and optimization</li>
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Monthly ranking improvements included</li>
+<section id="seo">
+  <div class="wrap sd-grid">
+    <div class="sd-copy reveal-left">
+      <div class="eyebrow">02 / Google</div>
+      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Show up when<br>people search.</h2>
+      <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Someone searches "roofer near me" or "roof repair Seattle." Your site needs to clearly tell Google what you do and where you work.</p>
+      <ul class="sd-bullets">
+        <li>Service pages</li>
+        <li>City targeting</li>
+        <li>Google Business support</li>
+        <li>Ongoing improvements</li>
       </ul>
+      <a href="seo.html" class="sd-cta">See How SEO Works →</a>
     </div>
-    <div class="sd-visual reveal">
-      <div class="sd-stat-row">
-        <div class="sd-stat"><div class="sd-stat-num">#1</div><div class="sd-stat-label">Target ranking</div></div>
-        <div class="sd-stat"><div class="sd-stat-num">30d</div><div class="sd-stat-label">Avg. first result</div></div>
+    <div class="sd-visual reveal-right">
+      <div class="sd-search-box"><span>roof repair near me</span><span class="sd-cursor"></span></div>
+      <div class="sd-result-card highlight">
+        <div class="sd-result-name">Highline Roofing WA</div>
+        <div class="sd-result-meta">★★★★★ · Seattle, WA</div>
       </div>
-      <div class="sd-bar">
-        <div class="sd-bar-label"><span>Keyword coverage</span><span>Page 1</span></div>
-        <div class="sd-bar-track"><div class="sd-bar-fill" style="width:88%"></div></div>
-      </div>
-      <div class="sd-bar">
-        <div class="sd-bar-label"><span>Local pack visibility</span><span>High</span></div>
-        <div class="sd-bar-track"><div class="sd-bar-fill" style="width:82%"></div></div>
+      <div class="sd-result-card faint">
+        <div class="sd-result-name">Competitor Roofing Co.</div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="service-detail" id="leads">
-  <div class="sd-inner">
-    <div>
-      <div class="sd-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-      <span class="section-label dark">Lead Capture</span>
-      <h2 class="section-title on-light">Every Visitor<br>Is a Potential Job.</h2>
-      <p class="section-sub on-light">Most contractor sites make it too hard to contact them. We put click-to-call buttons, quote request forms, and clear CTAs on every page so warm leads go straight to you.</p>
-      <ul class="sd-list">
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Click-to-call on every page (especially mobile)</li>
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Quote request and contact forms</li>
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Leads delivered directly to your phone and email</li>
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Optimized for conversion, not just traffic</li>
+<section id="leads" style="background:var(--surface-2);border-top:1px solid var(--border-soft);">
+  <div class="wrap sd-grid">
+    <div class="sd-copy reveal-left">
+      <div class="eyebrow">03 / Leads</div>
+      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Make it easy<br>to call you.</h2>
+      <p class="h-sub" style="margin-top:1.1rem;max-width:none;">When someone is ready to hire, they shouldn't have to search for your phone number.</p>
+      <ul class="sd-bullets">
+        <li>Tap-to-call buttons</li>
+        <li>Simple estimate forms</li>
+        <li>Leads sent directly to you</li>
+        <li>Built for mobile</li>
       </ul>
+      <a href="resources/click-to-call-placement.html" class="sd-cta">Why Placement Matters →</a>
     </div>
-    <div class="sd-visual reveal">
-      <div style="background:#fff;border-radius:var(--rad-sm);padding:1.25rem;border:1px solid var(--border);">
-        <div style="font-size:.68rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#10B981;display:flex;align-items:center;gap:.35rem;margin-bottom:.75rem;"><span style="width:6px;height:6px;border-radius:50%;background:#10B981;display:inline-block;"></span>New Lead Incoming</div>
-        <div style="font-weight:700;font-size:.95rem;color:var(--text);margin-bottom:.2rem;">James M. / Full Roof Replacement</div>
-        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.75rem;">Manchester, NH · Submitted 3 min ago</div>
-        <div style="font-size:.8rem;color:var(--muted);background:#F5F7FA;border-radius:7px;padding:.75rem;">Estimated job value: <strong style="color:var(--text);">$14,800</strong></div>
-      </div>
-      <div class="sd-stat-row">
-        <div class="sd-stat"><div class="sd-stat-num">24/7</div><div class="sd-stat-label">Lead capture</div></div>
-        <div class="sd-stat"><div class="sd-stat-num">3×</div><div class="sd-stat-label">More inquiries</div></div>
+    <div class="sd-visual reveal-right">
+      <div class="sd-phone-row"><span>Roof Replacement</span><span class="sd-estimate-btn">Get an Estimate</span></div>
+      <div class="sd-notification">
+        <div class="sd-notification-title">New Estimate Request<span class="sd-status-dot" aria-hidden="true"></span></div>
+        <div class="sd-notification-row"><span>Name</span><strong>James M.</strong></div>
+        <div class="sd-notification-row"><span>Service</span><strong>Roof Replacement</strong></div>
+        <div class="sd-notification-row"><span>Phone</span><strong>(206) 555-0142</strong></div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="service-detail" id="support">
-  <div class="sd-inner flip">
-    <div>
-      <div class="sd-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-      <span class="section-label dark">Ongoing Support</span>
-      <h2 class="section-title on-light">We Don't Build<br>and Disappear.</h2>
-      <p class="section-sub on-light">Most agencies charge extra for every tweak. We include ongoing updates, monthly optimization, and support in your $297/month. The site gets better every month it's live.</p>
-      <ul class="sd-list">
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Website updates and content changes included</li>
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Monthly SEO and performance review</li>
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Hosting, security, and uptime monitoring</li>
-        <li class="sd-item"><span class="sd-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Direct support with real people and fast responses</li>
+<section id="support">
+  <div class="wrap sd-grid">
+    <div class="sd-visual reveal-left">
+      <div class="sd-history-row"><span class="sd-history-date">AUG 12</span><span class="sd-history-text">Updated project gallery</span></div>
+      <div class="sd-history-row reveal-d1"><span class="sd-history-date">AUG 05</span><span class="sd-history-text">Added roof repair page</span></div>
+      <div class="sd-history-row reveal-d2"><span class="sd-history-date">JUL 29</span><span class="sd-history-text">Updated homepage CTA</span></div>
+    </div>
+    <div class="sd-copy reveal-right">
+      <div class="eyebrow">04 / Support</div>
+      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">We don't disappear<br>after launch.</h2>
+      <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Your website needs updates. We handle them without charging you every time something changes.</p>
+      <ul class="sd-bullets">
+        <li>Website updates</li>
+        <li>Monthly improvements</li>
+        <li>Hosting checks</li>
+        <li>Real human support</li>
       </ul>
     </div>
-    <div class="sd-visual reveal">
-      <div class="sd-stat-row">
-        <div class="sd-stat"><div class="sd-stat-num">99.9%</div><div class="sd-stat-label">Uptime</div></div>
-        <div class="sd-stat"><div class="sd-stat-num">Same day</div><div class="sd-stat-label">Response time</div></div>
-      </div>
-      <div class="sd-bar">
-        <div class="sd-bar-label"><span>Included in $297/mo</span><span>Everything</span></div>
-        <div class="sd-bar-track"><div class="sd-bar-fill" style="width:100%"></div></div>
-      </div>
-      <div style="background:#fff;border-radius:var(--rad-sm);padding:.85rem 1rem;border:1px solid var(--border);font-size:.82rem;color:var(--muted);">No hourly fees. No surprise invoices. One flat price covers it all.</div>
-    </div>
   </div>
-</div>
+</section>
 
 <!-- COMPARE -->
-<div class="compare-section" id="compare">
-  <div class="section-inner">
-    <span class="section-label">The Smart Choice</span>
-    <h2 class="section-title">How We Stack Up.</h2>
-    <p class="section-sub">See why $297/month beats every other option a contractor has.</p>
+<section id="compare" style="background:var(--surface-2);border-top:1px solid var(--border-soft);">
+  <div class="wrap">
+    <div class="eyebrow">The Smart Choice</div>
+    <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">How we stack up.</h2>
+    <p class="h-sub" style="margin-top:1.1rem;">See why Contractor Arsenal beats every other option a contractor has.</p>
     <div class="compare-wrap">
       <table class="compare-table">
         <thead>
@@ -422,200 +369,127 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Contractor-specific design</td>
-            <td class="hi"><span class="chk">Yes</span></td>
-            <td><span class="crs">No</span></td>
-            <td><span class="crs">Rarely</span></td>
-            <td><span class="crs">No</span></td>
-          </tr>
-          <tr>
-            <td>Local SEO included</td>
-            <td class="hi"><span class="chk">Yes, built in</span></td>
-            <td><span class="crs">Add-on cost</span></td>
-            <td><span class="crs">Extra charge</span></td>
-            <td><span class="crs">No</span></td>
-          </tr>
-          <tr>
-            <td>Done-for-you copywriting</td>
-            <td class="hi"><span class="chk">Yes, included</span></td>
-            <td><span class="crs">DIY only</span></td>
-            <td><span class="crs">Extra charge</span></td>
-            <td><span class="crs">No</span></td>
-          </tr>
-          <tr>
-            <td>Launch time</td>
-            <td class="hi"><span class="chk">Fast Launch</span></td>
-            <td>Weeks of your time</td>
-            <td>2 to 6 weeks</td>
-            <td>N/A</td>
-          </tr>
-          <tr>
-            <td>Monthly cost</td>
-            <td class="hi"><span class="chk">$297/month</span></td>
-            <td>$30 to $50 plus hours</td>
-            <td>Hourly billing</td>
-            <td>$300 to $600+ per lead</td>
-          </tr>
-          <tr>
-            <td>Ongoing support included</td>
-            <td class="hi"><span class="chk">Yes, included</span></td>
-            <td><span class="crs">None</span></td>
-            <td>Hourly rate extra</td>
-            <td><span class="crs">No</span></td>
-          </tr>
+          <tr><td>Contractor-specific design</td><td class="hi">Yes</td><td class="crs">No</td><td class="crs">Rarely</td><td class="crs">No</td></tr>
+          <tr><td>Built for Google, from day one</td><td class="hi">Yes, built in</td><td class="crs">Add-on cost</td><td class="crs">Extra charge</td><td class="crs">No</td></tr>
+          <tr><td>Done-for-you copywriting</td><td class="hi">Yes, included</td><td class="crs">DIY only</td><td class="crs">Extra charge</td><td class="crs">No</td></tr>
+          <tr><td>Launch time</td><td class="hi">Fast launch</td><td>Weeks of your time</td><td>2–6 weeks</td><td>N/A</td></tr>
+          <tr><td>Monthly cost</td><td class="hi">From $297/month</td><td>$30–$50 + hours</td><td>Hourly billing</td><td>$300–$600+ per lead</td></tr>
+          <tr><td>Ongoing support included</td><td class="hi">Yes, included</td><td class="crs">None</td><td>Hourly rate extra</td><td class="crs">No</td></tr>
         </tbody>
       </table>
     </div>
   </div>
-</div>
+</section>
 
 <!-- FAQ -->
-<div class="faq-section">
-  <div class="section-inner">
-    <span class="section-label" style="text-align:center;display:block;">FAQ</span>
-    <h2 class="section-title" style="text-align:center;">Common Questions.</h2>
+<section>
+  <div class="wrap-narrow">
+    <div class="section-head center">
+      <div class="eyebrow center">FAQ</div>
+      <h2 class="h-display center" style="font-size:clamp(2rem,3.6vw,2.8rem);">Common questions.</h2>
+    </div>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">What exactly is included in $297/month?</button>
-        <div class="faq-a"><div class="faq-a-inner">Your $297/month covers your custom website, mobile-first design, local SEO setup, service pages, lead capture forms, click-to-call buttons, hosting and SSL, website updates, Google Business Profile support, and ongoing optimization. Nothing extra. No hidden fees.</div></div>
+        <button class="faq-q">What exactly is included?</button>
+        <div class="faq-a"><div class="faq-a-inner">Your plan covers your custom website, mobile-first design, a site built for Google, service pages, lead capture forms, click-to-call buttons, hosting and SSL, website updates, Google Business Profile support, and we keep improving your site over time. Nothing extra. No hidden fees.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Is there a setup fee or upfront cost?</button>
-        <div class="faq-a"><div class="faq-a-inner">No massive upfront build fee. You pay $297/month starting when your site goes live. We offer a free demo first so you can see exactly what you're getting before you commit.</div></div>
+        <button class="faq-q">Is there a setup fee or upfront cost?</button>
+        <div class="faq-a"><div class="faq-a-inner">No massive upfront build fee. You pay monthly starting when your site goes live. We offer a free demo first so you can see exactly what you're getting before you commit.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">How fast will my site go live?</button>
+        <button class="faq-q">How fast will my site go live?</button>
         <div class="faq-a"><div class="faq-a-inner">Most sites launch within 48 to 72 hours after you review and approve the demo. No waiting weeks for a developer.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Do I need to write any content?</button>
+        <button class="faq-q">Do I need to write any content?</button>
         <div class="faq-a"><div class="faq-a-inner">No. We handle all copywriting including headlines, service pages, about sections, FAQs and all other content. Written for your trade, your city, and your customers.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Can I cancel anytime?</button>
+        <button class="faq-q">Can I cancel anytime?</button>
         <div class="faq-a"><div class="faq-a-inner">Yes. There's no long-term contract locking you in. You can cancel with 30 days notice. That said, most clients stay because the leads keep coming in.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Do I own the website?</button>
+        <button class="faq-q">Do I own the website?</button>
         <div class="faq-a"><div class="faq-a-inner">Yes, 100%. The site, the domain, and all assets are yours. We never hold your site hostage or lock you into a platform you can't leave.</div></div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- FINAL CTA -->
 <section class="final-cta">
-  <div class="final-cta-inner">
-    <h2>Stop Paying Thousands<br>for a Site That Does <span class="a-lime">Nothing.</span></h2>
-    <p>$297/month. Everything included. Get your free demo first with no commitment and no credit card.</p>
-    <div class="cta-actions">
-      <a href="demo.html" class="btn-lime">Get My Free Demo</a>
-      <a href="apply.html" class="btn-outline-white">Apply Now</a>
+  <div class="wrap">
+    <h2 class="h-display on-dark">Stop paying thousands<br>for a site that does <em>nothing.</em></h2>
+    <p class="h-sub on-dark center">Get your free demo first, no commitment, no credit card.</p>
+    <div class="btn-row">
+      <a href="demo.html" class="btn btn-accent">Get My Free Demo</a>
+      <a href="pricing.html" class="btn btn-ghost-dark">See Pricing →</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-main">
+<footer class="footer">
+  <div class="wrap footer-main">
     <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Contractor Arsenal</div>
+        <p>Websites built for contractors who want more calls, estimate requests, and booked work.</p>
+      </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html">What's Included</a></li>
-          <li><a href="services.html#seo">Local SEO</a></li>
+          <li><a href="services.html">Websites</a></li>
+          <li><a href="seo.html">Search Visibility</a></li>
+          <li><a href="seo.html#google-business">Google Business</a></li>
           <li><a href="services.html#leads">Lead Capture</a></li>
-          <li><a href="services.html#support">Ongoing Support</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Industries</h4>
-        <ul>
-          <li><a href="industries.html">All Trades</a></li>
-          <li><a href="industries.html#roofing">Roofing</a></li>
-          <li><a href="industries.html#painting">Painting</a></li>
-          <li><a href="industries.html">HVAC</a></li>
-          <li><a href="industries.html#landscaping">Landscaping</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="work.html">Our Work</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="industries.html">Industries</a></li>
           <li><a href="partner.html">Free CRM</a></li>
-          <li><a href="mailto:contractorarsenal@gmail.com">Contact</a></li>
+          <li><a href="arsenal.html">Arsenal 001</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Get Started</h4>
+        <h4>Resources</h4>
         <ul>
-          <li><a href="demo.html">Free Demo</a></li>
-          <li><a href="apply.html">Apply Now</a></li>
-          <li><a href="arsenal.html">Arsenal 001</a></li>
-          <li><a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-          <li><a href="mailto:contractorarsenal@gmail.com">Email Us</a></li>
+          <li><a href="resources.html">Growth Library</a></li>
+          <li><a href="resources.html#websites">Websites</a></li>
+          <li><a href="resources.html#search-visibility">Search Visibility</a></li>
+          <li><a href="resources.html#google-business">Google Business</a></li>
+          <li><a href="resources.html#leads">Leads</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Service Areas</h4>
         <ul>
-          <li><span>Seattle, WA</span></li>
-          <li><span>Bellevue, WA</span></li>
-          <li><span>Tacoma, WA</span></li>
-          <li><span>Spokane, WA</span></li>
-          <li><span>Everett &amp; Redmond</span></li>
-          <li><span>Wenatchee &amp; PNW</span></li>
+          <li><a href="service-areas/seattle-wa-contractor-websites.html">Seattle, WA</a></li>
+          <li><a href="service-areas/bellevue-wa-contractor-websites.html">Bellevue, WA</a></li>
+          <li><a href="service-areas/tacoma-wa-contractor-websites.html">Tacoma, WA</a></li>
+          <li><a href="service-areas/spokane-wa-contractor-websites.html">Spokane, WA</a></li>
+          <li><a href="service-areas/everett-wa-contractor-websites.html">Everett, WA</a></li>
+          <li><a href="service-areas/redmond-wa-contractor-websites.html">Redmond, WA</a></li>
+          <li><a href="service-areas/index.html" style="font-weight:700;">View All Service Areas →</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="footer-bar">
-    <a href="index.html" class="footer-bar-logo">
-      <img src="assets/ca-logo.png" alt="Contractor Arsenal">
-    </a>
-    <div class="footer-bar-right">
-      <p>&copy; 2026 Contractor Arsenal. All rights reserved.</p>
-      <a href="privacy.html">Privacy Policy</a>
+  <div class="wrap footer-bottom">
+    <span>&copy; 2026 Contractor Arsenal. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
+      <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="mailto:contractorarsenal@gmail.com">Email</a>
     </div>
   </div>
 </footer>
 
-<script>
-function toggleMenu(){
-  var btn=document.getElementById('navBtn');
-  btn.classList.toggle('open');
-  document.getElementById('navMobile').classList.toggle('open');
-}
-function closeMenu(){
-  var btn=document.getElementById('navBtn');
-  btn.classList.remove('open');
-  document.getElementById('navMobile').classList.remove('open');
-}
-/* Sliding nav indicator */
-(function(){
-  var links=document.querySelectorAll('#navLinks a:not(.nav-cta)');
-  var slider=document.getElementById('navSlider');
-  var container=document.getElementById('navLinks');
-  if(!slider||!container)return;
-  links.forEach(function(link){
-    link.addEventListener('mouseenter',function(){
-      var cr=container.getBoundingClientRect();
-      var lr=link.getBoundingClientRect();
-      slider.style.width=lr.width+'px';
-      slider.style.left=(lr.left-cr.left)+'px';
-      slider.style.opacity='1';
-    });
-  });
-  container.addEventListener('mouseleave',function(){
-    slider.style.opacity='0';
-  });
-})();
-function toggleFaq(btn){var item=btn.closest('.faq-item');var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!isOpen)item.classList.add('open');}
-var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r);});
-</script>
+<script src="main.js"></script>
 </body>
 </html>

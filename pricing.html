@@ -9,26 +9,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5PKHXQ2R');</script>
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy | Contractor Arsenal</title>
-<meta name="description" content="Contractor Arsenal privacy policy. Learn how we collect, use, and protect your information.">
-<link rel="icon" href="favicon.png">
-<link rel="canonical" href="https://contractorarsenal.com/privacy.html">
+<title>Pricing: Contractor Growth Websites | Contractor Arsenal</title>
+<meta name="description" content="Three Contractor Arsenal plans: Contractor Growth ($297/mo), Contractor Growth+ ($497/mo), and Contractor Pro ($997/mo). Find which fits your business.">
+<link rel="canonical" href="https://contractorarsenal.com/pricing.html">
 <meta name="robots" content="index, follow">
+<meta property="og:title" content="Pricing | Contractor Arsenal">
+<meta property="og:description" content="Three contractor website plans, scaled to the size and growth needs of your business.">
+<meta property="og:url" content="https://contractorarsenal.com/pricing.html">
+<meta property="og:image" content="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-.content{max-width:720px;margin:0 auto;padding:calc(var(--nav-h) + 56px) 24px 80px;}
-.content h1{font-family:var(--display);font-size:clamp(2.2rem,4vw,3.2rem);color:var(--ink);margin-bottom:.4rem;}
-.last-updated{font-size:.84rem;color:var(--muted);margin-bottom:2.5rem;}
-.content h2{font-size:1.02rem;font-weight:700;color:var(--ink);margin:2rem 0 .75rem;}
-.content p{color:var(--ink-soft);margin-bottom:1rem;font-size:.92rem;line-height:1.75;}
-.content ul{color:var(--ink-soft);margin:0 0 1rem 1.25rem;font-size:.92rem;line-height:1.75;}
-.content ul li{margin-bottom:.4rem;}
-.content a{color:var(--accent-deep);text-decoration:none;border-bottom:1px solid var(--accent-tint-2);}
-.content a:hover{border-color:var(--accent-deep);}
+.page-hero .h-sub{margin:1rem auto 0;}
+
+/* SELECTOR */
+.selector{background:var(--surface);border:1.5px solid var(--ink);border-radius:var(--r-lg);padding:2rem;max-width:760px;margin:0 auto;}
+.selector-q{margin-bottom:1.5rem;}
+.selector-q:last-of-type{margin-bottom:1.75rem;}
+.selector-q-label{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.75rem;}
+.selector-opts{display:flex;gap:.5rem;flex-wrap:wrap;}
+.selector-opt{
+  padding:.55rem 1.05rem;border-radius:var(--r-pill);border:1.5px solid var(--border);
+  background:var(--surface);color:var(--ink-soft);font-size:.85rem;font-weight:700;cursor:pointer;
+  transition:all .15s;
+}
+@media(max-width:640px){
+  .selector{padding:1.5rem 1.25rem;}
+  .selector-opt{padding:.72rem 1.1rem;}
+}
+.selector-opt:hover{border-color:var(--ink);}
+.selector-opt.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+.selector-result{
+  border-top:1.5px solid var(--border);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:1rem;
+}
+.selector-result-label{font-size:.8rem;color:var(--muted);font-weight:600;}
+.selector-result-tier{font-family:var(--display);font-weight:800;font-size:1.4rem;color:var(--accent);text-transform:uppercase;}
+
+/* TIERS */
+.tiers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:stretch;}
+.tier-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:2rem;display:flex;flex-direction:column;transition:border-color .15s;}
+.tier-card.featured{border-color:var(--accent);position:relative;}
+.tier-badge{position:absolute;top:-13px;left:2rem;background:var(--accent);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .7rem;border-radius:var(--r-sm);}
+.tier-name{font-family:var(--display);font-weight:700;font-size:1.1rem;text-transform:uppercase;color:var(--ink);}
+.tier-price{font-family:var(--display);font-weight:800;font-size:2.6rem;color:var(--ink);margin:.5rem 0 .25rem;}
+.tier-price span{font-family:var(--sans);font-size:.9rem;font-weight:600;color:var(--muted);}
+.tier-for{font-size:.85rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.55;min-height:3.3rem;}
+.tier-list{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.75rem;flex:1;}
+.tier-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:.87rem;color:var(--ink-soft);}
+.tier-list li::before{content:'';width:8px;height:2px;background:var(--accent);flex-shrink:0;margin-top:.5rem;}
+@media(max-width:1024px){.tiers-grid{grid-template-columns:repeat(2,1fr);max-width:none;margin:0;}}
+@media(max-width:700px){.tiers-grid{grid-template-columns:1fr;max-width:460px;margin:0 auto;}}
 </style>
 </head>
 <body>
@@ -93,7 +131,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      <a href="pricing.html">Pricing</a>
+      <a href="pricing.html" class="active">Pricing</a>
       <div class="nav-drop">
         <a href="resources.html" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Resources<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
         <div class="nav-drop-panel nav-drop-panel-wide">
@@ -180,75 +218,119 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="demo.html" class="mob-cta">Get a Free Demo</a>
 </div>
 
-<div class="content">
-  <h1>Privacy Policy</h1>
-  <p class="last-updated">Last updated: March 15, 2026</p>
+<section class="page-hero page-hero--center">
+  <div class="wrap-narrow">
+    <div class="eyebrow center">Pricing</div>
+    <h1 class="h-display center">Plans that scale<br>with your business.</h1>
+    <p class="h-sub center">Pricing changes with the size and growth needs of the website, not a flat page count.</p>
+  </div>
+</section>
 
-  <h2>1. Who We Are</h2>
-  <p>Contractor Arsenal ("we," "us," or "our") operates the website contractorarsenal.com. We build done-for-you websites for contractors and trades businesses across the United States.</p>
+<!-- INTERACTIVE SELECTOR -->
+<section style="padding:24px 0 48px;">
+  <div class="wrap">
+    <div class="selector reveal">
+      <div class="selector-q-label" style="font-family:var(--display);font-size:1.1rem;text-transform:uppercase;margin-bottom:1.5rem;">What does your company need?</div>
 
-  <h2>2. Information We Collect</h2>
-  <p>We collect information you provide directly when you:</p>
-  <ul>
-    <li>Submit an application for a website build via our Apply Now form</li>
-    <li>Request a free demo via our Demo page</li>
-    <li>Inquire about our Partner Network</li>
-    <li>Contact us through any other means</li>
-  </ul>
-  <p>This information may include: your name, business name, email address, phone number, service area, website URL, business details, and payment information (processed by third-party providers).</p>
-  <p>We also collect standard usage data automatically: IP address, browser type, pages visited, time on site and referring URL, collected via standard web analytics tools.</p>
+      <div class="selector-q">
+        <div class="selector-q-label">How large should the website be?</div>
+        <div class="selector-opts" data-selector-group="pages">
+          <button class="selector-opt active" data-value="small">1–5 pages</button>
+          <button class="selector-opt" data-value="medium">6–10 pages</button>
+          <button class="selector-opt" data-value="large">10+ pages</button>
+        </div>
+      </div>
 
-  <h2>3. How We Use Your Information</h2>
-  <ul>
-    <li>To fulfill the services you requested (building and delivering your website)</li>
-    <li>To communicate with you about your project or inquiry</li>
-    <li>To send relevant updates or marketing communications (you may opt out at any time)</li>
-    <li>To improve our website and services</li>
-    <li>To comply with legal obligations</li>
-  </ul>
+      <div class="selector-q">
+        <div class="selector-q-label">Do you need multiple service pages?</div>
+        <div class="selector-opts" data-selector-group="services">
+          <button class="selector-opt active" data-value="no">No</button>
+          <button class="selector-opt" data-value="yes">Yes</button>
+        </div>
+      </div>
 
-  <h2>4. Information Sharing</h2>
-  <p>We do not sell your personal information to third parties. We may share your information with:</p>
-  <ul>
-    <li><strong>Service providers</strong> who assist us in operating our website and delivering services (e.g., email delivery, form processing, hosting). These providers are bound by confidentiality agreements.</li>
-    <li><strong>Legal requirements:</strong> if required by law, court order, or governmental authority.</li>
-  </ul>
+      <div class="selector-q">
+        <div class="selector-q-label">Do you serve multiple cities or service areas?</div>
+        <div class="selector-opts" data-selector-group="cities">
+          <button class="selector-opt active" data-value="no">No</button>
+          <button class="selector-opt" data-value="yes">Yes</button>
+        </div>
+      </div>
 
-  <h2>5. Form Data Processing</h2>
-  <p>Our forms are processed through third-party form backend services. Demo and membership (Arsenal 001) forms use UseBasin (usebasin.com). Application forms use Web3Forms (web3forms.com). Submissions through either service are subject to their respective privacy policies in addition to ours. We receive and store your form submissions to process your request.</p>
+      <div class="selector-result">
+        <div class="selector-result-label">Recommended for you:</div>
+        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+          <span class="selector-result-tier" id="selectorResult">Contractor Growth</span>
+          <a href="#tiers" class="btn btn-outline btn-sm">See What's Included</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <h2>6. Cookies</h2>
-  <p>We use essential cookies to operate our website. We may also use analytics cookies to understand how visitors use our site. You can control cookie preferences through your browser settings.</p>
+<!-- TIERS -->
+<section id="tiers" style="padding-top:0;">
+  <div class="wrap">
+    <div class="tiers-grid">
+      <div class="tier-card">
+        <div class="tier-name">Contractor Growth</div>
+        <div class="tier-price">$297<span>/mo</span></div>
+        <div class="tier-for">Our core offer. Best for contractors who need a focused, professional website: home, services, about, projects, contact.</div>
+        <ul class="tier-list">
+          <li>Custom design for your trade</li>
+          <li>Mobile optimization</li>
+          <li>Built for Google</li>
+          <li>Contact forms &amp; click-to-call</li>
+          <li>Hosting &amp; SSL</li>
+          <li>Support &amp; ongoing updates</li>
+        </ul>
+        <a href="demo.html" class="btn btn-outline btn-block">Get My Free Demo</a>
+      </div>
 
-  <h2>7. Data Retention</h2>
-  <p>We retain your information for as long as necessary to provide services and comply with legal obligations. If you would like your data deleted, contact us and we will process your request within 30 days.</p>
+      <div class="tier-card featured">
+        <span class="tier-badge">Most Popular</span>
+        <div class="tier-name">Contractor Growth+</div>
+        <div class="tier-price">$497<span>/mo</span></div>
+        <div class="tier-for">For contractors who need a larger site and a stronger organic presence, typically more than five pages or a deeper service structure.</div>
+        <ul class="tier-list">
+          <li>Everything in Growth</li>
+          <li>Expanded service pages</li>
+          <li>Deeper local SEO structure</li>
+          <li>Additional content &amp; pages</li>
+          <li>Expanded project/case study architecture</li>
+          <li>More advanced lead paths</li>
+        </ul>
+        <a href="demo.html" class="btn btn-primary btn-block">Build My Growth Site</a>
+      </div>
 
-  <h2>8. Your Rights</h2>
-  <p>Depending on your location, you may have the right to:</p>
-  <ul>
-    <li>Access the personal information we hold about you</li>
-    <li>Request correction of inaccurate data</li>
-    <li>Request deletion of your data</li>
-    <li>Opt out of marketing communications</li>
-    <li>Lodge a complaint with a data protection authority</li>
-  </ul>
-  <p>California residents have additional rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information is collected and the right to opt out of the sale of personal information (we do not sell personal information).</p>
+      <div class="tier-card">
+        <div class="tier-name">Contractor Pro</div>
+        <div class="tier-price">$997<span>/mo</span></div>
+        <div class="tier-for">For larger companies that need significantly more content, pages, service areas, and ongoing optimization, usually beyond 10 pages.</div>
+        <ul class="tier-list">
+          <li>Everything in Growth+</li>
+          <li>Expanded service architecture</li>
+          <li>Multiple city / service-area strategies</li>
+          <li>Larger content footprint</li>
+          <li>More ongoing site improvements</li>
+          <li>Priority website support</li>
+        </ul>
+        <a href="demo.html" class="btn btn-outline btn-block">Talk About My Project</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <h2>9. Security</h2>
-  <p>We implement industry-standard security measures to protect your information. However, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security.</p>
-
-  <h2>10. Third-Party Links</h2>
-  <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of those sites. We encourage you to review their privacy policies.</p>
-
-  <h2>11. Children's Privacy</h2>
-  <p>Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal information from minors.</p>
-
-  <h2>12. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top reflects the most recent revision. Continued use of our website after changes constitutes acceptance of the updated policy.</p>
-
-  <h2>13. Contact Us</h2>
-  <p>If you have questions about this Privacy Policy or wish to exercise your rights, contact us via Instagram: <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener noreferrer">@contractorarsenal</a> or through our website at <a href="https://contractorarsenal.com">contractorarsenal.com</a>.</p>
-</div>
+<section class="final-cta">
+  <div class="wrap">
+    <h2 class="h-display on-dark">Not sure which plan<br>fits your <em>business?</em></h2>
+    <p class="h-sub on-dark center">Get a free demo first. We'll tell you honestly which plan makes sense.</p>
+    <div class="btn-row">
+      <a href="demo.html" class="btn btn-accent">Get My Free Demo</a>
+      <a href="services.html" class="btn btn-ghost-dark">See What's Included</a>
+    </div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="wrap footer-main">
@@ -313,5 +395,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="main.js"></script>
+<script>
+(function(){
+  var state={pages:'small',services:'no',cities:'no'};
+  var groups=document.querySelectorAll('[data-selector-group]');
+  var resultEl=document.getElementById('selectorResult');
+
+  function recommend(){
+    if(state.pages==='large'||(state.cities==='yes'&&state.pages!=='small')){
+      return 'Contractor Pro';
+    }
+    if(state.pages==='medium'||state.services==='yes'||state.cities==='yes'){
+      return 'Contractor Growth+';
+    }
+    return 'Contractor Growth';
+  }
+  function update(){
+    resultEl.textContent=recommend();
+  }
+  groups.forEach(function(group){
+    var key=group.getAttribute('data-selector-group');
+    group.querySelectorAll('.selector-opt').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        group.querySelectorAll('.selector-opt').forEach(function(b){b.classList.remove('active');});
+        btn.classList.add('active');
+        state[key]=btn.getAttribute('data-value');
+        update();
+      });
+    });
+  });
+  update();
+})();
+</script>
 </body>
 </html>

@@ -18,13 +18,19 @@ We deliver:
 
 - **Done-For-You Website Design**: Custom 3–10+ page websites built around each contractor's brand, services, and service area
 - **Local SEO**: On-page optimization, schema markup, Google Business Profile setup, city/service area targeting
-- **Copywriting**: All page copy written by our team — no templates, no generic text
+- **Copywriting**: All page copy written by our team, no templates, no generic text
 - **Free Demo Program**: We build a real custom demo site before any payment is required
 - **Partner Network**: Referral program for marketers, coaches, suppliers, and other contractors
 
 ## Key Pages
 
 - [Home](https://contractorarsenal.com/) - Overview of services and social proof
+- [Work](https://contractorarsenal.com/work.html) - Directory of real contractor websites built by Contractor Arsenal
+- [Websites](https://contractorarsenal.com/services.html) - What's included in a Contractor Arsenal website
+- [Search Visibility](https://contractorarsenal.com/seo.html) - How Contractor Arsenal builds contractor websites for Google search (SEO), AI-generated answers (AEO), and AI chat tools (GEO), with no ranking or AI-recommendation guarantees
+- [Pricing](https://contractorarsenal.com/pricing.html) - Contractor Growth, Growth+, and Pro plans
+- [Contractor Growth Library](https://contractorarsenal.com/resources.html) - Educational guides organized into six categories: Websites, Search Visibility, Google Business, Leads, Google Ads, and Trade Guides
+- [Service Areas](https://contractorarsenal.com/service-areas/) - Washington and Pacific Northwest markets served, with dedicated pages for Seattle, Bellevue, Tacoma, Spokane, Everett, and Redmond
 - [Apply Now](https://contractorarsenal.com/apply.html) - Application form to get a site built (paid)
 - [Free Demo](https://contractorarsenal.com/demo.html) - Request a free custom demo site with no obligation
 - [About](https://contractorarsenal.com/about.html) - Company background and mission
@@ -33,7 +39,7 @@ We deliver:
 
 ## Pricing
 
-- Monthly plan: $297/month — includes website, local SEO, hosting, and ongoing support
+- Monthly plan: $297/month, includes website, local SEO, hosting, and ongoing support
 - Free demo available at no cost with no obligation
 
 ## Contact

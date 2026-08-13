@@ -15,7 +15,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contractor Industries We Serve | Contractor Arsenal</title>
-<meta name="description" content="Contractor Arsenal builds premium websites for roofers, painters, landscapers, HVAC companies, plumbers, electricians, remodelers, and general contractors. $297/month.">
+<meta name="description" content="Contractor Arsenal builds premium websites for roofers, painters, landscapers, concrete contractors, welders, and every other trade. $297/month.">
 <link rel="canonical" href="https://contractorarsenal.com/industries.html">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Contractor Industries We Serve | Contractor Arsenal">
@@ -23,198 +23,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:url" content="https://contractorarsenal.com/industries.html">
 <meta property="og:image" content="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 <style>
-:root{
-  --bg:#FFFFFF;--bg2:#F5F7FA;--bg3:#EDEEF2;
-  --dark:#0F1115;--dark2:#151922;--dark3:#1B2130;
-  --accent:#FF5E2B;--accent-dim:rgba(255,94,43,0.08);
-  --text:#1C1C1E;--muted:#6B7280;
-  --text-inv:#F0F2F5;--muted-inv:#A8AFBC;
-  --border:rgba(0,0,0,0.08);--border-inv:rgba(255,255,255,0.07);
-  --rad:0 16px 0 16px;
-  --rad-sm:0 10px 0 10px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:#fff;color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6;}
-a{color:inherit;text-decoration:none;}
-img{max-width:100%;height:auto;display:block;}
-::-webkit-scrollbar{width:4px;}
-::-webkit-scrollbar-track{background:var(--bg2);}
-::-webkit-scrollbar-thumb{background:var(--accent);border-radius:4px;}
-
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:82px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(15,17,21,0.97);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,0.08);}
-.nav-logo{display:flex;align-items:center;}
-.nav-logo img{height:48px;width:auto;object-fit:contain;}
-.nav-links{display:flex;gap:0;align-items:center;position:relative;}
-.nav-slider{position:absolute;height:calc(100% - 8px);top:4px;left:0;background:rgba(255,94,43,0.08);border-radius:0 10px 0 10px;transition:left .2s ease,width .2s ease,opacity .15s;opacity:0;pointer-events:none;}
-.nav-links a{position:relative;z-index:1;font-weight:600;font-size:.8rem;letter-spacing:.5px;text-transform:uppercase;color:#F0F2F5;padding:.55rem .95rem;transition:color .2s;}
-.nav-links a:hover{color:#FF5E2B;}
-.nav-links a.active{color:#FF5E2B;}
-.nav-cta{background:#FF5E2B;color:#fff !important;padding:.46rem 1.25rem;border-radius:0 10px 0 10px;font-weight:700;font-size:.78rem;letter-spacing:.5px;text-transform:uppercase;transition:all .2s;margin-left:.75rem;}
-.nav-cta:hover{background:#e85520;transform:translateY(-1px);}
-.nav-hamburger{display:none;cursor:pointer;background:none;border:none;padding:6px;color:#F0F2F5;}
-.nav-hamburger svg{width:28px;height:28px;transition:transform 500ms ease;}
-.nav-hamburger.open svg{transform:rotate(-45deg);}
-.nav-hamburger svg path:first-child{transition:stroke-dasharray 500ms ease,stroke-dashoffset 500ms ease;stroke-dasharray:12 63;}
-.nav-hamburger.open svg path:first-child{stroke-dasharray:20 300;stroke-dashoffset:-32.42px;}
-.nav-mobile{display:none;position:fixed;top:82px;left:0;right:0;background:rgba(15,17,21,0.98);padding:1.25rem 5%;flex-direction:column;gap:0;z-index:999;border-bottom:1px solid rgba(255,255,255,0.08);}
-.nav-mobile.open{display:flex;}
-.nav-mobile a{font-weight:600;font-size:1rem;text-transform:uppercase;letter-spacing:.5px;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,0.1);color:#F0F2F5;}
-.nav-mobile a:hover{color:#FF5E2B;}
-.nav-mobile .mob-cta{margin-top:1rem;text-align:center;background:#FF5E2B;color:#fff;padding:.85rem;border-radius:0 10px 0 10px;font-weight:700;border:none;}
-
-.btn-lime{background:var(--accent);color:#fff;padding:.9rem 2.2rem;border-radius:var(--rad);font-weight:700;font-size:.95rem;letter-spacing:.4px;display:inline-block;transition:all .2s;border:2px solid var(--accent);}
-.btn-lime:hover{background:#e85520;transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,94,43,0.22);}
-.btn-outline{border:2px solid var(--accent);color:var(--accent);padding:.9rem 2.2rem;border-radius:var(--rad);font-weight:700;font-size:.95rem;letter-spacing:.4px;display:inline-block;transition:all .2s;}
-.btn-outline:hover{background:var(--accent);color:#000;transform:translateY(-2px);}
-.btn-outline-sm{border:1.5px solid var(--accent);color:var(--accent);padding:.55rem 1.2rem;border-radius:var(--rad);font-weight:700;font-size:.82rem;letter-spacing:.3px;display:inline-block;transition:all .2s;}
-.btn-outline-sm:hover{background:var(--accent);color:#000;}
-.btn-outline-white{border:2px solid rgba(255,255,255,0.4);color:#fff;padding:.9rem 2.2rem;border-radius:var(--rad);font-weight:700;font-size:.95rem;letter-spacing:.4px;display:inline-block;transition:all .2s;}
-.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,0.1);transform:translateY(-2px);}
-.btn-dark-outline{border:2px solid rgba(255,255,255,.35);color:#F5F7FA;background:transparent;padding:.9rem 2.2rem;border-radius:0 16px 0 16px;font-weight:700;font-size:.95rem;letter-spacing:.4px;display:inline-block;transition:all .2s;}
-.btn-dark-outline:hover{background:#F5F7FA;color:#0F1115;transform:translateY(-2px);}
-
-.page-hero{padding:140px 5% 80px;background:var(--dark);text-align:center;}
-.page-hero .section-title{color:var(--text-inv);}
-.page-hero .section-sub{color:var(--muted-inv);}
-.page-hero-inner{max-width:760px;margin:0 auto;}
-.section-label{font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:.85rem;display:block;}
-.section-label.dark{color:var(--accent);}
-.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,4.8vw,4rem);line-height:1;letter-spacing:1px;margin-bottom:1.1rem;}
-.section-title.on-light{color:var(--text);}
-.section-sub{color:var(--muted);font-size:1rem;line-height:1.72;}
-.section-sub.on-light{color:var(--muted);}
-
-.page-hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;}
-
-/* Industry grid overview */
-.industries-overview{background:var(--bg2);padding:80px 5%;}
-.section-inner{max-width:1280px;margin:0 auto;}
-.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem;}
-.ind-card{
-  background:#fff;border:1px solid var(--border);
-  border-radius:var(--rad-sm);padding:1.75rem 1.5rem;
-  transition:all .3s;box-shadow:0 2px 12px rgba(0,0,0,0.04);
-  position:relative;overflow:hidden;cursor:pointer;
-}
-.ind-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.1);}
-.ind-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
-.ind-card:hover::after{transform:scaleX(1);}
-.ind-icon{display:inline-block;font-size:.65rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);background:rgba(255,94,43,0.1);border:1px solid rgba(255,94,43,0.25);padding:4px 10px;border-radius:6px;margin-bottom:.85rem;}
-.ind-card h3{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:.35rem;}
-.ind-card p{font-size:.84rem;color:var(--muted);line-height:1.65;margin-bottom:1rem;}
-.ind-link{font-size:.78rem;font-weight:700;color:var(--text);text-decoration:underline;text-underline-offset:3px;}
-.ind-card-actions{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-top:.25rem;}
-.ind-example-link{display:inline-block;font-size:.72rem;font-weight:700;color:var(--accent);border:1.5px solid var(--accent);padding:.28rem .8rem;border-radius:0 10px 0 10px;transition:all .2s;}
-.ind-example-link:hover{background:var(--accent);color:#000;transform:translateY(-1px);}
-/* Mini website preview in ind-card */
-.ind-preview{
-  background:var(--bg2);border-radius:var(--rad-sm);
-  overflow:hidden;border:1px solid var(--border);
-  margin-bottom:1rem;
-}
-.ind-preview-chrome{
-  background:var(--bg3);padding:.35rem .6rem;
-  display:flex;align-items:center;gap:.35rem;
-  border-bottom:1px solid var(--border);
-}
-.ind-preview-dots{display:flex;gap:.22rem;}
-.ind-preview-dots span{width:6px;height:6px;border-radius:50%;display:block;}
-.ind-preview-dots span:nth-child(1){background:#FF5F57;}
-.ind-preview-dots span:nth-child(2){background:#FEBC2E;}
-.ind-preview-dots span:nth-child(3){background:#28C840;}
-.ind-preview-url{flex:1;background:#fff;border-radius:3px;padding:.15rem .4rem;font-size:.55rem;color:var(--muted);font-family:monospace;}
-.ind-preview-body{padding:.75rem .65rem;}
-.ind-preview-band{
-  background:linear-gradient(135deg,var(--dark),var(--dark2));
-  border-radius:var(--rad-sm);padding:.65rem;margin-bottom:.4rem;
-}
-.ind-preview-co{font-family:'Bebas Neue',sans-serif;font-size:.9rem;color:#fff;letter-spacing:.5px;}
-.ind-preview-cta{display:inline-block;background:var(--accent);color:#fff;padding:.15rem .4rem;border-radius:3px;font-size:.5rem;font-weight:700;margin-top:.25rem;}
-.ind-preview-items{display:grid;grid-template-columns:1fr 1fr;gap:.3rem;}
-.ind-preview-item{background:var(--bg3);border-radius:3px;padding:.3rem .4rem;font-size:.52rem;color:var(--muted);font-weight:500;}
-
-/* Individual industry sections */
-.ind-section{padding:100px 5%;}
-.ind-section:nth-child(odd){background:#fff;}
-.ind-section:nth-child(even){background:var(--bg2);}
-.ind-layout{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
-.ind-layout.flip{direction:rtl;}
-.ind-layout.flip>*{direction:ltr;}
-.ind-section-icon{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);background:rgba(255,94,43,0.1);border:1px solid rgba(255,94,43,0.25);padding:5px 14px;border-radius:6px;margin-bottom:1rem;}
-.ind-keywords{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.25rem;}
-.ind-kw{
-  background:#F0F2F5;border:1px solid var(--border);
-  border-radius:100px;padding:.28rem .75rem;
-  font-size:.72rem;font-weight:600;color:var(--muted);
-}
-.ind-wins{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-top:1.5rem;}
-.ind-win{display:flex;align-items:flex-start;gap:.75rem;font-size:.95rem;color:var(--muted);}
-.ind-check{width:20px;height:20px;min-width:20px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin-top:2px;}
-.ind-check svg{width:10px;height:10px;}
-.ind-stat-box{background:#F5F7FA;border-radius:var(--rad);padding:2rem;border:1px solid var(--border);}
-.ind-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem;}
-.ind-stat{background:#fff;border-radius:var(--rad-sm);padding:1.25rem;text-align:center;border:1px solid var(--border);}
-.ind-stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1;color:var(--text);margin-bottom:.2rem;}
-.ind-stat-label{font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);}
-.ind-cta-row{text-align:center;margin-top:.5rem;}
-
-/* Final CTA */
-.final-cta{background:var(--dark);padding:120px 5%;text-align:center;position:relative;overflow:hidden;}
-.final-cta::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(255,94,43,0.05),transparent);}
-.final-cta-inner{position:relative;z-index:1;}
-.final-cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5rem);letter-spacing:1.5px;margin-bottom:1.25rem;line-height:.95;color:var(--text-inv);}
-.final-cta h2 .a-lime{color:var(--accent);}
-.final-cta p{color:var(--muted-inv);font-size:1rem;max-width:440px;margin:0 auto 2.5rem;line-height:1.75;}
-.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
-
-/* ── FOOTER ── */
-footer{background:#09090C;}
-.footer-main{padding:80px 5% 70px;max-width:1280px;margin:0 auto;}
-.footer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:3rem;}
-.footer-col h4{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.1);}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.8rem;}
-.footer-col a{font-size:.88rem;color:var(--muted);transition:color .2s;}
-.footer-col a:hover{color:#fff;}
-.footer-col li span{font-size:.88rem;color:var(--muted);}
-.footer-bar{background:#FF5E2B;padding:1.5rem 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
-.footer-bar-logo{display:flex;flex-direction:column;gap:.4rem;}.footer-bar-logo img{height:36px;width:auto;display:block;filter:brightness(0) invert(1);}.footer-bar-tagline{font-size:.75rem;font-weight:700;color:#0F1115;letter-spacing:.5px;opacity:.6;}
-.footer-bar-right{display:flex;align-items:center;gap:1.75rem;flex-wrap:wrap;}
-.footer-bar-right p,.footer-bar-right a{font-size:.8rem;color:#fff;font-weight:500;text-decoration:none;}
-.footer-bar-right a:hover{text-decoration:underline;}
-
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
-.reveal.visible{opacity:1;transform:none;}
-.reveal-delay-1{transition-delay:.1s;}
-.reveal-delay-2{transition-delay:.2s;}
-.reveal-delay-3{transition-delay:.3s;}
-
-@media(max-width:1024px){
-  .ind-grid{grid-template-columns:repeat(3,1fr);}
-  .ind-layout,.ind-layout.flip{grid-template-columns:1fr;direction:ltr;}
-  .footer-grid{grid-template-columns:repeat(3,1fr);}
-  .footer-grid .footer-col:last-child{display:none;}
-}
-@media(max-width:768px){
-  nav{padding:0 4%;height:76px;}
-  .nav-links{display:none;}
-  .nav-hamburger{display:flex;}
-  .nav-mobile{top:82px;}
-  .page-hero{padding:100px 4% 60px;}
-  .industries-overview,.ind-section,.final-cta{padding:70px 4%;}
-  .ind-grid{grid-template-columns:repeat(2,1fr);}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
-  .footer-bottom{flex-direction:column;text-align:center;}
-  .page-hero-actions,.cta-actions{flex-direction:column;}
-  .btn-lime,.btn-outline{text-align:center;}
-  .ind-stat-grid{grid-template-columns:1fr 1fr;}
-}
-@media(max-width:480px){
-  .ind-grid{grid-template-columns:1fr 1fr;}
-  .footer-grid{grid-template-columns:1fr;}
-}
+.page-hero .h-sub{margin:1rem auto 0;}
+.trade-detail{padding:64px 0;border-bottom:1px solid var(--border-soft);}
+.trade-detail-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:3.5rem;align-items:start;}
+.trade-stat-box{background:var(--surface-2);border:1px solid var(--border-soft);border-radius:var(--r-lg);padding:1.75rem;}
+.trade-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem;}
+.trade-stat{background:var(--surface);border-radius:var(--r-md);padding:1.1rem;text-align:center;border:1px solid var(--border-soft);}
+.trade-stat-num{font-family:var(--display);font-size:1.7rem;color:var(--ink);}
+.trade-stat-label{font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:.15rem;}
+.trade-wins{display:flex;flex-direction:column;gap:.6rem;margin:1.25rem 0;}
+.trade-wins li{display:flex;gap:.6rem;font-size:.9rem;color:var(--ink-soft);}
+.trade-wins li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);margin-top:.5rem;flex-shrink:0;}
+.live-link{display:block;text-align:center;margin-top:.85rem;font-size:.8rem;font-weight:600;color:var(--muted);border-bottom:1px solid var(--border);}
+@media(max-width:860px){.trade-detail-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -223,352 +48,444 @@ footer{background:#09090C;}
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<nav>
-  <a href="index.html" class="nav-logo">
-    <img src="favicon.png" alt="Contractor Arsenal">
-  </a>
-  <div class="nav-links" id="navLinks">
-    <span class="nav-slider" id="navSlider"></span>
-    <a href="services.html">Services</a>
-    <a href="industries.html" class="active">Industries</a>
-    <a href="about.html">Company</a>
-    <a href="demo.html" class="nav-cta">Get Started</a>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Contractor Arsenal homepage">
+      <span class="nav-logo-mark">
+        <img src="assets/mark-dark.png" class="mark mark-dark" alt="" width="306" height="125">
+        <img src="assets/mark-light.png" class="mark mark-light" alt="" width="306" height="125">
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="work.html">Work</a>
+      <div class="nav-drop">
+        <a href="services.html" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
+        <div class="nav-drop-panel">
+          <div class="nav-drop-label">Services</div>
+        <a href="services.html" class="nav-drop-row">
+          <span class="nav-drop-row-bar"></span>
+          <span class="nav-drop-row-text">
+            <span class="nav-drop-row-eyebrow">Websites</span>
+            <span class="nav-drop-row-title">Contractor Websites</span>
+            <span class="nav-drop-row-desc">Built around your services, market, and customers.</span>
+          </span>
+          <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="seo.html" class="nav-drop-row">
+          <span class="nav-drop-row-bar"></span>
+          <span class="nav-drop-row-text">
+            <span class="nav-drop-row-eyebrow">Search Visibility</span>
+            <span class="nav-drop-row-title">SEO + AEO + GEO</span>
+            <span class="nav-drop-row-desc">Help Google and AI systems understand your business.</span>
+          </span>
+          <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="seo.html#google-business" class="nav-drop-row">
+          <span class="nav-drop-row-bar"></span>
+          <span class="nav-drop-row-text">
+            <span class="nav-drop-row-eyebrow">Google Business</span>
+            <span class="nav-drop-row-title">Google Business</span>
+            <span class="nav-drop-row-desc">Connect your site with your local Google presence.</span>
+          </span>
+          <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="services.html#leads" class="nav-drop-row">
+          <span class="nav-drop-row-bar"></span>
+          <span class="nav-drop-row-text">
+            <span class="nav-drop-row-eyebrow">Lead Capture</span>
+            <span class="nav-drop-row-title">Lead Capture</span>
+            <span class="nav-drop-row-desc">Make it easy for visitors to call or request an estimate.</span>
+          </span>
+          <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+          <div class="nav-drop-foot">
+            <span class="nav-drop-foot-price">Websites start at $297/mo</span>
+            <a href="services.html" class="nav-drop-foot-link">View All Services →</a>
+          </div>
+        </div>
+      </div>
+      <a href="pricing.html">Pricing</a>
+      <div class="nav-drop">
+        <a href="resources.html" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Resources<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
+        <div class="nav-drop-panel nav-drop-panel-wide">
+          <div class="nav-drop-label">Contractor Growth Library</div>
+          <div class="nav-drop-grid">
+          <a href="resources.html#websites" class="nav-drop-row nav-drop-row-compact">
+            <span class="nav-drop-row-bar"></span>
+            <span class="nav-drop-row-text">
+              <span class="nav-drop-row-title">Websites</span>
+              <span class="nav-drop-row-desc">Website design, pricing, structure</span>
+            </span>
+          </a>
+          <a href="resources.html#search-visibility" class="nav-drop-row nav-drop-row-compact">
+            <span class="nav-drop-row-bar"></span>
+            <span class="nav-drop-row-text">
+              <span class="nav-drop-row-title">Search Visibility</span>
+              <span class="nav-drop-row-desc">SEO, AEO, GEO, local search</span>
+            </span>
+          </a>
+          <a href="resources.html#google-business" class="nav-drop-row nav-drop-row-compact">
+            <span class="nav-drop-row-bar"></span>
+            <span class="nav-drop-row-text">
+              <span class="nav-drop-row-title">Google Business</span>
+              <span class="nav-drop-row-desc">Maps, reviews, profile optimization</span>
+            </span>
+          </a>
+          <a href="resources.html#leads" class="nav-drop-row nav-drop-row-compact">
+            <span class="nav-drop-row-bar"></span>
+            <span class="nav-drop-row-text">
+              <span class="nav-drop-row-title">Leads</span>
+              <span class="nav-drop-row-desc">Lead generation and conversion</span>
+            </span>
+          </a>
+          <a href="resources.html#google-ads" class="nav-drop-row nav-drop-row-compact">
+            <span class="nav-drop-row-bar"></span>
+            <span class="nav-drop-row-text">
+              <span class="nav-drop-row-title">Google Ads</span>
+              <span class="nav-drop-row-desc">Google Ads and Local Services Ads</span>
+            </span>
+          </a>
+          <a href="resources.html#trade-guides" class="nav-drop-row nav-drop-row-compact">
+            <span class="nav-drop-row-bar"></span>
+            <span class="nav-drop-row-text">
+              <span class="nav-drop-row-title">Trade Guides</span>
+              <span class="nav-drop-row-desc">Roofing, painting, HVAC, landscaping and more</span>
+            </span>
+          </a>
+          </div>
+          <div class="nav-drop-foot nav-drop-foot-center">
+            <a href="resources.html" class="nav-drop-foot-link">Browse the Growth Library →</a>
+          </div>
+        </div>
+      </div>
+      <a href="about.html">Company</a>
+    </nav>
+    <div class="nav-right">
+      <a href="demo.html" class="nav-cta hide-mobile">Get a Free Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
   </div>
-  <button class="nav-hamburger" id="navBtn" onclick="toggleMenu()" aria-label="Menu">
-    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"/>
-      <path d="M7 16 27 16"/>
-    </svg>
-  </button>
-</nav>
+</header>
 <div class="nav-mobile" id="navMobile">
-  <a href="services.html" onclick="closeMenu()">Services</a>
-  <a href="industries.html" onclick="closeMenu()">Industries</a>
-  <a href="about.html" onclick="closeMenu()">Company</a>
-  <a href="demo.html" class="mob-cta" onclick="closeMenu()">Get Started</a>
+  <a href="work.html">Work</a>
+  <details class="nav-mobile-drop">
+    <summary>Services</summary>
+    <a href="services.html">Websites</a>
+    <a href="seo.html">Search Visibility</a>
+    <a href="seo.html#google-business">Google Business</a>
+    <a href="services.html#leads">Lead Capture</a>
+  </details>
+  <a href="pricing.html">Pricing</a>
+  <details class="nav-mobile-drop">
+    <summary>Resources</summary>
+    <a href="resources.html">Growth Library</a>
+    <a href="resources.html#websites">Websites</a>
+    <a href="resources.html#search-visibility">Search Visibility</a>
+    <a href="resources.html#google-business">Google Business</a>
+    <a href="resources.html#leads">Leads</a>
+    <a href="resources.html#trade-guides">Trade Guides</a>
+  </details>
+  <a href="about.html">Company</a>
+  <a href="demo.html" class="mob-cta">Get a Free Demo</a>
 </div>
 
-<!-- HERO -->
-<div class="page-hero">
-  <div class="page-hero-inner">
-    <span class="section-label">Who We Build For</span>
-    <h1 class="section-title">Built for Every<br><span style="color:var(--accent);">Trade.</span></h1>
-    <p class="section-sub inv" style="margin:0 auto;">Contractors across Washington. Serving Seattle, Bellevue, Tacoma, Spokane, Everett, and beyond. We know your market and exactly what it takes to win jobs in the Pacific Northwest.</p>
-    <div class="page-hero-actions">
-      <a href="demo.html" class="btn-lime">Get My Free Demo</a>
-      <a href="services.html" class="btn-outline-white">See Pricing</a>
+<section class="page-hero page-hero--center">
+  <div class="wrap-narrow">
+    <div class="eyebrow center">Who We Build For</div>
+    <h1 class="h-display center">Built for every<br><em>trade.</em></h1>
+    <p class="h-sub center">Contractors across Washington and beyond. We know what it takes to win jobs in your market.</p>
+    <div class="btn-row" style="justify-content:center;margin-top:1.75rem;">
+      <a href="demo.html" class="btn btn-primary">Get My Free Demo</a>
+      <a href="services.html" class="btn btn-outline">See Pricing</a>
     </div>
   </div>
-</div>
+</section>
 
-<!-- INDUSTRY GRID -->
-<div class="industries-overview">
-  <div class="section-inner">
-    <span class="section-label dark" style="text-align:center;display:block;">All Trades</span>
-    <h2 class="section-title on-light" style="text-align:center;">Your Trade. Your Market.<br>Your Growth System.</h2>
-    <div class="ind-grid">
-      <div class="ind-card reveal"><div class="ind-preview"><div class="ind-preview-chrome"><div class="ind-preview-dots"><span></span><span></span><span></span></div><div class="ind-preview-url">highlineroofingwa.com</div></div><div class="ind-preview-body"><div class="ind-preview-band"><div class="ind-preview-co">HIGHLINE ROOFING WA</div><div class="ind-preview-cta">Free Estimate &rarr;</div></div><div class="ind-preview-items"><div class="ind-preview-item">Storm Damage</div><div class="ind-preview-item">Replacement</div><div class="ind-preview-item">Gutters</div><div class="ind-preview-item">New Build</div></div></div></div><div class="ind-icon">Roofing</div><h3>Roofing</h3><p>Storm damage, replacements, new construction. Rank when homeowners are searching hardest.</p><div class="ind-card-actions"><a href="#roofing" class="ind-link">View details →</a><a href="https://www.highlineroofingwa.com/" target="_blank" rel="noopener noreferrer" class="ind-example-link">Live site →</a></div></div>
-      <div class="ind-card reveal reveal-delay-1"><div class="ind-preview"><div class="ind-preview-chrome"><div class="ind-preview-dots"><span></span><span></span><span></span></div><div class="ind-preview-url">goldenoakpainting.com</div></div><div class="ind-preview-body"><div class="ind-preview-band"><div class="ind-preview-co">GOLDEN OAK PAINTING</div><div class="ind-preview-cta">Free Quote &rarr;</div></div><div class="ind-preview-items"><div class="ind-preview-item">Interior</div><div class="ind-preview-item">Exterior</div><div class="ind-preview-item">Cabinets</div><div class="ind-preview-item">Commercial</div></div></div></div><div class="ind-icon">Painting</div><h3>Painting</h3><p>Interior, exterior, cabinet refinishing. Get in front of homeowners ready to invest in quality.</p><div class="ind-card-actions"><a href="#painting" class="ind-link">View details →</a><a href="https://www.goldenoakpainting.com/" target="_blank" rel="noopener noreferrer" class="ind-example-link">Live site →</a></div></div>
-      <div class="ind-card reveal reveal-delay-2"><div class="ind-preview"><div class="ind-preview-chrome"><div class="ind-preview-dots"><span></span><span></span><span></span></div><div class="ind-preview-url">dgogreen.com</div></div><div class="ind-preview-body"><div class="ind-preview-band"><div class="ind-preview-co">DGO GREEN</div><div class="ind-preview-cta">Free Consult &rarr;</div></div><div class="ind-preview-items"><div class="ind-preview-item">Design</div><div class="ind-preview-item">Install</div><div class="ind-preview-item">Lawn</div><div class="ind-preview-item">Irrigation</div></div></div></div><div class="ind-icon">Landscape</div><h3>Landscaping</h3><p>Design, install, maintenance. Attract clients ready to invest in their outdoor space.</p><div class="ind-card-actions"><a href="#landscaping" class="ind-link">View details →</a><a href="https://contractorarsenal.github.io/DGOGREEN/" target="_blank" rel="noopener noreferrer" class="ind-example-link">Live site →</a></div></div>
-      <div class="ind-card reveal reveal-delay-3"><div class="ind-preview"><div class="ind-preview-chrome"><div class="ind-preview-dots"><span></span><span></span><span></span></div><div class="ind-preview-url">jcgradingpavingsolution.com</div></div><div class="ind-preview-body"><div class="ind-preview-band"><div class="ind-preview-co">JC GRADING & PAVING</div><div class="ind-preview-cta">Free Estimate &rarr;</div></div><div class="ind-preview-items"><div class="ind-preview-item">Driveways</div><div class="ind-preview-item">Grading</div><div class="ind-preview-item">Paving</div><div class="ind-preview-item">Concrete</div></div></div></div><div class="ind-icon">Concrete</div><h3>Concrete &amp; Paving</h3><p>Driveways, grading, paving, flatwork. Win the jobs homeowners post once and keep for decades.</p><div class="ind-card-actions"><a href="#concrete" class="ind-link">View details →</a><a href="https://jcgradingpavingsolution.com/" target="_blank" rel="noopener noreferrer" class="ind-example-link">Live site →</a></div></div>
-      <div class="ind-card reveal"><div class="ind-preview"><div class="ind-preview-chrome"><div class="ind-preview-dots"><span></span><span></span><span></span></div><div class="ind-preview-url">agavewelding.com</div></div><div class="ind-preview-body"><div class="ind-preview-band"><div class="ind-preview-co">AGAVE WELDING</div><div class="ind-preview-cta">Get a Quote &rarr;</div></div><div class="ind-preview-items"><div class="ind-preview-item">Custom Fab</div><div class="ind-preview-item">Gates</div><div class="ind-preview-item">Repair</div><div class="ind-preview-item">Structural</div></div></div></div><div class="ind-icon">Welding</div><h3>Welding</h3><p>Custom fabrication, gates, structural, repairs. Show your craft and get found by buyers ready to pay for quality.</p><div class="ind-card-actions"><a href="#welding" class="ind-link">View details →</a><a href="https://agavewelding.com/" target="_blank" rel="noopener noreferrer" class="ind-example-link">Live site →</a></div></div>
-      <div class="ind-card reveal reveal-delay-1"><div class="ind-preview"><div class="ind-preview-chrome"><div class="ind-preview-dots"><span></span><span></span><span></span></div><div class="ind-preview-url">buildnwgc.com</div></div><div class="ind-preview-body"><div class="ind-preview-band"><div class="ind-preview-co">BUILD NW GC</div><div class="ind-preview-cta">Get a Bid &rarr;</div></div><div class="ind-preview-items"><div class="ind-preview-item">New Builds</div><div class="ind-preview-item">Additions</div><div class="ind-preview-item">Renovations</div><div class="ind-preview-item">Commercial</div></div></div></div><div class="ind-icon">Gen. Cont.</div><h3>General Contractors</h3><p>New builds, additions, full renovations. A site that matches the scale and quality of your work.</p><div class="ind-card-actions"><a href="demo.html" class="ind-link">Get a demo →</a></div></div>
-      <div class="ind-card reveal reveal-delay-2"><div class="ind-preview"><div class="ind-preview-chrome"><div class="ind-preview-dots"><span></span><span></span><span></span></div><div class="ind-preview-url">cascadedeckco.com</div></div><div class="ind-preview-body"><div class="ind-preview-band"><div class="ind-preview-co">CASCADE DECK CO.</div><div class="ind-preview-cta">Free Quote &rarr;</div></div><div class="ind-preview-items"><div class="ind-preview-item">Design</div><div class="ind-preview-item">Composite</div><div class="ind-preview-item">Wood</div><div class="ind-preview-item">Pergolas</div></div></div></div><div class="ind-icon">Decks</div><h3>Decks &amp; Outdoor</h3><p>Decks, pergolas, outdoor structures. Homeowners planning outdoor projects are high-value leads.</p><div class="ind-card-actions"><a href="demo.html" class="ind-link">Get a demo →</a></div></div>
-      <div class="ind-card reveal reveal-delay-3"><div class="ind-preview"><div class="ind-preview-chrome"><div class="ind-preview-dots"><span></span><span></span><span></span></div><div class="ind-preview-url">boundaryfencenw.com</div></div><div class="ind-preview-body"><div class="ind-preview-band"><div class="ind-preview-co">BOUNDARY FENCE NW</div><div class="ind-preview-cta">Free Estimate &rarr;</div></div><div class="ind-preview-items"><div class="ind-preview-item">Wood</div><div class="ind-preview-item">Chain Link</div><div class="ind-preview-item">Vinyl</div><div class="ind-preview-item">Gates</div></div></div></div><div class="ind-icon">Fencing</div><h3>Fencing</h3><p>Wood, vinyl, chain link, custom gates. High search volume, clear intent, fast close cycle.</p><div class="ind-card-actions"><a href="demo.html" class="ind-link">Get a demo →</a></div></div>
+<!-- OVERVIEW LIST -->
+<section style="background:var(--surface-2);border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft);">
+  <div class="wrap">
+    <div class="industry-list">
+      <div class="industry-row">
+        <h3>Roofing</h3>
+        <div class="industry-row-meta">Storm damage · Replacement · Commercial &amp; residential</div>
+        <a href="#roofing" class="industry-row-link">View details →</a>
+      </div>
+      <div class="industry-row">
+        <h3>Painting</h3>
+        <div class="industry-row-meta">Interior · Exterior · Cabinet refinishing</div>
+        <a href="#painting" class="industry-row-link">View details →</a>
+      </div>
+      <div class="industry-row">
+        <h3>Landscaping</h3>
+        <div class="industry-row-meta">Design · Installation · Maintenance</div>
+        <a href="#landscaping" class="industry-row-link">View details →</a>
+      </div>
+      <div class="industry-row">
+        <h3>Concrete &amp; Paving</h3>
+        <div class="industry-row-meta">Driveways · Grading · Flatwork</div>
+        <a href="#concrete" class="industry-row-link">View details →</a>
+      </div>
+      <div class="industry-row">
+        <h3>Welding</h3>
+        <div class="industry-row-meta">Custom fabrication · Gates · Structural</div>
+        <a href="#welding" class="industry-row-link">View details →</a>
+      </div>
+      <div class="industry-row">
+        <h3>General Contractors</h3>
+        <div class="industry-row-meta">New builds · Additions · Renovations</div>
+        <a href="demo.html" class="industry-row-link">Get a demo →</a>
+      </div>
+      <div class="industry-row">
+        <h3>Decks &amp; Outdoor</h3>
+        <div class="industry-row-meta">Decks · Pergolas · Outdoor structures</div>
+        <a href="demo.html" class="industry-row-link">Get a demo →</a>
+      </div>
+      <div class="industry-row">
+        <h3>Fencing</h3>
+        <div class="industry-row-meta">Wood · Vinyl · Chain link · Custom gates</div>
+        <a href="demo.html" class="industry-row-link">Get a demo →</a>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- ROOFING -->
-<div class="ind-section" id="roofing">
-  <div class="ind-layout">
+<div class="trade-detail" id="roofing">
+  <div class="wrap trade-detail-grid">
     <div>
-      <div class="ind-section-icon">Roofing</div>
-      <span class="section-label dark">Roofing</span>
-      <h2 class="section-title on-light">Win the Jobs Before<br>Anyone Else Calls.</h2>
-      <p class="section-sub on-light">Roofing is one of the most competitive contractor markets online. Homeowners searching for a roofer are ready to spend. They call the first credible site they find. That needs to be yours.</p>
-      <ul class="ind-wins">
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Rank for storm damage, re-roof, and replacement searches</li>
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Service pages for every roofing type and city you cover</li>
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Trust-building content that justifies premium pricing</li>
+      <div class="eyebrow">Roofing</div>
+      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Win the jobs before anyone else calls.</h2>
+      <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Roofing is one of the most competitive contractor markets online. Homeowners searching for a roofer are ready to spend, and they call the first credible site they find.</p>
+      <ul class="trade-wins">
+        <li>Rank for storm damage, re-roof, and replacement searches</li>
+        <li>Service pages for every roofing type and city you cover</li>
+        <li>Trust-building content that justifies premium pricing</li>
       </ul>
-      <div class="ind-keywords">
-        <span class="ind-kw">roof replacement</span>
-        <span class="ind-kw">storm damage</span>
-        <span class="ind-kw">roofing near me</span>
-        <span class="ind-kw">shingle roof</span>
-        <span class="ind-kw">local roofer</span>
+      <div class="tag-row">
+        <span class="tag">roof replacement</span><span class="tag">storm damage</span><span class="tag">roofing near me</span><span class="tag">local roofer</span>
       </div>
+      <p style="font-size:.84rem;color:var(--muted);margin-top:1rem;">What the page needs to prove: licensing &amp; insurance, real roof photos, warranty terms, and the exact area you cover.</p>
+      <p style="font-size:.84rem;margin-top:.5rem;"><a href="resources/roofing-service-pages.html" style="color:var(--ink);font-weight:700;border-bottom:2px solid var(--accent);">Guide: Why Your Roofing Website Needs Separate Service Pages →</a></p>
     </div>
-    <div class="ind-stat-box reveal">
-      <div class="ind-stat-grid">
-        <div class="ind-stat"><div class="ind-stat-num">$14K</div><div class="ind-stat-label">Avg. roofing job</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">Page 1</div><div class="ind-stat-label">Target ranking</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">48hr</div><div class="ind-stat-label">Site live</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">$297</div><div class="ind-stat-label">Per month</div></div>
+    <div class="trade-stat-box reveal">
+      <div class="trade-stat-grid">
+        <div class="trade-stat"><div class="trade-stat-num">$14K</div><div class="trade-stat-label">Avg. roofing job</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">Page 1</div><div class="trade-stat-label">Target ranking</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">48hr</div><div class="trade-stat-label">Site live</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">$297</div><div class="trade-stat-label">Per month</div></div>
       </div>
-      <div class="ind-cta-row"><a href="demo.html" class="btn-outline-sm">Get a Free Roofing Demo →</a></div>
-      <div style="text-align:center;margin-top:.75rem;"><a href="https://www.highlineroofingwa.com/" target="_blank" rel="noopener noreferrer" style="font-size:.78rem;font-weight:600;color:var(--muted);text-decoration:underline;text-underline-offset:3px;">View Live Example: Highline Roofing WA →</a></div>
+      <a href="demo.html" class="btn btn-outline btn-sm btn-block">Get My Free Roofing Demo →</a>
+      <a href="https://seattlekingroofing.com/" target="_blank" rel="noopener noreferrer" class="live-link">Live example: Seattle King Roofing →</a>
+      <a href="https://www.highlineroofingwa.com/" target="_blank" rel="noopener noreferrer" class="live-link">Live example: Highline Roofing WA →</a>
     </div>
   </div>
 </div>
 
 <!-- PAINTING -->
-<div class="ind-section" id="painting">
-  <div class="ind-layout flip">
+<div class="trade-detail" id="painting">
+  <div class="wrap trade-detail-grid">
     <div>
-      <div class="ind-section-icon">Painting</div>
-      <span class="section-label dark">Painting</span>
-      <h2 class="section-title on-light">Get In Front of<br>Buyers, Not Browsers.</h2>
-      <p class="section-sub on-light">Painting is a high-trust industry. Customers want to see real work, real reviews, and a professional they feel confident handing their house to. Your website should sell that trust before you ever pick up the phone.</p>
-      <ul class="ind-wins">
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Interior, exterior, and cabinet refinishing pages</li>
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Gallery-ready layouts to showcase your work</li>
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Rank for painting in every city you serve</li>
+      <div class="eyebrow">Painting</div>
+      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Get in front of buyers, not browsers.</h2>
+      <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Painting is a high-trust trade. Customers want to see real work and a professional they feel confident handing their house to, before they ever pick up the phone.</p>
+      <ul class="trade-wins">
+        <li>Interior, exterior, and cabinet refinishing pages</li>
+        <li>Gallery-ready layouts to showcase your work</li>
+        <li>Rank for painting in every city you serve</li>
       </ul>
-      <div class="ind-keywords">
-        <span class="ind-kw">house painting</span>
-        <span class="ind-kw">interior painter</span>
-        <span class="ind-kw">cabinet painting</span>
-        <span class="ind-kw">exterior paint</span>
-        <span class="ind-kw">painter near me</span>
+      <div class="tag-row">
+        <span class="tag">house painting</span><span class="tag">interior painter</span><span class="tag">cabinet painting</span><span class="tag">painter near me</span>
       </div>
+      <p style="font-size:.84rem;color:var(--muted);margin-top:1rem;">What the page needs to prove: before/after project photos, clear pricing expectations, and reviews from real customers.</p>
     </div>
-    <div class="ind-stat-box reveal">
-      <div class="ind-stat-grid">
-        <div class="ind-stat"><div class="ind-stat-num">$4.5K</div><div class="ind-stat-label">Avg. painting job</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">4×</div><div class="ind-stat-label">More estimate requests</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">48hr</div><div class="ind-stat-label">Site live</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">$297</div><div class="ind-stat-label">Per month</div></div>
+    <div class="trade-stat-box reveal">
+      <div class="trade-stat-grid">
+        <div class="trade-stat"><div class="trade-stat-num">$4.5K</div><div class="trade-stat-label">Avg. painting job</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">4×</div><div class="trade-stat-label">More estimate requests</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">48hr</div><div class="trade-stat-label">Site live</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">$297</div><div class="trade-stat-label">Per month</div></div>
       </div>
-      <div class="ind-cta-row"><a href="demo.html" class="btn-outline-sm">Get a Free Painting Demo →</a></div>
-      <div style="text-align:center;margin-top:.75rem;"><a href="https://www.goldenoakpainting.com/" target="_blank" rel="noopener noreferrer" style="font-size:.78rem;font-weight:600;color:var(--muted);text-decoration:underline;text-underline-offset:3px;">View Live Example: Golden Oak Painting →</a></div>
+      <a href="demo.html" class="btn btn-outline btn-sm btn-block">Get My Free Painting Demo →</a>
+      <a href="https://www.goldenoakpainting.com/" target="_blank" rel="noopener noreferrer" class="live-link">Live example: Golden Oak Painting →</a>
     </div>
   </div>
 </div>
 
 <!-- LANDSCAPING -->
-<div class="ind-section" id="landscaping">
-  <div class="ind-layout">
+<div class="trade-detail" id="landscaping">
+  <div class="wrap trade-detail-grid">
     <div>
-      <div class="ind-section-icon">Landscaping</div>
-      <span class="section-label dark">Landscaping</span>
-      <h2 class="section-title on-light">Design It. Build It.<br>Win the Yard.</h2>
-      <p class="section-sub on-light">Landscaping clients are planning big investments including patios, full installs and ongoing maintenance. They research before they call. Your site needs to show the work, sell the vision, and make it easy to reach you.</p>
-      <ul class="ind-wins">
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Design, install, and maintenance service pages</li>
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Project gallery to showcase real transformations</li>
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Rank for landscaping in every city you work</li>
+      <div class="eyebrow">Landscaping</div>
+      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Design it. Build it. Win the yard.</h2>
+      <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Landscaping clients plan big investments: patios, full installs, ongoing maintenance. They research before they call, so your site needs to show the work and make it easy to reach you.</p>
+      <ul class="trade-wins">
+        <li>Design, install, and maintenance service pages</li>
+        <li>Project gallery to showcase real transformations</li>
+        <li>Rank for landscaping in every city you work</li>
       </ul>
-      <div class="ind-keywords">
-        <span class="ind-kw">landscaping near me</span>
-        <span class="ind-kw">landscape design</span>
-        <span class="ind-kw">lawn care</span>
-        <span class="ind-kw">irrigation install</span>
-        <span class="ind-kw">hardscape</span>
+      <div class="tag-row">
+        <span class="tag">landscaping near me</span><span class="tag">landscape design</span><span class="tag">lawn care</span><span class="tag">hardscape</span>
       </div>
+      <p style="font-size:.84rem;color:var(--muted);margin-top:1rem;">What the page needs to prove: real project transformations, maintenance plan options, and clear service-area coverage.</p>
     </div>
-    <div class="ind-stat-box reveal">
-      <div class="ind-stat-grid">
-        <div class="ind-stat"><div class="ind-stat-num">$8K</div><div class="ind-stat-label">Avg. install job</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">Repeat</div><div class="ind-stat-label">Maintenance clients</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">48hr</div><div class="ind-stat-label">Site live</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">$297</div><div class="ind-stat-label">Per month</div></div>
+    <div class="trade-stat-box reveal">
+      <div class="trade-stat-grid">
+        <div class="trade-stat"><div class="trade-stat-num">$8K</div><div class="trade-stat-label">Avg. install job</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">Repeat</div><div class="trade-stat-label">Maintenance clients</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">48hr</div><div class="trade-stat-label">Site live</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">$297</div><div class="trade-stat-label">Per month</div></div>
       </div>
-      <div class="ind-cta-row"><a href="demo.html" class="btn-outline-sm">Get a Free Landscaping Demo →</a></div>
-      <div style="text-align:center;margin-top:.75rem;"><a href="https://contractorarsenal.github.io/DGOGREEN/" target="_blank" rel="noopener noreferrer" style="font-size:.78rem;font-weight:600;color:var(--muted);text-decoration:underline;text-underline-offset:3px;">View Live Example: DGO Green →</a></div>
+      <a href="demo.html" class="btn btn-outline btn-sm btn-block">Get My Free Landscaping Demo →</a>
+      <a href="https://contractorarsenal.github.io/DGOGREEN/" target="_blank" rel="noopener noreferrer" class="live-link">Live example: DGO Green →</a>
     </div>
   </div>
 </div>
 
 <!-- CONCRETE -->
-<div class="ind-section" id="concrete">
-  <div class="ind-layout flip">
+<div class="trade-detail" id="concrete">
+  <div class="wrap trade-detail-grid">
     <div>
-      <div class="ind-section-icon">Concrete</div>
-      <span class="section-label dark">Concrete &amp; Paving</span>
-      <h2 class="section-title on-light">Driveways, Grading,<br>Paving. Own It All.</h2>
-      <p class="section-sub on-light">Concrete and paving jobs are big-ticket, one-time decisions. Homeowners search once, call two companies, and go with the one that looks more professional. Make sure that's you.</p>
-      <ul class="ind-wins">
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Driveway, paving, and grading service pages</li>
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Before/after project galleries that build trust fast</li>
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Rank for concrete and paving across your service area</li>
+      <div class="eyebrow">Concrete &amp; Paving</div>
+      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Driveways, grading, paving. Own it all.</h2>
+      <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Concrete and paving jobs are big-ticket, one-time decisions. Homeowners search once, call two companies, and go with whichever looks more professional.</p>
+      <ul class="trade-wins">
+        <li>Driveway, paving, and grading service pages</li>
+        <li>Before/after project galleries that build trust fast</li>
+        <li>Rank for concrete and paving across your service area</li>
       </ul>
-      <div class="ind-keywords">
-        <span class="ind-kw">concrete driveway</span>
-        <span class="ind-kw">paving contractor</span>
-        <span class="ind-kw">land grading</span>
-        <span class="ind-kw">asphalt paving</span>
-        <span class="ind-kw">flatwork near me</span>
+      <div class="tag-row">
+        <span class="tag">concrete driveway</span><span class="tag">paving contractor</span><span class="tag">land grading</span><span class="tag">flatwork near me</span>
       </div>
+      <p style="font-size:.84rem;color:var(--muted);margin-top:1rem;">What the page needs to prove: before/after project photos, equipment &amp; crew capability, and a clear service radius.</p>
     </div>
-    <div class="ind-stat-box reveal">
-      <div class="ind-stat-grid">
-        <div class="ind-stat"><div class="ind-stat-num">$12K</div><div class="ind-stat-label">Avg. paving job</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">Low</div><div class="ind-stat-label">Online competition</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">48hr</div><div class="ind-stat-label">Site live</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">$297</div><div class="ind-stat-label">Per month</div></div>
+    <div class="trade-stat-box reveal">
+      <div class="trade-stat-grid">
+        <div class="trade-stat"><div class="trade-stat-num">$12K</div><div class="trade-stat-label">Avg. paving job</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">Low</div><div class="trade-stat-label">Online competition</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">48hr</div><div class="trade-stat-label">Site live</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">$297</div><div class="trade-stat-label">Per month</div></div>
       </div>
-      <div class="ind-cta-row"><a href="demo.html" class="btn-outline-sm">Get a Free Concrete Demo →</a></div>
-      <div style="text-align:center;margin-top:.75rem;"><a href="https://jcgradingpavingsolution.com/" target="_blank" rel="noopener noreferrer" style="font-size:.78rem;font-weight:600;color:var(--muted);text-decoration:underline;text-underline-offset:3px;">View Live Example: JC Grading &amp; Paving →</a></div>
+      <a href="demo.html" class="btn btn-outline btn-sm btn-block">Get My Free Concrete Demo →</a>
+      <a href="https://jcgradingpavingsolution.com/" target="_blank" rel="noopener noreferrer" class="live-link">Live example: JC Grading &amp; Paving →</a>
     </div>
   </div>
 </div>
 
 <!-- WELDING -->
-<div class="ind-section" id="welding">
-  <div class="ind-layout">
+<div class="trade-detail" id="welding" style="border-bottom:none;">
+  <div class="wrap trade-detail-grid">
     <div>
-      <div class="ind-section-icon">Welding</div>
-      <span class="section-label dark">Welding</span>
-      <h2 class="section-title on-light">Show Your Craft.<br>Get Paid What It's Worth.</h2>
-      <p class="section-sub on-light">Welders do work that lasts decades. But most don't have a website that shows it. The ones who do own their market: custom gates, structural work, fabrication jobs that command real money.</p>
-      <ul class="ind-wins">
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Custom fab, gate, repair, and structural service pages</li>
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Portfolio layout built to show off real work</li>
-        <li class="ind-win"><span class="ind-check"><svg viewBox="0 0 12 12" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>Local SEO to rank when buyers search near you</li>
+      <div class="eyebrow">Welding</div>
+      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Show your craft. Get paid what it's worth.</h2>
+      <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Welders do work that lasts decades, but most don't have a website that shows it. The ones who do own their market: custom gates, structural work, fabrication that commands real money.</p>
+      <ul class="trade-wins">
+        <li>Custom fab, gate, repair, and structural service pages</li>
+        <li>Portfolio layout built to show off real work</li>
+        <li>Local SEO to rank when buyers search near you</li>
       </ul>
-      <div class="ind-keywords">
-        <span class="ind-kw">welding near me</span>
-        <span class="ind-kw">custom fabrication</span>
-        <span class="ind-kw">metal gates</span>
-        <span class="ind-kw">structural welding</span>
-        <span class="ind-kw">welding repair</span>
+      <div class="tag-row">
+        <span class="tag">welding near me</span><span class="tag">custom fabrication</span><span class="tag">metal gates</span><span class="tag">structural welding</span>
       </div>
+      <p style="font-size:.84rem;color:var(--muted);margin-top:1rem;">What the page needs to prove: real fabrication photos, certifications, and turnaround time on custom work.</p>
     </div>
-    <div class="ind-stat-box reveal">
-      <div class="ind-stat-grid">
-        <div class="ind-stat"><div class="ind-stat-num">$5K+</div><div class="ind-stat-label">Avg. custom job</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">Niche</div><div class="ind-stat-label">Low competition</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">48hr</div><div class="ind-stat-label">Site live</div></div>
-        <div class="ind-stat"><div class="ind-stat-num">$297</div><div class="ind-stat-label">Per month</div></div>
+    <div class="trade-stat-box reveal">
+      <div class="trade-stat-grid">
+        <div class="trade-stat"><div class="trade-stat-num">$5K+</div><div class="trade-stat-label">Avg. custom job</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">Niche</div><div class="trade-stat-label">Low competition</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">48hr</div><div class="trade-stat-label">Site live</div></div>
+        <div class="trade-stat"><div class="trade-stat-num">$297</div><div class="trade-stat-label">Per month</div></div>
       </div>
-      <div class="ind-cta-row"><a href="demo.html" class="btn-outline-sm">Get a Free Welding Demo →</a></div>
-      <div style="text-align:center;margin-top:.75rem;"><a href="https://agavewelding.com/" target="_blank" rel="noopener noreferrer" style="font-size:.78rem;font-weight:600;color:var(--muted);text-decoration:underline;text-underline-offset:3px;">View Live Example: Agave Welding →</a></div>
+      <a href="demo.html" class="btn btn-outline btn-sm btn-block">Get My Free Welding Demo →</a>
+      <a href="https://agavewelding.com/" target="_blank" rel="noopener noreferrer" class="live-link">Live example: Agave Welding →</a>
     </div>
   </div>
 </div>
 
 <!-- OTHER TRADES CTA -->
-<div style="background:var(--bg2);padding:80px 5%;text-align:center;">
-  <div style="max-width:600px;margin:0 auto;">
-    <span class="section-label" style="display:block;margin-bottom:.85rem;">More Trades</span>
-    <h2 class="section-title" style="color:var(--text);margin-bottom:1rem;">GC, Decks, Fencing,<br>HVAC &amp; More.</h2>
-    <p style="color:var(--muted);font-size:1rem;line-height:1.72;margin-bottom:2rem;">We build for general contractors, deck builders, fencing companies, HVAC techs, plumbers, electricians, and any trade doing residential or commercial work. If you need the phone ringing, we can build for you.</p>
-    <a href="demo.html" class="btn-lime">Get a Free Demo for Your Trade</a>
+<section style="background:var(--surface-2);border-top:1px solid var(--border-soft);text-align:center;">
+  <div class="wrap-narrow">
+    <div class="eyebrow center">More Trades</div>
+    <h2 class="h-display center" style="font-size:clamp(2rem,3.6vw,2.8rem);">GC, decks, fencing, HVAC &amp; more.</h2>
+    <p class="h-sub center" style="margin-top:1.1rem;">We build for general contractors, deck builders, fencing companies, HVAC techs, plumbers, electricians, and any trade doing residential or commercial work.</p>
+    <a href="demo.html" class="btn btn-primary" style="margin-top:1.75rem;">Get My Free Demo</a>
   </div>
-</div>
+</section>
 
-<!-- FINAL CTA -->
 <section class="final-cta">
-  <div class="final-cta-inner">
-    <h2>Your Trade Deserves<br>a Site That <span class="a-lime">Wins Jobs.</span></h2>
-    <p>$297/month. Everything included. See your site before you commit. Free demo, no credit card.</p>
-    <div class="cta-actions">
-      <a href="demo.html" class="btn-lime">Get My Free Demo</a>
-      <a href="services.html" class="btn-outline-white">See What's Included</a>
+  <div class="wrap">
+    <h2 class="h-display on-dark">Your trade deserves<br>a site that <em>wins jobs.</em></h2>
+    <p class="h-sub on-dark center">$297/month. Everything included. See your site before you commit.</p>
+    <div class="btn-row">
+      <a href="demo.html" class="btn btn-accent">Get My Free Demo</a>
+      <a href="services.html" class="btn btn-ghost-dark">See What's Included</a>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="footer-main">
+<footer class="footer">
+  <div class="wrap footer-main">
     <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Contractor Arsenal</div>
+        <p>Websites built for contractors who want more calls, estimate requests, and booked work.</p>
+      </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html">What's Included</a></li>
-          <li><a href="services.html#seo">Local SEO</a></li>
+          <li><a href="services.html">Websites</a></li>
+          <li><a href="seo.html">Search Visibility</a></li>
+          <li><a href="seo.html#google-business">Google Business</a></li>
           <li><a href="services.html#leads">Lead Capture</a></li>
-          <li><a href="services.html#support">Ongoing Support</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Industries</h4>
-        <ul>
-          <li><a href="industries.html">All Trades</a></li>
-          <li><a href="industries.html#roofing">Roofing</a></li>
-          <li><a href="industries.html#painting">Painting</a></li>
-          <li><a href="industries.html">HVAC</a></li>
-          <li><a href="industries.html#landscaping">Landscaping</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="work.html">Our Work</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="industries.html">Industries</a></li>
           <li><a href="partner.html">Free CRM</a></li>
-          <li><a href="mailto:contractorarsenal@gmail.com">Contact</a></li>
+          <li><a href="arsenal.html">Arsenal 001</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Get Started</h4>
+        <h4>Resources</h4>
         <ul>
-          <li><a href="demo.html">Free Demo</a></li>
-          <li><a href="apply.html">Apply Now</a></li>
-          <li><a href="arsenal.html">Arsenal 001</a></li>
-          <li><a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-          <li><a href="mailto:contractorarsenal@gmail.com">Email Us</a></li>
+          <li><a href="resources.html">Growth Library</a></li>
+          <li><a href="resources.html#websites">Websites</a></li>
+          <li><a href="resources.html#search-visibility">Search Visibility</a></li>
+          <li><a href="resources.html#google-business">Google Business</a></li>
+          <li><a href="resources.html#leads">Leads</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Service Areas</h4>
         <ul>
-          <li><span>Seattle, WA</span></li>
-          <li><span>Bellevue, WA</span></li>
-          <li><span>Tacoma, WA</span></li>
-          <li><span>Spokane, WA</span></li>
-          <li><span>Everett &amp; Redmond</span></li>
-          <li><span>Wenatchee &amp; PNW</span></li>
+          <li><a href="service-areas/seattle-wa-contractor-websites.html">Seattle, WA</a></li>
+          <li><a href="service-areas/bellevue-wa-contractor-websites.html">Bellevue, WA</a></li>
+          <li><a href="service-areas/tacoma-wa-contractor-websites.html">Tacoma, WA</a></li>
+          <li><a href="service-areas/spokane-wa-contractor-websites.html">Spokane, WA</a></li>
+          <li><a href="service-areas/everett-wa-contractor-websites.html">Everett, WA</a></li>
+          <li><a href="service-areas/redmond-wa-contractor-websites.html">Redmond, WA</a></li>
+          <li><a href="service-areas/index.html" style="font-weight:700;">View All Service Areas →</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="footer-bar">
-    <a href="index.html" class="footer-bar-logo">
-      <img src="assets/ca-logo.png" alt="Contractor Arsenal">
-    </a>
-    <div class="footer-bar-right">
-      <p>&copy; 2026 Contractor Arsenal. All rights reserved.</p>
-      <a href="privacy.html">Privacy Policy</a>
+  <div class="wrap footer-bottom">
+    <span>&copy; 2026 Contractor Arsenal. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
+      <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="mailto:contractorarsenal@gmail.com">Email</a>
     </div>
   </div>
 </footer>
 
-<script>
-function toggleMenu(){
-  var btn=document.getElementById('navBtn');
-  btn.classList.toggle('open');
-  document.getElementById('navMobile').classList.toggle('open');
-}
-function closeMenu(){
-  var btn=document.getElementById('navBtn');
-  btn.classList.remove('open');
-  document.getElementById('navMobile').classList.remove('open');
-}
-/* Sliding nav indicator */
-(function(){
-  var links=document.querySelectorAll('#navLinks a:not(.nav-cta)');
-  var slider=document.getElementById('navSlider');
-  var container=document.getElementById('navLinks');
-  if(!slider||!container)return;
-  links.forEach(function(link){
-    link.addEventListener('mouseenter',function(){
-      var cr=container.getBoundingClientRect();
-      var lr=link.getBoundingClientRect();
-      slider.style.width=lr.width+'px';
-      slider.style.left=(lr.left-cr.left)+'px';
-      slider.style.opacity='1';
-    });
-  });
-  container.addEventListener('mouseleave',function(){
-    slider.style.opacity='0';
-  });
-})();
-var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r);});
-</script>
+<script src="main.js"></script>
 </body>
 </html>
