@@ -58,6 +58,17 @@ Dark ink text and `mark-dark.png` on light/transparent-over-light nav states. Li
 - CTA copy system: **nav CTA = "Get a Free Demo"**, **every other demo-related button = "Get My Free Demo"** (trade-specific variants may add a suffix, e.g. "Get My Free Roofing Demo →", but always start with "Get My Free"). Don't introduce a sixth variant ("Book a Demo," "Request Your Demo," etc.) for the same action.
 - Footer is full black, five columns (Brand / Company / Industries / More / Service Areas), unchanged in shape from V4/V5.
 
+## /PREZ SALES PRESENTATION (separate from the marketing site)
+
+`prez/index.html` + `prez/prez.css` + `prez/prez.js`, served at `/prez` (directory index; trailing-slash redirect is handled by the host). It is a 7-section scroll presentation for sales calls, **not** a marketing page: `noindex, nofollow`, deliberately **not** in `sitemap.xml`, no site nav, no `main.js`. It links `styles.css` only for tokens, fonts, `.btn` and `.nav-logo-mark`; everything else is scoped under `body.prez`. Asset/CTA paths are root-absolute (`/styles.css`, `/demo.html`) so the page works with or without the trailing slash.
+
+- Vanilla CSS/JS only (no build step means no Framer Motion). Reveals are `.in` class toggles from IntersectionObserver; `html.js.motion` gates hidden states so the page is fully readable with JS off or `prefers-reduced-motion`.
+- Red: `#9A1F1F` (`--p-red`) for fills, bars, buttons; `--p-red-hi` (`#E2453D`) for red text and thin lines on black, because `#9A1F1F` alone is ~2.4:1 on the black background.
+- Slides 02 and 07 are two snap stops each (`.part[data-snap]`); keyboard/rail/step logic in `prez.js` walks parts and never skips the lower half of a part taller than the viewport.
+- Slide 05 is an **illustrative simulation** and is labeled as such, with a "Currently in development" badge. Do not remove those labels or describe any part of it as a shipped product without checking with the owner. Never state or imply the tech changes a customer's site automatically.
+- The deck is now 8 sections. 07 ends with "Now let's build yours." and a "Choose your plan" button that scrolls to 08 (`#s8`). Its secondary "Get my free demo" and the header CTA go to `/demo.html`.
+- **08 Plans** (`#s8`): Growth $297, Growth+ $497 (most popular, emphasized), Pro $997. Each card's CTA links straight to its Whop checkout in a new tab (`plan_YiM8yaMbHvx4x`, `plan_GCPxacr12HqI8`, `plan_GiGpBi7kbe0i8`). The Select toggle/card click only arms the bottom "Continue to checkout" bar, whose href is copied from the selected card's CTA, so the plan IDs live in one place (the card `href`s). Whop is opened normally, not embedded. Do not add discounts or setup fees unless the business confirms them.
+
 ## COPY RULES
 
 Direct, contractor-facing, no agency clichés. Zero em dashes anywhere in visible copy (checked with `grep -rln $'\xe2\x80\x94' --include="*.html" .`, excluding `dotcomjay/`). Don't promise specific rankings or that an AI tool will recommend a business. Prefer "Built for search"/"Built for Google and AI search" over "SEO-ready," but keep the homepage itself acronym-free. Don't invent statistics, testimonials, client names, or numeric ad-cost claims. Don't invent local offices or city-specific clients on Service Area pages unless the client is actually based there (Seattle King Roofing genuinely is Everett-based; say so plainly, don't fabricate anything similar for the other five cities).
