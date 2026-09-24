@@ -1,6 +1,9 @@
-# Keep local secret files out of the deployed static assets.
-.env
-.env.*
+# Files in the repo root that are not part of the public site.
+.git
+.wrangler
 .dev.vars
 .dev.vars.*
-.wrangler
+.env
+.env.*
+node_modules
+worker

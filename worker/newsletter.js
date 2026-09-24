@@ -1,5 +1,5 @@
 /* POST /api/newsletter/subscribe
-   Cloudflare Pages Function. Creates (or refreshes) a Resend Contact for the
+   Called from worker/index.js. Creates (or refreshes) a Resend Contact for the
    Contractor Arsenal Report. The Resend key lives only in the server-side
    environment (RESEND_API_KEY) and never reaches the browser.
 
@@ -80,7 +80,9 @@ function backTo(request, status) {
   return Response.redirect(url.toString(), 303);
 }
 
-export async function onRequestPost({ request, env }) {
+export async function handleSubscribe(request, env) {
+  if (request.method !== 'POST') return json(405, { ok: false, error: 'Method not allowed.' });
+
   let parsed;
   try {
     parsed = await readBody(request);
@@ -115,8 +117,4 @@ export async function onRequestPost({ request, env }) {
     return reply(502, { ok: false, error: "We couldn't add you right now. Please try again in a minute." }, 'error');
   }
   return reply(200, { ok: true }, 'success');
-}
-
-export function onRequest() {
-  return json(405, { ok: false, error: 'Method not allowed.' });
 }

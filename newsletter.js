@@ -1,5 +1,5 @@
 /* Contractor Arsenal Report: newsletter popup + inline (footer) signup forms.
-   Both post to /api/newsletter/subscribe (Cloudflare Pages Function -> Resend).
+   Both post to /api/newsletter/subscribe (Worker route in worker/ -> Resend).
    Analytics go through the existing GTM dataLayer, nothing else is loaded. */
 (function(){
   var ENDPOINT='/api/newsletter/subscribe';
