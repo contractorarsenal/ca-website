@@ -256,7 +256,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap trade-detail-grid">
     <div>
       <div class="eyebrow">Roofing</div>
-      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Win the jobs before anyone else calls.</h2>
+      <h2 class="h-display h-section">Win the jobs before anyone else calls.</h2>
       <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Roofing is one of the most competitive contractor markets online. Homeowners searching for a roofer are ready to spend, and they call the first credible site they find.</p>
       <ul class="trade-wins">
         <li>Rank for storm damage, re-roof, and replacement searches</li>
@@ -288,7 +288,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap trade-detail-grid">
     <div>
       <div class="eyebrow">Painting</div>
-      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Get in front of buyers, not browsers.</h2>
+      <h2 class="h-display h-section">Get in front of buyers, not browsers.</h2>
       <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Painting is a high-trust trade. Customers want to see real work and a professional they feel confident handing their house to, before they ever pick up the phone.</p>
       <ul class="trade-wins">
         <li>Interior, exterior, and cabinet refinishing pages</li>
@@ -318,7 +318,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap trade-detail-grid">
     <div>
       <div class="eyebrow">Landscaping</div>
-      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Design it. Build it. Win the yard.</h2>
+      <h2 class="h-display h-section">Design it. Build it. Win the yard.</h2>
       <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Landscaping clients plan big investments: patios, full installs, ongoing maintenance. They research before they call, so your site needs to show the work and make it easy to reach you.</p>
       <ul class="trade-wins">
         <li>Design, install, and maintenance service pages</li>
@@ -348,7 +348,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap trade-detail-grid">
     <div>
       <div class="eyebrow">Concrete &amp; Paving</div>
-      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Driveways, grading, paving. Own it all.</h2>
+      <h2 class="h-display h-section">Driveways, grading, paving. Own it all.</h2>
       <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Concrete and paving jobs are big-ticket, one-time decisions. Homeowners search once, call two companies, and go with whichever looks more professional.</p>
       <ul class="trade-wins">
         <li>Driveway, paving, and grading service pages</li>
@@ -378,7 +378,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap trade-detail-grid">
     <div>
       <div class="eyebrow">Welding</div>
-      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Show your craft. Get paid what it's worth.</h2>
+      <h2 class="h-display h-section">Show your craft. Get paid what it's worth.</h2>
       <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Welders do work that lasts decades, but most don't have a website that shows it. The ones who do own their market: custom gates, structural work, fabrication that commands real money.</p>
       <ul class="trade-wins">
         <li>Custom fab, gate, repair, and structural service pages</li>
@@ -407,7 +407,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section style="background:var(--surface-2);border-top:1px solid var(--border-soft);text-align:center;">
   <div class="wrap-narrow">
     <div class="eyebrow center">More Trades</div>
-    <h2 class="h-display center" style="font-size:clamp(2rem,3.6vw,2.8rem);">GC, decks, fencing, HVAC &amp; more.</h2>
+    <h2 class="h-display h-section center">GC, decks, fencing, HVAC &amp; more.</h2>
     <p class="h-sub center" style="margin-top:1.1rem;">We build for general contractors, deck builders, fencing companies, HVAC techs, plumbers, electricians, and any trade doing residential or commercial work.</p>
     <a href="demo.html" class="btn btn-primary" style="margin-top:1.75rem;">Get My Free Demo</a>
   </div>
@@ -426,6 +426,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer class="footer">
   <div class="wrap footer-main">
+    <div class="footer-news" id="newsletter" data-nl-inline-wrap>
+      <div>
+        <div class="footer-news-label">The Contractor Arsenal Report</div>
+        <p>Website fixes, SEO insights, and lessons from real contractor projects.</p>
+      </div>
+      <div>
+        <form class="footer-news-form" action="/api/newsletter/subscribe" method="post" novalidate data-nl-inline>
+          <label class="sr-only" for="footer-news-email">Email address</label>
+          <input id="footer-news-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Email address" required maxlength="254" aria-describedby="footer-news-error">
+          <input type="hidden" name="source" value="website-footer">
+          <div class="nl-hp" aria-hidden="true"><label for="footer-news-hp">Leave this empty</label><input id="footer-news-hp" name="company_website" type="text" tabindex="-1" autocomplete="off"></div>
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="footer-news-error" id="footer-news-error" role="alert" data-nl-error hidden></p>
+        <p class="footer-news-done" data-nl-inline-done tabindex="-1" hidden><strong>You're in.</strong>The next Contractor Arsenal Report will hit your inbox.</p>
+      </div>
+    </div>
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-brand-name">Contractor Arsenal</div>
@@ -487,5 +504,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="main.js"></script>
+<script src="newsletter.js" defer></script>
 </body>
 </html>

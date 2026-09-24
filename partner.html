@@ -254,7 +254,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="wrap crm-split-grid">
     <div>
       <div class="eyebrow">What It Does</div>
-      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Stop losing leads between jobs.</h2>
+      <h2 class="h-display h-section">Stop losing leads between jobs.</h2>
       <p class="h-sub" style="margin:.85rem 0 1.5rem;max-width:none;">Most contractors lose jobs not because they don't get leads, but because they forget to follow up. Our CRM keeps you on top of every inquiry.</p>
       <ul class="crm-checklist">
         <li>See every lead that comes through your website in one place</li>
@@ -283,7 +283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="wrap">
     <div class="section-head center">
       <div class="eyebrow center">Features</div>
-      <h2 class="h-display center" style="font-size:clamp(2rem,3.6vw,2.8rem);">Everything you need. Nothing you don't.</h2>
+      <h2 class="h-display h-section center">Everything you need. Nothing you don't.</h2>
     </div>
     <div class="card-grid grid-3">
       <div class="card"><h3 style="font-size:1rem;font-weight:700;margin-bottom:.5rem;">Lead Tracking</h3><p style="font-size:.88rem;color:var(--muted);line-height:1.65;">Every form submission from your website lands directly in your CRM.</p></div>
@@ -300,7 +300,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section class="on-dark">
   <div class="wrap">
     <div class="eyebrow on-dark">How It Works</div>
-    <h2 class="h-display on-dark" style="font-size:clamp(2rem,3.6vw,2.8rem);">From website lead to booked job.</h2>
+    <h2 class="h-display h-section on-dark">From website lead to booked job.</h2>
     <p class="h-sub on-dark" style="margin-top:1.1rem;max-width:none;">The CRM connects directly to your Contractor Arsenal website and keeps your pipeline moving.</p>
     <div class="steps-grid">
       <div class="step-card"><div class="step-num">1</div><h3 style="color:var(--ink-inv);font-size:.95rem;margin-bottom:.4rem;">Lead Comes In</h3><p style="color:var(--muted-inv);font-size:.85rem;line-height:1.6;">A homeowner fills out your website contact form. The lead appears instantly in your CRM.</p></div>
@@ -315,7 +315,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section>
   <div class="wrap-narrow text-center">
     <div class="eyebrow center">Pricing</div>
-    <h2 class="h-display center" style="font-size:clamp(2rem,3.6vw,2.8rem);">One price. Everything included.</h2>
+    <h2 class="h-display h-section center">One price. Everything included.</h2>
     <div class="pricing-panel" style="margin-top:2rem;text-align:left;">
       <div class="pricing-price" style="text-align:center;">$297<span>/month</span></div>
       <div class="tag-row" style="justify-content:center;margin:1.25rem 0 1.75rem;">
@@ -343,6 +343,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <footer class="footer">
   <div class="wrap footer-main">
+    <div class="footer-news" id="newsletter" data-nl-inline-wrap>
+      <div>
+        <div class="footer-news-label">The Contractor Arsenal Report</div>
+        <p>Website fixes, SEO insights, and lessons from real contractor projects.</p>
+      </div>
+      <div>
+        <form class="footer-news-form" action="/api/newsletter/subscribe" method="post" novalidate data-nl-inline>
+          <label class="sr-only" for="footer-news-email">Email address</label>
+          <input id="footer-news-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Email address" required maxlength="254" aria-describedby="footer-news-error">
+          <input type="hidden" name="source" value="website-footer">
+          <div class="nl-hp" aria-hidden="true"><label for="footer-news-hp">Leave this empty</label><input id="footer-news-hp" name="company_website" type="text" tabindex="-1" autocomplete="off"></div>
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="footer-news-error" id="footer-news-error" role="alert" data-nl-error hidden></p>
+        <p class="footer-news-done" data-nl-inline-done tabindex="-1" hidden><strong>You're in.</strong>The next Contractor Arsenal Report will hit your inbox.</p>
+      </div>
+    </div>
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-brand-name">Contractor Arsenal</div>
@@ -403,5 +420,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </footer>
 
 <script src="main.js"></script>
+<script src="newsletter.js" defer></script>
 </body>
 </html>

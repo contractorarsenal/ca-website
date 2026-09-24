@@ -52,7 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .why-item p strong{color:var(--ink);}
 
 .events-tabs{display:flex;gap:.5rem;margin-bottom:2rem;}
-.events-tab{padding:.5rem 1.1rem;border-radius:var(--r-pill);font-size:.82rem;font-weight:600;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--muted);}
+.events-tab{padding:.5rem 1.1rem;border-radius:var(--r-md);font-size:.82rem;font-weight:600;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--muted);}
 .events-tab.active{background:var(--ink);color:#fff;border-color:var(--ink);}
 .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
 .events-grid-online{display:none;grid-template-columns:repeat(2,1fr);gap:1.25rem;}
@@ -296,7 +296,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="reveal reveal-d1">
       <div class="eyebrow">The Name</div>
-      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Why Arsenal?</h2>
+      <h2 class="h-display h-section">Why Arsenal?</h2>
       <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Arsenal 001 pays homage to Contractor Arsenal, which grew from our roots in building websites for tradespeople. The name goes deeper than that.</p>
       <div class="why-list">
         <div class="why-item"><p><strong>Keep us in your arsenal.</strong> That's what we tell every contractor we work with. Have the right people, tools, and connections on standby, ready when you need them.</p></div>
@@ -312,7 +312,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="section-head center">
       <div class="eyebrow center">Member Benefits</div>
-      <h2 class="h-display center" style="font-size:clamp(2rem,3.6vw,2.8rem);">What you get as a member</h2>
+      <h2 class="h-display h-section center">What you get as a member</h2>
       <p class="h-sub center" style="margin-top:1.1rem;">A curated community of operators who are serious about growing and helping each other win.</p>
     </div>
     <div class="card-grid grid-3">
@@ -331,7 +331,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Upcoming Events</div>
-      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Get in the room</h2>
+      <h2 class="h-display h-section">Get in the room</h2>
       <p class="h-sub" style="margin-top:1.1rem;">In-person meetups in key cities and monthly online calls.</p>
     </div>
     <div class="events-tabs">
@@ -408,7 +408,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="section-head center">
       <div class="eyebrow center">Membership Application</div>
-      <h2 class="h-display center" style="font-size:clamp(2rem,3.6vw,2.8rem);">The first step into<br>the inner circle</h2>
+      <h2 class="h-display h-section center">The first step into<br>the inner circle</h2>
       <p class="h-sub center" style="margin-top:1.1rem;">Applications are reviewed personally. We look for serious operators who are growth-minded and genuinely want to contribute to the network.</p>
     </div>
 
@@ -541,6 +541,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer class="footer">
   <div class="wrap footer-main">
+    <div class="footer-news" id="newsletter" data-nl-inline-wrap>
+      <div>
+        <div class="footer-news-label">The Contractor Arsenal Report</div>
+        <p>Website fixes, SEO insights, and lessons from real contractor projects.</p>
+      </div>
+      <div>
+        <form class="footer-news-form" action="/api/newsletter/subscribe" method="post" novalidate data-nl-inline>
+          <label class="sr-only" for="footer-news-email">Email address</label>
+          <input id="footer-news-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Email address" required maxlength="254" aria-describedby="footer-news-error">
+          <input type="hidden" name="source" value="website-footer">
+          <div class="nl-hp" aria-hidden="true"><label for="footer-news-hp">Leave this empty</label><input id="footer-news-hp" name="company_website" type="text" tabindex="-1" autocomplete="off"></div>
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="footer-news-error" id="footer-news-error" role="alert" data-nl-error hidden></p>
+        <p class="footer-news-done" data-nl-inline-done tabindex="-1" hidden><strong>You're in.</strong>The next Contractor Arsenal Report will hit your inbox.</p>
+      </div>
+    </div>
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-brand-name">Contractor Arsenal</div>
@@ -602,6 +619,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="main.js"></script>
+<script src="newsletter.js" defer></script>
 <script>
 // HERO TYPING ANIMATION
 (function(){

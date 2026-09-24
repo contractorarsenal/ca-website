@@ -161,6 +161,14 @@
       switchPanel(radio.getAttribute('data-plan'));
     });
   });
+
+  /* Pricing page CTAs link here as demo.html?plan=growth|growth-plus|pro */
+  var m=/[?&]plan=([a-z-]+)/.exec(location.search);
+  var preset=m&&radios.filter(function(r){return r.getAttribute('data-plan')===m[1];})[0];
+  if(preset&&!preset.checked){
+    preset.checked=true;
+    preset.dispatchEvent(new Event('change'));
+  }
 })();
 
 /* Resource hub: real client-side search with an instant results popover

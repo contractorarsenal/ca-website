@@ -201,7 +201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="section-head" style="max-width:640px;">
       <div class="eyebrow">Who We Build For</div>
-      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Built for contractors<br>competing in Tacoma.</h2>
+      <h2 class="h-display h-section">Built for contractors<br>competing in Tacoma.</h2>
       <p class="h-sub" style="margin-top:1.1rem;max-width:560px;">Tacoma's housing stock is a mix, older homes throughout the city driving steady repair and renovation work, plus newer construction in developing areas. It's generally a more value-conscious market than Seattle, and word of mouth, reviews, and community reputation carry real weight here.</p>
     </div>
     <div class="loc-trade-row">
@@ -222,7 +222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="section-head" style="max-width:640px;">
       <div class="eyebrow">Search Visibility</div>
-      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Show up when<br>customers search.</h2>
+      <h2 class="h-display h-section">Show up when<br>customers search.</h2>
       <p class="h-sub" style="margin-top:1.1rem;max-width:560px;">These are examples of how a Tacoma homeowner might search, not a promise of where you'll rank.</p>
     </div>
     <div class="loc-search-examples">
@@ -266,7 +266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="section-head" style="max-width:640px;">
       <div class="eyebrow">What's Included</div>
-      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">What your contractor<br>website includes.</h2>
+      <h2 class="h-display h-section">What your contractor<br>website includes.</h2>
     </div>
     <div class="feat-grid">
       <div class="feat-cell"><div class="feat-cell-head"><span class="feat-cell-num">01</span><h3>Custom Website</h3></div><p>Built around your company, services, and the Tacoma market.</p></div>
@@ -287,7 +287,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="section-head" style="max-width:640px;">
       <div class="eyebrow">Our Work</div>
-      <h2 class="h-display" style="font-size:clamp(2rem,3.6vw,2.8rem);">Selected Contractor<br>Arsenal work.</h2>
+      <h2 class="h-display h-section">Selected Contractor<br>Arsenal work.</h2>
       <p class="h-sub" style="margin-top:1.1rem;">Real websites we've built and manage across Washington and beyond.</p>
     </div>
     <div class="dir-row">
@@ -347,7 +347,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap-narrow">
     <div class="section-head center">
       <div class="eyebrow center">FAQ</div>
-      <h2 class="h-display center" style="font-size:clamp(2rem,3.6vw,2.8rem);">Tacoma contractor<br>website FAQs.</h2>
+      <h2 class="h-display h-section center">Tacoma contractor<br>website FAQs.</h2>
     </div>
     <div class="faq-list">
       <div class="faq-item">
@@ -387,6 +387,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer class="footer">
   <div class="wrap footer-main">
+    <div class="footer-news" id="newsletter" data-nl-inline-wrap>
+      <div>
+        <div class="footer-news-label">The Contractor Arsenal Report</div>
+        <p>Website fixes, SEO insights, and lessons from real contractor projects.</p>
+      </div>
+      <div>
+        <form class="footer-news-form" action="/api/newsletter/subscribe" method="post" novalidate data-nl-inline>
+          <label class="sr-only" for="footer-news-email">Email address</label>
+          <input id="footer-news-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Email address" required maxlength="254" aria-describedby="footer-news-error">
+          <input type="hidden" name="source" value="website-footer">
+          <div class="nl-hp" aria-hidden="true"><label for="footer-news-hp">Leave this empty</label><input id="footer-news-hp" name="company_website" type="text" tabindex="-1" autocomplete="off"></div>
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="footer-news-error" id="footer-news-error" role="alert" data-nl-error hidden></p>
+        <p class="footer-news-done" data-nl-inline-done tabindex="-1" hidden><strong>You're in.</strong>The next Contractor Arsenal Report will hit your inbox.</p>
+      </div>
+    </div>
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-brand-name">Contractor Arsenal</div>
@@ -448,5 +465,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="../main.js"></script>
+<script src="../newsletter.js" defer></script>
 </body>
 </html>

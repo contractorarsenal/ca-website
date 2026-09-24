@@ -245,7 +245,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div>
       <div class="eyebrow hero-in hero-in-1">Contractor Arsenal / Washington</div>
       <h1 class="h-display hero-in hero-in-2">Websites that<br>win <em>jobs.</em></h1>
-      <p class="h-sub hero-in hero-in-3" style="margin-top:1.1rem;max-width:480px;">Built around how customers actually search, compare, and hire, not just a nice-looking homepage.</p>
+      <p class="h-sub hero-in hero-in-3" style="margin-top:1.1rem;max-width:500px;">Custom websites for contractors, built around how customers actually search, compare, and hire. Not just a nice-looking homepage.</p>
       <div class="hero-actions btn-row hero-in hero-in-4">
         <a href="demo.html" class="btn btn-primary">Get My Free Demo</a>
         <a href="work.html" class="btn btn-outline">See Our Work</a>
@@ -574,32 +574,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Before &amp; After</div>
-      <h2 class="h-display">Your site either wins jobs,<br>or it doesn't.</h2>
-      <p class="h-sub" style="margin-top:1.1rem;">An illustrative look at the difference between a site that sits online and one built to convert.</p>
+      <h2 class="h-display h-section">Your site either wins jobs,<br>or it doesn't.</h2>
+      <p class="h-sub" style="margin-top:1.1rem;">The problems we see most on contractor websites, and what we build in their place.</p>
     </div>
     <div class="compare-grid">
       <div class="compare-col is-before reveal">
-        <div class="compare-col-head"><span>Before</span><span class="compare-url">acmepainting2008.weebly.com</span></div>
+        <div class="compare-col-head"><span>Before</span><span class="compare-url">Common problems</span></div>
         <div class="compare-body">
-          <div class="compare-line">Generic copy, no service structure</div>
+          <div class="compare-line">Generic copy, no clear list of services</div>
           <div class="compare-line">No click-to-call on mobile</div>
-          <div class="compare-line">Loads in 8+ seconds</div>
-          <div class="compare-line">No local SEO or service pages</div>
-          <div class="compare-line">Invisible on Google past page 4</div>
+          <div class="compare-line">Heavy template pages that load slowly</div>
+          <div class="compare-line">One page trying to cover every service and city</div>
+          <div class="compare-line">Estimate form buried, or missing entirely</div>
         </div>
       </div>
-      <div class="compare-arrow reveal reveal-d1">→</div>
+      <div class="compare-arrow reveal reveal-d1" aria-hidden="true">→</div>
       <div class="compare-col is-after reveal reveal-d2">
-        <div class="compare-col-head"><span>After</span><span class="compare-url">elitepainting-portland.com</span></div>
+        <div class="compare-col-head"><span>After</span><span class="compare-url">What we build</span></div>
         <div class="compare-body">
-          <div class="compare-line">Clear service positioning by city</div>
+          <div class="compare-line">Clear service positioning by trade and city</div>
           <div class="compare-line">Click-to-call on every page</div>
-          <div class="compare-line">Sub-2 second load time</div>
-          <div class="compare-line">Six optimized local service pages</div>
-          <div class="compare-line">Ranking #1 for "painter Portland OR"</div>
+          <div class="compare-line">Lean, hand-coded pages built to load fast</div>
+          <div class="compare-line">A dedicated page for each core service and area</div>
+          <div class="compare-line">Estimate requests one tap away</div>
         </div>
       </div>
     </div>
+    <p class="text-center" style="margin-top:2rem;font-size:.9rem;"><a href="work.html" style="font-weight:700;color:var(--ink);border-bottom:2px solid var(--accent);">See real sites we've built →</a></p>
   </div>
 </section>
 
@@ -685,7 +686,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="section-head split">
       <div>
         <div class="eyebrow">Resources</div>
-        <h2 class="h-display" style="font-size:clamp(2rem,3.8vw,3rem);">Contractor Growth Library</h2>
+        <h2 class="h-display h-section">Contractor Growth Library</h2>
         <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Guides on websites, search visibility, Google Business, leads, and Google Ads, written for contractors, not marketers.</p>
       </div>
       <a href="resources.html" style="font-size:.88rem;font-weight:700;border-bottom:2px solid var(--accent);">Browse the library →</a>
@@ -719,6 +720,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FOOTER -->
 <footer class="footer">
   <div class="wrap footer-main">
+    <div class="footer-news" id="newsletter" data-nl-inline-wrap>
+      <div>
+        <div class="footer-news-label">The Contractor Arsenal Report</div>
+        <p>Website fixes, SEO insights, and lessons from real contractor projects.</p>
+      </div>
+      <div>
+        <form class="footer-news-form" action="/api/newsletter/subscribe" method="post" novalidate data-nl-inline>
+          <label class="sr-only" for="footer-news-email">Email address</label>
+          <input id="footer-news-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Email address" required maxlength="254" aria-describedby="footer-news-error">
+          <input type="hidden" name="source" value="website-footer">
+          <div class="nl-hp" aria-hidden="true"><label for="footer-news-hp">Leave this empty</label><input id="footer-news-hp" name="company_website" type="text" tabindex="-1" autocomplete="off"></div>
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="footer-news-error" id="footer-news-error" role="alert" data-nl-error hidden></p>
+        <p class="footer-news-done" data-nl-inline-done tabindex="-1" hidden><strong>You're in.</strong>The next Contractor Arsenal Report will hit your inbox.</p>
+      </div>
+    </div>
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-brand-name">Contractor Arsenal</div>
@@ -780,5 +798,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="main.js"></script>
+<script src="newsletter.js" defer></script>
 </body>
 </html>

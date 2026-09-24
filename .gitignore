@@ -1,0 +1,10 @@
+# Secrets: never commit. RESEND_API_KEY lives in Cloudflare env vars / .dev.vars locally.
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+
+# Local tooling
+.wrangler/
+node_modules/
+.DS_Store

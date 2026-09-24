@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .selector-q-label{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.75rem;}
 .selector-opts{display:flex;gap:.5rem;flex-wrap:wrap;}
 .selector-opt{
-  padding:.55rem 1.05rem;border-radius:var(--r-pill);border:1.5px solid var(--border);
+  padding:.55rem 1.05rem;border-radius:var(--r-md);border:1.5px solid var(--border);
   background:var(--surface);color:var(--ink-soft);font-size:.85rem;font-weight:700;cursor:pointer;
   transition:all .15s;
 }
@@ -53,20 +53,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .selector-result-label{font-size:.8rem;color:var(--muted);font-weight:600;}
 .selector-result-tier{font-family:var(--display);font-weight:800;font-size:1.4rem;color:var(--accent);text-transform:uppercase;}
 
-/* TIERS */
-.tiers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:stretch;}
-.tier-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:2rem;display:flex;flex-direction:column;transition:border-color .15s;}
-.tier-card.featured{border-color:var(--accent);position:relative;}
-.tier-badge{position:absolute;top:-13px;left:2rem;background:var(--accent);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:.25rem .7rem;border-radius:var(--r-sm);}
-.tier-name{font-family:var(--display);font-weight:700;font-size:1.1rem;text-transform:uppercase;color:var(--ink);}
-.tier-price{font-family:var(--display);font-weight:800;font-size:2.6rem;color:var(--ink);margin:.5rem 0 .25rem;}
-.tier-price span{font-family:var(--sans);font-size:.9rem;font-weight:600;color:var(--muted);}
-.tier-for{font-size:.85rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.55;min-height:3.3rem;}
-.tier-list{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.75rem;flex:1;}
-.tier-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:.87rem;color:var(--ink-soft);}
-.tier-list li::before{content:'';width:8px;height:2px;background:var(--accent);flex-shrink:0;margin-top:.5rem;}
-@media(max-width:1024px){.tiers-grid{grid-template-columns:repeat(2,1fr);max-width:none;margin:0;}}
-@media(max-width:700px){.tiers-grid{grid-template-columns:1fr;max-width:460px;margin:0 auto;}}
 </style>
 </head>
 <body>
@@ -268,15 +254,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- TIERS -->
+<!-- PLANS -->
 <section id="tiers" style="padding-top:0;">
   <div class="wrap">
-    <div class="tiers-grid">
-      <div class="tier-card">
-        <div class="tier-name">Contractor Growth</div>
-        <div class="tier-price">$297<span>/mo</span></div>
-        <div class="tier-for">Our core offer. Best for contractors who need a focused, professional website: home, services, about, projects, contact.</div>
-        <ul class="tier-list">
+    <div class="plans">
+      <article class="plan reveal" aria-labelledby="plan-growth">
+        <div class="plan-head"><h2 class="plan-name" id="plan-growth">Contractor Growth</h2></div>
+        <div class="plan-price">$297<span>/mo</span></div>
+        <p class="plan-for">Our core offer. Best for contractors who need a focused, professional website: home, services, about, projects, contact.</p>
+        <ul class="plan-list">
           <li>Custom design for your trade</li>
           <li>Mobile optimization</li>
           <li>Built for Google</li>
@@ -284,15 +270,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Hosting &amp; SSL</li>
           <li>Support &amp; ongoing updates</li>
         </ul>
-        <a href="demo.html" class="btn btn-outline btn-block">Get My Free Demo</a>
-      </div>
+        <a href="demo.html?plan=growth" class="btn btn-outline btn-block">Get My Free Demo <span class="plan-arrow" aria-hidden="true">→</span></a>
+      </article>
 
-      <div class="tier-card featured">
-        <span class="tier-badge">Most Popular</span>
-        <div class="tier-name">Contractor Growth+</div>
-        <div class="tier-price">$497<span>/mo</span></div>
-        <div class="tier-for">For contractors who need a larger site and a stronger organic presence, typically more than five pages or a deeper service structure.</div>
-        <ul class="tier-list">
+      <article class="plan plan--featured reveal reveal-d1" aria-labelledby="plan-growth-plus">
+        <div class="plan-head"><h2 class="plan-name" id="plan-growth-plus">Contractor Growth+</h2><span class="plan-badge">Most Popular</span></div>
+        <div class="plan-price">$497<span>/mo</span></div>
+        <p class="plan-for">For contractors who need a larger site and a stronger organic presence, typically more than five pages or a deeper service structure.</p>
+        <ul class="plan-list">
           <li>Everything in Growth</li>
           <li>Expanded service pages</li>
           <li>Deeper local SEO structure</li>
@@ -300,14 +285,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Expanded project/case study architecture</li>
           <li>More advanced lead paths</li>
         </ul>
-        <a href="demo.html" class="btn btn-primary btn-block">Build My Growth Site</a>
-      </div>
+        <a href="demo.html?plan=growth-plus" class="btn btn-primary btn-block">Get My Free Growth+ Demo <span class="plan-arrow" aria-hidden="true">→</span></a>
+      </article>
 
-      <div class="tier-card">
-        <div class="tier-name">Contractor Pro</div>
-        <div class="tier-price">$997<span>/mo</span></div>
-        <div class="tier-for">For larger companies that need significantly more content, pages, service areas, and ongoing optimization, usually beyond 10 pages.</div>
-        <ul class="tier-list">
+      <article class="plan reveal reveal-d2" aria-labelledby="plan-pro">
+        <div class="plan-head"><h2 class="plan-name" id="plan-pro">Contractor Pro</h2></div>
+        <div class="plan-price">$997<span>/mo</span></div>
+        <p class="plan-for">For larger companies that need significantly more content, pages, service areas, and ongoing optimization, usually beyond 10 pages.</p>
+        <ul class="plan-list">
           <li>Everything in Growth+</li>
           <li>Expanded service architecture</li>
           <li>Multiple city / service-area strategies</li>
@@ -315,9 +300,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>More ongoing site improvements</li>
           <li>Priority website support</li>
         </ul>
-        <a href="demo.html" class="btn btn-outline btn-block">Talk About My Project</a>
-      </div>
+        <a href="demo.html?plan=pro" class="btn btn-outline btn-block">Get My Free Pro Demo <span class="plan-arrow" aria-hidden="true">→</span></a>
+      </article>
     </div>
+    <div class="plans-fine"><span>No setup fee</span><span>Hosting &amp; SSL included on every plan</span><span>Free demo before you commit</span></div>
   </div>
 </section>
 
@@ -334,6 +320,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer class="footer">
   <div class="wrap footer-main">
+    <div class="footer-news" id="newsletter" data-nl-inline-wrap>
+      <div>
+        <div class="footer-news-label">The Contractor Arsenal Report</div>
+        <p>Website fixes, SEO insights, and lessons from real contractor projects.</p>
+      </div>
+      <div>
+        <form class="footer-news-form" action="/api/newsletter/subscribe" method="post" novalidate data-nl-inline>
+          <label class="sr-only" for="footer-news-email">Email address</label>
+          <input id="footer-news-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Email address" required maxlength="254" aria-describedby="footer-news-error">
+          <input type="hidden" name="source" value="website-footer">
+          <div class="nl-hp" aria-hidden="true"><label for="footer-news-hp">Leave this empty</label><input id="footer-news-hp" name="company_website" type="text" tabindex="-1" autocomplete="off"></div>
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+        <p class="footer-news-error" id="footer-news-error" role="alert" data-nl-error hidden></p>
+        <p class="footer-news-done" data-nl-inline-done tabindex="-1" hidden><strong>You're in.</strong>The next Contractor Arsenal Report will hit your inbox.</p>
+      </div>
+    </div>
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-brand-name">Contractor Arsenal</div>
@@ -395,6 +398,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="main.js"></script>
+<script src="newsletter.js" defer></script>
 <script>
 (function(){
   var state={pages:'small',services:'no',cities:'no'};

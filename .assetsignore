@@ -1,0 +1,6 @@
+# Keep local secret files out of the deployed static assets.
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+.wrangler
