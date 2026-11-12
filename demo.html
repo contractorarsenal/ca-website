@@ -494,6 +494,8 @@ document.getElementById('demoForm').addEventListener('submit',async function(e){
     var resp=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(object)});
     var data=await resp.json();
     if(data.success){
+      window.dataLayer=window.dataLayer||[];
+      window.dataLayer.push({event:'demo_request_success'});
       document.getElementById('formBody').style.display='none';
       document.getElementById('formSuccess').classList.add('visible');
     }else{throw new Error(data.message||'Server error');}

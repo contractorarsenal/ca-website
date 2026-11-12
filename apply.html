@@ -337,9 +337,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- TRUST STATS -->
 <div class="stat-strip">
   <div class="wrap stat-row">
-    <div class="stat-item"><span class="stat-num" data-count-to="120" data-count-suffix="+">0+</span><span class="stat-label">Contractor sites built</span></div>
+    <div class="stat-item"><span class="stat-num" data-count-to="120" data-count-suffix="+">120+</span><span class="stat-label">Contractor sites built</span></div>
     <div class="stat-item"><span class="stat-num">$4M+</span><span class="stat-label">In tracked leads</span></div>
-    <div class="stat-item"><span class="stat-num" data-count-to="8" data-count-suffix="+">0+</span><span class="stat-label">Trades served</span></div>
+    <div class="stat-item"><span class="stat-num" data-count-to="8" data-count-suffix="+">8+</span><span class="stat-label">Trades served</span></div>
     <div class="stat-item"><span class="stat-num">$297</span><span class="stat-label">Per month, all-in</span></div>
   </div>
 </div>
@@ -445,6 +445,8 @@ document.getElementById('applyForm').addEventListener('submit', async function(e
     });
     const data = await res.json();
     if(data.success){
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({event:'application_success'});
       document.getElementById('formBody').style.display = 'none';
       document.getElementById('successMsg').style.display = 'block';
     } else {
