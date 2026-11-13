@@ -752,7 +752,8 @@ body.nav-open{overflow:hidden;}
   padding:.5rem .5rem .5rem 1.1rem;display:inline-flex;align-items:center;gap:1rem;
   background:var(--surface);font-size:.82rem;color:var(--ink-soft);margin-bottom:1.75rem;font-weight:600;
 }
-.final-cta{background:var(--black);text-align:center;}
+.final-cta{background:#202020;text-align:center;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.16);}
+.final-cta .h-display.on-dark,.final-cta .h-sub.on-dark,.final-cta .eyebrow.on-dark{background:transparent;}
 .final-cta .h-display{margin-bottom:1rem;}
 .final-cta .h-sub{margin:0 auto 2rem;}
 .final-cta .btn-row{justify-content:center;}

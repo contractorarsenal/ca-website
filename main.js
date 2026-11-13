@@ -247,7 +247,7 @@
       browse.addEventListener('click',function(e){
         e.preventDefault();input.value='';applyBelow('');closePanel();jumpToLibrary();
       });
-      var demo=document.createElement('a');demo.href='demo.html';demo.textContent='Get My Free Demo →';
+      var demo=document.createElement('a');demo.href='demo';demo.textContent='Get My Free Demo →';
       actions.appendChild(browse);actions.appendChild(demo);
       empty.appendChild(p);empty.appendChild(span);empty.appendChild(actions);
       panel.appendChild(empty);

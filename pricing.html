@@ -16,46 +16,71 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pricing: Contractor Growth Websites | Contractor Arsenal</title>
 <meta name="description" content="Three Contractor Arsenal plans: Contractor Growth ($297/mo), Contractor Growth+ ($497/mo), and Contractor Pro ($997/mo). Find which fits your business.">
-<link rel="canonical" href="https://contractorarsenal.com/pricing.html">
+<link rel="canonical" href="https://contractorarsenal.com/pricing">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Pricing | Contractor Arsenal">
 <meta property="og:description" content="Three contractor website plans, scaled to the size and growth needs of your business.">
-<meta property="og:url" content="https://contractorarsenal.com/pricing.html">
+<meta property="og:url" content="https://contractorarsenal.com/pricing">
 <meta property="og:image" content="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="value-calc.css">
 <style>
 .page-hero .h-sub{margin:1rem auto 0;}
 
-/* SELECTOR */
-.selector{background:var(--surface);border:1.5px solid var(--ink);border-radius:var(--r-lg);padding:2rem;max-width:760px;margin:0 auto;}
-.selector-q{margin-bottom:1.5rem;}
-.selector-q:last-of-type{margin-bottom:1.75rem;}
-.selector-q-label{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.75rem;}
-.selector-opts{display:flex;gap:.5rem;flex-wrap:wrap;}
-.selector-opt{
-  padding:.55rem 1.05rem;border-radius:var(--r-md);border:1.5px solid var(--border);
-  background:var(--surface);color:var(--ink-soft);font-size:.85rem;font-weight:700;cursor:pointer;
-  transition:all .15s;
-}
-@media(max-width:640px){
-  .selector{padding:1.5rem 1.25rem;}
-  .selector-opt{padding:.72rem 1.1rem;}
-}
-.selector-opt:hover{border-color:var(--ink);}
-.selector-opt.active{background:var(--ink);color:#fff;border-color:var(--ink);}
-.selector-result{
-  border-top:1.5px solid var(--border);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:1rem;
-}
-.selector-result-label{font-size:.8rem;color:var(--muted);font-weight:600;}
-.selector-result-tier{font-family:var(--display);font-weight:800;font-size:1.4rem;color:var(--accent);text-transform:uppercase;}
+/* PRICING 2.0: comparison table */
+.cmp-wrap{position:relative;overflow-x:auto;border:1.5px solid var(--ink);border-radius:var(--r-lg);background:var(--surface);-webkit-overflow-scrolling:touch;}
+.cmp-wrap:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.cmp{width:100%;min-width:680px;border-collapse:collapse;font-size:.88rem;}
+.cmp th,.cmp td{padding:.85rem 1rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--border-soft);line-height:1.45;}
+.cmp thead th{font-family:var(--display);font-weight:800;font-size:1.15rem;text-transform:uppercase;color:var(--ink);background:var(--surface-2);border-bottom:1.5px solid var(--ink);vertical-align:bottom;}
+.cmp thead th span:not(.sr-only){display:block;font-family:var(--sans);font-size:.62rem;font-weight:800;letter-spacing:.06em;color:var(--accent);margin-top:.15rem;}
+.cmp tbody th{font-weight:700;color:var(--ink);width:24%;background:var(--surface);}
+.cmp td{color:var(--ink-soft);width:25.33%;}
+.cmp td b{font-family:var(--display);font-size:1.5rem;font-weight:800;color:var(--ink);}
+.cmp td:nth-child(3),.cmp thead th.is-pop{background:var(--accent-tint);}
+.cmp-y::before{content:'';display:inline-block;width:14px;height:8px;border-left:2.5px solid var(--accent);border-bottom:2.5px solid var(--accent);transform:rotate(-45deg) translateY(-2px);}
+.cmp tbody tr:hover th,.cmp tbody tr:hover td{background-color:var(--surface-2);}
+.cmp tbody tr:hover td:nth-child(3){background-color:var(--accent-tint-2);}
+.cmp tfoot td,.cmp tfoot th{border-bottom:0;padding-top:1.1rem;padding-bottom:1.2rem;}
+.cmp tfoot .btn{white-space:nowrap;}
 
+/* PRICING 2.0: plan-card polish, recommendation highlight, how-it-works */
+#tiers .plan{transition:background .2s var(--ease-out),box-shadow .3s var(--ease-out),transform .3s var(--ease-out);}
+#tiers .plan::before{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease-out);}
+#tiers .plan:hover{box-shadow:0 22px 46px -30px rgba(0,0,0,.4);}
+#tiers .plan-price{transition:color .2s;}
+#tiers .plan-list li{line-height:1.5;}
+.how-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--border-inv);border-radius:var(--r-lg);overflow:hidden;}
+.how-cell{padding:1.75rem 1.5rem 1.9rem;border-right:1px solid var(--border-inv);opacity:0;transform:translateY(12px);transition:opacity .55s var(--ease-out),transform .55s var(--ease-out),background .2s;}
+.how-cell:last-child{border-right:0;}
+.how-grid.visible .how-cell{opacity:1;transform:none;}
+.how-grid .how-cell:nth-child(2){transition-delay:.1s;}.how-grid .how-cell:nth-child(3){transition-delay:.2s;}.how-grid .how-cell:nth-child(4){transition-delay:.3s;}
+.how-cell:hover{background:rgba(255,255,255,.04);}
+.how-cell .idx{font-family:var(--display);font-weight:800;font-size:.82rem;letter-spacing:.08em;color:var(--accent);}
+.how-cell h3{font-family:var(--display);font-weight:800;font-size:1.45rem;text-transform:uppercase;line-height:1.05;color:#fff;margin:.5rem 0 .65rem;}
+.how-cell p{font-size:.9rem;line-height:1.6;color:var(--muted-inv);}
+html:not(.js-motion) .how-cell{opacity:1;transform:none;}
+.cmp-hint{display:none;margin-top:.6rem;font-size:.76rem;color:var(--muted);}
+/* comparison table: keep the feature column in view while scrolling sideways on phones */
+@media(max-width:760px){
+  .cmp{min-width:640px;font-size:.84rem;}
+  .cmp tbody th,.cmp thead th:first-child,.cmp tfoot th{position:sticky;left:0;z-index:1;width:118px;min-width:118px;max-width:118px;box-shadow:1px 0 0 var(--border);}
+  .cmp tbody th{background:var(--surface);}
+  .cmp thead th:first-child{background:var(--surface-2);}
+  .cmp tfoot th{background:var(--surface);}
+  .cmp th,.cmp td{padding:.7rem .75rem;}
+  .cmp-hint{display:block;}
+}
+@media(max-width:900px){.how-grid{grid-template-columns:1fr 1fr;}.how-cell:nth-child(2){border-right:0;}.how-cell:nth-child(-n+2){border-bottom:1px solid var(--border-inv);}}
+@media(max-width:520px){.how-grid{grid-template-columns:1fr;}.how-cell{border-right:0;border-bottom:1px solid var(--border-inv);}.how-cell:last-child{border-bottom:0;}}
+@media(prefers-reduced-motion:reduce){#tiers .plan,#tiers .plan::before,.how-cell{transition:none;}.how-cell{opacity:1;transform:none;}}
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add('js-motion');</script>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PKHXQ2R"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -63,19 +88,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo" aria-label="Contractor Arsenal homepage">
+    <a href="./" class="nav-logo" aria-label="Contractor Arsenal homepage">
       <span class="nav-logo-mark">
         <img src="assets/mark-dark.png" class="mark mark-dark" alt="" width="306" height="125">
         <img src="assets/mark-light.png" class="mark mark-light" alt="" width="306" height="125">
       </span>
     </a>
     <nav class="nav-links">
-      <a href="work.html">Work</a>
+      <a href="work">Work</a>
       <div class="nav-drop">
-        <a href="services.html" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
+        <a href="services" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
         <div class="nav-drop-panel">
           <div class="nav-drop-label">Services</div>
-        <a href="services.html" class="nav-drop-row">
+        <a href="services" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
             <span class="nav-drop-row-eyebrow">Websites</span>
@@ -84,28 +109,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </span>
           <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="seo.html" class="nav-drop-row">
+        <a href="seo" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
-            <span class="nav-drop-row-eyebrow">Search Visibility</span>
-            <span class="nav-drop-row-title">SEO + AEO + GEO</span>
-            <span class="nav-drop-row-desc">Help Google and AI systems understand your business.</span>
+            <span class="nav-drop-row-eyebrow">Search</span>
+            <span class="nav-drop-row-title">SEO</span>
+            <span class="nav-drop-row-desc">Help Google understand what you do and where you work.</span>
           </span>
           <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="seo.html#google-business" class="nav-drop-row">
+        <a href="ai-search" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
-            <span class="nav-drop-row-eyebrow">Google Business</span>
+            <span class="nav-drop-row-eyebrow">AI Search</span>
+            <span class="nav-drop-row-title">AEO + GEO</span>
+            <span class="nav-drop-row-desc">Help AI tools understand your business.</span>
+          </span>
+          <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="google-business" class="nav-drop-row">
+          <span class="nav-drop-row-bar"></span>
+          <span class="nav-drop-row-text">
+            <span class="nav-drop-row-eyebrow">Local</span>
             <span class="nav-drop-row-title">Google Business</span>
             <span class="nav-drop-row-desc">Connect your site with your local Google presence.</span>
           </span>
           <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="services.html#leads" class="nav-drop-row">
+        <a href="lead-capture" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
-            <span class="nav-drop-row-eyebrow">Lead Capture</span>
+            <span class="nav-drop-row-eyebrow">Leads</span>
             <span class="nav-drop-row-title">Lead Capture</span>
             <span class="nav-drop-row-desc">Make it easy for visitors to call or request an estimate.</span>
           </span>
@@ -113,68 +147,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
           <div class="nav-drop-foot">
             <span class="nav-drop-foot-price">Websites start at $297/mo</span>
-            <a href="services.html" class="nav-drop-foot-link">View All Services →</a>
+            <a href="services" class="nav-drop-foot-link">View All Services →</a>
           </div>
         </div>
       </div>
-      <a href="pricing.html" class="active">Pricing</a>
-      <div class="nav-drop">
-        <a href="resources.html" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Resources<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
-        <div class="nav-drop-panel nav-drop-panel-wide">
-          <div class="nav-drop-label">Contractor Growth Library</div>
-          <div class="nav-drop-grid">
-          <a href="resources.html#websites" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Websites</span>
-              <span class="nav-drop-row-desc">Website design, pricing, structure</span>
-            </span>
-          </a>
-          <a href="resources.html#search-visibility" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Search Visibility</span>
-              <span class="nav-drop-row-desc">SEO, AEO, GEO, local search</span>
-            </span>
-          </a>
-          <a href="resources.html#google-business" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Google Business</span>
-              <span class="nav-drop-row-desc">Maps, reviews, profile optimization</span>
-            </span>
-          </a>
-          <a href="resources.html#leads" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Leads</span>
-              <span class="nav-drop-row-desc">Lead generation and conversion</span>
-            </span>
-          </a>
-          <a href="resources.html#google-ads" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Google Ads</span>
-              <span class="nav-drop-row-desc">Google Ads and Local Services Ads</span>
-            </span>
-          </a>
-          <a href="resources.html#trade-guides" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Trade Guides</span>
-              <span class="nav-drop-row-desc">Roofing, painting, HVAC, landscaping and more</span>
-            </span>
-          </a>
-          </div>
-          <div class="nav-drop-foot nav-drop-foot-center">
-            <a href="resources.html" class="nav-drop-foot-link">Browse the Growth Library →</a>
-          </div>
-        </div>
-      </div>
-      <a href="about.html">Company</a>
+      <a href="pricing" class="active">Pricing</a>
+      <a href="resources">Resources</a>
+      <a href="about">Company</a>
     </nav>
     <div class="nav-right">
-      <a href="demo.html" class="nav-cta hide-mobile">Get a Free Demo</a>
+      <a href="demo" class="nav-cta hide-mobile">Get a Free Demo</a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -182,26 +164,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 <div class="nav-mobile" id="navMobile">
-  <a href="work.html">Work</a>
+  <a href="work">Work</a>
   <details class="nav-mobile-drop">
     <summary>Services</summary>
-    <a href="services.html">Websites</a>
-    <a href="seo.html">Search Visibility</a>
-    <a href="seo.html#google-business">Google Business</a>
-    <a href="services.html#leads">Lead Capture</a>
+    <a href="services">Contractor Websites</a>
+    <a href="seo">SEO</a>
+    <a href="ai-search">AEO + GEO</a>
+    <a href="google-business">Google Business</a>
+    <a href="lead-capture">Lead Capture</a>
   </details>
-  <a href="pricing.html">Pricing</a>
-  <details class="nav-mobile-drop">
-    <summary>Resources</summary>
-    <a href="resources.html">Growth Library</a>
-    <a href="resources.html#websites">Websites</a>
-    <a href="resources.html#search-visibility">Search Visibility</a>
-    <a href="resources.html#google-business">Google Business</a>
-    <a href="resources.html#leads">Leads</a>
-    <a href="resources.html#trade-guides">Trade Guides</a>
-  </details>
-  <a href="about.html">Company</a>
-  <a href="demo.html" class="mob-cta">Get a Free Demo</a>
+  <a href="pricing">Pricing</a>
+  <a href="resources">Resources</a>
+  <a href="about">Company</a>
+  <a href="demo" class="mob-cta">Get a Free Demo</a>
 </div>
 
 <section class="page-hero page-hero--center">
@@ -212,50 +187,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- INTERACTIVE SELECTOR -->
-<section style="padding:24px 0 48px;">
-  <div class="wrap">
-    <div class="selector reveal">
-      <div class="selector-q-label" style="font-family:var(--display);font-size:1.1rem;text-transform:uppercase;margin-bottom:1.5rem;">What does your company need?</div>
-
-      <div class="selector-q">
-        <div class="selector-q-label">How large should the website be?</div>
-        <div class="selector-opts" data-selector-group="pages">
-          <button class="selector-opt active" data-value="small">1–5 pages</button>
-          <button class="selector-opt" data-value="medium">6–10 pages</button>
-          <button class="selector-opt" data-value="large">10+ pages</button>
-        </div>
-      </div>
-
-      <div class="selector-q">
-        <div class="selector-q-label">Do you need multiple service pages?</div>
-        <div class="selector-opts" data-selector-group="services">
-          <button class="selector-opt active" data-value="no">No</button>
-          <button class="selector-opt" data-value="yes">Yes</button>
-        </div>
-      </div>
-
-      <div class="selector-q">
-        <div class="selector-q-label">Do you serve multiple cities or service areas?</div>
-        <div class="selector-opts" data-selector-group="cities">
-          <button class="selector-opt active" data-value="no">No</button>
-          <button class="selector-opt" data-value="yes">Yes</button>
-        </div>
-      </div>
-
-      <div class="selector-result">
-        <div class="selector-result-label">Recommended for you:</div>
-        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-          <span class="selector-result-tier" id="selectorResult">Contractor Growth</span>
-          <a href="#tiers" class="btn btn-outline btn-sm">See What's Included</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- PLANS -->
-<section id="tiers" style="padding-top:0;">
+<section id="tiers" style="padding-top:24px;">
   <div class="wrap">
     <div class="plans">
       <article class="plan reveal" aria-labelledby="plan-growth">
@@ -270,7 +203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Hosting &amp; SSL</li>
           <li>Support &amp; ongoing updates</li>
         </ul>
-        <a href="demo.html?plan=growth" class="btn btn-outline btn-block">Get My Free Demo <span class="plan-arrow" aria-hidden="true">→</span></a>
+        <a href="demo?plan=growth" class="btn btn-outline btn-block" data-cta="demo" data-cta-location="pricing_plans">Get My Free Demo <span class="plan-arrow" aria-hidden="true">→</span></a>
       </article>
 
       <article class="plan plan--featured reveal reveal-d1" aria-labelledby="plan-growth-plus">
@@ -285,7 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Expanded project/case study architecture</li>
           <li>More advanced lead paths</li>
         </ul>
-        <a href="demo.html?plan=growth-plus" class="btn btn-primary btn-block">Get My Free Growth+ Demo <span class="plan-arrow" aria-hidden="true">→</span></a>
+        <a href="demo?plan=growth-plus" class="btn btn-primary btn-block" data-cta="demo" data-cta-location="pricing_plans">Get My Free Growth+ Demo <span class="plan-arrow" aria-hidden="true">→</span></a>
       </article>
 
       <article class="plan reveal reveal-d2" aria-labelledby="plan-pro">
@@ -300,10 +233,138 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>More ongoing site improvements</li>
           <li>Priority website support</li>
         </ul>
-        <a href="demo.html?plan=pro" class="btn btn-outline btn-block">Get My Free Pro Demo <span class="plan-arrow" aria-hidden="true">→</span></a>
+        <a href="demo?plan=pro" class="btn btn-outline btn-block" data-cta="demo" data-cta-location="pricing_plans">Get My Free Pro Demo <span class="plan-arrow" aria-hidden="true">→</span></a>
       </article>
     </div>
     <div class="plans-fine"><span>No setup fee</span><span>Hosting &amp; SSL included on every plan</span><span>Free demo before you commit</span></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" style="background:var(--black);">
+  <div class="wrap">
+    <div class="section-head" style="max-width:640px;">
+      <div class="eyebrow on-dark">Before You Pick a Plan</div>
+      <h2 class="h-display on-dark h-section">How this works,<br>start to finish.</h2>
+    </div>
+    <div class="how-grid reveal">
+      <div class="how-cell"><span class="idx">01</span><h3>The free demo</h3><p>Send us the basics. We build a demo around your real company, services, and market. No payment required and no obligation.</p></div>
+      <div class="how-cell"><span class="idx">02</span><h3>When you sign up</h3><p>You pick the plan that fits. Monthly billing starts when you sign up, and there is no setup fee. Your site launches within 48 hours after you review and approve your demo.</p></div>
+      <div class="how-cell"><span class="idx">03</span><h3>Every month</h3><p>Hosting, SSL, website updates, and support are included on every plan. Need something changed? We handle it.</p></div>
+      <div class="how-cell"><span class="idx">04</span><h3>If it is not for you</h3><p>No long-term contract. You can cancel with 30 days' written notice, and once your build is paid in full, the site, the domain, and the content are yours.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN COMPARISON -->
+<section id="compare-plans" style="background:var(--surface);">
+  <div class="wrap">
+    <div class="section-head" style="max-width:680px;">
+      <div class="eyebrow">Side By Side</div>
+      <h2 class="h-display h-section">What changes as you move up.</h2>
+      <p class="h-sub" style="margin-top:1.1rem;">Every plan starts with the same custom website, hosting, and support. The higher plans add more pages, more service areas, and more ongoing work.</p>
+    </div>
+    <div class="cmp-wrap reveal" tabindex="0" role="region" aria-label="Plan comparison table, scrolls sideways on small screens">
+      <table class="cmp">
+        <thead>
+          <tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col">Growth</th><th scope="col" class="is-pop">Growth+<span>Most Popular</span></th><th scope="col">Pro</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Monthly price</th><td><b>$297</b></td><td><b>$497</b></td><td><b>$997</b></td></tr>
+          <tr><th scope="row">Best for</th><td>A focused, professional website: home, services, about, projects, contact</td><td>A larger site and a stronger organic presence, typically more than five pages</td><td>Larger companies that need more content, pages, and service areas, usually beyond 10 pages</td></tr>
+          <tr><th scope="row">Custom design for your trade</th><td class="cmp-y"><span class="sr-only">Included</span></td><td class="cmp-y"><span class="sr-only">Included</span></td><td class="cmp-y"><span class="sr-only">Included</span></td></tr>
+          <tr><th scope="row">Mobile optimization</th><td class="cmp-y"><span class="sr-only">Included</span></td><td class="cmp-y"><span class="sr-only">Included</span></td><td class="cmp-y"><span class="sr-only">Included</span></td></tr>
+          <tr><th scope="row">Built for Google</th><td class="cmp-y"><span class="sr-only">Included</span></td><td class="cmp-y"><span class="sr-only">Included</span></td><td class="cmp-y"><span class="sr-only">Included</span></td></tr>
+          <tr><th scope="row">Contact forms &amp; click-to-call</th><td class="cmp-y"><span class="sr-only">Included</span></td><td class="cmp-y"><span class="sr-only">Included</span></td><td class="cmp-y"><span class="sr-only">Included</span></td></tr>
+          <tr><th scope="row">Hosting &amp; SSL</th><td class="cmp-y"><span class="sr-only">Included</span></td><td class="cmp-y"><span class="sr-only">Included</span></td><td class="cmp-y"><span class="sr-only">Included</span></td></tr>
+          <tr><th scope="row">Support &amp; ongoing updates</th><td>Included</td><td>Included</td><td>Priority website support, more ongoing site improvements</td></tr>
+          <tr><th scope="row">Service pages</th><td>Core services</td><td>Expanded service pages</td><td>Expanded service architecture</td></tr>
+          <tr><th scope="row">Local search structure</th><td>Built for Google</td><td>Deeper local SEO structure</td><td>Multiple city / service-area strategies</td></tr>
+          <tr><th scope="row">Content &amp; pages</th><td>Focused site</td><td>Additional content &amp; pages</td><td>Larger content footprint</td></tr>
+          <tr><th scope="row">Projects &amp; case studies</th><td>Projects page</td><td>Expanded project/case study architecture</td><td>Everything in Growth+</td></tr>
+          <tr><th scope="row">Lead paths</th><td>Contact forms &amp; click-to-call</td><td>More advanced lead paths</td><td>Everything in Growth+</td></tr>
+          <tr><th scope="row">Setup fee</th><td>None</td><td>None</td><td>None</td></tr>
+          <tr><th scope="row">Free demo before you commit</th><td class="cmp-y"><span class="sr-only">Included</span></td><td class="cmp-y"><span class="sr-only">Included</span></td><td class="cmp-y"><span class="sr-only">Included</span></td></tr>
+        </tbody>
+        <tfoot>
+          <tr><th scope="row"><span class="sr-only">Start</span></th>
+            <td><a href="demo?plan=growth" class="btn btn-outline btn-sm" data-cta="demo" data-cta-location="pricing_compare" data-cta-label="Growth">Get My Free Demo</a></td>
+            <td><a href="demo?plan=growth-plus" class="btn btn-primary btn-sm" data-cta="demo" data-cta-location="pricing_compare" data-cta-label="Growth+">Get My Free Growth+ Demo</a></td>
+            <td><a href="demo?plan=pro" class="btn btn-outline btn-sm" data-cta="demo" data-cta-location="pricing_compare" data-cta-label="Pro">Get My Free Pro Demo</a></td></tr>
+        </tfoot>
+      </table>
+    </div>
+    <p class="cmp-hint">Swipe sideways to compare all three plans.</p>
+  </div>
+</section>
+
+<!-- WEBSITE VALUE ILLUSTRATION -->
+<section id="value" style="background:var(--surface-2);border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft);">
+  <div class="wrap">
+    <div class="section-head" style="max-width:700px;">
+      <div class="eyebrow">Run Your Own Numbers</div>
+      <h2 class="h-display h-section">What would the website have to bring in to be worth it?</h2>
+      <p class="h-sub" style="margin-top:1.1rem;">Put in what a typical job is worth, how many inquiries a year you think could come through your website, and how many of those you usually close. Everything below is figured over one year. This is your math, not our promise.</p>
+    </div>
+    <div class="vc reveal" data-vc>
+      <div class="vc-in">
+        <span class="vc-tag">Hypothetical example · one year</span>
+        <div class="vc-field">
+          <label for="vc-value">Average completed project value <output for="vc-value" data-vc-value-out>$5,500</output></label>
+          <input type="range" id="vc-value" data-vc-value min="500" max="100000" step="500" value="5500">
+        </div>
+        <div class="vc-field">
+          <label for="vc-inq">Website inquiries received per year <output for="vc-inq" data-vc-inq-out>24 inquiries</output></label>
+          <input type="range" id="vc-inq" data-vc-inq min="0" max="200" step="1" value="24">
+          <small>Calls and estimate requests that come through the website. An inquiry is not a job.</small>
+        </div>
+        <div class="vc-field">
+          <label for="vc-rate">Lead closing rate <output for="vc-rate" data-vc-rate-out>50%</output></label>
+          <input type="range" id="vc-rate" data-vc-rate min="0" max="100" step="1" value="50">
+          <small>The share of inquiries you turn into completed jobs. Use your own number. It depends on your pricing, response time, and follow-up.</small>
+        </div>
+        <fieldset class="vc-field">
+          <legend>Website plan</legend>
+          <div class="vc-plans">
+            <label><input type="radio" name="vc-plan" data-vc-plan value="297"><span>Growth<b>$297/mo</b></span></label>
+            <label><input type="radio" name="vc-plan" data-vc-plan value="497" checked><span>Growth+<b>$497/mo</b></span></label>
+            <label><input type="radio" name="vc-plan" data-vc-plan value="997"><span>Pro<b>$997/mo</b></span></label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="vc-out" aria-live="polite">
+        <div>
+          <div class="vc-kicker">Potential gross job revenue · one year</div>
+          <div class="vc-big" data-vc-revenue>$66,000</div>
+          <div class="vc-sub" data-vc-math>12 estimated jobs x $5,500</div>
+        </div>
+        <div class="vc-bars">
+          <div class="vc-bar-row"><span>Potential gross job revenue</span><strong data-vc-revenue-2>$66,000</strong><div class="vc-bar"><i data-vc-bar-rev style="width:100%"></i></div></div>
+          <div class="vc-bar-row"><span>Annual website subscription</span><strong data-vc-fee>$5,964</strong><div class="vc-bar is-fee"><i data-vc-bar-fee style="width:9%"></i></div></div>
+        </div>
+        <ol class="vc-lines">
+          <li><span><em>1</em>Estimated jobs won (<i data-vc-jobs-math>24 inquiries x 50%</i>)</span><strong data-vc-jobs>12</strong></li>
+          <li><span><em>2</em>Potential gross job revenue</span><strong data-vc-revenue-3>$66,000</strong></li>
+          <li><span><em>3</em>Annual website subscription (<i data-vc-fee-math>$497 x 12 months</i>)</span><strong data-vc-fee-2>$5,964</strong></li>
+          <li class="is-total"><span><em>4</em>Gross revenue compared with the subscription</span><strong data-vc-multiple>11.1x</strong></li>
+          <li><span><em>5</em>Completed jobs needed for gross revenue to equal the subscription</span><strong data-vc-breakeven>1.1 (2 whole jobs)</strong></li>
+        </ol>
+      </div>
+    </div>
+    <div class="vc-compare reveal">
+      <div class="vc-compare-head">Same inputs on each plan</div>
+      <div class="vc-compare-scroll">
+        <table>
+          <thead><tr><th scope="col">Plan</th><th scope="col">Annual subscription</th><th scope="col">Gross revenue vs. subscription</th><th scope="col">Jobs needed to equal it</th></tr></thead>
+          <tbody>
+            <tr data-vc-row="297"><th scope="row">Growth · $297/mo</th><td data-c="fee">$3,564</td><td data-c="mult">18.5x</td><td data-c="be">0.6 (1 whole job)</td></tr>
+            <tr data-vc-row="497" class="is-current"><th scope="row">Growth+ · $497/mo</th><td data-c="fee">$5,964</td><td data-c="mult">11.1x</td><td data-c="be">1.1 (2 whole jobs)</td></tr>
+            <tr data-vc-row="997"><th scope="row">Pro · $997/mo</th><td data-c="fee">$11,964</td><td data-c="mult">5.5x</td><td data-c="be">2.2 (3 whole jobs)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="vc-note"><strong>This is a hypothetical example, not a result.</strong> The numbers come from what you enter, not from a Contractor Arsenal client, and no website can guarantee inquiries or jobs. Estimated jobs won is simply your inquiries multiplied by your closing rate. When that is not a whole number it is shown as a decimal, because it is an average and not a count of guaranteed jobs. Your actual results depend on how well you convert the inquiries you get. <strong>The comparison is gross revenue divided by the subscription.</strong> It is not profit and it is not a return figure: materials, labor, overhead, advertising spend, and taxes are not subtracted. Our plans have no setup fee, so none is counted here.</p>
   </div>
 </section>
 
@@ -312,8 +373,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="h-display on-dark">Not sure which plan<br>fits your <em>business?</em></h2>
     <p class="h-sub on-dark center">Get a free demo first. We'll tell you honestly which plan makes sense.</p>
     <div class="btn-row">
-      <a href="demo.html" class="btn btn-accent">Get My Free Demo</a>
-      <a href="services.html" class="btn btn-ghost-dark">See What's Included</a>
+      <a href="demo" class="btn btn-accent" data-cta="demo" data-cta-location="pricing_final">Get My Free Demo</a>
+      <a href="services" class="btn btn-ghost-dark">See What's Included</a>
     </div>
   </div>
 </section>
@@ -345,43 +406,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html">Websites</a></li>
-          <li><a href="seo.html">Search Visibility</a></li>
-          <li><a href="seo.html#google-business">Google Business</a></li>
-          <li><a href="services.html#leads">Lead Capture</a></li>
+          <li><a href="services">Contractor Websites</a></li>
+          <li><a href="seo">SEO</a></li>
+          <li><a href="ai-search">AEO + GEO</a></li>
+          <li><a href="google-business">Google Business</a></li>
+          <li><a href="lead-capture">Lead Capture</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="partner.html">Free CRM</a></li>
-          <li><a href="arsenal.html">Arsenal 001</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="work">Work</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="industries">Industries</a></li>
+          <li><a href="partner">Free CRM</a></li>
+          <li><a href="arsenal">Arsenal 001</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
-          <li><a href="resources.html">Growth Library</a></li>
-          <li><a href="resources.html#websites">Websites</a></li>
-          <li><a href="resources.html#search-visibility">Search Visibility</a></li>
-          <li><a href="resources.html#google-business">Google Business</a></li>
-          <li><a href="resources.html#leads">Leads</a></li>
+          <li><a href="resources">Growth Library</a></li>
+          <li><a href="resources#websites">Websites</a></li>
+          <li><a href="resources#search-visibility">Search Visibility</a></li>
+          <li><a href="resources#google-business">Google Business</a></li>
+          <li><a href="resources#leads">Leads</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Service Areas</h4>
         <ul>
-          <li><a href="service-areas/seattle-wa-contractor-websites.html">Seattle, WA</a></li>
-          <li><a href="service-areas/bellevue-wa-contractor-websites.html">Bellevue, WA</a></li>
-          <li><a href="service-areas/tacoma-wa-contractor-websites.html">Tacoma, WA</a></li>
-          <li><a href="service-areas/spokane-wa-contractor-websites.html">Spokane, WA</a></li>
-          <li><a href="service-areas/everett-wa-contractor-websites.html">Everett, WA</a></li>
-          <li><a href="service-areas/redmond-wa-contractor-websites.html">Redmond, WA</a></li>
-          <li><a href="service-areas/index.html" style="font-weight:700;">View All Service Areas →</a></li>
+          <li><a href="service-areas/seattle-wa-contractor-websites">Seattle, WA</a></li>
+          <li><a href="service-areas/bellevue-wa-contractor-websites">Bellevue, WA</a></li>
+          <li><a href="service-areas/tacoma-wa-contractor-websites">Tacoma, WA</a></li>
+          <li><a href="service-areas/spokane-wa-contractor-websites">Spokane, WA</a></li>
+          <li><a href="service-areas/everett-wa-contractor-websites">Everett, WA</a></li>
+          <li><a href="service-areas/redmond-wa-contractor-websites">Redmond, WA</a></li>
+          <li><a href="service-areas/" style="font-weight:700;">View All Service Areas →</a></li>
         </ul>
       </div>
     </div>
@@ -389,8 +451,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap footer-bottom">
     <span>&copy; 2026 Contractor Arsenal. All rights reserved.</span>
     <div class="footer-bottom-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+      <a href="privacy">Privacy</a>
+      <a href="terms">Terms</a>
       <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="mailto:hello@contractorarsenal.com">Email</a>
     </div>
@@ -399,36 +461,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="main.js"></script>
 <script src="newsletter.js" defer></script>
+<script src="value-calc.js" defer></script>
 <script>
 (function(){
-  var state={pages:'small',services:'no',cities:'no'};
-  var groups=document.querySelectorAll('[data-selector-group]');
-  var resultEl=document.getElementById('selectorResult');
-
-  function recommend(){
-    if(state.pages==='large'||(state.cities==='yes'&&state.pages!=='small')){
-      return 'Contractor Pro';
-    }
-    if(state.pages==='medium'||state.services==='yes'||state.cities==='yes'){
-      return 'Contractor Growth+';
-    }
-    return 'Contractor Growth';
-  }
-  function update(){
-    resultEl.textContent=recommend();
-  }
-  groups.forEach(function(group){
-    var key=group.getAttribute('data-selector-group');
-    group.querySelectorAll('.selector-opt').forEach(function(btn){
-      btn.addEventListener('click',function(){
-        group.querySelectorAll('.selector-opt').forEach(function(b){b.classList.remove('active');});
-        btn.classList.add('active');
-        state[key]=btn.getAttribute('data-value');
-        update();
-      });
-    });
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('[data-cta]');
+    if(!a)return;
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({event:'cta_click',cta_id:a.dataset.cta,cta_location:a.dataset.ctaLocation||'',cta_label:a.dataset.ctaLabel||(a.textContent||'').trim().slice(0,60),cta_destination:a.getAttribute('href')||''});
   });
-  update();
 })();
 </script>
 </body>

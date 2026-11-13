@@ -20,13 +20,13 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeTeamMod
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Contractor Arsenal | Premium Contractor Websites for $297/Month</title>
 <meta name="description" content="Contractor Arsenal builds premium websites for contractors. Learn why we started, what we stand for, and why we're different from every other web agency.">
-<link rel="canonical" href="https://contractorarsenal.com/about.html">
+<link rel="canonical" href="https://contractorarsenal.com/about">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Contractor Arsenal">
 <meta property="og:title" content="About Contractor Arsenal">
 <meta property="og:description" content="We build premium contractor websites for $297/month. Learn our story and why trades trust us.">
-<meta property="og:url" content="https://contractorarsenal.com/about.html">
+<meta property="og:url" content="https://contractorarsenal.com/about">
 <meta property="og:image" content="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About Contractor Arsenal">
@@ -60,6 +60,29 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeTeamMod
 .team-modal-body p{font-size:.92rem;color:var(--muted);line-height:1.75;margin-top:.85rem;}
 .whop-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:center;}
 @media(max-width:860px){.page-hero-grid,.mission-grid,.whop-inner{grid-template-columns:1fr;}}
+
+/* ABOUT 2.0: real projects strip + founder block */
+.ab-works{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.1rem;}
+.ab-work{display:block;border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);transition:opacity .6s var(--ease-out),transform .6s var(--ease-out),border-color .2s,box-shadow .3s;}
+.ab-works .ab-work:nth-child(2){transition-delay:.08s;}.ab-works .ab-work:nth-child(3){transition-delay:.16s;}.ab-works .ab-work:nth-child(4){transition-delay:.24s;}
+.ab-work.visible:hover{border-color:var(--ink);transform:translateY(-4px);box-shadow:0 18px 40px -26px rgba(0,0,0,.45);transition-delay:0s;transition-duration:.25s;}
+.ab-work img{display:block;width:100%;height:auto;aspect-ratio:1120/700;object-fit:cover;object-position:top;border-bottom:1px solid var(--border-soft);}
+.ab-work span{display:block;padding:.8rem .95rem .95rem;font-size:.78rem;color:var(--muted);line-height:1.4;}
+.ab-work b{display:block;font-family:var(--display);font-weight:800;font-size:1.1rem;text-transform:uppercase;color:var(--ink);line-height:1.1;margin-bottom:.15rem;}
+.founder{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:0;margin-top:2rem;border:1.5px solid var(--ink);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);}
+.founder-mark{background:var(--black);display:flex;align-items:center;justify-content:center;min-height:260px;position:relative;}
+.founder-mark::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:4px;background:var(--accent);}
+.founder-mark span{font-family:var(--display);font-weight:800;font-size:5rem;color:#fff;letter-spacing:.02em;}
+.founder img,.founder video{display:block;width:100%;height:100%;object-fit:cover;}
+.founder-body{padding:2rem 2.25rem;}
+.founder-kicker{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);}
+.founder-name{font-family:var(--display);font-weight:800;font-size:2.4rem;text-transform:uppercase;line-height:1;color:var(--ink);margin:.35rem 0 .4rem;}
+.founder-meta{font-size:.84rem;font-weight:600;color:var(--muted);margin-bottom:1.1rem;}
+.founder-body p{font-size:.98rem;line-height:1.7;color:var(--ink-soft);margin-bottom:.9rem;max-width:640px;}
+.founder-link{display:inline-block;margin-top:.4rem;font-size:.88rem;font-weight:700;color:var(--ink);border-bottom:2px solid var(--accent);}
+@media(max-width:900px){.ab-works{grid-template-columns:1fr 1fr;}.founder{grid-template-columns:1fr;}.founder-mark{min-height:150px;}.founder-mark span{font-size:3.4rem;}.founder-body{padding:1.5rem;}}
+@media(max-width:420px){.ab-works{gap:.75rem;}.ab-work b{font-size:.95rem;}}
+@media(prefers-reduced-motion:reduce){.ab-work{transition:none;}.ab-work.visible:hover{transform:none;}}
 </style>
 </head>
 <body>
@@ -70,19 +93,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo" aria-label="Contractor Arsenal homepage">
+    <a href="./" class="nav-logo" aria-label="Contractor Arsenal homepage">
       <span class="nav-logo-mark">
         <img src="assets/mark-dark.png" class="mark mark-dark" alt="" width="306" height="125">
         <img src="assets/mark-light.png" class="mark mark-light" alt="" width="306" height="125">
       </span>
     </a>
     <nav class="nav-links">
-      <a href="work.html">Work</a>
+      <a href="work">Work</a>
       <div class="nav-drop">
-        <a href="services.html" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
+        <a href="services" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
         <div class="nav-drop-panel">
           <div class="nav-drop-label">Services</div>
-        <a href="services.html" class="nav-drop-row">
+        <a href="services" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
             <span class="nav-drop-row-eyebrow">Websites</span>
@@ -91,28 +114,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </span>
           <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="seo.html" class="nav-drop-row">
+        <a href="seo" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
-            <span class="nav-drop-row-eyebrow">Search Visibility</span>
-            <span class="nav-drop-row-title">SEO + AEO + GEO</span>
-            <span class="nav-drop-row-desc">Help Google and AI systems understand your business.</span>
+            <span class="nav-drop-row-eyebrow">Search</span>
+            <span class="nav-drop-row-title">SEO</span>
+            <span class="nav-drop-row-desc">Help Google understand what you do and where you work.</span>
           </span>
           <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="seo.html#google-business" class="nav-drop-row">
+        <a href="ai-search" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
-            <span class="nav-drop-row-eyebrow">Google Business</span>
+            <span class="nav-drop-row-eyebrow">AI Search</span>
+            <span class="nav-drop-row-title">AEO + GEO</span>
+            <span class="nav-drop-row-desc">Help AI tools understand your business.</span>
+          </span>
+          <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="google-business" class="nav-drop-row">
+          <span class="nav-drop-row-bar"></span>
+          <span class="nav-drop-row-text">
+            <span class="nav-drop-row-eyebrow">Local</span>
             <span class="nav-drop-row-title">Google Business</span>
             <span class="nav-drop-row-desc">Connect your site with your local Google presence.</span>
           </span>
           <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="services.html#leads" class="nav-drop-row">
+        <a href="lead-capture" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
-            <span class="nav-drop-row-eyebrow">Lead Capture</span>
+            <span class="nav-drop-row-eyebrow">Leads</span>
             <span class="nav-drop-row-title">Lead Capture</span>
             <span class="nav-drop-row-desc">Make it easy for visitors to call or request an estimate.</span>
           </span>
@@ -120,68 +152,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
           <div class="nav-drop-foot">
             <span class="nav-drop-foot-price">Websites start at $297/mo</span>
-            <a href="services.html" class="nav-drop-foot-link">View All Services →</a>
+            <a href="services" class="nav-drop-foot-link">View All Services →</a>
           </div>
         </div>
       </div>
-      <a href="pricing.html">Pricing</a>
-      <div class="nav-drop">
-        <a href="resources.html" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Resources<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
-        <div class="nav-drop-panel nav-drop-panel-wide">
-          <div class="nav-drop-label">Contractor Growth Library</div>
-          <div class="nav-drop-grid">
-          <a href="resources.html#websites" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Websites</span>
-              <span class="nav-drop-row-desc">Website design, pricing, structure</span>
-            </span>
-          </a>
-          <a href="resources.html#search-visibility" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Search Visibility</span>
-              <span class="nav-drop-row-desc">SEO, AEO, GEO, local search</span>
-            </span>
-          </a>
-          <a href="resources.html#google-business" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Google Business</span>
-              <span class="nav-drop-row-desc">Maps, reviews, profile optimization</span>
-            </span>
-          </a>
-          <a href="resources.html#leads" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Leads</span>
-              <span class="nav-drop-row-desc">Lead generation and conversion</span>
-            </span>
-          </a>
-          <a href="resources.html#google-ads" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Google Ads</span>
-              <span class="nav-drop-row-desc">Google Ads and Local Services Ads</span>
-            </span>
-          </a>
-          <a href="resources.html#trade-guides" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Trade Guides</span>
-              <span class="nav-drop-row-desc">Roofing, painting, HVAC, landscaping and more</span>
-            </span>
-          </a>
-          </div>
-          <div class="nav-drop-foot nav-drop-foot-center">
-            <a href="resources.html" class="nav-drop-foot-link">Browse the Growth Library →</a>
-          </div>
-        </div>
-      </div>
-      <a href="about.html" class="active">Company</a>
+      <a href="pricing">Pricing</a>
+      <a href="resources">Resources</a>
+      <a href="about" class="active">Company</a>
     </nav>
     <div class="nav-right">
-      <a href="demo.html" class="nav-cta hide-mobile">Get a Free Demo</a>
+      <a href="demo" class="nav-cta hide-mobile">Get a Free Demo</a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -189,26 +169,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 <div class="nav-mobile" id="navMobile">
-  <a href="work.html">Work</a>
+  <a href="work">Work</a>
   <details class="nav-mobile-drop">
     <summary>Services</summary>
-    <a href="services.html">Websites</a>
-    <a href="seo.html">Search Visibility</a>
-    <a href="seo.html#google-business">Google Business</a>
-    <a href="services.html#leads">Lead Capture</a>
+    <a href="services">Contractor Websites</a>
+    <a href="seo">SEO</a>
+    <a href="ai-search">AEO + GEO</a>
+    <a href="google-business">Google Business</a>
+    <a href="lead-capture">Lead Capture</a>
   </details>
-  <a href="pricing.html">Pricing</a>
-  <details class="nav-mobile-drop">
-    <summary>Resources</summary>
-    <a href="resources.html">Growth Library</a>
-    <a href="resources.html#websites">Websites</a>
-    <a href="resources.html#search-visibility">Search Visibility</a>
-    <a href="resources.html#google-business">Google Business</a>
-    <a href="resources.html#leads">Leads</a>
-    <a href="resources.html#trade-guides">Trade Guides</a>
-  </details>
-  <a href="about.html">Company</a>
-  <a href="demo.html" class="mob-cta">Get a Free Demo</a>
+  <a href="pricing">Pricing</a>
+  <a href="resources">Resources</a>
+  <a href="about">Company</a>
+  <a href="demo" class="mob-cta">Get a Free Demo</a>
 </div>
 
 <section class="page-hero page-hero--left">
@@ -218,15 +191,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h1 class="h-display">We build websites<br>that win jobs <em>for contractors.</em></h1>
       <p class="h-sub" style="margin-top:1.1rem;">We're not a generic web agency. We build specifically for contractors, trades, and local service businesses. We know what makes people call a contractor versus scroll past one.</p>
       <div class="btn-row" style="margin-top:1.75rem;">
-        <a href="demo.html" class="btn btn-primary">Get My Free Demo</a>
-        <a href="work.html" class="btn btn-outline">See Our Work</a>
+        <a href="demo" class="btn btn-primary" data-cta="demo" data-cta-location="about_hero">Get My Free Demo</a>
+        <a href="work" class="btn btn-outline" data-cta="see_work" data-cta-location="about_hero">See Our Work</a>
       </div>
     </div>
     <div class="card-grid grid-2 reveal">
-      <div class="card text-center"><div class="stat-num" style="font-family:var(--display);font-size:2rem;">120+</div><div style="font-size:.78rem;color:var(--muted);margin-top:.2rem;">Sites built</div></div>
-      <div class="card text-center"><div class="stat-num" style="font-family:var(--display);font-size:2rem;">$4M+</div><div style="font-size:.78rem;color:var(--muted);margin-top:.2rem;">Revenue generated</div></div>
-      <div class="card text-center"><div class="stat-num" style="font-family:var(--display);font-size:2rem;">48hr</div><div style="font-size:.78rem;color:var(--muted);margin-top:.2rem;">Avg. launch time</div></div>
-      <div class="card text-center"><div class="stat-num" style="font-family:var(--display);font-size:2rem;">9.2×</div><div style="font-size:.78rem;color:var(--muted);margin-top:.2rem;">Average ROI</div></div>
+      <div class="card text-center"><div class="stat-num" style="font-family:var(--display);font-size:2rem;">8</div><div style="font-size:.78rem;color:var(--muted);margin-top:.2rem;">Client sites in our portfolio</div></div>
+      <div class="card text-center"><div class="stat-num" style="font-family:var(--display);font-size:2rem;">$0</div><div style="font-size:.78rem;color:var(--muted);margin-top:.2rem;">Setup fee</div></div>
+      <div class="card text-center"><div class="stat-num" style="font-family:var(--display);font-size:2rem;">48hr</div><div style="font-size:.78rem;color:var(--muted);margin-top:.2rem;">Launch after demo approval</div></div>
+      <div class="card text-center"><div class="stat-num" style="font-family:var(--display);font-size:2rem;">$297</div><div style="font-size:.78rem;color:var(--muted);margin-top:.2rem;">Starting monthly price</div></div>
     </div>
   </div>
 </section>
@@ -245,6 +218,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- REAL PROJECTS -->
+<section>
+  <div class="wrap">
+    <div class="section-head split">
+      <div>
+        <div class="eyebrow">What We Actually Make</div>
+        <h2 class="h-display h-section">Real contractors.<br>Real websites.</h2>
+      </div>
+      <a href="work" style="font-size:.88rem;font-weight:700;border-bottom:2px solid var(--accent);" data-cta="all_work" data-cta-location="about_projects">See all our work →</a>
+    </div>
+    <div class="ab-works">
+      <a class="ab-work reveal" href="case-studies/refined-painting" data-cta="work_card" data-cta-location="about_projects" data-cta-label="Refined Painting">
+        <img src="assets/work/refined-painting-desktop.jpg" alt="Refined Painting website built by Contractor Arsenal" width="1120" height="700" loading="lazy" decoding="async">
+        <span><b>Refined Painting</b>Painting · Seattle &amp; Eastside, WA</span>
+      </a>
+      <a class="ab-work reveal" href="case-studies/seattle-king-roofing" data-cta="work_card" data-cta-location="about_projects" data-cta-label="Seattle King Roofing">
+        <img src="assets/work/seattle-king-roofing-desktop.jpg" alt="Seattle King Roofing website built by Contractor Arsenal" width="1120" height="700" loading="lazy" decoding="async">
+        <span><b>Seattle King Roofing</b>Roofing · Everett, WA</span>
+      </a>
+      <a class="ab-work reveal" href="https://www.goldenoakpainting.com/" target="_blank" rel="noopener noreferrer" data-cta="work_card" data-cta-location="about_projects" data-cta-label="Golden Oak Painting">
+        <img src="assets/work/golden-oak-painting-desktop.jpg" alt="Golden Oak Painting website built by Contractor Arsenal" width="1120" height="700" loading="lazy" decoding="async">
+        <span><b>Golden Oak Painting</b>Painting · Bothell, WA</span>
+      </a>
+      <a class="ab-work reveal" href="https://agavewelding.com/" target="_blank" rel="noopener noreferrer" data-cta="work_card" data-cta-location="about_projects" data-cta-label="Agave Welding">
+        <img src="assets/work/agave-welding-desktop.jpg" alt="Agave Welding website built by Contractor Arsenal" width="1120" height="700" loading="lazy" decoding="async">
+        <span><b>Agave Welding</b>Welding &amp; fabrication · Seattle, WA</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- VALUES -->
 <section>
   <div class="wrap">
@@ -257,7 +261,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="card reveal reveal-d1"><h3 style="font-size:1rem;font-weight:700;margin-bottom:.5rem;">Results Over Aesthetics</h3><p style="font-size:.88rem;color:var(--muted);line-height:1.65;">A pretty website that doesn't rank or convert is worthless. We build for calls, estimates, and booked jobs.</p></div>
       <div class="card reveal reveal-d2"><h3 style="font-size:1rem;font-weight:700;margin-bottom:.5rem;">Transparent Pricing</h3><p style="font-size:.88rem;color:var(--muted);line-height:1.65;">$297/month. Everything included. No hourly billing, no surprise invoices, no confusing packages.</p></div>
       <div class="card reveal"><h3 style="font-size:1rem;font-weight:700;margin-bottom:.5rem;">Real Support</h3><p style="font-size:.88rem;color:var(--muted);line-height:1.65;">When you need a change, you email us, not a ticket system with a five-day response time.</p></div>
-      <div class="card reveal reveal-d1"><h3 style="font-size:1rem;font-weight:700;margin-bottom:.5rem;">You Own Everything</h3><p style="font-size:.88rem;color:var(--muted);line-height:1.65;">The site, the domain, the content. It's all yours. We never lock you into a platform you can't leave.</p></div>
+      <div class="card reveal reveal-d1"><h3 style="font-size:1rem;font-weight:700;margin-bottom:.5rem;">You Own Everything</h3><p style="font-size:.88rem;color:var(--muted);line-height:1.65;">Once your build is paid in full, the site, the domain, and the content are yours. We never lock you into a platform you can't leave.</p></div>
       <div class="card reveal reveal-d2"><h3 style="font-size:1rem;font-weight:700;margin-bottom:.5rem;">Fast. Not Someday Fast.</h3><p style="font-size:.88rem;color:var(--muted);line-height:1.65;">Fast launch after demo approval. No weeks of meetings, no long build timeline.</p></div>
     </div>
   </div>
@@ -268,23 +272,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap who-inner">
     <div class="eyebrow center">Who We Are</div>
     <h2 class="h-display h-section center">Based in Eastlake, Seattle.<br>Built for contractors everywhere.</h2>
-    <p class="who-text">We're a small, focused team based in the Eastlake neighborhood of Seattle, WA. <strong>Not a 50-person agency. Not a software company that does "a little bit of everything."</strong> We build contractor websites. That's what we do, and we've built it into a craft.<br><br>Every site we launch is handled by someone who actually knows the contractor industry: what makes people call, what makes them book, and what makes a site actually win jobs. We've done it 120+ times.<br><br>If your website isn't bringing in jobs, it's not doing its job. <strong>That's the problem we fix.</strong></p>
+    <p class="who-text">We're a small, focused team based in the Eastlake neighborhood of Seattle, WA. <strong>Not a 50-person agency. Not a software company that does "a little bit of everything."</strong> We build contractor websites. That's what we do, and we've built it into a craft.<br><br>Every site we launch is handled by someone who actually knows the contractor industry: what makes people call, what makes them book, and what makes a site actually win jobs.<br><br>If your website isn't bringing in jobs, it's not doing its job. <strong>That's the problem we fix.</strong></p>
   </div>
 </section>
 
 <!-- TEAM -->
 <section>
   <div class="wrap">
-    <div class="eyebrow">The Team</div>
-    <h2 class="h-display">The team behind<br>Contractor Arsenal.</h2>
-    <div class="card-grid grid-3" style="margin-top:2rem;">
-      <div class="team-card reveal" onclick="openTeamModal()">
-        <div class="team-avatar">JD</div>
-        <div class="team-name">Jay</div>
-        <div class="team-role">Founder / CEO</div>
-        <div class="team-location">Eastlake, Seattle, WA</div>
-        <p class="team-bio">Started Contractor Arsenal in 2018. Background in web design, sales, marketing, software, and contractor growth systems.</p>
+    <div class="eyebrow">The People</div>
+    <h2 class="h-display">Who you are<br>working with.</h2>
+    <div class="founder reveal">
+      <!--
+        FOUNDER MEDIA SLOT (intentionally empty until real assets are supplied).
+        Replace the .founder-mark block below with ONE of:
+          <img src="assets/team/jay-working.jpg" alt="Jay, founder of Contractor Arsenal, at work" width="900" height="1100" loading="lazy" decoding="async">
+          or a self-hosted, owner-approved <video> with poster, muted, playsinline, and controls.
+        Do not use stock or AI-generated photos here.
+      -->
+      <div class="founder-mark" aria-hidden="true"><span>JD</span></div>
+      <div class="founder-body">
+        <div class="founder-kicker">Founder</div>
+        <h3 class="founder-name">Jay</h3>
+        <div class="founder-meta">Founder / CEO · Eastlake, Seattle, WA</div>
+        <p>Jay started Contractor Arsenal with one idea: contractors deserve websites that actually bring in work, not just sit online and look average.</p>
+        <p>His background spans web design, marketing, software, sales, and contractor growth systems. He leads strategy, offer direction, client experience, and the vision behind every site Contractor Arsenal builds.</p>
+        <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener noreferrer" class="founder-link" data-cta="instagram" data-cta-location="about_founder">See what we are working on, on Instagram →</a>
       </div>
+    </div>
+    <div class="card-grid grid-2" style="margin-top:1.5rem;">
       <div class="team-card placeholder reveal reveal-d1">
         <div class="team-avatar">AN</div>
         <div class="team-name">Andres</div>
@@ -309,7 +324,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="team-avatar" style="width:56px;height:56px;font-size:1.3rem;">JD</div>
     <div class="team-modal-name">Jay</div>
     <div class="team-role">Founder / CEO</div>
-    <div class="team-location">Eastlake, Seattle, WA · Contractor Arsenal since 2018</div>
+    <div class="team-location">Eastlake, Seattle, WA</div>
     <div class="team-modal-body">
       <p>Jay started Contractor Arsenal with one idea: contractors deserve websites that actually bring in work, not just sit online and look average.</p>
       <p>His background spans web design, marketing, software, sales, and contractor growth systems. He leads strategy, offer direction, client experience, and the vision behind every site Contractor Arsenal builds.</p>
@@ -321,20 +336,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section style="background:var(--surface-2);border-top:1px solid var(--border-soft);">
   <div class="wrap whop-inner">
     <div>
-      <div class="eyebrow">Partnership</div>
-      <h2 class="h-display h-section">Official WHOP Partner.</h2>
-      <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Contractor Arsenal is an Official WHOP Partner, a certification that reflects our commitment to quality, results, and contractor-specific websites built to win jobs.</p>
-      <a href="partner.html" class="btn btn-outline" style="margin-top:1.25rem;">See Our Free CRM →</a>
+      <div class="eyebrow">Also From Us</div>
+      <h2 class="h-display h-section">A free CRM for contractors.</h2>
+      <p class="h-sub" style="margin-top:1.1rem;max-width:none;">We also offer a free contractor CRM. See what it includes and whether it fits how you run your business.</p>
+      <a href="partner" class="btn btn-outline" style="margin-top:1.25rem;">See Our Free CRM →</a>
     </div>
     <div class="card reveal">
-      <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;">
-        <img src="assets/whop-logo.svg" alt="WHOP" style="height:22px;">
-        <span style="font-size:.82rem;color:var(--muted);">Trusted by 120+ contractors</span>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:.65rem;">
-        <div style="display:flex;align-items:center;gap:.6rem;font-size:.86rem;color:var(--ink-soft);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Verified contractor website partner</div>
-        <div style="display:flex;align-items:center;gap:.6rem;font-size:.86rem;color:var(--ink-soft);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Local SEO methodology certified</div>
-        <div style="display:flex;align-items:center;gap:.6rem;font-size:.86rem;color:var(--ink-soft);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Results-based partner network</div>
+      <div style="display:flex;align-items:center;gap:.75rem;">
+        <span style="font-family:var(--display);font-weight:800;font-size:1.3rem;text-transform:uppercase;color:var(--ink);">Free contractor CRM</span>
+        <a href="partner" style="font-size:.84rem;font-weight:700;color:var(--ink);border-bottom:2px solid var(--accent);margin-left:auto;">See it →</a>
       </div>
     </div>
   </div>
@@ -345,8 +355,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="h-display on-dark">Your website should<br>be winning you <em>jobs.</em></h2>
     <p class="h-sub on-dark center">See the website built to win your next jobs. Free demo, no commitment.</p>
     <div class="btn-row">
-      <a href="demo.html" class="btn btn-accent">Get My Free Demo</a>
-      <a href="services.html" class="btn btn-ghost-dark">See What's Included</a>
+      <a href="demo" class="btn btn-accent">Get My Free Demo</a>
+      <a href="services" class="btn btn-ghost-dark">See What's Included</a>
     </div>
   </div>
 </section>
@@ -378,43 +388,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html">Websites</a></li>
-          <li><a href="seo.html">Search Visibility</a></li>
-          <li><a href="seo.html#google-business">Google Business</a></li>
-          <li><a href="services.html#leads">Lead Capture</a></li>
+          <li><a href="services">Contractor Websites</a></li>
+          <li><a href="seo">SEO</a></li>
+          <li><a href="ai-search">AEO + GEO</a></li>
+          <li><a href="google-business">Google Business</a></li>
+          <li><a href="lead-capture">Lead Capture</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="partner.html">Free CRM</a></li>
-          <li><a href="arsenal.html">Arsenal 001</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="work">Work</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="industries">Industries</a></li>
+          <li><a href="partner">Free CRM</a></li>
+          <li><a href="arsenal">Arsenal 001</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
-          <li><a href="resources.html">Growth Library</a></li>
-          <li><a href="resources.html#websites">Websites</a></li>
-          <li><a href="resources.html#search-visibility">Search Visibility</a></li>
-          <li><a href="resources.html#google-business">Google Business</a></li>
-          <li><a href="resources.html#leads">Leads</a></li>
+          <li><a href="resources">Growth Library</a></li>
+          <li><a href="resources#websites">Websites</a></li>
+          <li><a href="resources#search-visibility">Search Visibility</a></li>
+          <li><a href="resources#google-business">Google Business</a></li>
+          <li><a href="resources#leads">Leads</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Service Areas</h4>
         <ul>
-          <li><a href="service-areas/seattle-wa-contractor-websites.html">Seattle, WA</a></li>
-          <li><a href="service-areas/bellevue-wa-contractor-websites.html">Bellevue, WA</a></li>
-          <li><a href="service-areas/tacoma-wa-contractor-websites.html">Tacoma, WA</a></li>
-          <li><a href="service-areas/spokane-wa-contractor-websites.html">Spokane, WA</a></li>
-          <li><a href="service-areas/everett-wa-contractor-websites.html">Everett, WA</a></li>
-          <li><a href="service-areas/redmond-wa-contractor-websites.html">Redmond, WA</a></li>
-          <li><a href="service-areas/index.html" style="font-weight:700;">View All Service Areas →</a></li>
+          <li><a href="service-areas/seattle-wa-contractor-websites">Seattle, WA</a></li>
+          <li><a href="service-areas/bellevue-wa-contractor-websites">Bellevue, WA</a></li>
+          <li><a href="service-areas/tacoma-wa-contractor-websites">Tacoma, WA</a></li>
+          <li><a href="service-areas/spokane-wa-contractor-websites">Spokane, WA</a></li>
+          <li><a href="service-areas/everett-wa-contractor-websites">Everett, WA</a></li>
+          <li><a href="service-areas/redmond-wa-contractor-websites">Redmond, WA</a></li>
+          <li><a href="service-areas/" style="font-weight:700;">View All Service Areas →</a></li>
         </ul>
       </div>
     </div>
@@ -422,8 +433,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap footer-bottom">
     <span>&copy; 2026 Contractor Arsenal. All rights reserved.</span>
     <div class="footer-bottom-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+      <a href="privacy">Privacy</a>
+      <a href="terms">Terms</a>
       <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="mailto:hello@contractorarsenal.com">Email</a>
     </div>
@@ -432,5 +443,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="main.js"></script>
 <script src="newsletter.js" defer></script>
+<script>
+(function(){
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('[data-cta]');
+    if(!a)return;
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({event:'cta_click',cta_id:a.dataset.cta,cta_location:a.dataset.ctaLocation||'',cta_label:a.dataset.ctaLabel||(a.textContent||'').trim().slice(0,60),cta_destination:a.getAttribute('href')||''});
+  });
+})();
+</script>
 </body>
 </html>

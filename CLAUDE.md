@@ -1,4 +1,37 @@
-# CONTRACTOR ARSENAL — V6 DESIGN SYSTEM (CLAUDE.md)
+# CONTRACTOR ARSENAL — V7 (CONTRACTOR ARSENAL 2.0)
+
+V7 supersedes V6 below wherever the two disagree. V6's token system, header contrast rule, and copy rules still apply. Read this section first.
+
+## WHAT CHANGED IN V7
+
+- **URLs are extensionless.** The canonical form is `https://contractorarsenal.com/pricing`, not `/pricing.html`. Canonicals, `og:url`, structured-data URLs, `sitemap.xml`, `llms.txt`, and every internal link use the clean form (`href="pricing"`, `href="../demo"`, `href="./"` for the homepage, `href="service-areas/"` for the hub). Files on disk keep their `.html` names. Cloudflare's default `html_handling` serves the clean URL; `_redirects` at the repo root gives each old `.html` address a 301. **When adding a page: use clean links, add a `_redirects` line, and add the clean URL to the sitemap.** Never write an internal `.html` link.
+- **Local preview:** `node /Volumes/AI-WORKSPACE/agents/ca-preview/preview.mjs <repo> 8911`. It mirrors Cloudflare routing (`_redirects`, clean URLs) and runs the real `worker/index.js` with Resend mocked. `python3 -m http.server` no longer works for navigation (clean links 404) or for the newsletter (no Worker).
+- **Nav:** Work / Services (dropdown) / Pricing / Resources / Company. The Services dropdown, mobile accordion, and footer column list five destinations: `services` (Contractor Websites), `seo` (SEO), `ai-search` (AEO + GEO), `google-business`, `lead-capture`. **Resources is a single direct link, no dropdown.** No nested dropdowns.
+- **Homepage:** hero is headline, sub, two CTAs, and an auto-rotating client showcase (eight clients, one pause button, no tabs, no caption bar, no trust bullets). H1 is "Websites built to win you more jobs." Do not change it for keywords. Featured work grid: Refined Painting first, Golden Oak second.
+- **Portfolio:** `work.html` has eight clients as screenshot cards in a fixed default order (Seattle King Roofing, Highline Roofing WA, Golden Oak Painting, DGO Green, JC Grading & Paving Solution, Agave Welding, Refined Painting, JBA Roofing). Each card has View Live Site and Read case study. Every client has a page in `case-studies/` built from one template. Screenshots live in `assets/work/` (`<slug>-desktop.jpg` 1120x700, `<slug>-mobile.jpg` 400 wide).
+- **Calculator** (`value-calc.js`, `value-calc.css`; homepage and pricing): inputs are project value, website inquiries per year, lead closing rate, and plan. It is labeled hypothetical. Never add profit, ROI, or ROAS wording, and never present its numbers as client results.
+- **Pricing:** three plans ($297 / $497 / $997), a how-it-works strip, a comparison table, the calculator. No plan-recommendation questionnaire. `demo?plan=growth|growth-plus|pro` must keep working; it depends on `[data-plan-group]` and `[data-plan-panel]` both existing in `demo.html`.
+- **Demo:** form first, single column, thumbnails below. Four required fields. Field names and the "Not sure yet" submitted value are the API contract.
+- **Resources:** 15 articles, six categories, a "Get Found Locally" featured collection, section jump links, search. No extra filters or dropdowns.
+- **Newsletter popup:** opens only on the Resources hub and articles, after 60% scroll or 45 seconds of visible time. Footer form everywhere. Worker route and Resend unchanged.
+- **Technology messaging:** public copy does not name hosting, repository, form, or analytics vendors. `privacy.html` is the exception and must stay accurate. Never claim a Google partnership.
+- **Tracking:** `cta_click` (with `cta_id`, `cta_location`, `cta_label`, `cta_destination`) is pushed by a small inline script on each page from `data-cta` attributes. `demo_request_success` and `application_success` fire only on confirmed success.
+
+## CLAIMS RULES (V7)
+
+- Client names, locations, and site features must match the client's own live site. Omit what cannot be verified.
+- No testimonials, ratings, rankings, revenue, lead counts, certifications, competitor prices, or industry averages without evidence on file. Do not reintroduce removed claims (ROI multiples, speed scores, "page 1", average job values, partner certifications).
+- Removed for lack of documentation, do not reintroduce without evidence on file: `$4M+`, `120+`, "since 2018", "Official WHOP Partner" and its certification wording, `30+ cities`, `8+ trades`.
+- Confirmed terms: billing starts at signup; cancellation needs 30 days' written notice; sites launch within 48 hours after the client reviews and approves the demo.
+
+## GIT SAFETY (V7)
+
+- Production is `main`; Cloudflare builds every pushed branch as a preview. Never push without explicit approval.
+- This repo tracks both `CLAUDE.md` and `Claude.MD`. On a case-insensitive disk only one exists, so `Claude.MD` always shows as modified. **Stage files by exact name. Never `git add .` or `git add -A`. Stage `CLAUDE.md`, never `Claude.MD`.**
+
+---
+
+# V6 DESIGN SYSTEM (superseded where V7 above disagrees)
 
 This supersedes V5 below. V5 established the current nav/hero/Growth Library shape; that structure is unchanged. V6 is two combined passes that turned the design system into an actual system: (1) real interaction fixes (pulsing LIVE indicators, corrected homepage hero spacing, a from-scratch dropdown hover fix, the demo plan-selector moved inside the form, a real client-side Growth Library search with a results popover, six new Service Area pages), then (2) full header/hero/dropdown centralization so every page shares one spacing token system and one dropdown component instead of each page inventing its own numbers, plus a completely redesigned Services/Resources dropdown and the addition of Seattle King Roofing to the portfolio. Visual identity (black/white/gray/red, typography, five-tab nav) did not change.
 

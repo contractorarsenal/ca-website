@@ -7,10 +7,15 @@
   var KEY_DISMISSED='ca_nl_dismissed_at';
   var KEY_SEEN_SESSION='ca_nl_seen';
   var COOLDOWN_MS=7*24*60*60*1000;
-  var DELAY_MS=5000;
+  /* Popup trigger: meaningful engagement, whichever comes first. */
+  var ENGAGE_MS=45000;
+  var SCROLL_DEPTH=0.6;
   var EMAIL_RE=/^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/;
   /* Conversion, application, checkout-style and legal pages: no popup. */
   var EXCLUDED=/\/(demo|apply|arsenal|partner|privacy|terms)(\.html)?\/?$|\/prez(\/|$)/;
+  /* The popup only opens automatically on the Resources hub and resource articles.
+     Everywhere else, signup is voluntary through the footer form. */
+  var POPUP_PAGES=/^\/resources(\.html)?\/?$|^\/resources\/[^\/]+\/?$/;
 
   function store(kind){try{return kind==='session'?window.sessionStorage:window.localStorage;}catch(e){return null;}}
   function get(key,kind){var s=store(kind);try{return s?s.getItem(key):null;}catch(e){return null;}}
@@ -90,6 +95,7 @@
 
   /* ── Popup ── */
   if(EXCLUDED.test(location.pathname))return;
+  if(!POPUP_PAGES.test(location.pathname))return;
   if(isSubscribed())return;
   var dismissedAt=parseInt(get(KEY_DISMISSED)||'0',10);
   if(dismissedAt&&Date.now()-dismissedAt<COOLDOWN_MS)return;
@@ -194,7 +200,37 @@
     track('newsletter_popup_view');
   }
 
-  function schedule(){setTimeout(open,DELAY_MS);}
-  if(document.readyState==='complete')schedule();
-  else window.addEventListener('load',schedule);
+  /* Open once, after 60% scroll depth or 45 seconds of active (visible) page time. */
+  var fired=false,activeMs=0,ticker=null,queued=false;
+  function fire(){
+    if(fired)return;
+    fired=true;
+    if(ticker)clearInterval(ticker);
+    window.removeEventListener('scroll',onScroll);
+    open();
+  }
+  function depth(){
+    var doc=document.documentElement;
+    var total=Math.max(doc.scrollHeight,document.body.scrollHeight);
+    return total>0?(window.pageYOffset+window.innerHeight)/total:0;
+  }
+  function onScroll(){
+    if(queued)return;
+    queued=true;
+    requestAnimationFrame(function(){
+      queued=false;
+      /* pageYOffset>0: a short page that already shows 60% on load does not count as scrolling */
+      if(window.pageYOffset>0&&depth()>=SCROLL_DEPTH)fire();
+    });
+  }
+  function watch(){
+    window.addEventListener('scroll',onScroll,{passive:true});
+    ticker=setInterval(function(){
+      if(document.hidden)return;
+      activeMs+=1000;
+      if(activeMs>=ENGAGE_MS)fire();
+    },1000);
+  }
+  if(document.readyState==='complete')watch();
+  else window.addEventListener('load',watch);
 })();

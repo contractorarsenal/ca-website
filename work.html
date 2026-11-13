@@ -16,11 +16,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contractor Website Directory | Contractor Arsenal</title>
 <meta name="description" content="Browse real contractor websites built by Contractor Arsenal. Custom sites for roofers, painters, landscapers, concrete contractors, welders, and more. From $297/month.">
-<link rel="canonical" href="https://contractorarsenal.com/work.html">
+<link rel="canonical" href="https://contractorarsenal.com/work">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Our Work | Contractor Arsenal">
 <meta property="og:description" content="Real contractor websites built to rank and convert. Browse the directory to see what your site could look like.">
-<meta property="og:url" content="https://contractorarsenal.com/work.html">
+<meta property="og:url" content="https://contractorarsenal.com/work">
 <meta property="og:image" content="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="styles.css">
 <style>
 .page-hero .h-sub{margin:1rem auto 0;}
+
+/* PORTFOLIO: visual project cards (work.html) */
+.pf-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.75rem;}
+.pf{display:flex;flex-direction:column;border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);transition:opacity .6s var(--ease-out),transform .6s var(--ease-out),border-color .2s,box-shadow .3s;}
+.pf-grid .pf:nth-child(even){transition-delay:.1s;}
+.pf.visible:hover,.pf:focus-within{border-color:var(--ink);box-shadow:0 20px 44px -28px rgba(0,0,0,.45);transition-delay:0s;}
+.pf-shot{position:relative;display:block;aspect-ratio:1120/700;overflow:hidden;background:#161616;border-bottom:1px solid var(--border-soft);}
+.pf-desk{display:block;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .7s var(--ease-out);}
+.pf-phone{position:absolute;right:4.5%;bottom:-14%;width:19%;border:1.5px solid var(--ink);border-radius:14px;background:var(--black);padding:4px;box-shadow:0 18px 36px -14px rgba(0,0,0,.6);transition:transform .5s var(--ease-out);}
+.pf-phone img{display:block;width:100%;height:auto;border-radius:10px;}
+.pf-open{position:absolute;left:1rem;bottom:1rem;background:var(--accent);color:#fff;font-size:.78rem;font-weight:700;padding:.5rem .85rem;border-radius:var(--r-md);opacity:0;transform:translateY(8px);transition:opacity .25s,transform .25s var(--ease-out);}
+.pf-shot:hover .pf-desk,.pf-shot:focus-visible .pf-desk{transform:scale(1.035);}
+.pf-shot:hover .pf-phone,.pf-shot:focus-visible .pf-phone{transform:translateY(-12%);}
+.pf-shot:hover .pf-open,.pf-shot:focus-visible .pf-open{opacity:1;transform:none;}
+.pf-shot:focus-visible{outline:3px solid var(--accent);outline-offset:-3px;}
+.pf-body{display:flex;flex-direction:column;gap:.5rem;flex:1;padding:1.4rem 1.5rem 1.5rem;}
+.pf-top{display:flex;align-items:center;justify-content:space-between;gap:.75rem;}
+.pf-name{font-family:var(--display);font-weight:800;font-size:1.65rem;line-height:1.05;text-transform:uppercase;color:var(--ink);}
+.pf-meta{font-size:.82rem;font-weight:600;color:var(--muted);}
+.pf-desc{font-size:.92rem;color:var(--ink-soft);line-height:1.6;}
+.pf-built{list-style:none;padding:0;margin:.35rem 0 0;display:flex;flex-wrap:wrap;gap:.4rem;}
+.pf-built li{font-size:.74rem;font-weight:700;color:var(--ink-soft);background:var(--surface-2);border:1px solid var(--border-soft);border-radius:var(--r-sm);padding:.3rem .55rem;}
+.pf-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem 1.25rem;margin-top:auto;padding-top:1rem;}
+.pf-case{font-size:.84rem;font-weight:700;color:var(--ink);border-bottom:2px solid var(--accent);}
+.pf-grid.is-swap .pf{animation:pf-in .38s var(--ease-out) both;}
+@keyframes pf-in{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+.pf-band{margin-top:2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.25rem 2rem;background:var(--black);border-radius:var(--r-lg);padding:2rem 2.25rem;}
+.pf-band h2{font-family:var(--display);font-weight:800;font-size:1.9rem;line-height:1;text-transform:uppercase;color:#fff;}
+.pf-band h2 em{font-style:normal;color:var(--accent);}
+.pf-band p{margin-top:.5rem;font-size:.92rem;color:var(--muted-inv);max-width:560px;line-height:1.55;}
+@media(max-width:860px){.pf-grid{grid-template-columns:1fr;gap:1.25rem;}.pf-name{font-size:1.4rem;}.pf-grid .pf:nth-child(even){transition-delay:0s;}}
+@media(hover:none){.pf-open{display:none;}}
+@media(prefers-reduced-motion:reduce){.pf,.pf-desk,.pf-phone,.pf-open{transition:none;}.pf-grid.is-swap .pf{animation:none;}.pf-shot:hover .pf-desk,.pf-shot:hover .pf-phone{transform:none;}}
 </style>
 </head>
 <body>
@@ -38,19 +71,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo" aria-label="Contractor Arsenal homepage">
+    <a href="./" class="nav-logo" aria-label="Contractor Arsenal homepage">
       <span class="nav-logo-mark">
         <img src="assets/mark-dark.png" class="mark mark-dark" alt="" width="306" height="125">
         <img src="assets/mark-light.png" class="mark mark-light" alt="" width="306" height="125">
       </span>
     </a>
     <nav class="nav-links">
-      <a href="work.html" class="active">Work</a>
+      <a href="work" class="active">Work</a>
       <div class="nav-drop">
-        <a href="services.html" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
+        <a href="services" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
         <div class="nav-drop-panel">
           <div class="nav-drop-label">Services</div>
-        <a href="services.html" class="nav-drop-row">
+        <a href="services" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
             <span class="nav-drop-row-eyebrow">Websites</span>
@@ -59,28 +92,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </span>
           <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="seo.html" class="nav-drop-row">
+        <a href="seo" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
-            <span class="nav-drop-row-eyebrow">Search Visibility</span>
-            <span class="nav-drop-row-title">SEO + AEO + GEO</span>
-            <span class="nav-drop-row-desc">Help Google and AI systems understand your business.</span>
+            <span class="nav-drop-row-eyebrow">Search</span>
+            <span class="nav-drop-row-title">SEO</span>
+            <span class="nav-drop-row-desc">Help Google understand what you do and where you work.</span>
           </span>
           <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="seo.html#google-business" class="nav-drop-row">
+        <a href="ai-search" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
-            <span class="nav-drop-row-eyebrow">Google Business</span>
+            <span class="nav-drop-row-eyebrow">AI Search</span>
+            <span class="nav-drop-row-title">AEO + GEO</span>
+            <span class="nav-drop-row-desc">Help AI tools understand your business.</span>
+          </span>
+          <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="google-business" class="nav-drop-row">
+          <span class="nav-drop-row-bar"></span>
+          <span class="nav-drop-row-text">
+            <span class="nav-drop-row-eyebrow">Local</span>
             <span class="nav-drop-row-title">Google Business</span>
             <span class="nav-drop-row-desc">Connect your site with your local Google presence.</span>
           </span>
           <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="services.html#leads" class="nav-drop-row">
+        <a href="lead-capture" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
-            <span class="nav-drop-row-eyebrow">Lead Capture</span>
+            <span class="nav-drop-row-eyebrow">Leads</span>
             <span class="nav-drop-row-title">Lead Capture</span>
             <span class="nav-drop-row-desc">Make it easy for visitors to call or request an estimate.</span>
           </span>
@@ -88,68 +130,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
           <div class="nav-drop-foot">
             <span class="nav-drop-foot-price">Websites start at $297/mo</span>
-            <a href="services.html" class="nav-drop-foot-link">View All Services →</a>
+            <a href="services" class="nav-drop-foot-link">View All Services →</a>
           </div>
         </div>
       </div>
-      <a href="pricing.html">Pricing</a>
-      <div class="nav-drop">
-        <a href="resources.html" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Resources<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
-        <div class="nav-drop-panel nav-drop-panel-wide">
-          <div class="nav-drop-label">Contractor Growth Library</div>
-          <div class="nav-drop-grid">
-          <a href="resources.html#websites" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Websites</span>
-              <span class="nav-drop-row-desc">Website design, pricing, structure</span>
-            </span>
-          </a>
-          <a href="resources.html#search-visibility" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Search Visibility</span>
-              <span class="nav-drop-row-desc">SEO, AEO, GEO, local search</span>
-            </span>
-          </a>
-          <a href="resources.html#google-business" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Google Business</span>
-              <span class="nav-drop-row-desc">Maps, reviews, profile optimization</span>
-            </span>
-          </a>
-          <a href="resources.html#leads" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Leads</span>
-              <span class="nav-drop-row-desc">Lead generation and conversion</span>
-            </span>
-          </a>
-          <a href="resources.html#google-ads" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Google Ads</span>
-              <span class="nav-drop-row-desc">Google Ads and Local Services Ads</span>
-            </span>
-          </a>
-          <a href="resources.html#trade-guides" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Trade Guides</span>
-              <span class="nav-drop-row-desc">Roofing, painting, HVAC, landscaping and more</span>
-            </span>
-          </a>
-          </div>
-          <div class="nav-drop-foot nav-drop-foot-center">
-            <a href="resources.html" class="nav-drop-foot-link">Browse the Growth Library →</a>
-          </div>
-        </div>
-      </div>
-      <a href="about.html">Company</a>
+      <a href="pricing">Pricing</a>
+      <a href="resources">Resources</a>
+      <a href="about">Company</a>
     </nav>
     <div class="nav-right">
-      <a href="demo.html" class="nav-cta hide-mobile">Get a Free Demo</a>
+      <a href="demo" class="nav-cta hide-mobile">Get a Free Demo</a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -157,45 +147,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 <div class="nav-mobile" id="navMobile">
-  <a href="work.html">Work</a>
+  <a href="work">Work</a>
   <details class="nav-mobile-drop">
     <summary>Services</summary>
-    <a href="services.html">Websites</a>
-    <a href="seo.html">Search Visibility</a>
-    <a href="seo.html#google-business">Google Business</a>
-    <a href="services.html#leads">Lead Capture</a>
+    <a href="services">Contractor Websites</a>
+    <a href="seo">SEO</a>
+    <a href="ai-search">AEO + GEO</a>
+    <a href="google-business">Google Business</a>
+    <a href="lead-capture">Lead Capture</a>
   </details>
-  <a href="pricing.html">Pricing</a>
-  <details class="nav-mobile-drop">
-    <summary>Resources</summary>
-    <a href="resources.html">Growth Library</a>
-    <a href="resources.html#websites">Websites</a>
-    <a href="resources.html#search-visibility">Search Visibility</a>
-    <a href="resources.html#google-business">Google Business</a>
-    <a href="resources.html#leads">Leads</a>
-    <a href="resources.html#trade-guides">Trade Guides</a>
-  </details>
-  <a href="about.html">Company</a>
-  <a href="demo.html" class="mob-cta">Get a Free Demo</a>
+  <a href="pricing">Pricing</a>
+  <a href="resources">Resources</a>
+  <a href="about">Company</a>
+  <a href="demo" class="mob-cta">Get a Free Demo</a>
 </div>
 
 <section class="page-hero page-hero--center">
   <div class="wrap-narrow">
     <div class="eyebrow center">Our Work</div>
-    <h1 class="h-display center">Real sites.<br>Real <em>results.</em></h1>
+    <h1 class="h-display center">Real sites.<br>Real <em>contractors.</em></h1>
     <p class="h-sub center">Contractor websites designed, launched, and managed by Contractor Arsenal. Every one built from scratch for the trade, the market, and the customer.</p>
     <div class="btn-row" style="justify-content:center;margin-top:1.75rem;">
-      <a href="demo.html" class="btn btn-primary">Get My Free Demo</a>
-      <a href="pricing.html" class="btn btn-outline">See Pricing</a>
+      <a href="demo" class="btn btn-primary" data-cta="demo" data-cta-location="work_hero">Get My Free Demo</a>
+      <a href="pricing" class="btn btn-outline" data-cta="pricing" data-cta-location="work_hero">See Pricing</a>
     </div>
   </div>
 </section>
 
 <div class="stat-strip">
   <div class="wrap stat-row">
-    <div class="stat-item"><span class="stat-num" data-count-to="120" data-count-suffix="+">120+</span><span class="stat-label">Contractor websites built</span></div>
-    <div class="stat-item"><span class="stat-num" data-count-to="8" data-count-suffix="+">8+</span><span class="stat-label">Trades supported</span></div>
-    <div class="stat-item"><span class="stat-num" data-count-to="30" data-count-suffix="+">30+</span><span class="stat-label">Cities served</span></div>
+    <div class="stat-item"><span class="stat-num">48hr</span><span class="stat-label">Launch after demo approval</span></div>
+    <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Client sites shown below</span></div>
+    <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">Trades in our portfolio</span></div>
     <div class="stat-item"><span class="stat-num">$297</span><span class="stat-label">Starting monthly price</span></div>
   </div>
 </div>
@@ -221,121 +204,170 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <option value="name">Company Name (A–Z)</option>
         </select>
       </div>
-      <div class="dir-results-count" data-dir-count>6 websites</div>
+      <div class="dir-results-count" data-dir-count>8 websites</div>
 
-      <div class="dir-row" data-row data-trade="roofing" data-name="Seattle King Roofing" data-order="1">
-        <div class="dir-row-mark">SK</div>
-        <div class="dir-row-main">
-          <div class="dir-row-name">Seattle King Roofing <span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
-          <div class="dir-row-meta">Roofing contractor · King &amp; Snohomish Counties</div>
-          <div class="dir-row-desc">Contractor website for an Everett-based roofing company serving King and Snohomish Counties, with dedicated service pages, service-area structure, lead capture, and project content.</div>
-          <div class="dir-row-tags"><span class="tag">Roofing</span><span class="tag">Website</span><span class="tag">Search Visibility</span><span class="tag">Local</span></div>
-        </div>
-        <div class="dir-row-loc">Everett, WA</div>
-        <a href="https://seattlekingroofing.com/" target="_blank" rel="noopener noreferrer" class="dir-row-link">View Site →</a>
+      <div class="pf-grid" data-pf-grid>
+        <article class="pf reveal" data-row data-trade="roofing" data-name="Seattle King Roofing" data-order="1">
+          <a class="pf-shot" href="https://seattlekingroofing.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the Seattle King Roofing live website" data-cta="work_card" data-cta-location="work_grid_image" data-cta-label="Seattle King Roofing">
+            <img class="pf-desk" src="assets/work/seattle-king-roofing-desktop.jpg" alt="Seattle King Roofing website on desktop" width="1120" height="700" loading="eager" decoding="async">
+            <span class="pf-phone"><img src="assets/work/seattle-king-roofing-mobile.jpg" alt="Seattle King Roofing website on a phone" width="400" height="865" loading="lazy" decoding="async"></span>
+            <span class="pf-open" aria-hidden="true">Open live site ↗</span>
+          </a>
+          <div class="pf-body">
+            <div class="pf-top"><h2 class="pf-name">Seattle King Roofing</h2><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+            <div class="pf-meta">Roofing contractor · Everett, WA · King &amp; Snohomish Counties</div>
+            <p class="pf-desc">Contractor website for an Everett-based roofing company serving King and Snohomish Counties, with dedicated service pages, service-area structure, lead capture, and project content.</p>
+            <ul class="pf-built" aria-label="What the site is built around"><li>Service pages</li><li>Service-area structure</li><li>Lead capture</li><li>Project content</li></ul>
+            <span class="sr-only">Roofing SEO Lead Capture</span>
+            <div class="pf-actions">
+              <a href="https://seattlekingroofing.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" data-cta="work_card" data-cta-location="work_grid" data-cta-label="Seattle King Roofing">View Live Site ↗</a>
+            <a href="case-studies/seattle-king-roofing" class="pf-case" data-cta="case_study" data-cta-location="work_grid" data-cta-label="Seattle King Roofing">Read case study →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pf reveal" data-row data-trade="roofing" data-name="Highline Roofing WA" data-order="2">
+          <a class="pf-shot" href="https://www.highlineroofingwa.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the Highline Roofing WA live website" data-cta="work_card" data-cta-location="work_grid_image" data-cta-label="Highline Roofing WA">
+            <img class="pf-desk" src="assets/work/highline-roofing-desktop.jpg" alt="Highline Roofing WA website on desktop" width="1120" height="700" loading="eager" decoding="async">
+            <span class="pf-phone"><img src="assets/work/highline-roofing-mobile.jpg" alt="Highline Roofing WA website on a phone" width="400" height="865" loading="lazy" decoding="async"></span>
+            <span class="pf-open" aria-hidden="true">Open live site ↗</span>
+          </a>
+          <div class="pf-body">
+            <div class="pf-top"><h2 class="pf-name">Highline Roofing WA</h2><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+            <div class="pf-meta">Roofing contractor · Everett, WA · Snohomish County</div>
+            <p class="pf-desc">Website built around storm damage response, roof replacement, and fast estimate requests.</p>
+            <ul class="pf-built" aria-label="What the site is built around"><li>Storm damage response</li><li>Roof replacement</li><li>Estimate requests</li></ul>
+            <span class="sr-only">Roofing SEO Lead Capture</span>
+            <div class="pf-actions">
+              <a href="https://www.highlineroofingwa.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" data-cta="work_card" data-cta-location="work_grid" data-cta-label="Highline Roofing WA">View Live Site ↗</a>
+            <a href="case-studies/highline-roofing" class="pf-case" data-cta="case_study" data-cta-location="work_grid" data-cta-label="Highline Roofing WA">Read case study →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pf reveal" data-row data-trade="painting" data-name="Golden Oak Painting" data-order="3">
+          <a class="pf-shot" href="https://www.goldenoakpainting.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the Golden Oak Painting live website" data-cta="work_card" data-cta-location="work_grid_image" data-cta-label="Golden Oak Painting">
+            <img class="pf-desk" src="assets/work/golden-oak-painting-desktop.jpg" alt="Golden Oak Painting website on desktop" width="1120" height="700" loading="lazy" decoding="async">
+            <span class="pf-phone"><img src="assets/work/golden-oak-painting-mobile.jpg" alt="Golden Oak Painting website on a phone" width="400" height="865" loading="lazy" decoding="async"></span>
+            <span class="pf-open" aria-hidden="true">Open live site ↗</span>
+          </a>
+          <div class="pf-body">
+            <div class="pf-top"><h2 class="pf-name">Golden Oak Painting</h2><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+            <div class="pf-meta">Painting contractor · Bothell, WA · Snohomish &amp; King County</div>
+            <p class="pf-desc">Website built around project photos, service pages, and free quote requests.</p>
+            <ul class="pf-built" aria-label="What the site is built around"><li>Project photos</li><li>Service pages</li><li>Quote requests</li></ul>
+            <span class="sr-only">Painting SEO Lead Capture</span>
+            <div class="pf-actions">
+              <a href="https://www.goldenoakpainting.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" data-cta="work_card" data-cta-location="work_grid" data-cta-label="Golden Oak Painting">View Live Site ↗</a>
+            <a href="case-studies/golden-oak-painting" class="pf-case" data-cta="case_study" data-cta-location="work_grid" data-cta-label="Golden Oak Painting">Read case study →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pf reveal" data-row data-trade="landscaping" data-name="DGO Green" data-order="4">
+          <a class="pf-shot" href="https://contractorarsenal.github.io/DGOGREEN/" target="_blank" rel="noopener noreferrer" aria-label="Open the DGO Green live website" data-cta="work_card" data-cta-location="work_grid_image" data-cta-label="DGO Green">
+            <img class="pf-desk" src="assets/work/dgo-green-desktop.jpg" alt="DGO Green website on desktop" width="1120" height="700" loading="lazy" decoding="async">
+            <span class="pf-phone"><img src="assets/work/dgo-green-mobile.jpg" alt="DGO Green website on a phone" width="400" height="865" loading="lazy" decoding="async"></span>
+            <span class="pf-open" aria-hidden="true">Open live site ↗</span>
+          </a>
+          <div class="pf-body">
+            <div class="pf-top"><h2 class="pf-name">DGO Green</h2><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+            <div class="pf-meta">Landscaping &amp; lawn care · Snohomish County, WA</div>
+            <p class="pf-desc">Website built around design, installation, and ongoing maintenance plans.</p>
+            <ul class="pf-built" aria-label="What the site is built around"><li>Design</li><li>Installation</li><li>Maintenance plans</li></ul>
+            <span class="sr-only">Landscaping SEO</span>
+            <div class="pf-actions">
+              <a href="https://contractorarsenal.github.io/DGOGREEN/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" data-cta="work_card" data-cta-location="work_grid" data-cta-label="DGO Green">View Live Site ↗</a>
+            <a href="case-studies/dgo-green" class="pf-case" data-cta="case_study" data-cta-location="work_grid" data-cta-label="DGO Green">Read case study →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pf reveal" data-row data-trade="concrete" data-name="JC Grading &amp; Paving Solution" data-order="5">
+          <a class="pf-shot" href="https://jcgradingpavingsolution.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the JC Grading &amp; Paving Solution live website" data-cta="work_card" data-cta-location="work_grid_image" data-cta-label="JC Grading &amp; Paving Solution">
+            <img class="pf-desk" src="assets/work/jc-grading-paving-desktop.jpg" alt="JC Grading &amp; Paving Solution website on desktop" width="1120" height="700" loading="lazy" decoding="async">
+            <span class="pf-phone"><img src="assets/work/jc-grading-paving-mobile.jpg" alt="JC Grading &amp; Paving Solution website on a phone" width="400" height="865" loading="lazy" decoding="async"></span>
+            <span class="pf-open" aria-hidden="true">Open live site ↗</span>
+          </a>
+          <div class="pf-body">
+            <div class="pf-top"><h2 class="pf-name">JC Grading &amp; Paving Solution</h2><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+            <div class="pf-meta">Concrete, grading &amp; paving · South Bay, CA</div>
+            <p class="pf-desc">Website built around before/after project photos and fast estimate requests.</p>
+            <ul class="pf-built" aria-label="What the site is built around"><li>Before/after photos</li><li>Estimate requests</li></ul>
+            <span class="sr-only">Concrete Lead Capture</span>
+            <div class="pf-actions">
+              <a href="https://jcgradingpavingsolution.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" data-cta="work_card" data-cta-location="work_grid" data-cta-label="JC Grading &amp; Paving Solution">View Live Site ↗</a>
+            <a href="case-studies/jc-grading-paving" class="pf-case" data-cta="case_study" data-cta-location="work_grid" data-cta-label="JC Grading &amp; Paving Solution">Read case study →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pf reveal" data-row data-trade="welding" data-name="Agave Welding" data-order="6">
+          <a class="pf-shot" href="https://agavewelding.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the Agave Welding live website" data-cta="work_card" data-cta-location="work_grid_image" data-cta-label="Agave Welding">
+            <img class="pf-desk" src="assets/work/agave-welding-desktop.jpg" alt="Agave Welding website on desktop" width="1120" height="700" loading="lazy" decoding="async">
+            <span class="pf-phone"><img src="assets/work/agave-welding-mobile.jpg" alt="Agave Welding website on a phone" width="400" height="865" loading="lazy" decoding="async"></span>
+            <span class="pf-open" aria-hidden="true">Open live site ↗</span>
+          </a>
+          <div class="pf-body">
+            <div class="pf-top"><h2 class="pf-name">Agave Welding</h2><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+            <div class="pf-meta">Custom fabrication, gates &amp; structural welding · Seattle, WA</div>
+            <p class="pf-desc">Website built around a work portfolio and direct quote requests.</p>
+            <ul class="pf-built" aria-label="What the site is built around"><li>Work portfolio</li><li>Quote requests</li></ul>
+            <span class="sr-only">Welding SEO</span>
+            <div class="pf-actions">
+              <a href="https://agavewelding.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" data-cta="work_card" data-cta-location="work_grid" data-cta-label="Agave Welding">View Live Site ↗</a>
+            <a href="case-studies/agave-welding" class="pf-case" data-cta="case_study" data-cta-location="work_grid" data-cta-label="Agave Welding">Read case study →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pf reveal" data-row data-trade="painting" data-name="Refined Painting" data-order="7">
+          <a class="pf-shot" href="https://refinedpainting.co/" target="_blank" rel="noopener noreferrer" aria-label="Open the Refined Painting live website" data-cta="work_card" data-cta-location="work_grid_image" data-cta-label="Refined Painting">
+            <img class="pf-desk" src="assets/work/refined-painting-desktop.jpg" alt="Refined Painting website on desktop" width="1120" height="700" loading="lazy" decoding="async">
+            <span class="pf-phone"><img src="assets/work/refined-painting-mobile.jpg" alt="Refined Painting website on a phone" width="400" height="865" loading="lazy" decoding="async"></span>
+            <span class="pf-open" aria-hidden="true">Open live site ↗</span>
+          </a>
+          <div class="pf-body">
+            <div class="pf-top"><h2 class="pf-name">Refined Painting</h2><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+            <div class="pf-meta">Painting contractor · Seattle &amp; Eastside, WA</div>
+            <p class="pf-desc">Website built around project galleries, mobile-optimized video, lead capture enhancements, and local SEO for a Seattle and Eastside painting contractor.</p>
+            <ul class="pf-built" aria-label="What the site is built around"><li>Project galleries</li><li>Mobile video</li><li>Lead capture</li><li>Local search</li></ul>
+            <span class="sr-only">Painting SEO Lead Capture</span>
+            <div class="pf-actions">
+              <a href="https://refinedpainting.co/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" data-cta="work_card" data-cta-location="work_grid" data-cta-label="Refined Painting">View Live Site ↗</a>
+            <a href="case-studies/refined-painting" class="pf-case" data-cta="case_study" data-cta-location="work_grid" data-cta-label="Refined Painting">Read case study →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pf reveal" data-row data-trade="roofing" data-name="JBA Roofing" data-order="8">
+          <a class="pf-shot" href="https://jbaroofpro.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the JBA Roofing live website" data-cta="work_card" data-cta-location="work_grid_image" data-cta-label="JBA Roofing">
+            <img class="pf-desk" src="assets/work/jba-roofing-desktop.jpg" alt="JBA Roofing website on desktop" width="1120" height="700" loading="lazy" decoding="async">
+            <span class="pf-phone"><img src="assets/work/jba-roofing-mobile.jpg" alt="JBA Roofing website on a phone" width="400" height="865" loading="lazy" decoding="async"></span>
+            <span class="pf-open" aria-hidden="true">Open live site ↗</span>
+          </a>
+          <div class="pf-body">
+            <div class="pf-top"><h2 class="pf-name">JBA Roofing</h2><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+            <div class="pf-meta">Roofing contractor · King, Snohomish &amp; Skagit Counties, WA</div>
+            <p class="pf-desc">Roofing website development with technical SEO improvements and service-area architecture for a contractor serving King, Snohomish, and Skagit Counties.</p>
+            <ul class="pf-built" aria-label="What the site is built around"><li>Website development</li><li>Technical SEO</li><li>Service-area architecture</li></ul>
+            <span class="sr-only">Roofing SEO Service Areas</span>
+            <div class="pf-actions">
+              <a href="https://jbaroofpro.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" data-cta="work_card" data-cta-location="work_grid" data-cta-label="JBA Roofing">View Live Site ↗</a>
+            <a href="case-studies/jba-roofing" class="pf-case" data-cta="case_study" data-cta-location="work_grid" data-cta-label="JBA Roofing">Read case study →</a>
+            </div>
+          </div>
+        </article>
       </div>
 
-      <div class="dir-row" data-row data-trade="roofing" data-name="Highline Roofing WA" data-order="2">
-        <div class="dir-row-mark">HR</div>
-        <div class="dir-row-main">
-          <div class="dir-row-name">Highline Roofing WA <span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
-          <div class="dir-row-meta">Roofing contractor · Residential &amp; commercial · Licensed &amp; insured</div>
-          <div class="dir-row-desc">Website built around storm damage response, roof replacement, and fast estimate requests.</div>
-          <div class="dir-row-tags"><span class="tag">Roofing</span><span class="tag">SEO</span><span class="tag">Lead Capture</span></div>
-        </div>
-        <div class="dir-row-loc">Washington State</div>
-        <a href="https://www.highlineroofingwa.com/" target="_blank" rel="noopener noreferrer" class="dir-row-link">View Site →</a>
-      </div>
-
-      <div class="dir-row" data-row data-trade="painting" data-name="Golden Oak Painting" data-order="3">
-        <div class="dir-row-mark">GO</div>
-        <div class="dir-row-main">
-          <div class="dir-row-name">Golden Oak Painting <span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
-          <div class="dir-row-meta">Painting contractor · Interior, exterior &amp; cabinet refinishing</div>
-          <div class="dir-row-desc">Website built around project photos, service pages, and free quote requests.</div>
-          <div class="dir-row-tags"><span class="tag">Painting</span><span class="tag">SEO</span><span class="tag">Lead Capture</span></div>
-        </div>
-        <div class="dir-row-loc">Pacific Northwest</div>
-        <a href="https://www.goldenoakpainting.com/" target="_blank" rel="noopener noreferrer" class="dir-row-link">View Site →</a>
-      </div>
-
-      <div class="dir-row" data-row data-trade="landscaping" data-name="DGO Green" data-order="4">
-        <div class="dir-row-mark">DG</div>
-        <div class="dir-row-main">
-          <div class="dir-row-name">DGO Green <span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
-          <div class="dir-row-meta">Landscaping &amp; lawn care · Design, install &amp; maintenance</div>
-          <div class="dir-row-desc">Website built around design, installation, and ongoing maintenance plans.</div>
-          <div class="dir-row-tags"><span class="tag">Landscaping</span><span class="tag">SEO</span></div>
-        </div>
-        <div class="dir-row-loc">Pacific Northwest</div>
-        <a href="https://contractorarsenal.github.io/DGOGREEN/" target="_blank" rel="noopener noreferrer" class="dir-row-link">View Site →</a>
-      </div>
-
-      <div class="dir-row" data-row data-trade="concrete" data-name="JC Grading & Paving Solution" data-order="5">
-        <div class="dir-row-mark">JC</div>
-        <div class="dir-row-main">
-          <div class="dir-row-name">JC Grading &amp; Paving Solution <span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
-          <div class="dir-row-meta">Concrete, grading &amp; paving · Driveways &amp; flatwork</div>
-          <div class="dir-row-desc">Website built around before/after project photos and fast estimate requests.</div>
-          <div class="dir-row-tags"><span class="tag">Concrete</span><span class="tag">Lead Capture</span></div>
-        </div>
-        <div class="dir-row-loc">Pacific Northwest</div>
-        <a href="https://jcgradingpavingsolution.com/" target="_blank" rel="noopener noreferrer" class="dir-row-link">View Site →</a>
-      </div>
-
-      <div class="dir-row" data-row data-trade="welding" data-name="Agave Welding" data-order="6">
-        <div class="dir-row-mark">AW</div>
-        <div class="dir-row-main">
-          <div class="dir-row-name">Agave Welding <span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
-          <div class="dir-row-meta">Custom fabrication, gates &amp; structural welding</div>
-          <div class="dir-row-desc">Website built around a work portfolio and direct quote requests.</div>
-          <div class="dir-row-tags"><span class="tag">Welding</span><span class="tag">SEO</span></div>
-        </div>
-        <div class="dir-row-loc">Arizona</div>
-        <a href="https://agavewelding.com/" target="_blank" rel="noopener noreferrer" class="dir-row-link">View Site →</a>
-      </div>
-
-      <div class="dir-row" data-row data-trade="painting" data-name="Refined Painting" data-order="7">
-        <div class="dir-row-mark">RP</div>
-        <div class="dir-row-main">
-          <div class="dir-row-name">Refined Painting <span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
-          <div class="dir-row-meta">Painting contractor · Seattle &amp; Eastside</div>
-          <div class="dir-row-desc">Website built around project galleries, mobile-optimized video, lead capture enhancements, and local SEO for a Seattle and Eastside painting contractor.</div>
-          <div class="dir-row-tags"><span class="tag">Painting</span><span class="tag">SEO</span><span class="tag">Lead Capture</span></div>
-        </div>
-        <div class="dir-row-loc">Seattle &amp; Eastside, WA</div>
-        <a href="https://refinedpainting.co/" target="_blank" rel="noopener noreferrer" class="dir-row-link">View Site →</a>
-      </div>
-
-      <div class="dir-empty" data-dir-empty style="display:none;">No websites match that search. <a href="demo.html">Get a free demo built for your trade →</a></div>
+      <div class="dir-empty" data-dir-empty style="display:none;">No websites match that search. <a href="demo">Get a free demo built for your trade →</a></div>
     </div>
-    <p class="text-center" style="margin-top:2.5rem;font-size:.92rem;color:var(--muted);">Want to see a demo built for your specific trade and city? <a href="demo.html" style="color:var(--ink);font-weight:700;border-bottom:2px solid var(--accent);">Request yours free →</a></p>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section style="background:var(--surface-2);border-top:1px solid var(--border-soft);">
-  <div class="wrap">
-    <div class="section-head center">
-      <div class="eyebrow center">Client Results</div>
-      <h2 class="h-display center">Contractors who made the move</h2>
-    </div>
-    <div class="card-grid grid-3">
-      <div class="testi-card reveal">
-        <div class="testi-rating">5.0 CUSTOMER REVIEW</div>
-        <p class="testi-quote">"My old site got maybe one call a month. Within two weeks of launching I had four estimates booked."</p>
-        <div class="testi-author"><div class="testi-avatar">MC</div><div><div class="testi-name">Mike C.</div><div class="testi-role">Painting · Phoenix, AZ</div></div></div>
+    <div class="pf-band reveal">
+      <div>
+        <h2>Your company <em>next.</em></h2>
+        <p>Want to see a demo built for your specific trade and city? We build it around your real company, services, and market before you commit.</p>
       </div>
-      <div class="testi-card reveal reveal-d1">
-        <div class="testi-rating">5.0 CUSTOMER REVIEW</div>
-        <p class="testi-quote">"They wrote all the copy, set up the SEO, and launched fast. I'm on page one for roofing in my city."</p>
-        <div class="testi-author"><div class="testi-avatar">TR</div><div><div class="testi-name">Tony R.</div><div class="testi-role">Roofing · Nashville, TN</div></div></div>
-      </div>
-      <div class="testi-card reveal reveal-d2">
-        <div class="testi-rating">5.0 CUSTOMER REVIEW</div>
-        <p class="testi-quote">"Got a $45K remodel job from a lead through my new site. Paid for itself with one call."</p>
-        <div class="testi-author"><div class="testi-avatar">DS</div><div><div class="testi-name">Dave S.</div><div class="testi-role">Remodeling · Denver, CO</div></div></div>
-      </div>
+      <a href="demo" class="btn btn-accent" data-cta="demo" data-cta-location="work_band">Get My Free Demo →</a>
     </div>
   </div>
 </section>
@@ -345,8 +377,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="h-display on-dark">Your site could be<br><em>next.</em></h2>
     <p class="h-sub on-dark center">Get a free custom demo built for your trade and city. See exactly what your site will look like before you commit.</p>
     <div class="btn-row">
-      <a href="demo.html" class="btn btn-accent">Get My Free Demo</a>
-      <a href="services.html" class="btn btn-ghost-dark">See What's Included</a>
+      <a href="demo" class="btn btn-accent">Get My Free Demo</a>
+      <a href="services" class="btn btn-ghost-dark">See What's Included</a>
     </div>
   </div>
 </section>
@@ -378,43 +410,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html">Websites</a></li>
-          <li><a href="seo.html">Search Visibility</a></li>
-          <li><a href="seo.html#google-business">Google Business</a></li>
-          <li><a href="services.html#leads">Lead Capture</a></li>
+          <li><a href="services">Contractor Websites</a></li>
+          <li><a href="seo">SEO</a></li>
+          <li><a href="ai-search">AEO + GEO</a></li>
+          <li><a href="google-business">Google Business</a></li>
+          <li><a href="lead-capture">Lead Capture</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="partner.html">Free CRM</a></li>
-          <li><a href="arsenal.html">Arsenal 001</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="work">Work</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="industries">Industries</a></li>
+          <li><a href="partner">Free CRM</a></li>
+          <li><a href="arsenal">Arsenal 001</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
-          <li><a href="resources.html">Growth Library</a></li>
-          <li><a href="resources.html#websites">Websites</a></li>
-          <li><a href="resources.html#search-visibility">Search Visibility</a></li>
-          <li><a href="resources.html#google-business">Google Business</a></li>
-          <li><a href="resources.html#leads">Leads</a></li>
+          <li><a href="resources">Growth Library</a></li>
+          <li><a href="resources#websites">Websites</a></li>
+          <li><a href="resources#search-visibility">Search Visibility</a></li>
+          <li><a href="resources#google-business">Google Business</a></li>
+          <li><a href="resources#leads">Leads</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Service Areas</h4>
         <ul>
-          <li><a href="service-areas/seattle-wa-contractor-websites.html">Seattle, WA</a></li>
-          <li><a href="service-areas/bellevue-wa-contractor-websites.html">Bellevue, WA</a></li>
-          <li><a href="service-areas/tacoma-wa-contractor-websites.html">Tacoma, WA</a></li>
-          <li><a href="service-areas/spokane-wa-contractor-websites.html">Spokane, WA</a></li>
-          <li><a href="service-areas/everett-wa-contractor-websites.html">Everett, WA</a></li>
-          <li><a href="service-areas/redmond-wa-contractor-websites.html">Redmond, WA</a></li>
-          <li><a href="service-areas/index.html" style="font-weight:700;">View All Service Areas →</a></li>
+          <li><a href="service-areas/seattle-wa-contractor-websites">Seattle, WA</a></li>
+          <li><a href="service-areas/bellevue-wa-contractor-websites">Bellevue, WA</a></li>
+          <li><a href="service-areas/tacoma-wa-contractor-websites">Tacoma, WA</a></li>
+          <li><a href="service-areas/spokane-wa-contractor-websites">Spokane, WA</a></li>
+          <li><a href="service-areas/everett-wa-contractor-websites">Everett, WA</a></li>
+          <li><a href="service-areas/redmond-wa-contractor-websites">Redmond, WA</a></li>
+          <li><a href="service-areas/" style="font-weight:700;">View All Service Areas →</a></li>
         </ul>
       </div>
     </div>
@@ -422,8 +455,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap footer-bottom">
     <span>&copy; 2026 Contractor Arsenal. All rights reserved.</span>
     <div class="footer-bottom-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+      <a href="privacy">Privacy</a>
+      <a href="terms">Terms</a>
       <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="mailto:hello@contractorarsenal.com">Email</a>
     </div>
@@ -432,5 +465,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="main.js"></script>
 <script src="newsletter.js" defer></script>
+<script>
+(function(){
+  var grid=document.querySelector('[data-pf-grid]');if(!grid)return;
+  function swap(){grid.classList.remove('is-swap');void grid.offsetWidth;grid.classList.add('is-swap');}
+  document.querySelectorAll('[data-filter]').forEach(function(b){b.addEventListener('click',swap);});
+  var s=document.querySelector('[data-dir-sort]');if(s)s.addEventListener('change',swap);
+})();
+</script>
+<script>
+(function(){
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('[data-cta]');
+    if(!a)return;
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({event:'cta_click',cta_id:a.dataset.cta,cta_location:a.dataset.ctaLocation||'',cta_label:a.dataset.ctaLabel||(a.textContent||'').trim().slice(0,60),cta_destination:a.getAttribute('href')||''});
+  });
+})();
+</script>
 </body>
 </html>

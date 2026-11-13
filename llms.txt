@@ -25,17 +25,17 @@ We deliver:
 ## Key Pages
 
 - [Home](https://contractorarsenal.com/) - Overview of services and social proof
-- [Work](https://contractorarsenal.com/work.html) - Directory of real contractor websites built by Contractor Arsenal
-- [Websites](https://contractorarsenal.com/services.html) - What's included in a Contractor Arsenal website
-- [Search Visibility](https://contractorarsenal.com/seo.html) - How Contractor Arsenal builds contractor websites for Google search (SEO), AI-generated answers (AEO), and AI chat tools (GEO), with no ranking or AI-recommendation guarantees
-- [Pricing](https://contractorarsenal.com/pricing.html) - Contractor Growth, Growth+, and Pro plans
-- [Contractor Growth Library](https://contractorarsenal.com/resources.html) - Educational guides organized into six categories: Websites, Search Visibility, Google Business, Leads, Google Ads, and Trade Guides
+- [Work](https://contractorarsenal.com/work) - Directory of real contractor websites built by Contractor Arsenal
+- [Websites](https://contractorarsenal.com/services) - What's included in a Contractor Arsenal website
+- [Search Visibility](https://contractorarsenal.com/seo) - How Contractor Arsenal builds contractor websites for Google search (SEO), AI-generated answers (AEO), and AI chat tools (GEO), with no ranking or AI-recommendation guarantees
+- [Pricing](https://contractorarsenal.com/pricing) - Contractor Growth, Growth+, and Pro plans
+- [Contractor Growth Library](https://contractorarsenal.com/resources) - Educational guides organized into six categories: Websites, Search Visibility, Google Business, Leads, Google Ads, and Trade Guides
 - [Service Areas](https://contractorarsenal.com/service-areas/) - Washington and Pacific Northwest markets served, with dedicated pages for Seattle, Bellevue, Tacoma, Spokane, Everett, and Redmond
-- [Apply Now](https://contractorarsenal.com/apply.html) - Application form to get a site built (paid)
-- [Free Demo](https://contractorarsenal.com/demo.html) - Request a free custom demo site with no obligation
-- [About](https://contractorarsenal.com/about.html) - Company background and mission
-- [Arsenal 001](https://contractorarsenal.com/arsenal.html) - Private contractor network membership
-- [Partner Network](https://contractorarsenal.com/partner.html) - Referral partner program
+- [Apply Now](https://contractorarsenal.com/apply) - Application form to get a site built (paid)
+- [Free Demo](https://contractorarsenal.com/demo) - Request a free custom demo site with no obligation
+- [About](https://contractorarsenal.com/about) - Company background and mission
+- [Arsenal 001](https://contractorarsenal.com/arsenal) - Private contractor network membership
+- [Partner Network](https://contractorarsenal.com/partner) - Referral partner program
 
 ## Pricing
 

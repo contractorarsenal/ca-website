@@ -32,64 +32,146 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="value-calc.css">
+<link rel="preload" as="image" href="assets/work/seattle-king-roofing-desktop.jpg" fetchpriority="high">
 <style>
-.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:4rem;align-items:center;width:100%;}
-.hero-actions{margin:1.75rem 0;}
-.hero-meta{display:flex;align-items:center;gap:0;flex-wrap:wrap;font-size:.84rem;color:var(--muted);font-weight:600;}
-.hero-meta span{padding:0 .85rem;border-right:1px solid var(--border);}
-.hero-meta span:first-child{padding-left:0;}
-.hero-meta span:last-child{border-right:none;}
+/* HERO: copy + live client showcase */
+.hx{position:relative;overflow:hidden;}
+.hx::before{content:'';position:absolute;inset:-80px;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(18,18,18,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(18,18,18,.045) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 60% 70% at 72% 45%,#000 0%,transparent 72%);mask-image:radial-gradient(ellipse 60% 70% at 72% 45%,#000 0%,transparent 72%);animation:hx-drift 48s linear infinite;}
+@keyframes hx-drift{to{transform:translate3d(64px,64px,0);}}
+.hx .wrap{position:relative;z-index:1;}
+.hx .h-display{font-size:clamp(2.75rem,5vw,4.5rem);line-height:.94;letter-spacing:-.005em;max-width:11.5em;text-wrap:balance;}
+.hx .h-display em{display:block;white-space:nowrap;margin-top:.04em;}
+.hx-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4rem;align-items:center;}
+.hx-sub{margin-top:1.5rem;max-width:480px;}
+.hx-actions{margin:2rem 0 0;}
+.sc{width:100%;max-width:540px;margin-left:auto;}
+.sc-stage{position:relative;padding-bottom:1.6rem;}
+.sc-bar{position:relative;}
+.sc-toggle{width:26px;height:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:transparent;border:1px solid #3d3d3d;border-radius:var(--r-sm);color:var(--muted-inv);cursor:pointer;transition:color .15s,border-color .15s;}
+.sc-toggle:hover{color:#fff;border-color:#777;}
+.sc-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.sc-toggle svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;}
+.sc-toggle .i-play{display:none;fill:currentColor;stroke-width:1;}
+.sc.is-paused .sc-toggle .i-play{display:block;}
+.sc.is-paused .sc-toggle .i-pause{display:none;}
+.sc-progress{position:absolute;left:0;right:0;bottom:0;height:2px;background:transparent;}
+.sc-progress i{display:block;height:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;}
+.sc.is-running .sc-progress i{animation:sc-progress var(--sc-ms,5000ms) linear forwards;}
+@keyframes sc-progress{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+.sc-browser{border:1.5px solid var(--ink);border-radius:var(--r-lg);overflow:hidden;background:var(--black);box-shadow:0 26px 60px -30px rgba(0,0,0,.5);}
+.sc-bar{display:flex;align-items:center;gap:.65rem;padding:.55rem .8rem;background:var(--black);}
+.sc-dots{display:flex;gap:5px;flex-shrink:0;}
+.sc-dots i{width:8px;height:8px;border-radius:50%;background:#3d3d3d;}
+.sc-url{flex:1;min-width:0;font-size:.72rem;color:var(--muted-inv);background:#1e1e1e;border-radius:var(--r-sm);padding:.3rem .65rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;transition:color .2s;}
+.sc-live{display:inline-flex;align-items:center;gap:.35rem;font-size:.64rem;font-weight:800;letter-spacing:.06em;color:var(--accent);flex-shrink:0;}
+.sc-screen{position:relative;aspect-ratio:1200/750;background:#161616;}
+.sc-screen img,.sc-phone-screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transform:scale(1.025);transition:opacity .55s var(--ease-out),transform .9s var(--ease-out);}
+.sc-screen img.is-on,.sc-phone-screen img.is-on{opacity:1;transform:none;}
+.sc-phone{will-change:transform;}
+.sc-phone{position:absolute;right:-12px;bottom:0;width:23%;min-width:104px;border:1.5px solid var(--ink);border-radius:18px;background:var(--black);padding:5px;box-shadow:0 22px 44px -18px rgba(0,0,0,.55);}
+.sc-phone-screen{position:relative;aspect-ratio:420/860;border-radius:13px;overflow:hidden;background:#161616;}
+@media(max-width:980px){
+  .hx-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .sc-phone{right:0;}
+  .sc{max-width:560px;margin-left:0;}
+}
+@media(max-width:560px){
+  .sc-phone{width:27%;}
+  .sc-live{display:none;}
+}
+
+/* WORK: visual project cards */
+.wk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;}
+.wk{display:flex;flex-direction:column;border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);transition:opacity .6s var(--ease-out),transform .6s var(--ease-out),border-color .2s,box-shadow .3s;transition-delay:var(--d,0s);}
+.wk.visible:hover{border-color:var(--ink);transform:translateY(-4px);box-shadow:0 18px 40px -26px rgba(0,0,0,.45);transition-delay:0s;transition-duration:.25s;}
+.wk-grid .wk:nth-child(3n){--d:.08s;}
+.wk-grid .wk:nth-child(3n+1){--d:.16s;}
+.wk-grid .wk:first-child{--d:0s;}
+.wk-link span + i{display:inline-block;font-style:normal;transition:transform .25s var(--ease-out);}
+.wk:hover .wk-link span + i{transform:translate(3px,-3px);}
+.wk-shot{aspect-ratio:1200/750;overflow:hidden;background:var(--surface-3);border-bottom:1px solid var(--border-soft);}
+.wk-shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s var(--ease-out);}
+.wk:hover .wk-shot img{transform:scale(1.03);}
+.wk-body{display:flex;flex-direction:column;gap:.4rem;flex:1;padding:1.15rem 1.25rem 1.3rem;}
+.wk-top{display:flex;align-items:center;justify-content:space-between;gap:.6rem;}
+.wk-name{font-family:var(--display);font-weight:800;font-size:1.3rem;line-height:1.05;text-transform:uppercase;color:var(--ink);}
+.wk-meta{font-size:.8rem;font-weight:600;color:var(--muted);}
+.wk-desc{font-size:.87rem;color:var(--ink-soft);line-height:1.55;}
+.wk-link{margin-top:auto;padding-top:.7rem;font-size:.82rem;font-weight:700;color:var(--ink);}
+.wk-link span{border-bottom:2px solid var(--accent);}
+.wk--feature{grid-column:1 / -1;flex-direction:row;}
+.wk--feature .wk-shot{flex:0 0 58%;border-bottom:0;border-right:1px solid var(--border-soft);}
+.wk--feature .wk-body{flex:1;justify-content:center;padding:2.25rem;gap:.6rem;}
+.wk--feature .wk-desc{font-size:.95rem;}
+.wk--feature .wk-name{font-size:2.3rem;}
+.wk--feature .wk-link{margin-top:.4rem;}
+.wk--cta{grid-column:1 / -1;flex-direction:row;align-items:center;justify-content:space-between;background:var(--black);border-color:var(--black);padding:2rem 2.25rem;gap:1.25rem 2rem;flex-wrap:wrap;}
+.wk--cta > div{flex:1;min-width:260px;}
+.wk--cta p{margin-top:.5rem;max-width:560px;}
+.wk--cta.visible:hover{transform:none;border-color:var(--black);box-shadow:none;}
+.wk--cta h3{font-family:var(--display);font-weight:800;font-size:1.9rem;line-height:1;text-transform:uppercase;color:#fff;}
+.wk--cta h3 em{font-style:normal;color:var(--accent);}
+.wk--cta p{font-size:.9rem;color:var(--muted-inv);line-height:1.55;}
+.wk-foot{margin-top:2rem;text-align:center;font-size:.9rem;}
+.wk-foot a{font-weight:700;color:var(--ink);border-bottom:2px solid var(--accent);}
+@media(max-width:980px){
+  .wk-grid{grid-template-columns:1fr 1fr;}
+  .wk--feature{flex-direction:column;}
+  .wk--feature .wk-shot{flex:none;border-right:0;border-bottom:1px solid var(--border-soft);}
+  .wk--feature .wk-body{padding:1.25rem;}
+}
+@media(max-width:640px){
+  .wk-grid{grid-template-columns:1fr;gap:1.1rem;}
+  .wk--feature .wk-name{font-size:1.5rem;}
+}
+
+/* OUTCOMES (dark) */
+.oc-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border-inv);border-radius:var(--r-lg);overflow:hidden;}
+.oc-grid::before{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 1.1s var(--ease-out) .15s;}
+.oc-grid.visible::before{transform:scaleX(1);}
+.oc-grid .oc{opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease-out),transform .6s var(--ease-out);}
+.oc-grid .oc:nth-child(2){transition-delay:.14s;}
+.oc-grid .oc:nth-child(3){transition-delay:.28s;}
+.oc-grid.visible .oc{opacity:1;transform:none;}
+html:not(.js-motion) .oc-grid .oc{opacity:1;transform:none;}
+.oc{padding:2rem 1.9rem 2.1rem;border-right:1px solid var(--border-inv);}
+.oc:last-child{border-right:0;}
+.oc-num{font-family:var(--display);font-weight:800;font-size:.85rem;letter-spacing:.08em;color:var(--accent);}
+.oc h3{font-family:var(--display);font-weight:800;font-size:1.9rem;line-height:1;text-transform:uppercase;color:#fff;margin:.6rem 0 .7rem;}
+.oc p{font-size:.92rem;line-height:1.6;color:var(--muted-inv);}
+.oc ul{list-style:none;padding:0;margin:1.1rem 0 0;display:flex;flex-direction:column;gap:.5rem;}
+.oc li{display:flex;align-items:center;gap:.55rem;font-size:.88rem;font-weight:600;color:var(--ink-inv);}
+.oc li::before{content:'';width:6px;height:6px;background:var(--accent);flex-shrink:0;}
+.oc-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem;}
 @media(max-width:860px){
-  .hero-grid{grid-template-columns:1fr;gap:2.5rem;}
-}
-@media(max-width:600px){
-  .hero-meta{display:grid;grid-template-columns:1fr 1fr;gap:.65rem 1rem;}
-  .hero-meta span{padding:0;border-right:none;}
+  .oc-grid{grid-template-columns:1fr;}
+  .oc{border-right:0;border-bottom:1px solid var(--border-inv);}
+  .oc:last-child{border-bottom:0;}
 }
 
-/* RECENT BUILDS panel (not a search-bar directory preview) */
-.builds-panel{background:var(--surface);border:1.5px solid var(--ink);border-radius:var(--r-lg);overflow:hidden;}
-.builds-head{background:var(--black);padding:.9rem 1.1rem;display:flex;align-items:center;justify-content:space-between;}
-.builds-head-label{display:flex;align-items:center;gap:.6rem;font-family:var(--display);font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:#fff;}
-.builds-head-label::before{content:'';width:8px;height:8px;background:var(--accent);flex-shrink:0;}
-.builds-head-tag{font-size:.68rem;font-weight:800;color:var(--accent);letter-spacing:.05em;}
-.build-row{display:flex;align-items:center;gap:.9rem;padding:.95rem 1.1rem;border-bottom:1px solid var(--border-soft);}
-.build-row:last-child{border-bottom:none;}
-.build-mark{width:38px;height:38px;border-radius:var(--r-sm);background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:.95rem;color:var(--ink);flex-shrink:0;}
-.build-name{font-size:.9rem;font-weight:700;color:var(--ink);}
-.build-meta{font-size:.76rem;color:var(--muted);}
-.build-status{margin-left:auto;display:inline-flex;align-items:center;gap:.35rem;font-size:.65rem;font-weight:800;letter-spacing:.05em;color:var(--accent);white-space:nowrap;}
-.builds-foot{padding:.85rem 1.1rem;border-top:1px solid var(--border-soft);text-align:center;}
-.builds-foot a{font-size:.82rem;font-weight:700;color:var(--ink);border-bottom:2px solid var(--accent);}
+/* TRADES + LOCAL */
+.ind-chips{display:flex;flex-wrap:wrap;gap:.6rem;}
+.ind-chip{display:inline-flex;align-items:center;border:1.5px solid var(--border);border-radius:var(--r-pill);padding:.6rem 1.15rem;font-size:.9rem;font-weight:700;color:var(--ink);background:var(--surface);transition:border-color .2s,background .2s,color .2s;}
+.ind-chip:hover{border-color:var(--ink);background:var(--ink);color:#fff;}
+.local-line{margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--border-soft);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem 1.5rem;font-size:.92rem;color:var(--ink-soft);}
+.local-line a{font-weight:700;color:var(--ink);border-bottom:2px solid var(--accent);white-space:nowrap;}
+.home-plans-foot{margin-top:1.5rem;text-align:center;font-size:.9rem;}
+.home-plans-foot a{font-weight:700;color:var(--ink);border-bottom:2px solid var(--accent);}
 
-/* HOW CUSTOMERS FIND YOU */
-.find-row{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:0;align-items:stretch;}
-.find-step{background:var(--surface);border:1.5px solid var(--border-soft);border-radius:var(--r-lg);padding:1.5rem;}
-.find-num{font-family:var(--display);font-weight:800;color:var(--accent);font-size:.85rem;letter-spacing:.05em;margin-bottom:.85rem;text-transform:uppercase;}
-.find-step h3{font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:.5rem;text-transform:uppercase;font-family:var(--display);}
-.find-step p{font-size:.85rem;color:var(--muted);line-height:1.6;}
-.find-visual{margin-bottom:1rem;}
-.find-search-box{display:flex;align-items:center;gap:.5rem;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:.55rem .8rem;font-size:.82rem;color:var(--ink-soft);font-family:monospace;}
-.find-result-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);padding:.65rem .8rem;}
-.find-result-card .fr-name{font-size:.8rem;font-weight:700;color:var(--ink);}
-.find-result-card .fr-meta{font-size:.7rem;color:var(--accent);font-weight:700;margin-top:.15rem;}
-.find-trust-list{display:flex;flex-direction:column;gap:.3rem;}
-.find-trust-list span{font-size:.76rem;color:var(--ink-soft);display:flex;align-items:center;gap:.4rem;}
-.find-trust-list span::before{content:'';width:5px;height:5px;background:var(--accent);flex-shrink:0;}
-.find-contact-btn{display:inline-block;background:var(--accent);color:#fff;font-size:.78rem;font-weight:700;padding:.5rem 1rem;border-radius:var(--r-md);}
-.find-arrow{display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--border);padding:0 .5rem;}
-@media(max-width:900px){
-  .find-row{grid-template-columns:1fr;gap:1rem;}
-  .find-arrow{transform:rotate(90deg);padding:.25rem 0;}
-}
-
-/* ARCHITECTURE */
+/* MOBILE STICKY CTA */
+.mcta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:.6rem;padding:.65rem var(--page-padding) calc(.65rem + env(safe-area-inset-bottom));background:var(--black);border-top:1px solid var(--border-inv);transform:translateY(110%);transition:transform .25s var(--ease-out);}
+.mcta .btn{flex:1;justify-content:center;text-align:center;}
+.mcta.is-on{transform:none;}
+@media(max-width:860px){.mcta{display:flex;}}
+@media(prefers-reduced-motion:reduce){.hx::before,.sc.is-running .sc-progress i{animation:none;}.sc-screen img,.sc-phone-screen img{transform:none;transition:none;}.wk,.wk-shot img,.mcta,.oc-grid::before,.oc-grid .oc{transition:none;}.oc-grid .oc{opacity:1;transform:none;}.oc-grid::before{transform:scaleX(1);}.wk.visible:hover{transform:none;}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Contractor Arsenal","url":"https://contractorarsenal.com","logo":"https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png","description":"Contractor websites built around how customers actually search, compare, and hire. Based in the Eastlake neighborhood of Seattle, WA. From $297/month.","areaServed":{"@type":"City","name":"Seattle, WA"},"contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://contractorarsenal.com/demo.html"}}
+{"@context":"https://schema.org","@type":"Organization","name":"Contractor Arsenal","url":"https://contractorarsenal.com","logo":"https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png","description":"Contractor websites built around how customers actually search, compare, and hire. Based in the Eastlake neighborhood of Seattle, WA. From $297/month.","areaServed":{"@type":"City","name":"Seattle, WA"},"contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://contractorarsenal.com/demo"}}
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add('js-motion');</script>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PKHXQ2R"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -98,19 +180,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- NAV -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo" aria-label="Contractor Arsenal homepage">
+    <a href="./" class="nav-logo" aria-label="Contractor Arsenal homepage">
       <span class="nav-logo-mark">
         <img src="assets/mark-dark.png" class="mark mark-dark" alt="" width="306" height="125">
         <img src="assets/mark-light.png" class="mark mark-light" alt="" width="306" height="125">
       </span>
     </a>
     <nav class="nav-links">
-      <a href="work.html">Work</a>
+      <a href="work">Work</a>
       <div class="nav-drop">
-        <a href="services.html" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
+        <a href="services" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Services<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
         <div class="nav-drop-panel">
           <div class="nav-drop-label">Services</div>
-        <a href="services.html" class="nav-drop-row">
+        <a href="services" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
             <span class="nav-drop-row-eyebrow">Websites</span>
@@ -119,28 +201,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </span>
           <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="seo.html" class="nav-drop-row">
+        <a href="seo" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
-            <span class="nav-drop-row-eyebrow">Search Visibility</span>
-            <span class="nav-drop-row-title">SEO + AEO + GEO</span>
-            <span class="nav-drop-row-desc">Help Google and AI systems understand your business.</span>
+            <span class="nav-drop-row-eyebrow">Search</span>
+            <span class="nav-drop-row-title">SEO</span>
+            <span class="nav-drop-row-desc">Help Google understand what you do and where you work.</span>
           </span>
           <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="seo.html#google-business" class="nav-drop-row">
+        <a href="ai-search" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
-            <span class="nav-drop-row-eyebrow">Google Business</span>
+            <span class="nav-drop-row-eyebrow">AI Search</span>
+            <span class="nav-drop-row-title">AEO + GEO</span>
+            <span class="nav-drop-row-desc">Help AI tools understand your business.</span>
+          </span>
+          <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="google-business" class="nav-drop-row">
+          <span class="nav-drop-row-bar"></span>
+          <span class="nav-drop-row-text">
+            <span class="nav-drop-row-eyebrow">Local</span>
             <span class="nav-drop-row-title">Google Business</span>
             <span class="nav-drop-row-desc">Connect your site with your local Google presence.</span>
           </span>
           <svg class="nav-drop-row-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="services.html#leads" class="nav-drop-row">
+        <a href="lead-capture" class="nav-drop-row">
           <span class="nav-drop-row-bar"></span>
           <span class="nav-drop-row-text">
-            <span class="nav-drop-row-eyebrow">Lead Capture</span>
+            <span class="nav-drop-row-eyebrow">Leads</span>
             <span class="nav-drop-row-title">Lead Capture</span>
             <span class="nav-drop-row-desc">Make it easy for visitors to call or request an estimate.</span>
           </span>
@@ -148,68 +239,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
           <div class="nav-drop-foot">
             <span class="nav-drop-foot-price">Websites start at $297/mo</span>
-            <a href="services.html" class="nav-drop-foot-link">View All Services →</a>
+            <a href="services" class="nav-drop-foot-link">View All Services →</a>
           </div>
         </div>
       </div>
-      <a href="pricing.html">Pricing</a>
-      <div class="nav-drop">
-        <a href="resources.html" class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">Resources<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="2.5 4.5 6 8 9.5 4.5"/></svg></a>
-        <div class="nav-drop-panel nav-drop-panel-wide">
-          <div class="nav-drop-label">Contractor Growth Library</div>
-          <div class="nav-drop-grid">
-          <a href="resources.html#websites" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Websites</span>
-              <span class="nav-drop-row-desc">Website design, pricing, structure</span>
-            </span>
-          </a>
-          <a href="resources.html#search-visibility" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Search Visibility</span>
-              <span class="nav-drop-row-desc">SEO, AEO, GEO, local search</span>
-            </span>
-          </a>
-          <a href="resources.html#google-business" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Google Business</span>
-              <span class="nav-drop-row-desc">Maps, reviews, profile optimization</span>
-            </span>
-          </a>
-          <a href="resources.html#leads" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Leads</span>
-              <span class="nav-drop-row-desc">Lead generation and conversion</span>
-            </span>
-          </a>
-          <a href="resources.html#google-ads" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Google Ads</span>
-              <span class="nav-drop-row-desc">Google Ads and Local Services Ads</span>
-            </span>
-          </a>
-          <a href="resources.html#trade-guides" class="nav-drop-row nav-drop-row-compact">
-            <span class="nav-drop-row-bar"></span>
-            <span class="nav-drop-row-text">
-              <span class="nav-drop-row-title">Trade Guides</span>
-              <span class="nav-drop-row-desc">Roofing, painting, HVAC, landscaping and more</span>
-            </span>
-          </a>
-          </div>
-          <div class="nav-drop-foot nav-drop-foot-center">
-            <a href="resources.html" class="nav-drop-foot-link">Browse the Growth Library →</a>
-          </div>
-        </div>
-      </div>
-      <a href="about.html">Company</a>
+      <a href="pricing">Pricing</a>
+      <a href="resources">Resources</a>
+      <a href="about">Company</a>
     </nav>
     <div class="nav-right">
-      <a href="demo.html" class="nav-cta hide-mobile">Get a Free Demo</a>
+      <a href="demo" class="nav-cta hide-mobile">Get a Free Demo</a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -217,355 +256,166 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 <div class="nav-mobile" id="navMobile">
-  <a href="work.html">Work</a>
+  <a href="work">Work</a>
   <details class="nav-mobile-drop">
     <summary>Services</summary>
-    <a href="services.html">Websites</a>
-    <a href="seo.html">Search Visibility</a>
-    <a href="seo.html#google-business">Google Business</a>
-    <a href="services.html#leads">Lead Capture</a>
+    <a href="services">Contractor Websites</a>
+    <a href="seo">SEO</a>
+    <a href="ai-search">AEO + GEO</a>
+    <a href="google-business">Google Business</a>
+    <a href="lead-capture">Lead Capture</a>
   </details>
-  <a href="pricing.html">Pricing</a>
-  <details class="nav-mobile-drop">
-    <summary>Resources</summary>
-    <a href="resources.html">Growth Library</a>
-    <a href="resources.html#websites">Websites</a>
-    <a href="resources.html#search-visibility">Search Visibility</a>
-    <a href="resources.html#google-business">Google Business</a>
-    <a href="resources.html#leads">Leads</a>
-    <a href="resources.html#trade-guides">Trade Guides</a>
-  </details>
-  <a href="about.html">Company</a>
-  <a href="demo.html" class="mob-cta">Get a Free Demo</a>
+  <a href="pricing">Pricing</a>
+  <a href="resources">Resources</a>
+  <a href="about">Company</a>
+  <a href="demo" class="mob-cta">Get a Free Demo</a>
 </div>
+
 
 <!-- HERO -->
-<section class="page-hero page-hero--home">
-  <div class="wrap hero-grid">
+<section class="page-hero page-hero--home hx">
+  <div class="wrap hx-grid">
     <div>
-      <div class="eyebrow hero-in hero-in-1">Contractor Arsenal / Eastlake, Seattle</div>
-      <h1 class="h-display hero-in hero-in-2">Websites that<br>win <em>jobs.</em></h1>
-      <p class="h-sub hero-in hero-in-3" style="margin-top:1.1rem;max-width:500px;">Custom websites for contractors, built around how customers actually search, compare, and hire. Not just a nice-looking homepage.</p>
-      <div class="hero-actions btn-row hero-in hero-in-4">
-        <a href="demo.html" class="btn btn-primary">Get My Free Demo</a>
-        <a href="work.html" class="btn btn-outline">See Our Work</a>
-      </div>
-      <div class="hero-meta hero-in hero-in-4">
-        <span>120+ sites built</span>
-        <span>Built for search</span>
-        <span>Mobile-first</span>
-        <span>From $297/mo</span>
+      <div class="eyebrow hero-in hero-in-1">Web design + marketing for contractors</div>
+      <h1 class="h-display hero-in hero-in-2">Websites built to win you <em>more jobs.</em></h1>
+      <p class="h-sub hx-sub hero-in hero-in-3">Custom websites and digital marketing for contractors who want more calls, more estimates, and more booked projects. Based in Eastlake, Seattle.</p>
+      <div class="hx-actions btn-row hero-in hero-in-4">
+        <a href="demo" class="btn btn-primary" data-cta="demo" data-cta-location="home_hero">Get My Free Demo</a>
+        <a href="#work" class="btn btn-outline" data-cta="see_work" data-cta-location="home_hero">See Our Work</a>
       </div>
     </div>
-    <div class="builds-panel hero-in hero-in-5">
-      <div class="builds-head">
-        <span class="builds-head-label">Recent Builds</span>
-        <span class="builds-head-tag">CA / <span class="live-badge"><span class="live-dot"></span>LIVE</span></span>
+    <div class="sc hero-in hero-in-3" data-showcase role="group" aria-roledescription="carousel" aria-label="Client websites built by Contractor Arsenal">
+      <div class="sc-stage">
+        <span class="sr-only" data-sc-name aria-live="off">Seattle King Roofing</span>
+        <div class="sc-browser">
+          <div class="sc-bar">
+            <span class="sc-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="sc-url" data-sc-domain>seattlekingroofing.com</span>
+            <span class="sc-live"><span class="live-dot"></span>LIVE</span>
+            <button type="button" class="sc-toggle" data-sc-toggle aria-label="Pause automatic rotation"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+            <span class="sc-progress" aria-hidden="true"><i></i></span>
+          </div>
+          <div class="sc-screen" data-sc-desktop>
+            <img class="is-on" src="assets/work/seattle-king-roofing-desktop.jpg" fetchpriority="high" alt="Seattle King Roofing website on desktop" width="1120" height="700" decoding="async" data-name="Seattle King Roofing" data-meta="Roofing · Everett, WA" data-url="https://seattlekingroofing.com/" data-domain="seattlekingroofing.com">
+            <img data-src="assets/work/refined-painting-desktop.jpg" alt="Refined Painting website on desktop" width="1120" height="700" decoding="async" data-name="Refined Painting" data-meta="Painting · Seattle &amp; Eastside, WA" data-url="https://refinedpainting.co/" data-domain="refinedpainting.co">
+            <img data-src="assets/work/golden-oak-painting-desktop.jpg" alt="Golden Oak Painting website on desktop" width="1120" height="700" decoding="async" data-name="Golden Oak Painting" data-meta="Painting · Bothell, WA" data-url="https://www.goldenoakpainting.com/" data-domain="goldenoakpainting.com">
+            <img data-src="assets/work/highline-roofing-desktop.jpg" alt="Highline Roofing WA website on desktop" width="1120" height="700" decoding="async" data-name="Highline Roofing WA" data-meta="Roofing · Everett, WA" data-url="https://www.highlineroofingwa.com/" data-domain="highlineroofingwa.com">
+            <img data-src="assets/work/dgo-green-desktop.jpg" alt="DGO Green website on desktop" width="1120" height="700" decoding="async" data-name="DGO Green" data-meta="Landscaping · Snohomish County, WA" data-url="https://contractorarsenal.github.io/DGOGREEN/" data-domain="DGO Green Landscaping">
+            <img data-src="assets/work/jc-grading-paving-desktop.jpg" alt="JC Grading &amp; Paving Solution website on desktop" width="1120" height="700" decoding="async" data-name="JC Grading &amp; Paving Solution" data-meta="Concrete, grading &amp; paving · South Bay, CA" data-url="https://jcgradingpavingsolution.com/" data-domain="jcgradingpavingsolution.com">
+            <img data-src="assets/work/agave-welding-desktop.jpg" alt="Agave Welding website on desktop" width="1120" height="700" decoding="async" data-name="Agave Welding" data-meta="Welding &amp; fabrication · Seattle, WA" data-url="https://agavewelding.com/" data-domain="agavewelding.com">
+            <img data-src="assets/work/jba-roofing-desktop.jpg" alt="JBA Roofing website on desktop" width="1120" height="700" decoding="async" data-name="JBA Roofing" data-meta="Roofing · King, Snohomish &amp; Skagit Counties, WA" data-url="https://jbaroofpro.com/" data-domain="jbaroofpro.com">
+          </div>
+        </div>
+        <div class="sc-phone" aria-hidden="true" data-parallax="-22">
+          <div class="sc-phone-screen" data-sc-mobile>
+            <img class="is-on" src="assets/work/seattle-king-roofing-mobile.jpg" fetchpriority="high" alt="Seattle King Roofing website on a phone" width="400" height="865" decoding="async">
+            <img data-src="assets/work/refined-painting-mobile.jpg" alt="Refined Painting website on a phone" width="400" height="865" decoding="async">
+            <img data-src="assets/work/golden-oak-painting-mobile.jpg" alt="Golden Oak Painting website on a phone" width="400" height="865" decoding="async">
+            <img data-src="assets/work/highline-roofing-mobile.jpg" alt="Highline Roofing WA website on a phone" width="400" height="865" decoding="async">
+            <img data-src="assets/work/dgo-green-mobile.jpg" alt="DGO Green website on a phone" width="400" height="865" decoding="async">
+            <img data-src="assets/work/jc-grading-paving-mobile.jpg" alt="JC Grading &amp; Paving Solution website on a phone" width="400" height="865" decoding="async">
+            <img data-src="assets/work/agave-welding-mobile.jpg" alt="Agave Welding website on a phone" width="400" height="865" decoding="async">
+            <img data-src="assets/work/jba-roofing-mobile.jpg" alt="JBA Roofing website on a phone" width="400" height="865" decoding="async">
+          </div>
+        </div>
       </div>
-      <div class="build-row">
-        <div class="build-mark">SK</div>
-        <div><div class="build-name">Seattle King Roofing</div><div class="build-meta">Roofing · Everett, WA</div></div>
-        <span class="build-status"><span class="live-dot"></span>LIVE</span>
-      </div>
-      <div class="build-row">
-        <div class="build-mark">JC</div>
-        <div><div class="build-name">JC Grading &amp; Paving</div><div class="build-meta">Excavation · Washington</div></div>
-        <span class="build-status"><span class="live-dot"></span>LIVE</span>
-      </div>
-      <div class="build-row">
-        <div class="build-mark">AW</div>
-        <div><div class="build-name">Agave Welding</div><div class="build-meta">Welding · Arizona</div></div>
-        <span class="build-status"><span class="live-dot"></span>LIVE</span>
-      </div>
-      <div class="builds-foot"><a href="work.html">View All Work →</a></div>
     </div>
   </div>
 </section>
 
-<!-- PROOF / PROJECT STRIP -->
+<!-- PROOF STRIP -->
 <div class="stat-strip">
   <div class="wrap stat-row">
-    <div class="stat-item"><span class="stat-num" data-count-to="120" data-count-suffix="+">120+</span><span class="stat-label">Contractor sites built</span></div>
-    <div class="stat-item"><span class="stat-num">$4M+</span><span class="stat-label">Revenue generated for clients</span></div>
-    <div class="stat-item"><span class="stat-num">9.2×</span><span class="stat-label">Average client ROI</span></div>
-    <div class="stat-item"><span class="stat-num">48hr</span><span class="stat-label">Average launch time</span></div>
+    <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Client sites in our portfolio</span></div>
+    <div class="stat-item"><span class="stat-num">$0</span><span class="stat-label">Setup fee</span></div>
+    <div class="stat-item"><span class="stat-num">$297</span><span class="stat-label">Starting monthly price</span></div>
+    <div class="stat-item"><span class="stat-num">48hr</span><span class="stat-label">Launch after demo approval</span></div>
   </div>
 </div>
 
-<!-- HOW CUSTOMERS FIND YOU -->
-<section>
+<!-- WORK -->
+<section id="work">
   <div class="wrap">
-    <div class="section-head center">
-      <div class="eyebrow center">The Product</div>
-      <h2 class="h-display center">Be there when they're<br>ready to hire.</h2>
-      <p class="h-sub center" style="margin-top:1.1rem;">This is the story your website has to tell, every time.</p>
+    <div class="section-head split">
+      <div>
+        <div class="eyebrow">Real Work</div>
+        <h2 class="h-display">Don't take our word for it.<br>Look at the sites.</h2>
+        <p class="h-sub" style="margin-top:1.1rem;">Every site here is a real contractor website we built and manage. Open any of them and judge the work yourself.</p>
+      </div>
+      <a href="work" style="font-size:.88rem;font-weight:700;border-bottom:2px solid var(--accent);" data-cta="all_work" data-cta-location="home_work">See all work →</a>
     </div>
-    <div class="find-row">
-      <div class="find-step reveal">
-        <div class="find-num">Search</div>
-        <div class="find-visual find-search-box">"roof repair near me"</div>
-        <p>A homeowner searches for your trade, in your city, right now.</p>
-      </div>
-      <div class="find-arrow">→</div>
-      <div class="find-step reveal reveal-d1">
-        <div class="find-num">Find</div>
-        <div class="find-visual find-result-card"><div class="fr-name">ABC Roofing Co.</div><div class="fr-meta">★★★★★ · Example result</div></div>
-        <p>Your company shows up with a strong, local presence.</p>
-      </div>
-      <div class="find-arrow">→</div>
-      <div class="find-step reveal reveal-d2">
-        <div class="find-num">Trust</div>
-        <div class="find-visual find-trust-list">
-          <span>Fast, mobile-first site</span>
-          <span>Clear services &amp; service area</span>
-          <span>Real project proof</span>
+    <div class="wk-grid">
+      <a class="wk wk--feature reveal" href="https://refinedpainting.co/" target="_blank" rel="noopener noreferrer" data-cta="work_card" data-cta-location="home_work" data-cta-label="Refined Painting">
+        <div class="wk-shot"><img src="assets/work/refined-painting-desktop.jpg" alt="Refined Painting website homepage, built by Contractor Arsenal" width="1200" height="750" loading="lazy" decoding="async"></div>
+        <div class="wk-body">
+          <div class="wk-top"><h3 class="wk-name">Refined Painting</h3><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+          <div class="wk-meta">Painting · Seattle &amp; Eastside, WA</div>
+          <p class="wk-desc">Website built around project galleries, mobile-optimized video, lead capture enhancements, and local search for a Seattle and Eastside painting contractor.</p>
+          <div class="wk-link"><span>Visit live site</span> <i aria-hidden="true">↗</i></div>
         </div>
-        <p>They land on a site that answers their questions in seconds.</p>
-      </div>
-      <div class="find-arrow">→</div>
-      <div class="find-step reveal reveal-d3">
-        <div class="find-num">Contact</div>
-        <div class="find-visual"><span class="find-contact-btn">Call Now →</span></div>
-        <p>They tap Call or request an estimate. That's the job done.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BUILT FOR GOOGLE (dark, two-column technical layout) -->
-<section class="on-dark">
-  <div class="wrap">
-    <div class="section-head" style="max-width:620px;">
-      <div class="eyebrow on-dark">What We Actually Build</div>
-      <h2 class="h-display on-dark">What Google needs to<br>understand your business.</h2>
-      <p class="h-sub on-dark" style="margin-top:1.1rem;max-width:560px;">We build the structure Google and modern search need before your website ever goes live. Not a promise of rankings. A real foundation.</p>
-    </div>
-
-    <div class="tech-row reveal-left">
-      <div class="tech-copy">
-        <div class="idx">01</div>
-        <h3>Service Structure</h3>
-        <p>Give every major service its own clear page, not a paragraph buried on the homepage.</p>
-      </div>
-      <div class="tech-visual">
-        <div class="tech-sitemap">
-<span class="tm-line">HOME</span>
-<span class="tm-line">│</span>
-<span class="tm-line">└── </span><span class="tm-root">ROOFING</span>
-<span class="tm-line">    ├── </span><span class="tm-active">Roof Replacement</span>
-<span class="tm-line">    ├── Roof Repair</span>
-<span class="tm-line">    ├── Commercial Roofing</span>
-<span class="tm-line">    └── Flat Roofing</span>
+      </a>
+      <a class="wk reveal" href="https://www.goldenoakpainting.com/" target="_blank" rel="noopener noreferrer" data-cta="work_card" data-cta-location="home_work" data-cta-label="Golden Oak Painting">
+        <div class="wk-shot"><img src="assets/work/golden-oak-painting-desktop.jpg" alt="Golden Oak Painting website homepage, built by Contractor Arsenal" width="1200" height="750" loading="lazy" decoding="async"></div>
+        <div class="wk-body">
+          <div class="wk-top"><h3 class="wk-name">Golden Oak Painting</h3><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+          <div class="wk-meta">Painting · Bothell, WA</div>
+          <p class="wk-desc">Website built around project photos, service pages, and free quote requests.</p>
+          <div class="wk-link"><span>Visit live site</span> <i aria-hidden="true">↗</i></div>
         </div>
-      </div>
-    </div>
-
-    <div class="tech-row flip reveal-right">
-      <div class="tech-copy">
-        <div class="idx">02</div>
-        <h3>Local Relevance</h3>
-        <p>Cities and service areas get built into the site's architecture, so Google knows exactly where you work.</p>
-      </div>
-      <div class="tech-visual">
-        <div class="tech-nodes">
-          <span class="tech-node is-active">Seattle</span>
-          <span class="tech-node">Bellevue</span>
-          <span class="tech-node">Tacoma</span>
-          <span class="tech-node">Everett</span>
+      </a>
+      <a class="wk reveal" href="https://seattlekingroofing.com/" target="_blank" rel="noopener noreferrer" data-cta="work_card" data-cta-location="home_work" data-cta-label="Seattle King Roofing">
+        <div class="wk-shot"><img src="assets/work/seattle-king-roofing-desktop.jpg" alt="Seattle King Roofing website homepage, built by Contractor Arsenal" width="1200" height="750" loading="lazy" decoding="async"></div>
+        <div class="wk-body">
+          <div class="wk-top"><h3 class="wk-name">Seattle King Roofing</h3><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+          <div class="wk-meta">Roofing · Everett, WA</div>
+          <p class="wk-desc">Contractor website for an Everett-based roofing company serving King and Snohomish Counties, with dedicated service pages, service-area structure, lead capture, and project content.</p>
+          <div class="wk-link"><span>Visit live site</span> <i aria-hidden="true">↗</i></div>
         </div>
-      </div>
-    </div>
-
-    <div class="tech-row reveal-left">
-      <div class="tech-copy">
-        <div class="idx">03</div>
-        <h3>Search Foundation</h3>
-        <p>Metadata, headings, internal links, schema, and crawlability. The parts Google actually reads.</p>
-      </div>
-      <div class="tech-visual">
-        <div class="tech-nodes">
-          <span class="tech-node is-active">Title Tag</span>
-          <span class="tech-node">Meta Description</span>
-          <span class="tech-node">Schema</span>
-          <span class="tech-node">Alt Text</span>
+      </a>
+      <a class="wk reveal" href="https://www.highlineroofingwa.com/" target="_blank" rel="noopener noreferrer" data-cta="work_card" data-cta-location="home_work" data-cta-label="Highline Roofing WA">
+        <div class="wk-shot"><img src="assets/work/highline-roofing-desktop.jpg" alt="Highline Roofing WA website homepage, built by Contractor Arsenal" width="1200" height="750" loading="lazy" decoding="async"></div>
+        <div class="wk-body">
+          <div class="wk-top"><h3 class="wk-name">Highline Roofing WA</h3><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+          <div class="wk-meta">Roofing · Everett, WA</div>
+          <p class="wk-desc">Website built around storm damage response, roof replacement, and fast estimate requests.</p>
+          <div class="wk-link"><span>Visit live site</span> <i aria-hidden="true">↗</i></div>
         </div>
-      </div>
-    </div>
-
-    <div class="tech-row flip reveal-right">
-      <div class="tech-copy">
-        <div class="idx">04</div>
-        <h3>Clear Answers</h3>
-        <p>Real questions get real answers, written so both people and AI tools can find them fast.</p>
-      </div>
-      <div class="tech-visual">
-        <div class="tech-nodes">
-          <span class="tech-node is-active">FAQ Blocks</span>
-          <span class="tech-node">Direct Answers</span>
-          <span class="tech-node">Question Headers</span>
-          <span class="tech-node">Schema Markup</span>
+      </a>
+      <a class="wk reveal" href="https://contractorarsenal.github.io/DGOGREEN/" target="_blank" rel="noopener noreferrer" data-cta="work_card" data-cta-location="home_work" data-cta-label="DGO Green">
+        <div class="wk-shot"><img src="assets/work/dgo-green-desktop.jpg" alt="DGO Green website homepage, built by Contractor Arsenal" width="1200" height="750" loading="lazy" decoding="async"></div>
+        <div class="wk-body">
+          <div class="wk-top"><h3 class="wk-name">DGO Green</h3><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+          <div class="wk-meta">Landscaping · Snohomish County, WA</div>
+          <p class="wk-desc">Website built around design, installation, and ongoing maintenance plans.</p>
+          <div class="wk-link"><span>Visit live site</span> <i aria-hidden="true">↗</i></div>
         </div>
-      </div>
-    </div>
-
-    <div class="tech-row reveal-left">
-      <div class="tech-copy">
-        <div class="idx">05</div>
-        <h3>Brand Signals</h3>
-        <p>Your website and Google Business Profile should reinforce each other, not compete.</p>
-      </div>
-      <div class="tech-visual">
-        <div class="tech-nodes">
-          <span class="tech-node is-active">Profile Setup</span>
-          <span class="tech-node">Hours</span>
-          <span class="tech-node">Reviews</span>
-          <span class="tech-node">Photos</span>
+      </a>
+      <a class="wk reveal" href="https://jcgradingpavingsolution.com/" target="_blank" rel="noopener noreferrer" data-cta="work_card" data-cta-location="home_work" data-cta-label="JC Grading &amp; Paving Solution">
+        <div class="wk-shot"><img src="assets/work/jc-grading-paving-desktop.jpg" alt="JC Grading &amp; Paving Solution website homepage, built by Contractor Arsenal" width="1200" height="750" loading="lazy" decoding="async"></div>
+        <div class="wk-body">
+          <div class="wk-top"><h3 class="wk-name">JC Grading &amp; Paving Solution</h3><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+          <div class="wk-meta">Concrete, grading &amp; paving · South Bay, CA</div>
+          <p class="wk-desc">Website built around before/after project photos and fast estimate requests.</p>
+          <div class="wk-link"><span>Visit live site</span> <i aria-hidden="true">↗</i></div>
         </div>
+      </a>
+      <a class="wk reveal" href="https://agavewelding.com/" target="_blank" rel="noopener noreferrer" data-cta="work_card" data-cta-location="home_work" data-cta-label="Agave Welding">
+        <div class="wk-shot"><img src="assets/work/agave-welding-desktop.jpg" alt="Agave Welding website homepage, built by Contractor Arsenal" width="1200" height="750" loading="lazy" decoding="async"></div>
+        <div class="wk-body">
+          <div class="wk-top"><h3 class="wk-name">Agave Welding</h3><span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
+          <div class="wk-meta">Welding &amp; fabrication · Seattle, WA</div>
+          <p class="wk-desc">Website built around a work portfolio and direct quote requests.</p>
+          <div class="wk-link"><span>Visit live site</span> <i aria-hidden="true">↗</i></div>
+        </div>
+      </a>
+      <div class="wk wk--cta reveal">
+        <div>
+          <h3>Your company <em>next.</em></h3>
+          <p>We build a demo around your real company, services, and market. You see it before you commit to anything.</p>
+        </div>
+        <a href="demo" class="btn btn-accent" data-cta="demo" data-cta-location="home_work">Get My Free Demo →</a>
       </div>
     </div>
-
-    <div class="tech-row full reveal" style="border-bottom:none;">
-      <div class="tech-copy">
-        <div class="idx">06</div>
-        <h3>Ongoing Improvement</h3>
-        <p>None of this is a one-time setup. We keep improving the site's structure as your services, cities, and content grow.</p>
-        <a href="seo.html" class="btn btn-ghost-dark" style="margin-top:1.25rem;">See How Search Visibility Works →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EVERYTHING INCLUDED -->
-<section id="included" style="background:var(--surface-2);border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft);">
-  <div class="wrap">
-    <div class="section-head" style="max-width:640px;">
-      <div class="eyebrow">Everything Included</div>
-      <h2 class="h-display">One website.<br>One monthly price.</h2>
-      <p class="h-sub" style="margin-top:1.1rem;">Everything you need to launch, run, and improve your contractor website.</p>
-    </div>
-    <div class="included-grid">
-      <div class="feat-grid reveal">
-        <div class="feat-cell"><div class="feat-cell-head"><span class="feat-cell-num">01</span><h3>Custom Website</h3></div><p>Built around your company, services, and market.</p></div>
-        <div class="feat-cell"><div class="feat-cell-head"><span class="feat-cell-num">02</span><h3>Built for Google</h3></div><p>We structure every page so Google can understand what you do and where you work.</p></div>
-        <div class="feat-cell"><div class="feat-cell-head"><span class="feat-cell-num">03</span><h3>Easy Lead Capture</h3></div><p>Calls and quote requests go directly to you.</p></div>
-        <div class="feat-cell"><div class="feat-cell-head"><span class="feat-cell-num">04</span><h3>Hosting Included</h3></div><p>Fast hosting, SSL, security, and uptime handled for you.</p></div>
-        <div class="feat-cell"><div class="feat-cell-head"><span class="feat-cell-num">05</span><h3>Ongoing Updates</h3></div><p>Need something changed? We handle it.</p></div>
-        <div class="feat-cell"><div class="feat-cell-head"><span class="feat-cell-num">06</span><h3>Real Support</h3></div><p>Talk to an actual person when you need help.</p></div>
-      </div>
-      <div class="pricing-panel reveal reveal-d1">
-        <div class="pricing-id">CA / GROWTH</div>
-        <div class="pricing-kicker">Contractor Growth Website</div>
-        <div class="pricing-price">$297<span>/ month</span></div>
-        <p class="pricing-note">Everything needed to get your contractor website live and working for your business.</p>
-        <ul class="pricing-list">
-          <li>Custom website</li>
-          <li>Built for Google</li>
-          <li>Lead forms + click-to-call</li>
-          <li>Hosting + SSL</li>
-          <li>Updates</li>
-          <li>Support</li>
-        </ul>
-        <a href="demo.html" class="btn btn-primary btn-block">Get My Free Demo <span class="pricing-arrow">→</span></a>
-        <p class="pricing-fine">No setup fee · <a href="pricing.html" style="color:var(--ink-soft);font-weight:700;border-bottom:1px solid var(--accent);">Compare Plans →</a></p>
-        <div class="pricing-whop"><img src="assets/whop-logo.svg" alt="WHOP"> Official WHOP Partner</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTRACTOR WEBSITE DIRECTORY -->
-<section id="directory">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Our Work</div>
-      <h2 class="h-display">Contractor Website Directory</h2>
-      <p class="h-sub" style="margin-top:1.1rem;">Real websites we've built and manage, across roofing, painting, landscaping, concrete, welding, and more.</p>
-    </div>
-
-    <div data-directory>
-    <div class="dir-filter-bar">
-      <button class="dir-filter-pill active" data-filter="all">All</button>
-      <button class="dir-filter-pill" data-filter="roofing">Roofing</button>
-      <button class="dir-filter-pill" data-filter="painting">Painting</button>
-      <button class="dir-filter-pill" data-filter="landscaping">Landscaping</button>
-      <button class="dir-filter-pill" data-filter="concrete">Concrete &amp; Paving</button>
-      <button class="dir-filter-pill" data-filter="welding">Welding</button>
-    </div>
-    <div class="dir-toolbar">
-      <div class="dir-search">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" placeholder="Search contractor websites…" data-dir-search aria-label="Search contractor websites">
-      </div>
-      <select class="dir-sort" data-dir-sort aria-label="Sort directory">
-        <option value="order">Recently Launched</option>
-        <option value="name">Company Name (A–Z)</option>
-      </select>
-    </div>
-    <div class="dir-results-count" data-dir-count>5 websites</div>
-
-    <div class="dir-row" data-row data-trade="roofing" data-name="Highline Roofing WA" data-order="1">
-      <div class="dir-row-mark">HR</div>
-      <div class="dir-row-main">
-        <div class="dir-row-name">Highline Roofing WA <span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
-        <div class="dir-row-meta">Roofing contractor · Residential &amp; commercial</div>
-            <div class="dir-row-desc">Website built around storm damage response, roof replacement, and fast estimate requests.</div>
-        <div class="dir-row-tags"><span class="tag">Roofing</span><span class="tag">SEO</span><span class="tag">Lead Capture</span></div>
-      </div>
-      <div class="dir-row-loc">Washington State</div>
-      <a href="https://www.highlineroofingwa.com/" target="_blank" rel="noopener noreferrer" class="dir-row-link">View Site →</a>
-    </div>
-
-    <div class="dir-row" data-row data-trade="painting" data-name="Golden Oak Painting" data-order="2">
-      <div class="dir-row-mark">GO</div>
-      <div class="dir-row-main">
-        <div class="dir-row-name">Golden Oak Painting <span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
-        <div class="dir-row-meta">Painting contractor · Interior &amp; exterior</div>
-            <div class="dir-row-desc">Website built around project photos, service pages, and free quote requests.</div>
-        <div class="dir-row-tags"><span class="tag">Painting</span><span class="tag">SEO</span><span class="tag">Lead Capture</span></div>
-      </div>
-      <div class="dir-row-loc">Pacific Northwest</div>
-      <a href="https://www.goldenoakpainting.com/" target="_blank" rel="noopener noreferrer" class="dir-row-link">View Site →</a>
-    </div>
-
-    <div class="dir-row" data-row data-trade="landscaping" data-name="DGO Green" data-order="3">
-      <div class="dir-row-mark">DG</div>
-      <div class="dir-row-main">
-        <div class="dir-row-name">DGO Green <span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
-        <div class="dir-row-meta">Landscaping &amp; lawn care</div>
-            <div class="dir-row-desc">Website built around design, installation, and ongoing maintenance plans.</div>
-        <div class="dir-row-tags"><span class="tag">Landscaping</span><span class="tag">SEO</span></div>
-      </div>
-      <div class="dir-row-loc">Pacific Northwest</div>
-      <a href="https://contractorarsenal.github.io/DGOGREEN/" target="_blank" rel="noopener noreferrer" class="dir-row-link">View Site →</a>
-    </div>
-
-    <div class="dir-row" data-row data-trade="concrete" data-name="JC Grading & Paving Solution" data-order="4">
-      <div class="dir-row-mark">JC</div>
-      <div class="dir-row-main">
-        <div class="dir-row-name">JC Grading &amp; Paving Solution <span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
-        <div class="dir-row-meta">Concrete, grading &amp; paving</div>
-            <div class="dir-row-desc">Website built around before/after project photos and fast estimate requests.</div>
-        <div class="dir-row-tags"><span class="tag">Concrete</span><span class="tag">Lead Capture</span></div>
-      </div>
-      <div class="dir-row-loc">Pacific Northwest</div>
-      <a href="https://jcgradingpavingsolution.com/" target="_blank" rel="noopener noreferrer" class="dir-row-link">View Site →</a>
-    </div>
-
-    <div class="dir-row" data-row data-trade="welding" data-name="Agave Welding" data-order="5">
-      <div class="dir-row-mark">AW</div>
-      <div class="dir-row-main">
-        <div class="dir-row-name">Agave Welding <span class="tag tag-live"><span class="live-dot live-dot-on-accent"></span>Live</span></div>
-        <div class="dir-row-meta">Custom fabrication, gates &amp; structural welding</div>
-            <div class="dir-row-desc">Website built around a work portfolio and direct quote requests.</div>
-        <div class="dir-row-tags"><span class="tag">Welding</span><span class="tag">SEO</span></div>
-      </div>
-      <div class="dir-row-loc">Arizona</div>
-      <a href="https://agavewelding.com/" target="_blank" rel="noopener noreferrer" class="dir-row-link">View Site →</a>
-    </div>
-
-    <div class="dir-empty" data-dir-empty style="display:none;">No websites match that search. <a href="demo.html">Get a free demo built for your trade →</a></div>
-    </div>
-    <p class="text-center" style="margin-top:2rem;font-size:.9rem;color:var(--muted);"><a href="work.html" style="font-weight:700;color:var(--ink);border-bottom:2px solid var(--accent);">See the full directory →</a></p>
   </div>
 </section>
 
@@ -600,52 +450,171 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
-    <p class="text-center" style="margin-top:2rem;font-size:.9rem;"><a href="work.html" style="font-weight:700;color:var(--ink);border-bottom:2px solid var(--accent);">See real sites we've built →</a></p>
+    <p class="text-center" style="margin-top:2rem;font-size:.9rem;"><a href="work" style="font-weight:700;color:var(--ink);border-bottom:2px solid var(--accent);">See real sites we've built →</a></p>
   </div>
 </section>
 
-<!-- INDUSTRY DIRECTORY -->
-<section>
+<!-- OUTCOMES -->
+<section class="on-dark">
   <div class="wrap">
-    <div class="section-head split">
-      <div>
-        <div class="eyebrow">Who We Build For</div>
-        <h2 class="h-display">Industries</h2>
-      </div>
-      <a href="industries.html" style="font-size:.88rem;font-weight:700;border-bottom:2px solid var(--accent);">See all trades →</a>
+    <div class="section-head" style="max-width:660px;">
+      <div class="eyebrow on-dark">What You Get</div>
+      <h2 class="h-display on-dark">Built to do one job:<br>bring you work.</h2>
+      <p class="h-sub on-dark" style="margin-top:1.1rem;">Not a promise of rankings. A website built around how customers actually search, compare, and hire.</p>
     </div>
-    <div class="industry-list">
-      <div class="industry-row">
-        <h3>Roofing</h3>
-        <div class="industry-row-meta">Storm damage · Replacement · Commercial &amp; residential</div>
-        <a href="industries.html#roofing" class="industry-row-link">View roofing websites →</a>
+    <div class="oc-grid reveal">
+      <div class="oc">
+        <div class="oc-num">01</div>
+        <h3>Get found</h3>
+        <p>Every service you offer and every city you work in gets its own clear page, so Google understands what you do and where.</p>
+        <ul><li>A page for each core service</li><li>Service areas built into the site</li><li>Works with your Google Business Profile</li></ul>
       </div>
-      <div class="industry-row">
-        <h3>Painting</h3>
-        <div class="industry-row-meta">Interior · Exterior · Cabinet refinishing</div>
-        <a href="industries.html#painting" class="industry-row-link">View painting websites →</a>
+      <div class="oc">
+        <div class="oc-num">02</div>
+        <h3>Get chosen</h3>
+        <p>Customers compare a few contractors before they call anyone. Your site has to look like the safe choice in seconds.</p>
+        <ul><li>Custom design for your trade</li><li>Real project photos up front</li><li>Fast on every phone</li></ul>
       </div>
-      <div class="industry-row">
-        <h3>Landscaping</h3>
-        <div class="industry-row-meta">Design · Installation · Maintenance</div>
-        <a href="industries.html#landscaping" class="industry-row-link">View landscaping websites →</a>
-      </div>
-      <div class="industry-row">
-        <h3>Concrete &amp; Paving</h3>
-        <div class="industry-row-meta">Driveways · Grading · Flatwork</div>
-        <a href="industries.html#concrete" class="industry-row-link">View concrete websites →</a>
-      </div>
-      <div class="industry-row">
-        <h3>Welding</h3>
-        <div class="industry-row-meta">Custom fabrication · Gates · Structural</div>
-        <a href="industries.html#welding" class="industry-row-link">View welding websites →</a>
-      </div>
-      <div class="industry-row">
-        <h3>+ More Trades</h3>
-        <div class="industry-row-meta">General contractors · HVAC · Plumbing · Electrical · Decks · Fencing</div>
-        <a href="industries.html" class="industry-row-link">See every trade →</a>
+      <div class="oc">
+        <div class="oc-num">03</div>
+        <h3>Get the call</h3>
+        <p>Calling you or requesting an estimate is never more than one tap away, and every request goes straight to you.</p>
+        <ul><li>Click-to-call on every page</li><li>Short estimate request forms</li><li>Hosting, updates, and support handled</li></ul>
       </div>
     </div>
+    <div class="oc-links">
+      <a href="services" class="btn btn-ghost-dark" data-cta="services" data-cta-location="home_outcomes">See What's Included →</a>
+      <a href="seo" class="btn btn-ghost-dark" data-cta="search_visibility" data-cta-location="home_outcomes">How Search Visibility Works →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow center">Pricing</div>
+      <h2 class="h-display center">One monthly price.<br>No setup fee.</h2>
+      <p class="h-sub center" style="margin-top:1.1rem;">Design, hosting, updates, and support in one plan. See a free demo of your site before you commit.</p>
+    </div>
+    <div class="plans">
+      <article class="plan reveal" aria-labelledby="plan-growth">
+        <div class="plan-head"><h3 class="plan-name" id="plan-growth">Contractor Growth</h3></div>
+        <div class="plan-price">$297<span>/mo</span></div>
+        <p class="plan-for">Our core offer. Best for contractors who need a focused, professional website: home, services, about, projects, contact.</p>
+        <ul class="plan-list">
+          <li>Custom design for your trade</li>
+          <li>Mobile optimization</li>
+          <li>Built for Google</li>
+          <li>Contact forms &amp; click-to-call</li>
+          <li>Hosting &amp; SSL</li>
+          <li>Support &amp; ongoing updates</li>
+        </ul>
+        <a href="demo?plan=growth" class="btn btn-outline btn-block" data-cta="demo" data-cta-location="home_pricing">Get My Free Demo <span class="plan-arrow" aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="plan plan--featured reveal reveal-d1" aria-labelledby="plan-growth-plus">
+        <div class="plan-head"><h3 class="plan-name" id="plan-growth-plus">Contractor Growth+</h3><span class="plan-badge">Most Popular</span></div>
+        <div class="plan-price">$497<span>/mo</span></div>
+        <p class="plan-for">For contractors who need a larger site and a stronger organic presence, typically more than five pages or a deeper service structure.</p>
+        <ul class="plan-list">
+          <li>Everything in Growth</li>
+          <li>Expanded service pages</li>
+          <li>Deeper local SEO structure</li>
+          <li>Additional content &amp; pages</li>
+          <li>Expanded project/case study architecture</li>
+          <li>More advanced lead paths</li>
+        </ul>
+        <a href="demo?plan=growth-plus" class="btn btn-primary btn-block" data-cta="demo" data-cta-location="home_pricing">Get My Free Growth+ Demo <span class="plan-arrow" aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="plan reveal reveal-d2" aria-labelledby="plan-pro">
+        <div class="plan-head"><h3 class="plan-name" id="plan-pro">Contractor Pro</h3></div>
+        <div class="plan-price">$997<span>/mo</span></div>
+        <p class="plan-for">For larger companies that need significantly more content, pages, service areas, and ongoing optimization, usually beyond 10 pages.</p>
+        <ul class="plan-list">
+          <li>Everything in Growth+</li>
+          <li>Expanded service architecture</li>
+          <li>Multiple city / service-area strategies</li>
+          <li>Larger content footprint</li>
+          <li>More ongoing site improvements</li>
+          <li>Priority website support</li>
+        </ul>
+        <a href="demo?plan=pro" class="btn btn-outline btn-block" data-cta="demo" data-cta-location="home_pricing">Get My Free Pro Demo <span class="plan-arrow" aria-hidden="true">→</span></a>
+      </article>
+    </div>
+    <div class="plans-fine"><span>No setup fee</span><span>Hosting &amp; SSL included on every plan</span><span>Free demo before you commit</span></div>
+    <p class="home-plans-foot"><a href="pricing" data-cta="compare_plans" data-cta-location="home_pricing">Compare plans in detail →</a> &nbsp; <a href="#value" data-cta="value_illustration" data-cta-location="home_pricing">Run your own numbers ↓</a></p>
+  </div>
+</section>
+
+<!-- WEBSITE VALUE ILLUSTRATION -->
+<section id="value" style="background:var(--surface-2);border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft);">
+  <div class="wrap">
+    <div class="section-head" style="max-width:700px;">
+      <div class="eyebrow">Run Your Own Numbers</div>
+      <h2 class="h-display h-section">What would the website have to bring in to be worth it?</h2>
+      <p class="h-sub" style="margin-top:1.1rem;">Put in what a typical job is worth, how many inquiries a year you think could come through your website, and how many of those you usually close. Everything below is figured over one year. This is your math, not our promise.</p>
+    </div>
+    <div class="vc reveal" data-vc>
+      <div class="vc-in">
+        <span class="vc-tag">Hypothetical example · one year</span>
+        <div class="vc-field">
+          <label for="vc-value">Average completed project value <output for="vc-value" data-vc-value-out>$5,500</output></label>
+          <input type="range" id="vc-value" data-vc-value min="500" max="100000" step="500" value="5500">
+        </div>
+        <div class="vc-field">
+          <label for="vc-inq">Website inquiries received per year <output for="vc-inq" data-vc-inq-out>24 inquiries</output></label>
+          <input type="range" id="vc-inq" data-vc-inq min="0" max="200" step="1" value="24">
+          <small>Calls and estimate requests that come through the website. An inquiry is not a job.</small>
+        </div>
+        <div class="vc-field">
+          <label for="vc-rate">Lead closing rate <output for="vc-rate" data-vc-rate-out>50%</output></label>
+          <input type="range" id="vc-rate" data-vc-rate min="0" max="100" step="1" value="50">
+          <small>The share of inquiries you turn into completed jobs. Use your own number. It depends on your pricing, response time, and follow-up.</small>
+        </div>
+        <fieldset class="vc-field">
+          <legend>Website plan</legend>
+          <div class="vc-plans">
+            <label><input type="radio" name="vc-plan" data-vc-plan value="297"><span>Growth<b>$297/mo</b></span></label>
+            <label><input type="radio" name="vc-plan" data-vc-plan value="497" checked><span>Growth+<b>$497/mo</b></span></label>
+            <label><input type="radio" name="vc-plan" data-vc-plan value="997"><span>Pro<b>$997/mo</b></span></label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="vc-out" aria-live="polite">
+        <div>
+          <div class="vc-kicker">Potential gross job revenue · one year</div>
+          <div class="vc-big" data-vc-revenue>$66,000</div>
+          <div class="vc-sub" data-vc-math>12 estimated jobs x $5,500</div>
+        </div>
+        <div class="vc-bars">
+          <div class="vc-bar-row"><span>Potential gross job revenue</span><strong data-vc-revenue-2>$66,000</strong><div class="vc-bar"><i data-vc-bar-rev style="width:100%"></i></div></div>
+          <div class="vc-bar-row"><span>Annual website subscription</span><strong data-vc-fee>$5,964</strong><div class="vc-bar is-fee"><i data-vc-bar-fee style="width:9%"></i></div></div>
+        </div>
+        <ol class="vc-lines">
+          <li><span><em>1</em>Estimated jobs won (<i data-vc-jobs-math>24 inquiries x 50%</i>)</span><strong data-vc-jobs>12</strong></li>
+          <li><span><em>2</em>Potential gross job revenue</span><strong data-vc-revenue-3>$66,000</strong></li>
+          <li><span><em>3</em>Annual website subscription (<i data-vc-fee-math>$497 x 12 months</i>)</span><strong data-vc-fee-2>$5,964</strong></li>
+          <li class="is-total"><span><em>4</em>Gross revenue compared with the subscription</span><strong data-vc-multiple>11.1x</strong></li>
+          <li><span><em>5</em>Completed jobs needed for gross revenue to equal the subscription</span><strong data-vc-breakeven>1.1 (2 whole jobs)</strong></li>
+        </ol>
+      </div>
+    </div>
+    <div class="vc-compare reveal">
+      <div class="vc-compare-head">Same inputs on each plan</div>
+      <div class="vc-compare-scroll">
+        <table>
+          <thead><tr><th scope="col">Plan</th><th scope="col">Annual subscription</th><th scope="col">Gross revenue vs. subscription</th><th scope="col">Jobs needed to equal it</th></tr></thead>
+          <tbody>
+            <tr data-vc-row="297"><th scope="row">Growth · $297/mo</th><td data-c="fee">$3,564</td><td data-c="mult">18.5x</td><td data-c="be">0.6 (1 whole job)</td></tr>
+            <tr data-vc-row="497" class="is-current"><th scope="row">Growth+ · $497/mo</th><td data-c="fee">$5,964</td><td data-c="mult">11.1x</td><td data-c="be">1.1 (2 whole jobs)</td></tr>
+            <tr data-vc-row="997"><th scope="row">Pro · $997/mo</th><td data-c="fee">$11,964</td><td data-c="mult">5.5x</td><td data-c="be">2.2 (3 whole jobs)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="vc-note"><strong>This is a hypothetical example, not a result.</strong> The numbers come from what you enter, not from a Contractor Arsenal client, and no website can guarantee inquiries or jobs. Estimated jobs won is simply your inquiries multiplied by your closing rate. When that is not a whole number it is shown as a decimal, because it is an average and not a count of guaranteed jobs. Your actual results depend on how well you convert the inquiries you get. <strong>The comparison is gross revenue divided by the subscription.</strong> It is not profit and it is not a return figure: materials, labor, overhead, advertising spend, and taxes are not subtracted. Our plans have no setup fee, so none is counted here.</p>
   </div>
 </section>
 
@@ -675,29 +644,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <p class="text-center" style="margin-top:2.25rem;">
-      <a href="demo.html" class="btn btn-primary">Get My Free Demo →</a>
+      <a href="demo" class="btn btn-primary" data-cta="demo" data-cta-location="home_process">Get My Free Demo →</a>
     </p>
   </div>
 </section>
 
-<!-- RESOURCES TEASER -->
+<!-- TRADES + LOCAL -->
 <section>
   <div class="wrap">
     <div class="section-head split">
       <div>
-        <div class="eyebrow">Resources</div>
-        <h2 class="h-display h-section">Contractor Growth Library</h2>
-        <p class="h-sub" style="margin-top:1.1rem;max-width:none;">Guides on websites, search visibility, Google Business, leads, and Google Ads, written for contractors, not marketers.</p>
+        <div class="eyebrow">Who We Build For</div>
+        <h2 class="h-display h-section">Contractors and home service companies.</h2>
       </div>
-      <a href="resources.html" style="font-size:.88rem;font-weight:700;border-bottom:2px solid var(--accent);">Browse the library →</a>
+      <a href="industries" style="font-size:.88rem;font-weight:700;border-bottom:2px solid var(--accent);">See all trades →</a>
     </div>
-    <div class="tag-row">
-      <span class="tag">Websites</span>
-      <span class="tag">Search Visibility</span>
-      <span class="tag">Google Business</span>
-      <span class="tag">Leads</span>
-      <span class="tag">Google Ads</span>
-      <span class="tag">Trade Guides</span>
+    <div class="ind-chips">
+      <a class="ind-chip" href="industries#roofing">Roofing</a>
+      <a class="ind-chip" href="industries#painting">Painting</a>
+      <a class="ind-chip" href="industries#landscaping">Landscaping</a>
+      <a class="ind-chip" href="industries#concrete">Concrete &amp; Paving</a>
+      <a class="ind-chip" href="industries#welding">Welding</a>
+      <a class="ind-chip" href="industries">General contractors</a>
+      <a class="ind-chip" href="industries">HVAC</a>
+      <a class="ind-chip" href="industries">Plumbing</a>
+      <a class="ind-chip" href="industries">Electrical</a>
+      <a class="ind-chip" href="industries">Decks &amp; Fencing</a>
+    </div>
+    <div class="local-line">
+      <span>Based in the Eastlake neighborhood of Seattle. We work with contractors across Washington and beyond.</span>
+      <span><a href="service-areas/seattle-wa-contractor-websites">Seattle contractor websites →</a> &nbsp; <a href="resources">Contractor Growth Library →</a></span>
     </div>
   </div>
 </section>
@@ -708,11 +684,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="announce" style="background:transparent;border-color:var(--border-inv);color:var(--muted-inv);">
       <span>$297/month · No setup fees · Fast launch</span>
     </div><br>
-    <h2 class="h-display on-dark">Put your website<br>to <em>work.</em></h2>
-    <p class="h-sub on-dark center">See what Contractor Arsenal could build for your company.</p>
+    <h2 class="h-display on-dark">See your site before<br>you <em>commit.</em></h2>
+    <p class="h-sub on-dark center">Send us the basics. We build a demo around your real company, services, and market.</p>
     <div class="btn-row">
-      <a href="demo.html" class="btn btn-accent">Get My Free Demo</a>
-      <a href="services.html" class="btn btn-ghost-dark">See What's Included</a>
+      <a href="demo" class="btn btn-accent" data-cta="demo" data-cta-location="home_final">Get My Free Demo</a>
+      <a href="pricing" class="btn btn-ghost-dark" data-cta="pricing" data-cta-location="home_final">See Pricing</a>
     </div>
   </div>
 </section>
@@ -745,43 +721,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html">Websites</a></li>
-          <li><a href="seo.html">Search Visibility</a></li>
-          <li><a href="seo.html#google-business">Google Business</a></li>
-          <li><a href="services.html#leads">Lead Capture</a></li>
+          <li><a href="services">Contractor Websites</a></li>
+          <li><a href="seo">SEO</a></li>
+          <li><a href="ai-search">AEO + GEO</a></li>
+          <li><a href="google-business">Google Business</a></li>
+          <li><a href="lead-capture">Lead Capture</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="partner.html">Free CRM</a></li>
-          <li><a href="arsenal.html">Arsenal 001</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="work">Work</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="industries">Industries</a></li>
+          <li><a href="partner">Free CRM</a></li>
+          <li><a href="arsenal">Arsenal 001</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
-          <li><a href="resources.html">Growth Library</a></li>
-          <li><a href="resources.html#websites">Websites</a></li>
-          <li><a href="resources.html#search-visibility">Search Visibility</a></li>
-          <li><a href="resources.html#google-business">Google Business</a></li>
-          <li><a href="resources.html#leads">Leads</a></li>
+          <li><a href="resources">Growth Library</a></li>
+          <li><a href="resources#websites">Websites</a></li>
+          <li><a href="resources#search-visibility">Search Visibility</a></li>
+          <li><a href="resources#google-business">Google Business</a></li>
+          <li><a href="resources#leads">Leads</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Service Areas</h4>
         <ul>
-          <li><a href="service-areas/seattle-wa-contractor-websites.html">Seattle, WA</a></li>
-          <li><a href="service-areas/bellevue-wa-contractor-websites.html">Bellevue, WA</a></li>
-          <li><a href="service-areas/tacoma-wa-contractor-websites.html">Tacoma, WA</a></li>
-          <li><a href="service-areas/spokane-wa-contractor-websites.html">Spokane, WA</a></li>
-          <li><a href="service-areas/everett-wa-contractor-websites.html">Everett, WA</a></li>
-          <li><a href="service-areas/redmond-wa-contractor-websites.html">Redmond, WA</a></li>
-          <li><a href="service-areas/index.html" style="font-weight:700;">View All Service Areas →</a></li>
+          <li><a href="service-areas/seattle-wa-contractor-websites">Seattle, WA</a></li>
+          <li><a href="service-areas/bellevue-wa-contractor-websites">Bellevue, WA</a></li>
+          <li><a href="service-areas/tacoma-wa-contractor-websites">Tacoma, WA</a></li>
+          <li><a href="service-areas/spokane-wa-contractor-websites">Spokane, WA</a></li>
+          <li><a href="service-areas/everett-wa-contractor-websites">Everett, WA</a></li>
+          <li><a href="service-areas/redmond-wa-contractor-websites">Redmond, WA</a></li>
+          <li><a href="service-areas/" style="font-weight:700;">View All Service Areas →</a></li>
         </ul>
       </div>
     </div>
@@ -789,15 +766,95 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap footer-bottom">
     <span>&copy; 2026 Contractor Arsenal. All rights reserved.</span>
     <div class="footer-bottom-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+      <a href="privacy">Privacy</a>
+      <a href="terms">Terms</a>
       <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="mailto:hello@contractorarsenal.com">Email</a>
     </div>
   </div>
 </footer>
 
+<div class="mcta" data-mcta aria-hidden="true">
+  <a href="demo" class="btn btn-accent btn-sm" data-cta="demo" data-cta-location="home_sticky_mobile">Get My Free Demo</a>
+  <a href="#work" class="btn btn-ghost-dark btn-sm" data-cta="see_work" data-cta-location="home_sticky_mobile">See Our Work</a>
+</div>
+
 <script src="main.js"></script>
 <script src="newsletter.js" defer></script>
+<script src="value-calc.js" defer></script>
+<script>
+(function(){
+  var root=document.querySelector('[data-showcase]');
+  if(root){
+    var d=[].slice.call(root.querySelectorAll('[data-sc-desktop] img'));
+    var m=[].slice.call(root.querySelectorAll('[data-sc-mobile] img'));
+    var dom=root.querySelector('[data-sc-domain]'),nameEl=root.querySelector('[data-sc-name]');
+    var toggle=root.querySelector('[data-sc-toggle]');
+    var MS=5000,cur=0,timer=null,loaded=false,inView=true;
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    /* userPaused: explicit choice via the pause button. Starts paused under reduced motion. */
+    var userPaused=reduce,hoverPaused=false;
+    root.style.setProperty('--sc-ms',MS+'ms');
+    function load(i){[d[i],m[i]].forEach(function(im){if(im&&!im.getAttribute('src')&&im.dataset.src){im.src=im.dataset.src;}});}
+    function show(i){
+      i=(i+d.length)%d.length;load(i);cur=i;
+      d.forEach(function(im,k){im.classList.toggle('is-on',k===i);});
+      m.forEach(function(im,k){im.classList.toggle('is-on',k===i);});
+      /* domain label and screen-reader name come from the same slide element as the screenshots */
+      dom.textContent=d[i].dataset.domain;nameEl.textContent=d[i].dataset.name;
+    }
+    function stopTimer(){if(timer){clearTimeout(timer);timer=null;}root.classList.remove('is-running');}
+    function schedule(){
+      stopTimer();
+      if(userPaused||hoverPaused||!inView||!loaded||document.hidden)return;
+      load((cur+1)%d.length);
+      void root.offsetWidth;root.classList.add('is-running');
+      timer=setTimeout(function(){show(cur+1);schedule();},MS);
+    }
+    function sync(){
+      root.classList.toggle('is-paused',userPaused);
+      toggle.setAttribute('aria-label',userPaused?'Play automatic rotation':'Pause automatic rotation');
+      nameEl.setAttribute('aria-live',userPaused?'polite':'off');
+      schedule();
+    }
+    toggle.addEventListener('click',function(){userPaused=!userPaused;sync();});
+    root.addEventListener('mouseenter',function(){hoverPaused=true;schedule();});
+    root.addEventListener('mouseleave',function(){hoverPaused=false;schedule();});
+    root.addEventListener('focusin',function(){hoverPaused=true;schedule();});
+    root.addEventListener('focusout',function(e){if(!root.contains(e.relatedTarget)){hoverPaused=false;schedule();}});
+    root.addEventListener('touchstart',function(){hoverPaused=true;schedule();setTimeout(function(){hoverPaused=false;schedule();},8000);},{passive:true});
+    document.addEventListener('visibilitychange',schedule);
+    if('IntersectionObserver' in window){new IntersectionObserver(function(e){inView=e[0].isIntersecting;schedule();},{threshold:.25}).observe(root);}
+    show(0);
+    window.addEventListener('load',function(){loaded=true;sync();});
+  }
+  var bar=document.querySelector('[data-mcta]'),hero=document.querySelector('.page-hero'),end=document.querySelector('.final-cta');
+  if(bar&&hero&&'IntersectionObserver' in window){
+    var pastHero=false;
+    /* Hidden once the final CTA has entered the viewport, and stays hidden through the footer. */
+    function sync(){var atEnd=end?end.getBoundingClientRect().top<window.innerHeight:false;var on=pastHero&&!atEnd;bar.classList.toggle('is-on',on);bar.setAttribute('aria-hidden',on?'false':'true');bar.querySelectorAll('a').forEach(function(a){a.tabIndex=on?0:-1;});}
+    new IntersectionObserver(function(e){pastHero=!e[0].isIntersecting;sync();}).observe(hero);
+    /* An instant jump can carry the final CTA past the viewport without ever intersecting it, so also re-check on scroll. */
+    var mq=false;
+    window.addEventListener('scroll',function(){if(!mq){mq=true;requestAnimationFrame(function(){mq=false;sync();});}},{passive:true});
+    sync();
+  }
+  /* Subtle parallax: desktop pointers only, never under reduced motion. */
+  var px=[].slice.call(document.querySelectorAll('[data-parallax]'));
+  var canPx=px.length&&window.matchMedia&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&window.matchMedia('(min-width: 981px) and (hover: hover)').matches;
+  if(canPx){
+    var ticking=false;
+    function paint(){ticking=false;var vh=window.innerHeight;px.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;var t=((r.top+r.height/2)-vh/2)/vh;el.style.transform='translate3d(0,'+(t*parseFloat(el.dataset.parallax)).toFixed(1)+'px,0)';});}
+    window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(paint);}},{passive:true});
+    paint();
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('[data-cta]');
+    if(!a)return;
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({event:'cta_click',cta_id:a.dataset.cta,cta_location:a.dataset.ctaLocation||'',cta_label:a.dataset.ctaLabel||(a.textContent||'').trim().slice(0,60),cta_destination:a.getAttribute('href')||''});
+  });
+})();
+</script>
 </body>
 </html>
